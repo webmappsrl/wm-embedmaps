@@ -1223,8 +1223,12 @@ var AppComponent = /** @class */ (function () {
                     var id = startUrl.split('/poi/')[1];
                     _this._mapService.centerOnFeature(id, true);
                 }
-                else
-                    _this._mapService.fitExtent();
+                else {
+                    if (!_this._configService.areMapExtentDefined())
+                        _this._mapService.centerFeatureLayer();
+                    else
+                        _this._mapService.fitExtent();
+                }
             }, 0);
         });
     };
@@ -1477,11 +1481,11 @@ var ETaxonomy;
 
 /***/ }),
 
-/***/ "./src/app/constants.ts":
+/***/ "./src/app/constants.js":
 /*!******************************!*\
-  !*** ./src/app/constants.ts ***!
+  !*** ./src/app/constants.js ***!
   \******************************/
-/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION */
+/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1504,6 +1508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
 // DATA
 var SINGLE_MAP_ID = 'wm-map';
 var POI = 'poi';
@@ -1527,6 +1532,63 @@ var MAP_DEF_ZOOM = 11;
 var MAP_DEF_CENTER = [0, 0];
 var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
 var MAP_DEF_ANIMATION_DURATION = 500;
+var MAP_DEF_EXTENT = [-180, -85, 180, 85];
+//# sourceMappingURL=constants.js.map
+
+/***/ }),
+
+/***/ "./src/app/constants.ts":
+/*!******************************!*\
+  !*** ./src/app/constants.ts ***!
+  \******************************/
+/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SINGLE_MAP_ID", function() { return SINGLE_MAP_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POI", function() { return POI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACK", function() { return TRACK; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTE", function() { return ROUTE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COMPASS_ROTATION_TIMEOUT", function() { return COMPASS_ROTATION_TIMEOUT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CURRENT_SPEED_TIME_WINDOW", function() { return CURRENT_SPEED_TIME_WINDOW; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GEOLOCATION_TIMEOUT_TIME", function() { return GEOLOCATION_TIMEOUT_TIME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MIN_SPEED_FOR_GPS_BEARING", function() { return MIN_SPEED_FOR_GPS_BEARING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OUT_OF_TRACK_TOAST_DELAY", function() { return OUT_OF_TRACK_TOAST_DELAY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAX_SYNC_IMG_DOWNLOAD", function() { return MAX_SYNC_IMG_DOWNLOAD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RETRY_DELAY", function() { return RETRY_DELAY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RETRY_TIMES", function() { return RETRY_TIMES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FORCE_POST_RETRY_DELAY", function() { return FORCE_POST_RETRY_DELAY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MERGE_LENGTH_LIMIT", function() { return MERGE_LENGTH_LIMIT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ZOOM", function() { return MAP_DEF_ZOOM; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
+// DATA
+var SINGLE_MAP_ID = 'wm-map';
+var POI = 'poi';
+var TRACK = 'track';
+var ROUTE = 'route';
+// GEOLOCATION
+var COMPASS_ROTATION_TIMEOUT = 8000; // Time in milliseconds to wait before switching from gps rotation to compass rotation
+var CURRENT_SPEED_TIME_WINDOW = 10000; // Time in milliseconds window of positions to calculate currentSpeed with
+var GEOLOCATION_TIMEOUT_TIME = 60000;
+var MIN_SPEED_FOR_GPS_BEARING = 1; // Speed in km/h needed to switch from compass bearing (<) to gps bearing (>)
+var OUT_OF_TRACK_TOAST_DELAY = 8000; // Time in milliseconds to wait before switching from gps rotation to compass rotation
+// OFFLINE
+var MAX_SYNC_IMG_DOWNLOAD = 10;
+var RETRY_DELAY = 5000;
+var RETRY_TIMES = 20;
+// REPORT
+var FORCE_POST_RETRY_DELAY = 25000;
+var MERGE_LENGTH_LIMIT = 1;
+// MAP
+var MAP_DEF_ZOOM = 11;
+var MAP_DEF_CENTER = [0, 0];
+var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
+var MAP_DEF_ANIMATION_DURATION = 500;
+var MAP_DEF_EXTENT = [-180, -85, 180, 85];
 
 
 /***/ }),
@@ -1611,6 +1673,7 @@ var version_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack
 /* harmony import */ var _communication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./communication.service */ "./src/app/services/communication.service.ts");
 /* harmony import */ var _storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage.service */ "./src/app/services/storage.service.ts");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../constants.js */ "./src/app/constants.js");
 /**
  * Config Service
  *
@@ -1632,6 +1695,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 // TODO find a way to type the config
+
 
 var ConfigService = /** @class */ (function () {
     function ConfigService(_communicationService, _storageService) {
@@ -1764,6 +1828,14 @@ var ConfigService = /** @class */ (function () {
             valid = false;
         return valid ? [this._config.MAP.center[0], this._config.MAP.center[1]] : undefined;
     };
+    ConfigService.prototype.areMapExtentDefined = function () {
+        var extent = this.getMapExtent();
+        return extent[0] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][0]
+            && extent[1] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][1]
+            && extent[2] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][2]
+            && extent[3] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][3]
+            ? false : true;
+    };
     ConfigService.prototype.getMapExtent = function () {
         var extent;
         if (this._offlineMapConfig && this._offlineMapConfig.bbox && this._offlineMapConfig.bbox.length && this._offlineMapConfig.bbox.length === 4)
@@ -1771,7 +1843,7 @@ var ConfigService = /** @class */ (function () {
         else if (this._config.MAP.bbox && this._config.MAP.bbox.length && this._config.MAP.bbox.length === 4)
             extent = [this._config.MAP.bbox[0], this._config.MAP.bbox[1], this._config.MAP.bbox[2], this._config.MAP.bbox[3]];
         else
-            extent = [-180, -85, 180, 85];
+            extent = _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"];
         return extent;
     };
     ConfigService.prototype.getBaseLayers = function () {
