@@ -3131,14 +3131,14 @@ var MapService = /** @class */ (function () {
             icon: "locationIcon"
         };
         this._locationIconArrow = new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
-            src: '/wp-contents/plugins/wm-embedmaps/assets/js/assets/images/location-icon-arrow.png',
+            src: '/wp-contents/plugins/wm-embedmaps/assets/js/core/assets/images/location-icon-arrow.png',
             scale: 0.33,
             size: [125, 125],
             rotateWithView: false
         });
         this._locationIconStyle = new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
             image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
-                src: '/wp-contents/plugins/wm-embedmaps/assets/js/assets/images/location-icon.png',
+                src: '/wp-contents/plugins/wm-embedmaps/assets/js/core/assets/images/location-icon.png',
                 scale: 0.29,
                 size: [125, 125]
             }),
@@ -4002,7 +4002,7 @@ var MapService = /** @class */ (function () {
             style = [
                 new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
                     image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
-                        src: '/wp-contents/plugins/wm-embedmaps/assets/js/assets/images/pin.png',
+                        src: '/wp-contents/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
                         scale: 0.20 * zoomFactor,
                         color: color
                     }),
@@ -4019,7 +4019,7 @@ var MapService = /** @class */ (function () {
             style = [
                 new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
                     image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
-                        src: '/wp-contents/plugins/wm-embedmaps/assets/js/assets/images/pin.png',
+                        src: '/wp-contents/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
                         scale: 0.2 * this._configService.getPoiSelectedRadius(),
                         color: '#fff'
                     }),
@@ -4144,7 +4144,7 @@ var MapService = /** @class */ (function () {
             styles.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
                 geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_15__["default"]([point[0], point[1]]),
                 image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
-                    src: '/wp-contents/plugins/wm-embedmaps/assets/js/assets/images/line-icon-arrow.png',
+                    src: '/wp-contents/plugins/wm-embedmaps/assets/js/core/assets/images/line-icon-arrow.png',
                     scale: scale,
                     rotation: point[2],
                     color: color,
