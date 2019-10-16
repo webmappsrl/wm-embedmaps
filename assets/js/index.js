@@ -7,20 +7,21 @@ var baseUrl = '/wp-content/plugins/wm-embedmaps/assets/js/core/',
   polyfills = document.createElement("script"),
   styles = document.createElement("script"),
   main = document.createElement("script"),
-  vendor = document.createElement("script");
+  vendor = document.createElement("script"),
+  hostStyle = getComputedStyle(host);
 
-if (validPositions.indexOf(host.style.position) === -1)
+if (validPositions.indexOf(hostStyle.position) === -1)
   host.style.position = 'relative';
-if (validDisplays.indexOf(host.style.display) === -1)
+if (validDisplays.indexOf(hostStyle.display) === -1)
   host.style.display = 'inline-block';
 
-if (!host.style.height)
+if (!hostStyle.height)
   host.style.height = '100%';
-if (!host.style.minHeight)
+if (!hostStyle.minHeight)
   host.style.minHeight = '400px';
-if (!host.style.width)
+if (!hostStyle.width)
   host.style.width = '100%';
-if (!host.style.minWidth)
+if (!hostStyle.minWidth)
   host.style.minWidth = '600px';
 appRoot.style.height = '100%';
 appRoot.style.width = '100%';

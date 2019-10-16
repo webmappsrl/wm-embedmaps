@@ -3110,6 +3110,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _classes_clocation__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../classes/clocation */ "./src/app/classes/clocation.ts");
 /* harmony import */ var ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ol/style/Fill */ "./node_modules/ol/style/Fill.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
+/* harmony import */ var ol_interaction__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ol/interaction */ "./node_modules/ol/interaction.js");
 /**
  * Map Service
  *
@@ -3146,6 +3147,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
  // Throws problems importing normally
+
 
 
 
@@ -3475,6 +3477,7 @@ var MapService = /** @class */ (function () {
                         minWidth: 50
                     })
                 ],
+                interactions: Object(ol_interaction__WEBPACK_IMPORTED_MODULE_37__["defaults"])({ mouseWheelZoom: false }),
                 moveTolerance: 3,
                 loadTilesWhileAnimating: true,
                 loadTilesWhileInteracting: this._deviceService.isBrowser ? true : false
