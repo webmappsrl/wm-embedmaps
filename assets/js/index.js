@@ -14,8 +14,14 @@ if (validPositions.indexOf(host.style.position) === -1)
 if (validDisplays.indexOf(host.style.display) === -1)
   host.style.display = 'inline-block';
 
-host.style.height = '100%';
-host.style.width = '100%';
+if (!host.style.height)
+  host.style.height = '100%';
+if (!host.style.minHeight)
+  host.style.minHeight = '5vh';
+if (!host.style.width)
+  host.style.width = '100%';
+if (!host.style.minWidth)
+  host.style.minWidth = '50vw';
 appRoot.style.height = '100%';
 appRoot.style.width = '100%';
 host.appendChild(appRoot);
