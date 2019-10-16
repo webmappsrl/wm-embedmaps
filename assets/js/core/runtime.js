@@ -120,7 +120,7 @@
 /******/ 				if (__webpack_require__.nc) {
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
-/******/ 				script.src = jsonpScriptSrc(chunkId); split = script.src.split('/'); script.src = split[0] + '//' + split[2] + '/wp-contents/plugins/wm-embedmaps/assets/js/core/' + split[split.length - 1];
+/******/ 				script.src = jsonpScriptSrc(chunkId); split = script.src.split('/'); script.src = split[0] + '//' + split[2] + '/wp-content/plugins/wm-embedmaps/assets/js/core/' + split[split.length - 1];
 /******/
 /******/ 				onScriptComplete = function (event) {
 /******/ 					// avoid mem leaks in IE.

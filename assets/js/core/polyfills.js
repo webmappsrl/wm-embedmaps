@@ -8397,7 +8397,7 @@ Zone.__load_patch('fetch', function (global, Zone, api) {
                 var zone = Zone.current;
                 try {
                     zone[fetchTaskScheduling] = true;
-                    if (args[0] && args[0].substring(0, 4) !== 'http'){if (args[0][0] === '.'){args[0] = args[0].substring(1);}if (args[0][0] === '/') {args[0] = window.location.origin + '/wp-contents/plugins/wm-embedmaps/assets/js/core' + args[0];}else{args[0] = window.location.origin + '/wp-contents/plugins/wm-embedmaps/assets/js/core/' + args[0];}}fetchPromise = fetch.apply(_this, args);
+                    if (args[0] && args[0].substring(0, 4) !== 'http'){if (args[0][0] === '.'){args[0] = args[0].substring(1);}if (args[0][0] === '/') {args[0] = window.location.origin + '/wp-content/plugins/wm-embedmaps/assets/js/core' + args[0];}else{args[0] = window.location.origin + '/wp-content/plugins/wm-embedmaps/assets/js/core/' + args[0];}}fetchPromise = fetch.apply(_this, args);
                 }
                 catch (error) {
                     rej(error);

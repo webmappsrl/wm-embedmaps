@@ -1,4 +1,4 @@
-var baseUrl = '/wp-contents/plugins/wm-embedmaps/assets/js/core/',
+var baseUrl = '/wp-content/plugins/wm-embedmaps/assets/js/core/',
   host = document.getElementsByTagName('wm-map-container')[0],
   validPositions = ['absolute', 'relative', 'static', 'sticky'],
   validDisplays = ['block', 'flex', 'flex-root', 'grid', 'inline-block', 'inline-flex', 'inline-grid', 'list-item', 'table', 'table-cell'],
