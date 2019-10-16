@@ -14,8 +14,10 @@ if (validPositions.indexOf(host.style.position) === -1)
 if (validDisplays.indexOf(host.style.display) === -1)
   host.style.display = 'inline-block';
 
-appRoot.style.height = '50vh';
-appRoot.style.width = '50vw';
+host.style.height = '100%';
+host.style.width = '100%';
+appRoot.style.height = '100%';
+appRoot.style.width = '100%';
 host.appendChild(appRoot);
 runtime.src = baseUrl + 'runtime.js';
 polyfills.src = baseUrl + 'polyfills.js';
