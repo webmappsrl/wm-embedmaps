@@ -1326,7 +1326,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 function HttpLoaderFactory(http) {
-    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](http, "./assets/i18n/", ".json");
+    return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](http, "/wp-content/plugins/wm-embedmaps/assets/js/core/assets/i18n/", ".json");
 }
 function initConfig(configService) {
     return function () { return configService.initialize(); };
@@ -4484,6 +4484,20 @@ var MapService = /** @class */ (function () {
     MapService.prototype.toggleTaxonomyFilter = function (id) {
         if (typeof this._taxonomyFilters[id + ''] !== 'undefined') {
             this._taxonomyFilters[id + ''] = !this._taxonomyFilters[id + ''];
+            this._drawTaxonomyFilteredFeatures();
+            this.onTaxonomyFiltersChange.next(this._taxonomyFilters);
+        }
+    };
+    MapService.prototype.toggleAllTaxonomyFilters = function () {
+        if (typeof this._taxonomyFilters !== 'undefined') {
+            var activeNumber = 0;
+            for (var i in this._taxonomyFilters) {
+                if (this._taxonomyFilters[i])
+                    activeNumber++;
+            }
+            for (var i in this._taxonomyFilters) {
+                this._taxonomyFilters[i] = activeNumber === 0;
+            }
             this._drawTaxonomyFilteredFeatures();
             this.onTaxonomyFiltersChange.next(this._taxonomyFilters);
         }
