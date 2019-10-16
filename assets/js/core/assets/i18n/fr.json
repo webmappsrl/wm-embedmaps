@@ -1,0 +1,236 @@
+{
+    "lang": {
+        "de": "deutsch",
+        "en": "english",
+        "es": "español",
+        "fr": "français",
+        "it": "italiano"
+    },
+    "taxonomy": {
+        "webmapp_category": "points d’intérêt",
+        "activity": "activité",
+        "theme": "thème",
+        "when": "quand",
+        "where": "où",
+        "who": "qui"
+    },
+    "details": {
+        "readAll": "lisez tout",
+        "hide": "cachez",
+        "info": "informations",
+        "contactsTitle": "localisation et contacts",
+        "routeVoucher": "Client {{customerName}}",
+        "routeDownload": "téléchargez",
+        "routeOpen": "ouvrez",
+        "routeDelete": "supprimer",
+        "navigate": "navigation",
+        "table": {
+            "difficulty": "difficulté",
+            "ref": "numéro de chemin",
+            "scale": "difficulté",
+            "caiScale": "difficulté",
+            "mtbScale": "difficultés de VTT",
+            "operator": "compétence",
+            "from": "point de départ",
+            "to": "point d'arrivée",
+            "distance": "distance",
+            "duration": "durées",
+            "durationBackward": "durée de retour",
+            "ascent": "dénivelé positif",
+            "descent": "dénivelé négatif",
+            "ele": "élévation",
+            "eleMax": "altitude maximale",
+            "eleMin": "altitude minimale",
+            "eleFrom": "altitude de départ",
+            "eleTo": "altitude d'arrivée",
+            "stages": "étapes",
+            "code": "code",
+            "languages": "langues",
+            "downloadGpx": "télécharger la piste GPX"
+        },
+        "open": "ouvert",
+        "close": "fermé",
+        "moreInfoTitle": "autre information",
+        "website": "Site Internet"
+    },
+    "alert": {
+        "warning": "attention",
+        "activateGPS": "Il semble que votre GPS soit désactivé. Il faut l'activer pour accéder à toutes les fonctionnaliés de l'App. Voulez-vous le faire maintenant?",
+        "gpsAuthorization": "Toutes les fonctionnalités liées à votre position sont désactivées. Vous pouvez les activer en autorisant l'utilisation de votre position grâce aux paramétrages de votre dispositif",
+        "outsideExtent": "Il semble que vous soyez hors des limites de la carte",
+        "routeDownload": "Vous êtes sur le point de télécharger l'itinéraire. Voulez-vous poursuivre?",
+        "mapDownload": "Vous êtes sur le point de télécharger la carte. Voulez-vous continuer?",
+        "downloadError": "Une erreur s'est produite lors du téléchargement. Veuillez réessayer ultérieurement",
+        "wrongLogin": "Nous ne parvenons pas à vous identifier. Veuillez s’il vous plait vérifiez que vous avez correctement saisi votre identifiant (email) ou votre mot de passe",
+        "genericError": "Une erreur est survenue. Veuillez réessayer plus tard",
+        "loginNeededDownload": "Pour télécharger l'itinéraire, vous devez vous connecter. Voulez-vous le faire maintenant?",
+        "voucherMessage": "Entrez le code de votre forfait",
+        "voucherPlaceholder": "code",
+        "voucherExpired": "Ce code a expiré",
+        "voucherError": "Le code entré n'est pas valide. Vérifiez que vous l'avez entré correctement",
+        "discardRecordedTrack": "Vous êtes sur le point de supprimer la piste que vous avez enregistrée. Voulez-vous continuer quand même?",
+        "discardChanges": "En continuant, vous perdrez les modifications apportées. Voulez-vous continuer?",
+        "copiedLink": "Lien copié dans le presse-papier",
+        "copiedCoordinates": "Coordonnées copiées dans le presse-papier",
+        "userAlreadyExists": "Le mail {{email}} a déjà été enregistré. Connectez-vous pour vous connecter",
+        "abortDownload": "Êtes-vous sûr de vouloir interrompre le téléchargement?",
+        "resumeTrackRecord": "L'application a été interrompue lors de l'enregistrement d'un itinéraire. Comment voulez-vous procéder?",
+        "storageAuthorization": "L'application n'est pas autorisée à télécharger le fichier. Pour télécharger, vous devez autoriser l'application via les paramètres de votre appareil.",
+        "fileDownload": "Téléchargement du fichier {{nom du fichier}} en cours",
+        "fileDownloadError": "Une erreur s'est produite lors du téléchargement du fichier. Veuillez réessayer plus tard",
+        "fileDownloadSuccess": "Le fichier a été téléchargé avec succès dans {{dest}}",
+        "exportMessage": "Entrez le email pour envoyer le morceau à",
+        "exportEmailPlaceholder": "email",
+        "exportSuccessfull": "Suivre exporté avec succès",
+        "exportError": "Une erreur s'est produite lors de l'exportation de la piste. Vérifiez d'être connecté ou réessayez plus tard"
+    },
+    "buttons": {
+        "ok": "ok",
+        "cancel": "annuler",
+        "delete": "supprimer",
+        "save": "sauver",
+        "edit": "modifier",
+        "share": "partager"
+    },
+    "navigation": {
+        "pause": "pause",
+        "resume": "reprenez",
+        "stop": "arrêtez",
+        "toast": "Méfiez-vous, vous vous êtes égaré du chemin de {{distance}}m",
+        "notification": "Navigation active",
+        "tooFar": "Vous êtes actuellement trop loin pour commencer la navigation"
+    },
+    "settings": {
+        "title": "paramétres",
+        "languageRadio": "Sélectionnez la langue",
+        "login": "connexion",
+        "logout": "se déconnecter",
+        "privacyHeader": "politique de confidentialité",
+        "privacy": "Lire la <a href=\"{{url}}\" target=\"blank\">politique de confidentialité</a>",
+        "appHeader": "app",
+        "appDeveloped": "Application développée par Webmapp Srl",
+        "appVersion": "Version {{version}}"
+    },
+    "main": {
+        "search": "chercher",
+        "loading": "chargement...",
+        "actions": {
+            "list": "liste",
+            "map": "carte",
+            "filter": "filtrer",
+            "order": "ordre"
+        }
+    },
+    "home": {
+        "whatToDo": "Que veux-tu faire?",
+        "seeAll": "tout voir"
+    },
+    "menu": {
+        "explore": "découvrir",
+        "search": "chercher",
+        "settings": "paramètres",
+        "exitRoute": "quitter l'itinéraire",
+        "myRoutes": "mes itinéraires",
+        "stages": "étapes",
+        "help": "aider",
+        "attribution": "attribution",
+        "offline": "hors ligne",
+        "credits": "crédits"
+    },
+    "credits": {
+        "webmappContent1": "L'application {{appName}} est développée et gérée par Webmapp. <br> Webmapp crée des services de cartographie Web, des applications mobiles et des cartes imprimées pour Nature & Adventure Tourism. <br> Pour plus d'informations, visitez notre site Web ",
+        "webmappContent2": " ou écrivez-nous à <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+        "map": "Carte",
+        "mapContent": "© Webmapp, distribué sous licence CC BY-NC-SA",
+        "cartographicData": "Données cartographiques",
+        "cartographicDataContent": "© OpenStreetMap Contributors"
+    },
+    "modals": {
+        "routeDownload": {
+            "mapDownloadTitle": "Vous téléchargez la carte",
+            "routeDownloadTitle": "Vous téléchargez la route {{name}}",
+            "setup": "Configuration initiale",
+            "map": "Téléchargement de la carte",
+            "data": "Téléchargement de données",
+            "media": "Téléchargement de média",
+            "install": "Installation",
+            "doNotInterrupt": "Ne fermez pas l'application pendant la phase d'installation des données",
+            "error": "Le téléchargement est momentanément arrêté. Assurez-vous que vous êtes connecté au réseau de données. Le téléchargement reprendra dès que possible."
+        },
+        "login": {
+            "loginHeader": "Entrez votre email et votre mot de passe pour vous connecter",
+            "username": "nom d'utilisateur",
+            "password": "mot de passe",
+            "login": "connexion",
+            "missingFields": "Remplissez tous les champs obligatoires",
+            "passwordRecovery": "mot de passe oublié?",
+            "signupHeader": "Complétez les champs suivants pour vous inscrire",
+            "signup": "s'inscrire",
+            "firstName": "prénom",
+            "lastName": "nom de famille",
+            "email": "email",
+            "passwordConfirm": "confirmez le mot de passe",
+            "newsletter": "Je m'inscris à la newsletter",
+            "privacy": "J'accepte les termes de la <a href=\"{{privacy}}\" target=\"blank\">politique de confidentialité</a>",
+            "backToLogin": "retour à la connexion"
+        },
+        "saveTrack": {
+            "saveTitle": "enregistrer l'itinéraire",
+            "editTitle": "éditer l'itinéraire",
+            "trackName": "Itinéraire enregistré {{id}}",
+            "name": "titre du chemin",
+            "description": "ajouter une description",
+            "presetLabel": "Couleurs prédéfinies",
+            "selectColor": "Sélectionnez la couleur"
+        },
+        "filters": {
+            "title": "filtres",
+            "reset": "réinitialiser",
+            "apply": "appliquer des filtres",
+            "activateAll": "activer tout",
+            "deactivateAll": "désactiver tout "
+        },
+        "report": {
+            "title": "signaler votre position",
+            "send": "envoyer un rapport",
+            "reportNotSent": "Le rapport a été accepté et sera envoyé dès que possible.",
+            "reportSent": "Rapport envoyé avec succès",
+            "featureUnavailable": "Fonctionnalité non disponible dans le navigateur",
+            "selectPictureSource": "choisir",
+            "cameraSource": "Prendre une photo",
+            "photolibrarySource": "Utilisez une photo de votre bibliothèque"
+        }
+    },
+    "popover": {
+        "mapCenter": "carte des coordonnées du centre:",
+        "shareCoordinates": "partager les coordonnées",
+        "shareLocation": "partagez votre position",
+        "recordTrack": "enregistrer un itinéraire",
+        "beEdit": "modifier en ligne",
+        "report": "signaler votre position",
+        "export": "exportations"
+    },
+    "help": {
+        "0": "Après votre inscription, vous pourrez <span class='bold'>télécharger les itinéraires</bold> sur votre appareil en un seul clic",
+        "1": "Chaque itinéraire a une <span class='bold'>carte de référence</span> où se trouvent les <span class='bold'>points d’intérêt</span> que nous avons sélectionnés.",
+        "2": "En cliquant <span class='bold'>sur l'icône</span> vous pouvez accéder à la description, à la galerie de photos et à d'autres info à propos de ce <span class='bold'>point d’intérêt</span>.",
+        "3": "En cliquant <span class='bold'>sur le bouton de géolocalisation</span> vous pouvez voir votre position (le point bleu sur la carte).",
+        "4": "En cliquant à nouveau <span class='bold'>sur le bouton de géolocalisation</span> vous activez le <span class='bold'>mode compas</span> et la carte tournera et s'orientera vers le Nord."
+    },
+    "offline": {
+        "title": "Carte déconnecté",
+        "download": "décharge",
+        "delete": "effacer",
+        "open": "actif hors ligne",
+        "close": "désactiver hors ligne",
+        "textContent": "Téléchargez la carte et activez la fonction de navigation hors ligne"
+    },
+    "search": {
+        "poiDivider": "Points d'Intérêt",
+        "routeDivider": "Itinéraires",
+        "trackDivider": "Chemins",
+        "poiEmptyList": "Aucun point d'intérêt trouvé",
+        "trackEmptyList": "Aucun itinéraire trouvé",
+        "routeEmptyList": "Aucun itinéraire trouvé"
+    }
+}

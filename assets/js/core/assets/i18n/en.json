@@ -1,0 +1,236 @@
+{
+    "lang": {
+        "de": "deutsch",
+        "en": "english",
+        "es": "español",
+        "fr": "français",
+        "it": "italiano"
+    },
+    "taxonomy": {
+        "webmapp_category": "points of interest",
+        "activity": "activity",
+        "theme": "theme",
+        "when": "when",
+        "where": "where",
+        "who": "who"
+    },
+    "details": {
+        "readAll": "read all",
+        "hide": "hide",
+        "info": "informations",
+        "contactsTitle": "location & contacts",
+        "routeVoucher": "{{customerName}} customer",
+        "routeDownload": "download",
+        "routeOpen": "open",
+        "routeDelete": "delete",
+        "navigate": "navigate",
+        "table": {
+            "difficulty": "difficulty",
+            "ref": "path number",
+            "scale": "difficulty",
+            "caiScale": "difficulty",
+            "mtbScale": "mountain-bike difficulty",
+            "operator": "competence",
+            "from": "starting point",
+            "to": "arriving point",
+            "distance": "length",
+            "duration": "duration",
+            "durationBackward": "duration backward",
+            "ascent": "ascent",
+            "descent": "descent",
+            "ele": "elevation",
+            "eleMax": "max elevation",
+            "eleMin": "min elevation",
+            "eleFrom": "starting elevation",
+            "eleTo": "arriving elevation",
+            "stages": "stages",
+            "code": "code",
+            "languages": "languages",
+            "downloadGpx": "download the GPX track"
+        },
+        "open": "open",
+        "close": "close",
+        "moreInfoTitle": "more info",
+        "website": "Website"
+    },
+    "alert": {
+        "warning": "warning",
+        "activateGPS": "In order to access to all the features of the app you have to enable the GPS. Do you want to do it now?",
+        "gpsAuthorization": "The app can not access your position and the features based on it will not be available. In order to use them you have to authorize the use of your position from your device settings",
+        "outsideExtent": "It seems that you are outside the map bounds. The geolocation will be disabled. You can enable it again any time you want simply by pressing the dedicated button in the map",
+        "routeDownload": "You are about to download the route. Do you want to proceed?",
+        "mapDownload": "You are about to download the map. Do you want to proceed?",
+        "downloadError": "An error occurred during the download. Please retry later",
+        "wrongLogin": "Unable to login. Please check username and password",
+        "genericError": "An error occurred. Please try again later",
+        "loginNeededDownload": "In order to download this route you need to be logged in. Do you want to do it now?",
+        "voucherMessage": "Insert your travel code",
+        "voucherPlaceholder": "code",
+        "voucherExpired": "This code is expired",
+        "voucherError": "Invalid code. Please try again",
+        "discardRecordedTrack": "You are going to delete the recorded route. Do you want to proceed?",
+        "discardChanges": "By selecting ok you will discard all the changes. Do you want to proceed?",
+        "copiedLink": "Link copied to clipboard",
+        "copiedCoordinates": "Coordinates copied to clipboard",
+        "userAlreadyExists": "The email {{email}} has already been used. Please, try to login instead",
+        "abortDownload": "Are you sure you want to abort the download?",
+        "resumeTrackRecord": "The application has been terminated while recording a track. What do you want to do?",
+        "storageAuthorization": "The app does not have access to your storage to download the file. In order to use them you have to authorize the use of your storage from your device settings",
+        "fileDownload": "Downloading {{filename}}",
+        "fileDownloadError": "An error occurred during the download. Please retry later",
+        "fileDownloadSuccess": "The file has been successfully downloaded in {{dest}}",
+        "exportMessage": "Insert the email where you want to receive the exported track",
+        "exportEmailPlaceholder": "email",
+        "exportSuccessfull": "Route exported successfully",
+        "exportError": "An error accurred during the export. Please check your connection or retry later"
+    },
+    "buttons": {
+        "ok": "ok",
+        "cancel": "cancel",
+        "delete": "delete",
+        "save": "save",
+        "edit": "edit",
+        "share": "share"
+    },
+    "navigation": {
+        "pause": "pause",
+        "resume": "resume",
+        "stop": "stop",
+        "toast": "Be careful, you moved away from the path by {{distance}}m",
+        "notification": "Navigating",
+        "tooFar": "You are currently too far to start the navigation"
+    },
+    "settings": {
+        "title": "settings",
+        "languageRadio": "Choose the language",
+        "login": "login",
+        "logout": "logout",
+        "privacyHeader": "privacy",
+        "privacy": "Read the <a href=\"{{url}}\" target=\"blank\">privacy policy</a>",
+        "appHeader": "app",
+        "appDeveloped": "App developed by Webmapp Srl",
+        "appVersion": "Version {{version}}"
+    },
+    "main": {
+        "search": "search",
+        "loading": "loading...",
+        "actions": {
+            "list": "list",
+            "map": "map",
+            "filter": "filter",
+            "order": "order"
+        }
+    },
+    "home": {
+        "whatToDo": "What do you want to do?",
+        "seeAll": "see all"
+    },
+    "menu": {
+        "explore": "discover",
+        "search": "search",
+        "settings": "settings",
+        "exitRoute": "exit route",
+        "myRoutes": "my routes",
+        "stages": "stages",
+        "help": "help",
+        "attribution": "attribution",
+        "offline": "offline",
+        "credits": "credits"
+    },
+    "credits": {
+        "webmappContent1": "The app {{appName}} is developed and mantained by Webmapp.<br> Webmapp creates web, mobile and printed maps for Nature & Adventure Tourism.<br>For more information please visit our website ",
+        "webmappContent2": " or contact us at <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+        "map": "Map",
+        "mapContent": "© Webmapp, distributed with licence CC BY-NC-SA",
+        "cartographicData": "Cartographic Data",
+        "cartographicDataContent": "© OpenStreetMap Contributors"
+    },
+    "modals": {
+        "routeDownload": {
+            "mapDownloadTitle": "Downloading the map",
+            "routeDownloadTitle": "You are downloading the route {{name}}",
+            "setup": "Initial setup",
+            "map": "Map download",
+            "data": "Data download",
+            "media": "Media download",
+            "install": "Install",
+            "doNotInterrupt": "Do not close the app during the installation process please",
+            "error": "The download has been temporarily interrupted. Make sure you are connected to the network. The download will resume as soon as possible"
+        },
+        "login": {
+            "loginHeader": "Insert email and password to login",
+            "username": "username",
+            "password": "password",
+            "login": "login",
+            "missingFields": "Fill all the required fields",
+            "passwordRecovery": "forgot password?",
+            "signupHeader": "Insert the following fields to sign up",
+            "signup": "sign up",
+            "firstName": "name",
+            "lastName": "last name",
+            "email": "email",
+            "passwordConfirm": "password confirm",
+            "newsletter": "I want to subscribe to the newsletter",
+            "privacy": "I agree to the terms of the <a href=\"{{privacy}}\" target=\"blank\">privacy policy</a>",
+            "backToLogin": "back to login"
+        },
+        "saveTrack": {
+            "saveTitle": "save the recorded route",
+            "editTitle": "editing the route",
+            "trackName": "Recorded route {{id}}",
+            "name": "route title",
+            "description": "add a description",
+            "presetLabel": "Preset colors",
+            "selectColor": "Select color"
+        },
+        "filters": {
+            "title": "filter",
+            "reset": "reset",
+            "apply": "apply filters",
+            "activateAll": "enable all",
+            "deactivateAll": "disable all"
+        },
+        "report": {
+            "title": "report your location",
+            "send": "send report",
+            "reportNotSent": "The report has been accepted and will be sent as soon as possible",
+            "reportSent": "Report sent successfully",
+            "featureUnavailable": "Feature not available in the browser",
+            "selectPictureSource": "Choose",
+            "cameraSource": "Take a picture",
+            "photolibrarySource": "Use a picture from your library"
+        }
+    },
+    "popover": {
+        "mapCenter": "map center coordinates:",
+        "shareCoordinates": "share the coordinates",
+        "shareLocation": "share your location",
+        "recordTrack": "record route",
+        "beEdit": "edit online",
+        "report": "report your location",
+        "export": "export"
+    },
+    "help": {
+        "0": "After signing up, with just a click you would be able to <span class='bold'>download the routes</span> to your device.",
+        "1": "Every route has a <span class='bold'>reference map</span> where there are the <span class='bold'>points of interest</span> select by us.",
+        "2": "By clicking <span class='bold'>on the icon</span> you can access the description, the photo gallery and other info about that <span class='bold'>point of interest</span>.",
+        "3": "By clicking <span class='bold'>the geolocation button</span> you can see your position (the blu point in the map).",
+        "4": "By clicking again <span class='bold'>the geolocation button</span> you activate the <span class='bold'>compass mode</span> and the map will rotate and orientate to Nord."
+    },
+    "offline": {
+        "title": "Offline map",
+        "download": "download",
+        "delete": "delete",
+        "open": "enable offline",
+        "close": "disable offline",
+        "textContent": "Download the map and enable the offline mode"
+    },
+    "search": {
+        "poiDivider": "Points of interest",
+        "routeDivider": "Routes",
+        "trackDivider": "Tracks",
+        "poiEmptyList": "No points of interest found",
+        "trackEmptyList": "No route found",
+        "routeEmptyList": "No route found"
+    }
+}
