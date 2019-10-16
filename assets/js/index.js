@@ -17,11 +17,11 @@ if (validDisplays.indexOf(host.style.display) === -1)
 if (!host.style.height)
   host.style.height = '100%';
 if (!host.style.minHeight)
-  host.style.minHeight = '5vh';
+  host.style.minHeight = '400px';
 if (!host.style.width)
   host.style.width = '100%';
 if (!host.style.minWidth)
-  host.style.minWidth = '50vw';
+  host.style.minWidth = '600px';
 appRoot.style.height = '100%';
 appRoot.style.width = '100%';
 host.appendChild(appRoot);
