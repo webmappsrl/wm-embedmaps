@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, LANGUAGES, HOME, MAP, THEME, OPTIONS, GEOLOCATION, SHARE, OFFLINE, TABLES, REPORTS, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, GEOLOCATION, TABLES, SHARE, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"I Sentieri SAT del Trentino","id":"it.webmapp.trentinosat","customerName":"SAT Trentino"},"LANGUAGES":{"default":"it"},"HOME":[{"view":"compact-horizontal","title":"I nostri sentieri","terms":["21","22"]},{"view":"compact-horizontal","title":"Rifugi e bivacchi","terms":["3","1"]},{"view":"compact-horizontal","title":"Luoghi di interesse e località","terms":["2","4"]}],"MAP":{"maxZoom":16,"minZoom":10,"defZoom":11,"center":[11.1357,46.0612],"bbox":[10.4272,45.6444,11.9935,46.5572],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/trentino/tiles/map/","default":true,"maxNativeZoom":16}],"overlays":[{"id":"sentieri_tratte","label":"Sentieri SAT","type":"utfgrid","tilesUrl":"https://api.webmapp.it/trentino/tiles/sentierisat_new_utfgrid/","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_tratte.geojson","maxZoom":16,"minZoom":10,"noDetails":false,"noInteraction":false},{"id":"punti_appoggio","label":"Punti d'appoggio","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_appoggio.geojson","noDetails":false,"noInteraction":false},{"id":"punti_interesse","label":"Punti d'interesse","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_interesse.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"rifugi","label":"Rifugi","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/rifugi.geojson","noDetails":false,"noInteraction":false},{"id":"sentieri_localita","label":"Località","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_localita.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"sentieri_lunga_percorrenza","label":"Itinerari","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_lunga_percorrenza.geojson","noDetails":false,"noInteraction":false}]},"THEME":{"primary":"#387EF5","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Noto Serif","fontFamilyContent":"Open Sans"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/trentino/","startUrl":"/main/map","disableLogin":true,"hideGlobalMap":false,"poiMinRadius":0.2,"poiMaxRadius":1,"poiIconZoom":13.5,"showMapViewfinder":true},"GEOLOCATION":{"record":{"enable":true,"export":true}},"SHARE":{"deeplinksHost":"trentino.webmapp.it","feature":false,"mapCenter":false,"location":false},"OFFLINE":{"enable":true,"blocks":48},"TABLES":{"details":{"show_wgs84":true,"show_utm":true}},"REPORTS":{"enable":true,"items":[{"title":"Problema riscontrato","excerpt":"Segnalaci i problemi che riscontri nei sentieri e che ritieni opportuno comunicare alla SAT","type":"reportByEmail","fields":[{"label":"Nome","name":"name","mandatory":true,"type":"text","placeholder":"inserisci il tuo nome"},{"label":"Email","name":"email","mandatory":true,"type":"text","placeholder":"inserisci la tua email"},{"label":"Descrizione","name":"description","mandatory":true,"type":"textarea","placeholder":"Un albero caduto in mezzo alla strada ostruisce il passaggio"},{"label":"Foto","name":"picture","mandatory":false,"type":"picture","help":"Scatta una foto che dimostri il problema"},{"name":"emailTo","type":"hidden","value":"sentieri@sat.tn.it"}]}]}};
+module.exports = {"APP":{"name":"Parco San Rossore","id":"it.webmapp.sanrossore","customerName":"Parco San Rossore"},"HOME":[{"view":"compact-horizontal","taxonomy":"where","types":["track"],"title":"Le tenute del Parco"},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"I luoghi della visita","terms":["119","26","25"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Ricettività e altri servizi","terms":["130"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":17,"minZoom":10,"defZoom":12,"center":[10.3872,43.6743],"bbox":[10,43,11,45],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}],"overlays":[{"id":"park_bounds","type":"geojson","geojsonUrl":"park_bounds.geojson","noDetails":true,"color":"#014d38","invertPolygons":true}]},"THEME":{"primary":"#014d38","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Merriweather","fontFamilyContent":"Montserrat"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/sanrossore/","startUrl":"/main/explore","hideGlobalMap":false,"beBaseUrl":"http://parcosanrossore.netseven.it/","disableLogin":true,"addArrowsOverTracks":false,"poiMinRadius":0.2,"showHelp":false,"showEditLink":true},"GEOLOCATION":{"record":{"enable":true}},"TABLES":{"details":{"hideElevationChart":true,"hide_ele:max":true,"hide_ele:min":true}},"SHARE":{"deeplinksHost":"parcosanrossore.k.webmapp.it"}};
 
 /***/ }),
 
@@ -1485,7 +1485,7 @@ var ETaxonomy;
 /*!******************************!*\
   !*** ./src/app/constants.js ***!
   \******************************/
-/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1504,6 +1504,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RETRY_TIMES", function() { return RETRY_TIMES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FORCE_POST_RETRY_DELAY", function() { return FORCE_POST_RETRY_DELAY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MERGE_LENGTH_LIMIT", function() { return MERGE_LENGTH_LIMIT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_COLOR", function() { return DEF_FEATURE_COLOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_FILL_COLOR", function() { return DEF_FEATURE_FILL_COLOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_FILL_OPACITY", function() { return DEF_FEATURE_FILL_OPACITY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_TRACK_STROKE_WIDTH", function() { return DEF_TRACK_STROKE_WIDTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_POLYGON_STROKE_WIDTH", function() { return DEF_POLYGON_STROKE_WIDTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_STROKE_OPACITY", function() { return DEF_FEATURE_STROKE_OPACITY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ZOOM", function() { return MAP_DEF_ZOOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
@@ -1528,6 +1534,13 @@ var RETRY_TIMES = 20;
 var FORCE_POST_RETRY_DELAY = 25000;
 var MERGE_LENGTH_LIMIT = 1;
 // MAP
+var DEF_FEATURE_COLOR = '#000000';
+var DEF_FEATURE_FILL_COLOR = '#000000';
+var DEF_FEATURE_FILL_OPACITY = 0.2;
+var DEF_TRACK_STROKE_WIDTH = 2.5;
+var DEF_POLYGON_STROKE_WIDTH = 1;
+var DEF_FEATURE_STROKE_OPACITY = 1;
+// CONFIG
 var MAP_DEF_ZOOM = 11;
 var MAP_DEF_CENTER = [0, 0];
 var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
@@ -1541,7 +1554,7 @@ var MAP_DEF_EXTENT = [-180, -85, 180, 85];
 /*!******************************!*\
   !*** ./src/app/constants.ts ***!
   \******************************/
-/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1560,6 +1573,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RETRY_TIMES", function() { return RETRY_TIMES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FORCE_POST_RETRY_DELAY", function() { return FORCE_POST_RETRY_DELAY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MERGE_LENGTH_LIMIT", function() { return MERGE_LENGTH_LIMIT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_COLOR", function() { return DEF_FEATURE_COLOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_FILL_COLOR", function() { return DEF_FEATURE_FILL_COLOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_FILL_OPACITY", function() { return DEF_FEATURE_FILL_OPACITY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_TRACK_STROKE_WIDTH", function() { return DEF_TRACK_STROKE_WIDTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_POLYGON_STROKE_WIDTH", function() { return DEF_POLYGON_STROKE_WIDTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_STROKE_OPACITY", function() { return DEF_FEATURE_STROKE_OPACITY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ZOOM", function() { return MAP_DEF_ZOOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
@@ -1584,6 +1603,13 @@ var RETRY_TIMES = 20;
 var FORCE_POST_RETRY_DELAY = 25000;
 var MERGE_LENGTH_LIMIT = 1;
 // MAP
+var DEF_FEATURE_COLOR = '#000000';
+var DEF_FEATURE_FILL_COLOR = '#000000';
+var DEF_FEATURE_FILL_OPACITY = 0.2;
+var DEF_TRACK_STROKE_WIDTH = 2.5;
+var DEF_POLYGON_STROKE_WIDTH = 1;
+var DEF_FEATURE_STROKE_OPACITY = 1;
+// CONFIG
 var MAP_DEF_ZOOM = 11;
 var MAP_DEF_CENTER = [0, 0];
 var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
@@ -3991,6 +4017,39 @@ var MapService = /** @class */ (function () {
             return [];
     };
     /**
+     * Return the style for the polygon
+     *
+     * @param id the feature id
+     */
+    MapService.prototype._getPolygonStyle = function (id) {
+        var style = [], selected = false, feature = this._dataSource.getFeatureById(id)
+            ? this._dataSource.getFeatureById(id)
+            : undefined;
+        if (!feature)
+            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
+        var color = this._modelService.getFeatureColor(id), fillColor = this._modelService.getFeatureFillColor(id), fillOpacity = this._modelService.getFeatureFillOpacity(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
+        if ('' + this._selectedFeatureId === '' + id) {
+            selected = true;
+            fillOpacity = Math.min(1, fillOpacity + 0.1);
+            strokeWidth = Math.min(5, strokeWidth + 2);
+            strokeOpacity = Math.min(1, strokeOpacity + 0.1);
+            color = this._themeService.getTertiaryColor();
+        }
+        fillColor = 'rgba(' + this._themeService.getRgb(fillColor) + ',' + fillOpacity + ')';
+        color = 'rgba(' + this._themeService.getRgb(color) + ',' + strokeOpacity + ')';
+        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
+            fill: new ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__["default"]({
+                color: fillColor,
+            }),
+            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
+                color: color,
+                width: strokeWidth
+            }),
+            zIndex: selected ? 400 : 100
+        }));
+        return style;
+    };
+    /**
      * Return a style object for the specified tracks
      */
     MapService.prototype._getLineStyle = function (id) {
@@ -3999,64 +4058,24 @@ var MapService = /** @class */ (function () {
             : undefined;
         if (!feature)
             return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
-        var color = this._modelService.getFeatureColor(id);
-        if ('' + this._selectedFeatureId === '' + id)
+        var color = this._modelService.getFeatureColor(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
+        if ('' + this._selectedFeatureId === '' + id) {
             selected = true;
-        if (!selected) {
-            if (((typeof this._features[id].properties.showArrows === 'undefined' && this._configService.addArrowsOverTracks()) ||
-                this._features[id].properties.showArrows === true) && this._view.getZoom() > 12)
-                style = this._getArrowStyle(this._dataSource.getFeatureById(id), this._view.getResolution(), color, 110);
-            style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
-                    color: color,
-                    width: 2.5
-                }),
-                zIndex: 100
-            }));
+            strokeWidth = Math.min(5, strokeWidth + 2);
+            strokeOpacity = Math.min(1, strokeOpacity + 0.1);
+            color = this._themeService.getTertiaryColor();
         }
-        else {
-            if (this._configService.addArrowsOverTracks() && this._view.getZoom() > 12)
-                style = this._getArrowStyle(this._dataSource.getFeatureById(id), this._view.getResolution(), this._themeService.getTertiaryColor(), 410);
-            style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
-                    color: this._themeService.getTertiaryColor(),
-                    width: 5
-                }),
-                zIndex: 400
-            }));
-        }
-        return style;
-    };
-    MapService.prototype._getPolygonStyle = function (id) {
-        var style = [], selected = false, feature = this._dataSource.getFeatureById(id)
-            ? this._dataSource.getFeatureById(id)
-            : undefined;
-        if (!feature)
-            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
-        var color = this._modelService.getFeatureColor(id);
-        color = 'rgba(' + this._themeService.getRgb(color) + ',0.3)';
-        if ('' + this._selectedFeatureId === '' + id)
-            selected = true;
-        if (!selected) {
-            style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                fill: new ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__["default"]({
-                    color: color
-                }),
-                zIndex: 100,
-            }));
-        }
-        else {
-            style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                fill: new ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__["default"]({
-                    color: color
-                }),
-                stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
-                    color: this._themeService.getTertiaryColor(),
-                    width: 3
-                }),
-                zIndex: 400
-            }));
-        }
+        color = 'rgba(' + this._themeService.getRgb(color) + ',' + strokeOpacity + ')';
+        if (((typeof this._features[id].properties.showArrows === 'undefined' && this._configService.addArrowsOverTracks()) ||
+            this._features[id].properties.showArrows === true) && this._view.getZoom() > 12)
+            style = this._getArrowStyle(this._dataSource.getFeatureById(id), this._view.getResolution(), color, selected ? 410 : 110);
+        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
+            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
+                color: color,
+                width: strokeWidth
+            }),
+            zIndex: selected ? 400 : 100
+        }));
         return style;
     };
     /**
@@ -4614,6 +4633,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _languages_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./languages.service */ "./src/app/services/languages.service.ts");
 /* harmony import */ var _classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../classes/etaxonomy.enum */ "./src/app/classes/etaxonomy.enum.ts");
 /* harmony import */ var _classes_ctaxonomies__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../classes/ctaxonomies */ "./src/app/classes/ctaxonomies.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
 /**
  * Model Service
  *
@@ -4630,6 +4650,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -4793,10 +4814,20 @@ var ModelService = /** @class */ (function () {
                     feature.properties.noInteraction = overlayMeta.noInteraction;
                 if (overlayMeta.color && feature.properties.color === undefined)
                     feature.properties.color = overlayMeta.color;
+                if (overlayMeta.strokeWidth && !feature.properties.strokeWidth)
+                    feature.properties.strokeWidth = overlayMeta.strokeWidth;
+                if (overlayMeta.strokeOpacity && !feature.properties.strokeOpacity)
+                    feature.properties.strokeOpacity = overlayMeta.strokeOpacity;
                 if (overlayMeta.icon && feature.properties.icon === undefined)
                     feature.properties.icon = overlayMeta.icon;
                 if (overlayMeta.preventFilter && feature.properties.preventFilter !== false && feature.properties.preventFilter !== true)
                     feature.properties.preventFilter = overlayMeta.preventFilter;
+                if (['Polygon', 'MultiPolygon'].indexOf(feature.geometry.type) !== -1) {
+                    if (overlayMeta.fillColor && !feature.properties.fillColor)
+                        feature.properties.fillColor = overlayMeta.fillColor;
+                    if (overlayMeta.fillOpacity && !feature.properties.fillOpacity)
+                        feature.properties.fillOpacity = overlayMeta.fillOpacity;
+                }
                 _this._features[feature.properties.id] = feature;
                 _this._addOverlayFeatureToTaxonomy(feature);
             }
@@ -4850,8 +4881,14 @@ var ModelService = /** @class */ (function () {
                                 term.color = overlay.metadati.color;
                             else if (overlay.metadati.colore)
                                 term.color = overlay.metadati.colore;
-                            else if (overlay.metadati.fillColor)
-                                term.color = overlay.metadati.fillColor;
+                            if (overlay.metadati.fillColor)
+                                term.fillColor = overlay.metadati.fillColor;
+                            if (overlay.metadati.fillOpacity)
+                                term.fillOpacity = overlay.metadati.fillOpacity;
+                            if (overlay.metadati.strokeWidth)
+                                term.strokeWidth = overlay.metadati.strokeWidth;
+                            if (overlay.metadati.strokeOpacity)
+                                term.strokeOpacity = overlay.metadati.strokeOpacity;
                             if (overlay.metadati.icon)
                                 term.icon = overlay.metadati.icon;
                             else if (overlay.metadati.iconaSvg)
@@ -5060,6 +5097,12 @@ var ModelService = /** @class */ (function () {
             };
         });
     };
+    /**
+     * Check if specified feature belong to the specified taxonomy
+     *
+     * @param featureId the feature id
+     * @param taxonomyId the taxonomy id
+     */
     ModelService.prototype.hasTaxonomy = function (featureId, taxonomyId) {
         featureId = '' + featureId;
         taxonomyId = '' + taxonomyId;
@@ -5091,28 +5134,6 @@ var ModelService = /** @class */ (function () {
      */
     ModelService.prototype.getTaxonomies = function () {
         return this._onTaxonomyChange;
-    };
-    /**
-     * Return a string with the color of the taxonomy
-     *
-     * @param id the id of the taxonomy
-     */
-    ModelService.prototype.getTaxonomyColor = function (id) {
-        id = "" + id;
-        var color = '#000000';
-        for (var i in this._taxonomies) {
-            for (var taxId in this._taxonomies[i]) {
-                if (taxId === id) {
-                    if (this._taxonomies[i][taxId].color)
-                        return this._taxonomies[i][taxId].color;
-                    else if (this._taxonomies[i][taxId].parent)
-                        return this.getTaxonomyColor(this._taxonomies[i][taxId].parent);
-                    else
-                        return color;
-                }
-            }
-        }
-        return color;
     };
     /**
      * Return a string with the name of the feature
@@ -5161,37 +5182,369 @@ var ModelService = /** @class */ (function () {
             return this._features[id].properties.description ? this._features[id].properties.description : '';
     };
     /**
+     * Return a string with the color of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyColor = function (id) {
+        id = "" + id;
+        var color = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_COLOR"];
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].color)
+                        color = this._taxonomies[i][taxId].color;
+                    else if (this._taxonomies[i][taxId].parent)
+                        color = this.getTaxonomyColor(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if (color !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_COLOR"])
+                break;
+        }
+        return color;
+    };
+    /**
      * Return a string with the color of the feature
      *
      * @param id the id of the feature
      */
     ModelService.prototype.getFeatureColor = function (id) {
         id = "" + id;
-        if (!this._features[id]) {
-            return '#000000';
-        }
-        var color = '#000000';
+        var color = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_COLOR"];
+        if (!this._features[id])
+            return color;
         if (this._features[id].properties.color)
             color = this._features[id].properties.color;
+        else if (this._features[id].properties.taxonomy) {
+            var taxonomyIds = [];
+            if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                for (var i in this._features[id].properties.taxonomy) {
+                    if (i !== 'webmapp_category') {
+                        for (var j in this._features[id].properties.taxonomy[i]) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                        }
+                    }
+                }
+            }
+            else if (this._features[id].geometry.type === 'Point') {
+                if (this._features[id].properties.taxonomy.webmapp_category) {
+                    for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                    }
+                }
+            }
+            else {
+                if (this._features[id].properties.taxonomy.activity) {
+                    for (var i in this._features[id].properties.taxonomy.activity) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                    }
+                }
+            }
+            if (taxonomyIds.length > 0) {
+                for (var _i = 0, taxonomyIds_1 = taxonomyIds; _i < taxonomyIds_1.length; _i++) {
+                    var i = taxonomyIds_1[_i];
+                    color = this.getTaxonomyColor(i);
+                    if (color !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_COLOR"])
+                        break;
+                }
+            }
+        }
+        return color;
+    };
+    /**
+     * Return a string with the fill color of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyFillColor = function (id) {
+        id = "" + id;
+        var color = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_COLOR"];
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].fillColor)
+                        color = this._taxonomies[i][taxId].fillColor;
+                    else if (this._taxonomies[i][taxId].fillColor)
+                        color;
+                    this.getTaxonomyFillColor(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if (color !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_COLOR"])
+                break;
+        }
+        return color;
+    };
+    /**
+     * Return a string with the fill color of the feature
+     *
+     * @param id the id of the feature
+     */
+    ModelService.prototype.getFeatureFillColor = function (id) {
+        id = "" + id;
+        var color = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_COLOR"];
+        if (!this._features[id])
+            return color;
+        if (this._features[id].properties.fillColor)
+            color = this._features[id].properties.fillColor;
         else {
             if (this._features[id].properties.taxonomy) {
                 var taxonomyIds = [];
-                for (var i in this._features[id].properties.taxonomy) {
-                    for (var j in this._features[id].properties.taxonomy[i]) {
-                        taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                    for (var i in this._features[id].properties.taxonomy) {
+                        if (i !== 'webmapp_category') {
+                            for (var j in this._features[id].properties.taxonomy[i]) {
+                                taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                            }
+                        }
+                    }
+                }
+                else if (this._features[id].geometry.type === 'Point') {
+                    if (this._features[id].properties.taxonomy.webmapp_category) {
+                        for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                        }
+                    }
+                }
+                else {
+                    if (this._features[id].properties.taxonomy.activity) {
+                        for (var i in this._features[id].properties.taxonomy.activity) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                        }
                     }
                 }
                 if (taxonomyIds.length > 0) {
-                    for (var _i = 0, taxonomyIds_1 = taxonomyIds; _i < taxonomyIds_1.length; _i++) {
-                        var i = taxonomyIds_1[_i];
-                        color = this.getTaxonomyColor(i);
-                        if (color !== '#000000')
+                    for (var _i = 0, taxonomyIds_2 = taxonomyIds; _i < taxonomyIds_2.length; _i++) {
+                        var i = taxonomyIds_2[_i];
+                        color = this.getTaxonomyFillColor(i);
+                        if (color !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_COLOR"])
                             break;
                     }
                 }
             }
         }
+        if (color === _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_COLOR"])
+            color = this.getFeatureColor(id);
         return color;
+    };
+    /**
+     * Return the fill opacity value of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyFillOpacity = function (id) {
+        id = "" + id;
+        var opacity = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_OPACITY"];
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].fillOpacity)
+                        opacity = this._taxonomies[i][taxId].fillOpacity;
+                    else if (this._taxonomies[i][taxId].fillOpacity)
+                        opacity = this.getTaxonomyFillOpacity(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if (opacity !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_OPACITY"])
+                break;
+        }
+        return opacity > 1 ? Math.max(0, Math.min(100, opacity)) / 100 : Math.max(0, Math.min(1, opacity));
+    };
+    /**
+     * Return the fill opacity value of the feature
+     *
+     * @param id the id of the feature
+     */
+    ModelService.prototype.getFeatureFillOpacity = function (id) {
+        id = "" + id;
+        var opacity = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_OPACITY"];
+        if (!this._features[id])
+            return opacity;
+        if (this._features[id].properties.fillOpacity)
+            opacity = this._features[id].properties.fillOpacity;
+        else if (this._features[id].properties.taxonomy) {
+            var taxonomyIds = [];
+            if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                for (var i in this._features[id].properties.taxonomy) {
+                    if (i !== 'webmapp_category') {
+                        for (var j in this._features[id].properties.taxonomy[i]) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                        }
+                    }
+                }
+            }
+            else if (this._features[id].geometry.type === 'Point') {
+                if (this._features[id].properties.taxonomy.webmapp_category) {
+                    for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                    }
+                }
+            }
+            else {
+                if (this._features[id].properties.taxonomy.activity) {
+                    for (var i in this._features[id].properties.taxonomy.activity) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                    }
+                }
+            }
+            if (taxonomyIds.length > 0) {
+                for (var _i = 0, taxonomyIds_3 = taxonomyIds; _i < taxonomyIds_3.length; _i++) {
+                    var i = taxonomyIds_3[_i];
+                    opacity = this.getTaxonomyFillOpacity(i);
+                    if (opacity !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_FILL_OPACITY"])
+                        break;
+                }
+            }
+        }
+        return opacity > 1 ? Math.max(0, Math.min(100, opacity)) / 100 : Math.max(0, Math.min(1, opacity));
+    };
+    /**
+     * Return the stroke width in pixel of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyStrokeWidth = function (id, defaultWidth) {
+        id = "" + id;
+        var width = defaultWidth >= 0 ? defaultWidth : _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_TRACK_STROKE_WIDTH"];
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].strokeWidth)
+                        width = this._taxonomies[i][taxId].strokeWidth;
+                    else if (this._taxonomies[i][taxId].strokeWidth)
+                        width = this.getTaxonomyStrokeWidth(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if ((defaultWidth >= 0 && width !== defaultWidth)
+                || (typeof defaultWidth === 'undefined' && width !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_TRACK_STROKE_WIDTH"]))
+                break;
+        }
+        return width;
+    };
+    /**
+     * Return the stroke width in pixel of the feature
+     *
+     * @param id the id of the feature
+     */
+    ModelService.prototype.getFeatureStrokeWidth = function (id) {
+        id = "" + id;
+        var width = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_TRACK_STROKE_WIDTH"], defaultWidth = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_TRACK_STROKE_WIDTH"];
+        if (!this._features[id])
+            return width;
+        else if (['Polygon', 'MultiPolygon'].indexOf(this._features[id].geometry.type) !== -1) {
+            width = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_POLYGON_STROKE_WIDTH"];
+            defaultWidth = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_POLYGON_STROKE_WIDTH"];
+        }
+        if (this._features[id].properties.strokeWidth)
+            width = this._features[id].properties.strokeWidth;
+        else if (this._features[id].properties.taxonomy) {
+            var taxonomyIds = [];
+            if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                for (var i in this._features[id].properties.taxonomy) {
+                    if (i !== 'webmapp_category') {
+                        for (var j in this._features[id].properties.taxonomy[i]) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                        }
+                    }
+                }
+            }
+            else if (this._features[id].geometry.type === 'Point') {
+                if (this._features[id].properties.taxonomy.webmapp_category) {
+                    for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                    }
+                }
+            }
+            else {
+                if (this._features[id].properties.taxonomy.activity) {
+                    for (var i in this._features[id].properties.taxonomy.activity) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                    }
+                }
+            }
+            if (taxonomyIds.length > 0) {
+                for (var _i = 0, taxonomyIds_4 = taxonomyIds; _i < taxonomyIds_4.length; _i++) {
+                    var i = taxonomyIds_4[_i];
+                    width = this.getTaxonomyStrokeWidth(i, defaultWidth);
+                    if (width !== defaultWidth)
+                        break;
+                }
+            }
+        }
+        return Math.max(0, Math.round(width));
+    };
+    /**
+     * Return the stroke opacity of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyStrokeOpacity = function (id) {
+        id = "" + id;
+        var opacity = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_STROKE_OPACITY"];
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].strokeOpacity)
+                        opacity = this._taxonomies[i][taxId].strokeOpacity;
+                    else if (this._taxonomies[i][taxId].strokeOpacity)
+                        opacity = this.getTaxonomyStrokeOpacity(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if (opacity !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_STROKE_OPACITY"])
+                break;
+        }
+        return opacity > 1 ? Math.max(0, Math.min(100, opacity)) / 100 : Math.max(0, Math.min(1, opacity));
+    };
+    /**
+     * Return the stroke opacity of the feature
+     *
+     * @param id the id of the feature
+     */
+    ModelService.prototype.getFeatureStrokeOpacity = function (id) {
+        id = "" + id;
+        var opacity = _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_STROKE_OPACITY"];
+        if (!this._features[id])
+            return opacity;
+        if (this._features[id].properties.strokeOpacity)
+            opacity = this._features[id].properties.strokeOpacity;
+        else if (this._features[id].properties.taxonomy) {
+            var taxonomyIds = [];
+            if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                for (var i in this._features[id].properties.taxonomy) {
+                    if (i !== 'webmapp_category') {
+                        for (var j in this._features[id].properties.taxonomy[i]) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                        }
+                    }
+                }
+            }
+            else if (this._features[id].geometry.type === 'Point') {
+                if (this._features[id].properties.taxonomy.webmapp_category) {
+                    for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                    }
+                }
+            }
+            else {
+                if (this._features[id].properties.taxonomy.activity) {
+                    for (var i in this._features[id].properties.taxonomy.activity) {
+                        taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                    }
+                }
+            }
+            if (taxonomyIds.length > 0) {
+                for (var _i = 0, taxonomyIds_5 = taxonomyIds; _i < taxonomyIds_5.length; _i++) {
+                    var i = taxonomyIds_5[_i];
+                    opacity = this.getTaxonomyStrokeOpacity(i);
+                    if (opacity !== _constants__WEBPACK_IMPORTED_MODULE_8__["DEF_FEATURE_STROKE_OPACITY"])
+                        break;
+                }
+            }
+        }
+        return opacity > 1 ? Math.max(0, Math.min(100, opacity)) / 100 : Math.max(0, Math.min(1, opacity));
     };
     /**
      * Return a string with the icon class of the taxonomy
@@ -5236,8 +5589,8 @@ var ModelService = /** @class */ (function () {
                     }
                 }
                 if (taxonomyIds.length > 0) {
-                    for (var _i = 0, taxonomyIds_2 = taxonomyIds; _i < taxonomyIds_2.length; _i++) {
-                        var i = taxonomyIds_2[_i];
+                    for (var _i = 0, taxonomyIds_6 = taxonomyIds; _i < taxonomyIds_6.length; _i++) {
+                        var i = taxonomyIds_6[_i];
                         icon = this.getTaxonomyIcon(i);
                         if (icon !== '')
                             break;
