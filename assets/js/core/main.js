@@ -3295,20 +3295,31 @@ var MapService = /** @class */ (function () {
                 coords[1] = parseInt(tmp[tmp.length - 2]);
                 coords[2] = -parseInt(tmp[tmp.length - 1].split('.')[0]);
                 _this._modelService.getTile(coords, tilesUrl).then(function (tileString) {
-                    if (layer.grayscale) {
-                        var canvas_1 = document.createElement('canvas'), ctx_1 = canvas_1.getContext('2d'), img_1 = new Image(), grayscalePercentage_1 = layer.grayscale ? Math.min(Math.max(layer.grayscale, 0), 100) / 100 : 1;
+                    if (layer.grayscale || layer.opacity) {
+                        var canvas_1 = document.createElement('canvas'), ctx_1 = canvas_1.getContext('2d'), img_1 = new Image(), grayscalePercentage_1 = layer.grayscale
+                            ? (layer.grayscale > 1
+                                ? Math.max(0, Math.min(1, layer.grayscale / 100))
+                                : Math.max(0, Math.min(1, layer.grayscale)))
+                            : 0, opacityPercentage_1 = layer.opacity
+                            ? (layer.opacity > 1
+                                ? Math.max(0, Math.min(1, layer.opacity / 100))
+                                : Math.max(0, Math.min(1, layer.opacity)))
+                            : 1;
                         img_1.onload = function () {
-                            canvas_1.width = img_1.width;
-                            canvas_1.height = img_1.height;
+                            canvas_1.width = 256;
+                            canvas_1.height = 256;
                             ctx_1.drawImage(img_1, 0, 0);
-                            var imgData = ctx_1.getImageData(0, 0, canvas_1.width, canvas_1.height);
-                            for (var i = 0; i < imgData.data.length; i += 3) {
-                                var lightness = Math.round(imgData.data[i] * grayscalePercentage_1
-                                    + imgData.data[i + 1] * grayscalePercentage_1
-                                    + imgData.data[i + 2] * grayscalePercentage_1);
-                                imgData.data[i] = lightness;
-                                imgData.data[i + 1] = lightness;
-                                imgData.data[i + 2] = lightness;
+                            var imgData = ctx_1.getImageData(0, 0, 256, 256);
+                            for (var i = 0; i + 3 < imgData.data.length; i += 4) {
+                                if (grayscalePercentage_1 !== 0) {
+                                    var red = imgData.data[i], green = imgData.data[i + 1], blue = imgData.data[i + 2];
+                                    var lightness = Math.round(red * 0.3 + green * 0.59 + blue * 0.11);
+                                    imgData.data[i] = lightness + (red - lightness) * grayscalePercentage_1;
+                                    imgData.data[i + 1] = lightness + (green - lightness) * grayscalePercentage_1;
+                                    imgData.data[i + 2] = lightness + (blue - lightness) * grayscalePercentage_1;
+                                }
+                                if (opacityPercentage_1 !== 1)
+                                    imgData.data[i + 3] = 256 * opacityPercentage_1;
                             }
                             ctx_1.putImageData(imgData, 0, 0);
                             tile.getImage().src = canvas_1.toDataURL();
