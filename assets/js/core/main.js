@@ -1283,15 +1283,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
 /* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
 /* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
-/* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
-/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/ngx/index.js");
-/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
-/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
-/* harmony import */ var _services_config_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/config.service */ "./src/app/services/config.service.ts");
-/* harmony import */ var _services_router_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/router.service */ "./src/app/services/router.service.ts");
-/* harmony import */ var _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ionic-native/diagnostic/ngx */ "./node_modules/@ionic-native/diagnostic/ngx/index.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
+/* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
+/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/ngx/index.js");
+/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
+/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
+/* harmony import */ var _services_config_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/config.service */ "./src/app/services/config.service.ts");
+/* harmony import */ var _services_router_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/router.service */ "./src/app/services/router.service.ts");
+/* harmony import */ var _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @ionic-native/diagnostic/ngx */ "./node_modules/@ionic-native/diagnostic/ngx/index.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1312,6 +1313,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 //Ionic native modules
 //Ionic native plugins - use /ngx if available
+
 
 
 
@@ -1359,20 +1361,21 @@ var AppModule = /** @class */ (function () {
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]
             ],
             providers: [
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_23__["APP_BASE_HREF"], useValue: '/' },
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_24__["APP_BASE_HREF"], useValue: '/' },
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
-                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: initConfig, deps: [_services_config_service__WEBPACK_IMPORTED_MODULE_20__["ConfigService"], _services_router_service__WEBPACK_IMPORTED_MODULE_21__["RouterService"]], multi: true },
+                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: initConfig, deps: [_services_config_service__WEBPACK_IMPORTED_MODULE_21__["ConfigService"], _services_router_service__WEBPACK_IMPORTED_MODULE_22__["RouterService"]], multi: true },
                 { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: setUpI18nCountrySelect, deps: [ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectService"]], multi: true },
                 _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_11__["BackgroundGeolocation"],
                 ngx_clipboard__WEBPACK_IMPORTED_MODULE_12__["ClipboardModule"],
-                _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_22__["Diagnostic"],
+                _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_23__["Diagnostic"],
                 _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_13__["DeviceOrientation"],
                 _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_14__["File"],
-                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_15__["InAppBrowser"],
-                _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_16__["Keyboard"],
-                _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_17__["LaunchNavigator"],
-                _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_18__["SQLite"],
-                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_19__["WebView"],
+                _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__["Geolocation"],
+                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"],
+                _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_17__["Keyboard"],
+                _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_18__["LaunchNavigator"],
+                _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_19__["SQLite"],
+                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_20__["WebView"],
                 ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectService"],
                 ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectModule"]
             ],
@@ -1485,11 +1488,12 @@ var ETaxonomy;
 /*!******************************!*\
   !*** ./src/app/constants.js ***!
   \******************************/
-/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WEBAPP_HOST", function() { return WEBAPP_HOST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SINGLE_MAP_ID", function() { return SINGLE_MAP_ID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POI", function() { return POI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACK", function() { return TRACK; });
@@ -1515,6 +1519,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
+// WEBAPP HOST
+var WEBAPP_HOST = 'wa.webmapp.it';
 // DATA
 var SINGLE_MAP_ID = 'wm-map';
 var POI = 'poi';
@@ -1554,11 +1560,12 @@ var MAP_DEF_EXTENT = [-180, -85, 180, 85];
 /*!******************************!*\
   !*** ./src/app/constants.ts ***!
   \******************************/
-/*! exports provided: SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WEBAPP_HOST", function() { return WEBAPP_HOST; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SINGLE_MAP_ID", function() { return SINGLE_MAP_ID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POI", function() { return POI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TRACK", function() { return TRACK; });
@@ -1584,6 +1591,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
+// WEBAPP HOST
+var WEBAPP_HOST = 'wa.webmapp.it';
 // DATA
 var SINGLE_MAP_ID = 'wm-map';
 var POI = 'poi';
@@ -2347,16 +2356,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeolocationService", function() { return GeolocationService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/background-geolocation/ngx */ "./node_modules/@ionic-native/background-geolocation/ngx/index.js");
-/* harmony import */ var _map_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./map.service */ "./src/app/services/map.service.ts");
-/* harmony import */ var _device_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./device.service */ "./src/app/services/device.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
-/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./config.service */ "./src/app/services/config.service.ts");
-/* harmony import */ var _classes_clocation__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../classes/clocation */ "./src/app/classes/clocation.ts");
-/* harmony import */ var _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../classes/elocation-state.enum */ "./src/app/classes/elocation-state.enum.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
+/* harmony import */ var _map_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./map.service */ "./src/app/services/map.service.ts");
+/* harmony import */ var _device_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./device.service */ "./src/app/services/device.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./config.service */ "./src/app/services/config.service.ts");
+/* harmony import */ var _classes_clocation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../classes/clocation */ "./src/app/classes/clocation.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2377,39 +2385,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var GeolocationService = /** @class */ (function () {
-    function GeolocationService(_alertController, _backgroundGeolocation, _configService, _deviceService, _mapService, _ngZone, _platform, _translateService) {
+    function GeolocationService(_alertController, _configService, _deviceService, _geolocation, _mapService, _ngZone, _platform, _translateService) {
         var _this = this;
         this._alertController = _alertController;
-        this._backgroundGeolocation = _backgroundGeolocation;
         this._configService = _configService;
         this._deviceService = _deviceService;
+        this._geolocation = _geolocation;
         this._mapService = _mapService;
         this._ngZone = _ngZone;
         this._platform = _platform;
         this._translateService = _translateService;
-        this._config = {
-            locationProvider: _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationLocationProvider"].RAW_PROVIDER,
-            desiredAccuracy: 10,
-            distanceFilter: 3,
-            stationaryRadius: 0,
-            stopOnTerminate: true,
-            startOnBoot: false,
-            interval: 500,
-            fastestInterval: 500,
-            startForeground: false,
-            notificationTitle: '',
-            notificationText: "",
-            notificationIconColor: '#FF00FF',
-            activityType: 'OtherNavigation',
-            pauseLocationUpdates: false,
-            saveBatteryOnBackground: false,
-            maxLocations: 10000,
-            debug: false,
-            notificationIconSmall: 'location_notification_icon',
-            notificationIconLarge: null
-        };
         this._outsideBboxPresented = false;
         this._useGpsBearing = false;
         this._state = {
@@ -2423,26 +2409,14 @@ var GeolocationService = /** @class */ (function () {
             onDrag: null,
             onRotate: null
         };
-        this.onLocationChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
-        this.onGeolocationStateChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
-        if (!this._deviceService.isBrowser) {
-            this._platform.ready().then(function () {
-                _this._deviceService.onLocationStateChange().subscribe(function (state) {
-                    console.log('stateChange');
-                    if (state === _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].ENABLED) {
-                        _this._start();
-                    }
-                    else {
-                        _this._stop();
-                    }
-                });
-                _this._enableBackgroundGeolocationHandlers();
-            });
-            this._mapService.onReady
-                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["filter"])(function (ready) { return ready; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_7__["take"])(1)).subscribe(function () {
+        this.onLocationChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
+        this.onGeolocationStateChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
+        this._platform.ready().then(function () {
+            _this._mapService.onReady
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["filter"])(function (ready) { return ready; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["take"])(1)).subscribe(function () {
                 _this._start(true);
             });
-        }
+        });
     }
     /**
      * Check if map has been moved to change the geolocation status
@@ -2524,7 +2498,7 @@ var GeolocationService = /** @class */ (function () {
             else
                 return;
         }
-        var newLocation = new _classes_clocation__WEBPACK_IMPORTED_MODULE_9__["CLocation"](rawLocation.longitude, rawLocation.latitude, rawLocation.altitude && typeof rawLocation.altitude === 'number' && !Number.isNaN(rawLocation.altitude) ? rawLocation.altitude : undefined, rawLocation.accuracy && typeof rawLocation.accuracy === 'number' && !Number.isNaN(rawLocation.accuracy) ? rawLocation.accuracy : undefined, rawLocation.speed && typeof rawLocation.speed === 'number' && !Number.isNaN(rawLocation.speed) ? rawLocation.speed : undefined, rawLocation.bearing && typeof rawLocation.bearing === 'number' && !Number.isNaN(rawLocation.bearing) ? rawLocation.bearing : undefined);
+        var newLocation = new _classes_clocation__WEBPACK_IMPORTED_MODULE_8__["CLocation"](rawLocation.longitude, rawLocation.latitude, rawLocation.altitude && typeof rawLocation.altitude === 'number' && !Number.isNaN(rawLocation.altitude) ? rawLocation.altitude : undefined, rawLocation.accuracy && typeof rawLocation.accuracy === 'number' && !Number.isNaN(rawLocation.accuracy) ? rawLocation.accuracy : undefined, rawLocation.speed && typeof rawLocation.speed === 'number' && !Number.isNaN(rawLocation.speed) ? rawLocation.speed : undefined, rawLocation.bearing && typeof rawLocation.bearing === 'number' && !Number.isNaN(rawLocation.bearing) ? rawLocation.bearing : undefined);
         var movePosition = !this._currentLocation || this._mapService.getDistanceBetweenPoints(this._currentLocation, newLocation) > 4;
         if (this._mapService.isInitialized()) {
             if (!this._mapService.isInsideExtent(newLocation)) {
@@ -2553,13 +2527,8 @@ var GeolocationService = /** @class */ (function () {
             this._outsideBboxPresented = false;
             if (this._state.isRotating)
                 this._handleRotationSwitch(newLocation);
-            if (movePosition) {
-                this._mapService.setLocation(newLocation);
-                if (this._state.isFollowing)
-                    this._mapService.centerOnCoords(newLocation);
-            }
-            else
-                this._mapService.setLocationAccuracy(newLocation.accuracy);
+            if (this._state.isFollowing)
+                this._mapService.centerOnCoords(newLocation);
         }
         if (this._state.isLoading) {
             this._state.isLoading = false;
@@ -2569,47 +2538,6 @@ var GeolocationService = /** @class */ (function () {
             this._currentLocation = newLocation;
             this.onLocationChange.next(this._currentLocation);
         }
-    };
-    /**
-     * Enable all the handler for the background geolocation plugin
-     */
-    GeolocationService.prototype._enableBackgroundGeolocationHandlers = function () {
-        var _this = this;
-        this._backgroundGeolocation.on(_ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationEvents"].location).subscribe(function (location) {
-            _this._ngZone.run(function () {
-                _this._backgroundGeolocation.startTask().then(function (task) {
-                    _this._locationUpdate(location);
-                    _this._backgroundGeolocation.endTask(task).then(function () {
-                    });
-                });
-            });
-        });
-        this._backgroundGeolocation.on(_ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationEvents"].stationary).subscribe(function (location) {
-            _this._ngZone.run(function () {
-                _this._backgroundGeolocation.startTask().then(function (task) {
-                    _this._locationUpdate(location);
-                    _this._backgroundGeolocation.endTask(task).then(function () {
-                    });
-                });
-            });
-        });
-        this._backgroundGeolocation.on(_ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationEvents"].error).subscribe(function (location) {
-            _this._ngZone.run(function () {
-                _this._backgroundGeolocation.stop().then(function () {
-                    _this._backgroundGeolocation.start();
-                });
-            });
-        });
-        this._backgroundGeolocation.on(_ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationEvents"].background).subscribe(function () {
-            _this._ngZone.run(function () {
-                _this._backgroundGeolocation.stop();
-            });
-        });
-        this._backgroundGeolocation.on(_ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocationEvents"].foreground).subscribe(function () {
-            _this._ngZone.run(function () {
-                _this._backgroundGeolocation.start();
-            });
-        });
     };
     /**
      * Check permissions, enable GPS and start to track the position showing it in the map
@@ -2623,103 +2551,68 @@ var GeolocationService = /** @class */ (function () {
                 resolve(_this._state);
                 return;
             }
-            if (!_this._deviceService.isBrowser) {
-                _this._backgroundGeolocation.configure(_this._config).then(function () {
-                    _this._enableMapEventListeners();
-                    _this._state.isLoading = true;
-                    _this.onGeolocationStateChange.next(_this._state);
-                    _this._deviceService.enableGPS(force).then(function (gpsState) {
-                        switch (gpsState) {
-                            case _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].ENABLED_WHEN_IN_USE:
-                            case _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].ENABLED:
-                                _this._backgroundGeolocation.getCurrentLocation({
-                                    timeout: 15000,
-                                    maximumAge: 1000 * 60 * 60 * 2,
-                                    enableHighAccuracy: false
-                                }).then(function (location) {
-                                    if (!_this._currentLocation)
-                                        _this._locationUpdate(location, true);
-                                }, function () { });
-                                _this._state.isActive = true;
-                                _this._state.isFollowing = true;
-                                _this._backgroundGeolocation.start();
-                                _this.onGeolocationStateChange.next(_this._state);
-                                resolve(_this._state);
-                                break;
-                            case _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].SETTINGS:
-                            case _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].NOT_ENABLED:
-                            default:
-                                _this._state.isActive = false;
-                                _this._state.isLoading = false;
-                                _this._state.isFollowing = false;
-                                _this._state.isRotating = false;
-                                _this.onGeolocationStateChange.next(_this._state);
-                                reject(gpsState);
-                                break;
-                            case _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_10__["ELocationState"].NOT_AUTHORIZED:
-                                _this._alertController.create({
-                                    header: _this._translateService.instant('alert.warning'),
-                                    message: _this._translateService.instant('alert.gpsAuthorization'),
-                                    buttons: [
-                                        {
-                                            text: _this._translateService.instant('buttons.ok'),
-                                            cssClass: 'primary'
-                                        }
-                                    ]
-                                }).then(function (alert) {
-                                    alert.present();
-                                });
-                                _this._state.isActive = false;
-                                _this._state.isLoading = false;
-                                _this._state.isFollowing = false;
-                                _this._state.isRotating = false;
-                                _this.onGeolocationStateChange.next(_this._state);
-                                reject(gpsState);
-                                break;
-                        }
-                    }, function (error) {
-                        reject(error);
-                    });
-                }, function (error) {
-                    reject(error);
-                });
-            }
-            else {
-                if (_this._deviceService.isLocalServer) {
-                    _this._enableMapEventListeners();
-                    _this._state.isActive = true;
-                    _this._state.isLoading = true;
-                    _this._state.isFollowing = true;
-                    _this._state.isRotating = false;
-                    _this.onGeolocationStateChange.next(_this._state);
-                    setInterval(function () {
-                        var center = _this._configService.getMapCenter(), extent = _this._configService.getMapExtent();
-                        var alt = Math.random() * 5000, lat = center[1], lng = center[0], acc = 5 + Math.random() * 100, speed = 1 + Math.random() * 50, bearing = Math.random() * 360;
-                        if (_this._currentLocation) {
-                            alt = Math.max(10, _this._currentLocation.altitude + (-25 + Math.random() * 50));
-                            lat = Math.max(extent[1], Math.min(extent[3], _this._currentLocation.latitude + (-0.0001 + Math.random() / 5000)));
-                            lng = Math.max(extent[0], Math.min(extent[2], _this._currentLocation.longitude + (-0.0001 + Math.random() / 5000)));
-                            if (!_this._currentLocation.bearing || Number.isNaN(_this._currentLocation.bearing))
-                                bearing = 0;
-                            else
-                                bearing = _this._currentLocation.bearing + (-10 + Math.random() * 20);
-                        }
-                        _this._locationUpdate({
-                            altitude: alt,
-                            latitude: lat,
-                            longitude: lng,
-                            id: 1,
-                            accuracy: acc,
-                            time: Date.now(),
-                            speed: speed,
-                            locationProvider: undefined,
+            if (true) {
+                _this._enableMapEventListeners();
+                _this._state.isActive = true;
+                _this._state.isLoading = true;
+                _this._state.isFollowing = true;
+                _this._state.isRotating = false;
+                _this.onGeolocationStateChange.next(_this._state);
+                _this._geolocation.getCurrentPosition({
+                    timeout: _constants__WEBPACK_IMPORTED_MODULE_9__["GEOLOCATION_TIMEOUT_TIME"],
+                    enableHighAccuracy: true
+                }).then(function (location) {
+                    if (location && location.coords) {
+                        var rawLocation = {
+                            id: -1,
+                            longitude: location.coords.longitude,
+                            latitude: location.coords.latitude,
+                            altitude: location.coords.altitude,
+                            accuracy: location.coords.accuracy,
+                            speed: location.coords.speed,
+                            bearing: location.coords.heading,
+                            time: location.timestamp,
                             provider: undefined,
-                            bearing: bearing
-                        });
-                    }, 2000);
-                }
-                resolve(_this._state);
+                            locationProvider: undefined
+                        };
+                        _this._locationUpdate(rawLocation, true);
+                    }
+                }, function (err) {
+                    console.warn(err);
+                });
+                // if (this._locationWatch) {
+                //   try {
+                //     this._locationWatch.unsubscribe();
+                //   }
+                //   catch (e) { }
+                // }
+                // this._locationWatch = this._geolocation.watchPosition({
+                //   timeout: GEOLOCATION_TIMEOUT_TIME,
+                //   enableHighAccuracy: true
+                // });
+                // this._locationWatch.subscribe((location: Geoposition) => {
+                //   if (location && location.coords) {
+                //     let rawLocation: BackgroundGeolocationResponse = {
+                //       id: -1,
+                //       longitude: location.coords.longitude,
+                //       latitude: location.coords.latitude,
+                //       altitude: location.coords.altitude,
+                //       accuracy: location.coords.accuracy,
+                //       speed: location.coords.speed,
+                //       bearing: location.coords.heading,
+                //       time: location.timestamp,
+                //       provider: undefined,
+                //       locationProvider: undefined
+                //     };
+                //     this._locationUpdate(rawLocation, false);
+                //   }
+                // }, (err: any) => {
+                //   console.warn(err);
+                //   this._start();
+                // });
             }
+            else {}
+            resolve(_this._state);
         });
     };
     /**
@@ -2728,10 +2621,7 @@ var GeolocationService = /** @class */ (function () {
     GeolocationService.prototype._stop = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            if (!_this._deviceService.isBrowser)
-                _this._backgroundGeolocation.stop();
             _this._disableMapEventListeners();
-            _this._mapService.removeLocation();
             _this._toggleFollow(false);
             _this._toggleRotation(false);
             _this._state.isActive = false;
@@ -2826,13 +2716,11 @@ var GeolocationService = /** @class */ (function () {
     GeolocationService.prototype._toggleFollow = function (enable) {
         if (!this._state.isFollowing && (enable || typeof enable === 'undefined')) {
             this._state.isFollowing = true;
-            if (this._currentLocation && this._currentLocation.latitude && this._currentLocation.longitude) {
+            if (this._currentLocation && this._currentLocation.latitude && this._currentLocation.longitude)
                 this._mapService.centerOnCoords(this._currentLocation);
-            }
         }
-        else if (this._state.isFollowing && (!enable || typeof enable === 'undefined')) {
+        else if (this._state.isFollowing && (!enable || typeof enable === 'undefined'))
             this._state.isFollowing = false;
-        }
     };
     /**
      * Toggle the rotation of the map based on compass
@@ -2840,12 +2728,10 @@ var GeolocationService = /** @class */ (function () {
     GeolocationService.prototype._toggleRotation = function (enable) {
         if (!this._state.isRotating && (enable || typeof enable === 'undefined')) {
             this._state.isRotating = true;
-            if (this._currentLocation && this._currentLocation.bearing && this._currentLocation.speed && this._currentLocation.speed > _constants__WEBPACK_IMPORTED_MODULE_11__["MIN_SPEED_FOR_GPS_BEARING"]) {
+            if (this._currentLocation && this._currentLocation.bearing && this._currentLocation.speed && this._currentLocation.speed > _constants__WEBPACK_IMPORTED_MODULE_9__["MIN_SPEED_FOR_GPS_BEARING"])
                 this._toggleRotationType('gps');
-            }
-            else {
+            else
                 this._toggleRotationType('compass');
-            }
         }
         else if (this._state.isRotating && (!enable || typeof enable === 'undefined')) {
             if (this._rotationSwitchTimeout) {
@@ -2857,7 +2743,6 @@ var GeolocationService = /** @class */ (function () {
             this._state.isRotating = false;
             this._mapService.rotate(0, 500);
             this._toggleCompassRotation(false);
-            this._mapService.toggleLocationIcon("location");
         }
     };
     /**
@@ -2869,20 +2754,16 @@ var GeolocationService = /** @class */ (function () {
         var _this = this;
         if (enable || typeof enable === 'undefined') {
             if (typeof this._rotationWatch === 'undefined' || typeof this._rotationWatch.unsubscribe !== 'function') {
-                if (!this._deviceService.isBrowser) {
-                    this._rotationWatch = this._deviceService.onCompassOrientationChange()
-                        .subscribe(function (orientation) {
-                        _this._mapService.rotate(-orientation.trueHeading, 300);
-                    });
-                }
+                this._rotationWatch = this._deviceService.onCompassOrientationChange()
+                    .subscribe(function (orientation) {
+                    _this._mapService.rotate(-orientation.trueHeading, 300);
+                });
             }
         }
         else if (!enable || typeof enable === 'undefined') {
             if (typeof this._rotationWatch !== 'undefined' && typeof this._rotationWatch.unsubscribe === 'function') {
-                if (!this._deviceService.isBrowser) {
-                    this._rotationWatch.unsubscribe();
-                    this._rotationWatch = undefined;
-                }
+                this._rotationWatch.unsubscribe();
+                this._rotationWatch = undefined;
             }
         }
     };
@@ -2893,7 +2774,7 @@ var GeolocationService = /** @class */ (function () {
      */
     GeolocationService.prototype._handleRotationSwitch = function (newLocation) {
         var _this = this;
-        if (newLocation.speed > _constants__WEBPACK_IMPORTED_MODULE_11__["MIN_SPEED_FOR_GPS_BEARING"] && newLocation.bearing) {
+        if (newLocation.speed > _constants__WEBPACK_IMPORTED_MODULE_9__["MIN_SPEED_FOR_GPS_BEARING"] && newLocation.bearing) {
             if (!this._useGpsBearing) //first valid position: keep compass
                 this._useGpsBearing = true;
             else { //valid position confirmation: change to gps
@@ -2906,7 +2787,7 @@ var GeolocationService = /** @class */ (function () {
                     _this._toggleRotationType('compass');
                     _this._useGpsBearing = false;
                     _this._rotationSwitchTimeout = undefined;
-                }, _constants__WEBPACK_IMPORTED_MODULE_11__["COMPASS_ROTATION_TIMEOUT"]);
+                }, _constants__WEBPACK_IMPORTED_MODULE_9__["COMPASS_ROTATION_TIMEOUT"]);
             }
         }
         else {
@@ -2922,12 +2803,10 @@ var GeolocationService = /** @class */ (function () {
     GeolocationService.prototype._toggleRotationType = function (type) {
         switch (type) {
             case 'gps':
-                this._mapService.toggleLocationIcon("arrow");
                 this._toggleCompassRotation(false);
                 break;
             case 'compass':
             default:
-                this._mapService.toggleLocationIcon("location");
                 this._toggleCompassRotation(true);
                 break;
         }
@@ -2937,13 +2816,13 @@ var GeolocationService = /** @class */ (function () {
             providedIn: 'root'
         }),
         __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["AlertController"],
-            _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_2__["BackgroundGeolocation"],
-            _config_service__WEBPACK_IMPORTED_MODULE_8__["ConfigService"],
-            _device_service__WEBPACK_IMPORTED_MODULE_4__["DeviceService"],
-            _map_service__WEBPACK_IMPORTED_MODULE_3__["MapService"],
+            _config_service__WEBPACK_IMPORTED_MODULE_7__["ConfigService"],
+            _device_service__WEBPACK_IMPORTED_MODULE_3__["DeviceService"],
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_10__["Geolocation"],
+            _map_service__WEBPACK_IMPORTED_MODULE_2__["MapService"],
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"],
-            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateService"]])
+            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateService"]])
     ], GeolocationService);
     return GeolocationService;
 }());
@@ -3104,39 +2983,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var ol_extent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ol/extent */ "./node_modules/ol/extent.js");
 /* harmony import */ var ol_source_UTFGrid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ol/source/UTFGrid */ "./node_modules/ol/source/UTFGrid.js");
-/* harmony import */ var ol_sphere_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ol/sphere.js */ "./node_modules/ol/sphere.js");
-/* harmony import */ var ol_proj__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ol/proj */ "./node_modules/ol/proj.js");
-/* harmony import */ var ol_geom_Circle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ol/geom/Circle */ "./node_modules/ol/geom/Circle.js");
-/* harmony import */ var ol_Feature__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ol/Feature */ "./node_modules/ol/Feature.js");
-/* harmony import */ var ol_format_Geojson__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/format/Geojson */ "./node_modules/ol/format/Geojson.js");
-/* harmony import */ var ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ol/style/Icon */ "./node_modules/ol/style/Icon.js");
-/* harmony import */ var ol_geom_LineString__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ol/geom/LineString */ "./node_modules/ol/geom/LineString.js");
-/* harmony import */ var ol_Map__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ol/Map */ "./node_modules/ol/Map.js");
-/* harmony import */ var ol_Overlay__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ol/Overlay */ "./node_modules/ol/Overlay.js");
-/* harmony import */ var ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ol/OverlayPositioning */ "./node_modules/ol/OverlayPositioning.js");
-/* harmony import */ var ol_geom_Point__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ol/geom/Point */ "./node_modules/ol/geom/Point.js");
-/* harmony import */ var ol_control_Rotate__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ol/control/Rotate */ "./node_modules/ol/control/Rotate.js");
-/* harmony import */ var ol_control_Scaleline__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ol/control/Scaleline */ "./node_modules/ol/control/Scaleline.js");
-/* harmony import */ var ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ol/style/Stroke */ "./node_modules/ol/style/Stroke.js");
-/* harmony import */ var ol_style_Style__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ol/style/Style */ "./node_modules/ol/style/Style.js");
-/* harmony import */ var ol_source_TileJSON__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ol/source/TileJSON */ "./node_modules/ol/source/TileJSON.js");
-/* harmony import */ var ol_layer_Tile__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ol/layer/Tile */ "./node_modules/ol/layer/Tile.js");
-/* harmony import */ var ol_TileState__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ol/TileState */ "./node_modules/ol/TileState.js");
-/* harmony import */ var ol_layer_Vector__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ol/layer/Vector */ "./node_modules/ol/layer/Vector.js");
-/* harmony import */ var ol_source_Vector__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ol/source/Vector */ "./node_modules/ol/source/Vector.js");
-/* harmony import */ var ol_View__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ol/View */ "./node_modules/ol/View.js");
-/* harmony import */ var ol_source_XYZ__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ol/source/XYZ */ "./node_modules/ol/source/XYZ.js");
-/* harmony import */ var ol_control_Zoom__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ol/control/Zoom */ "./node_modules/ol/control/Zoom.js");
-/* harmony import */ var proj4__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! proj4 */ "./node_modules/proj4/lib/index.js");
-/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./config.service */ "./src/app/services/config.service.ts");
-/* harmony import */ var _model_service__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./model.service */ "./src/app/services/model.service.ts");
-/* harmony import */ var _theme_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./theme.service */ "./src/app/services/theme.service.ts");
-/* harmony import */ var _device_service__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./device.service */ "./src/app/services/device.service.ts");
-/* harmony import */ var _router_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./router.service */ "./src/app/services/router.service.ts");
-/* harmony import */ var _classes_clocation__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../classes/clocation */ "./src/app/classes/clocation.ts");
-/* harmony import */ var ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ol/style/Fill */ "./node_modules/ol/style/Fill.js");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
-/* harmony import */ var ol_interaction__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ol/interaction */ "./node_modules/ol/interaction.js");
+/* harmony import */ var ol_interaction__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ol/interaction */ "./node_modules/ol/interaction.js");
+/* harmony import */ var ol_sphere_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ol/sphere.js */ "./node_modules/ol/sphere.js");
+/* harmony import */ var ol_proj__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ol/proj */ "./node_modules/ol/proj.js");
+/* harmony import */ var ol_geom_Circle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ol/geom/Circle */ "./node_modules/ol/geom/Circle.js");
+/* harmony import */ var ol_Feature__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ol/Feature */ "./node_modules/ol/Feature.js");
+/* harmony import */ var ol_style_Fill__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ol/style/Fill */ "./node_modules/ol/style/Fill.js");
+/* harmony import */ var ol_format_Geojson__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ol/format/Geojson */ "./node_modules/ol/format/Geojson.js");
+/* harmony import */ var ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ol/style/Icon */ "./node_modules/ol/style/Icon.js");
+/* harmony import */ var ol_geom_LineString__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ol/geom/LineString */ "./node_modules/ol/geom/LineString.js");
+/* harmony import */ var ol_Map__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ol/Map */ "./node_modules/ol/Map.js");
+/* harmony import */ var ol_Overlay__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ol/Overlay */ "./node_modules/ol/Overlay.js");
+/* harmony import */ var ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ol/OverlayPositioning */ "./node_modules/ol/OverlayPositioning.js");
+/* harmony import */ var ol_geom_Point__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ol/geom/Point */ "./node_modules/ol/geom/Point.js");
+/* harmony import */ var ol_control_Rotate__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ol/control/Rotate */ "./node_modules/ol/control/Rotate.js");
+/* harmony import */ var ol_control_Scaleline__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ol/control/Scaleline */ "./node_modules/ol/control/Scaleline.js");
+/* harmony import */ var ol_style_Stroke__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ol/style/Stroke */ "./node_modules/ol/style/Stroke.js");
+/* harmony import */ var ol_style_Style__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ol/style/Style */ "./node_modules/ol/style/Style.js");
+/* harmony import */ var ol_source_TileJSON__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ol/source/TileJSON */ "./node_modules/ol/source/TileJSON.js");
+/* harmony import */ var ol_layer_Tile__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ol/layer/Tile */ "./node_modules/ol/layer/Tile.js");
+/* harmony import */ var ol_TileState__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ol/TileState */ "./node_modules/ol/TileState.js");
+/* harmony import */ var ol_layer_Vector__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ol/layer/Vector */ "./node_modules/ol/layer/Vector.js");
+/* harmony import */ var ol_source_Vector__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ol/source/Vector */ "./node_modules/ol/source/Vector.js");
+/* harmony import */ var ol_View__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ol/View */ "./node_modules/ol/View.js");
+/* harmony import */ var ol_source_XYZ__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ol/source/XYZ */ "./node_modules/ol/source/XYZ.js");
+/* harmony import */ var ol_control_Zoom__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ol/control/Zoom */ "./node_modules/ol/control/Zoom.js");
+/* harmony import */ var proj4__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! proj4 */ "./node_modules/proj4/lib/index.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../constants */ "./src/app/constants.ts");
+/* harmony import */ var _classes_clocation__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../classes/clocation */ "./src/app/classes/clocation.ts");
+/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./config.service */ "./src/app/services/config.service.ts");
+/* harmony import */ var _device_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./device.service */ "./src/app/services/device.service.ts");
+/* harmony import */ var _model_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./model.service */ "./src/app/services/model.service.ts");
+/* harmony import */ var _router_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./router.service */ "./src/app/services/router.service.ts");
+/* harmony import */ var _theme_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./theme.service */ "./src/app/services/theme.service.ts");
 /**
  * Map Service
  *
@@ -3172,8 +3051,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
- // Throws problems importing normally
 
+ // Throws problems importing normally
 
 
 
@@ -3230,21 +3109,21 @@ var MapService = /** @class */ (function () {
             circle: null,
             icon: "locationIcon"
         };
-        this._locationIconArrow = new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
+        this._locationIconArrow = new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
             src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/location-icon-arrow.png',
             scale: 0.33,
             size: [125, 125],
             rotateWithView: false
         });
-        this._locationIconStyle = new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-            image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
+        this._locationIconStyle = new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+            image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
                 src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/location-icon.png',
                 scale: 0.29,
                 size: [125, 125]
             }),
             zIndex: 600
         });
-        this._locationIconArrowStyle = new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
+        this._locationIconArrowStyle = new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
             image: this._locationIconArrow,
             zIndex: 600
         });
@@ -3258,24 +3137,24 @@ var MapService = /** @class */ (function () {
             .subscribe(function () {
             var coords = _this._configService.getMapCenter();
             if (coords)
-                _this.centerOnCoords(new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](coords[0], coords[1]), _this._configService.getMapDefZoom() || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_ZOOM"]);
+                _this.centerOnCoords(new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](coords[0], coords[1]), _this._configService.getMapDefZoom() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ZOOM"]);
         });
     }
     MapService.prototype._toLonLat = function (coordinates) {
-        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_6__["transform"])(coordinates, 'EPSG:3857', 'EPSG:4326');
+        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_7__["transform"])(coordinates, 'EPSG:3857', 'EPSG:4326');
     };
     MapService.prototype._fromLonLat = function (coordinates) {
-        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_6__["transform"])(coordinates, 'EPSG:4326', 'EPSG:3857');
+        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_7__["transform"])(coordinates, 'EPSG:4326', 'EPSG:3857');
     };
     MapService.prototype._extentToLonLat = function (extent) {
-        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_6__["transformExtent"])(extent, 'EPSG:3857', 'EPSG:4326');
+        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_7__["transformExtent"])(extent, 'EPSG:3857', 'EPSG:4326');
     };
     MapService.prototype._extentFromLonLat = function (extent) {
-        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_6__["transformExtent"])(extent, 'EPSG:4326', 'EPSG:3857');
+        return Object(ol_proj__WEBPACK_IMPORTED_MODULE_7__["transformExtent"])(extent, 'EPSG:4326', 'EPSG:3857');
     };
     MapService.prototype.getUTMCoords = function (location) {
         var etrs89projection = "+proj=utm +zone=32 +ellps=GRS80 +units=m +no_defs ";
-        var etrs89coords = Object(proj4__WEBPACK_IMPORTED_MODULE_28__["default"])(etrs89projection, [location.longitude, location.latitude]);
+        var etrs89coords = Object(proj4__WEBPACK_IMPORTED_MODULE_30__["default"])(etrs89projection, [location.longitude, location.latitude]);
         etrs89coords[0] = Math.round(etrs89coords[0]);
         etrs89coords[1] = Math.round(etrs89coords[1]);
         return etrs89coords;
@@ -3285,7 +3164,7 @@ var MapService = /** @class */ (function () {
         var tilesUrl = layer.tilesUrl;
         if (tilesUrl[tilesUrl.length - 1] !== '/')
             tilesUrl += '/';
-        return new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_26__["default"]({
+        return new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_28__["default"]({
             maxZoom: 21,
             minZoom: 1,
             tileLoadFunction: function (tile, url) {
@@ -3345,7 +3224,7 @@ var MapService = /** @class */ (function () {
         var defaultSet = false;
         // return;
         for (var i in layers) {
-            this._map.addLayer(new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_21__["default"]({
+            this._map.addLayer(new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_23__["default"]({
                 source: this._getBaseSource(layers[i]),
                 visible: layers[i].default && !defaultSet ? true : false,
                 zIndex: 1
@@ -3364,8 +3243,8 @@ var MapService = /** @class */ (function () {
                 tilesUrl = overlay.tilesUrl;
                 if (tilesUrl[tilesUrl.length - 1] !== '/')
                     tilesUrl += '/';
-                layer = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_21__["default"]({
-                    source: new ol_source_TileJSON__WEBPACK_IMPORTED_MODULE_20__["default"]({
+                layer = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_23__["default"]({
+                    source: new ol_source_TileJSON__WEBPACK_IMPORTED_MODULE_22__["default"]({
                         tileJSON: {
                             tiles: [tilesUrl + '{z}/{x}/{y}.png'],
                             grids: [tilesUrl + '{z}/{x}/{y}.grid.json'],
@@ -3395,8 +3274,8 @@ var MapService = /** @class */ (function () {
                 tilesUrl = overlay.tilesUrl;
                 if (tilesUrl[tilesUrl.length - 1] !== '/')
                     tilesUrl += '/';
-                layer = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_21__["default"]({
-                    source: new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_26__["default"]({
+                layer = new ol_layer_Tile__WEBPACK_IMPORTED_MODULE_23__["default"]({
+                    source: new ol_source_XYZ__WEBPACK_IMPORTED_MODULE_28__["default"]({
                         tileLoadFunction: function (tile, url) {
                             var coords = [0, 0, 0];
                             var tmp = url.split('/');
@@ -3461,7 +3340,7 @@ var MapService = /** @class */ (function () {
                 for (var i in layers) {
                     if (values[i]) {
                         var coord = _this._gridLayers[layers[i].id].getSource().getTileGrid().getTileCoordForCoordAndResolution(coordinate, _this._view.getResolution());
-                        var tmp = new ol_source_UTFGrid__WEBPACK_IMPORTED_MODULE_4__["CustomTile"](coord, ol_TileState__WEBPACK_IMPORTED_MODULE_22__["default"].LOADED, layers[i].tilesUrl + coord[0] + '/' + coord[1] + '/' + -coord[2] + '.grid.json', _this._gridLayers[layers[i].id].getSource().getTileGrid().getTileCoordExtent(coord), true, false);
+                        var tmp = new ol_source_UTFGrid__WEBPACK_IMPORTED_MODULE_4__["CustomTile"](coord, ol_TileState__WEBPACK_IMPORTED_MODULE_24__["default"].LOADED, layers[i].tilesUrl + coord[0] + '/' + coord[1] + '/' + -coord[2] + '.grid.json', _this._gridLayers[layers[i].id].getSource().getTileGrid().getTileCoordExtent(coord), true, false);
                         tmp.keys_ = values[i].keys;
                         tmp.data_ = values[i].data;
                         tmp.grid_ = values[i].grid;
@@ -3488,20 +3367,20 @@ var MapService = /** @class */ (function () {
             rotateIcon.style.transform = 'rotate(-45deg)';
             divRotateIcon.appendChild(rotateIcon);
             var defZoom = this._configService.getMapDefZoom(), center = this._configService.getMapCenter();
-            this._view = new ol_View__WEBPACK_IMPORTED_MODULE_25__["default"]({
-                center: this._fromLonLat(center || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_CENTER"]),
-                zoom: defZoom || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_ZOOM"],
+            this._view = new ol_View__WEBPACK_IMPORTED_MODULE_27__["default"]({
+                center: this._fromLonLat(center || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_CENTER"]),
+                zoom: defZoom || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ZOOM"],
                 maxZoom: this._configService.getMapMaxZoom(),
                 minZoom: this._configService.getMapMinZoom(),
                 projection: 'EPSG:3857',
                 extent: this._extentFromLonLat(this._configService.getMapExtent())
             });
-            this._map = new ol_Map__WEBPACK_IMPORTED_MODULE_12__["default"]({
+            this._map = new ol_Map__WEBPACK_IMPORTED_MODULE_14__["default"]({
                 target: 'map',
                 view: this._view,
                 controls: [
-                    new ol_control_Zoom__WEBPACK_IMPORTED_MODULE_27__["default"](),
-                    new ol_control_Rotate__WEBPACK_IMPORTED_MODULE_16__["default"]({
+                    new ol_control_Zoom__WEBPACK_IMPORTED_MODULE_29__["default"](),
+                    new ol_control_Rotate__WEBPACK_IMPORTED_MODULE_18__["default"]({
                         label: divRotateIcon,
                         autoHide: true,
                         resetNorth: function () {
@@ -3509,12 +3388,14 @@ var MapService = /** @class */ (function () {
                             _this.rotate(0, 500);
                         }
                     }),
-                    new ol_control_Scaleline__WEBPACK_IMPORTED_MODULE_17__["default"]({
+                    new ol_control_Scaleline__WEBPACK_IMPORTED_MODULE_19__["default"]({
                         units: 'metric',
                         minWidth: 50
                     })
                 ],
-                interactions: Object(ol_interaction__WEBPACK_IMPORTED_MODULE_37__["defaults"])({ mouseWheelZoom: false }),
+                interactions: Object(ol_interaction__WEBPACK_IMPORTED_MODULE_5__["defaults"])({
+                    mouseWheelZoom: this._deviceService.isLocalServer || window.location.hostname === _constants__WEBPACK_IMPORTED_MODULE_31__["WEBAPP_HOST"] ? true : false
+                }),
                 moveTolerance: 3,
                 loadTilesWhileAnimating: true,
                 loadTilesWhileInteracting: this._deviceService.isBrowser ? true : false
@@ -3534,10 +3415,10 @@ var MapService = /** @class */ (function () {
                 var tmp = event;
                 _this.onZoom.emit(tmp.target.values_);
             });
-            this._dataSource = new ol_source_Vector__WEBPACK_IMPORTED_MODULE_24__["default"]({
-                format: new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_9__["default"]()
+            this._dataSource = new ol_source_Vector__WEBPACK_IMPORTED_MODULE_26__["default"]({
+                format: new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_11__["default"]()
             });
-            this._dataLayer = new ol_layer_Vector__WEBPACK_IMPORTED_MODULE_23__["default"]({
+            this._dataLayer = new ol_layer_Vector__WEBPACK_IMPORTED_MODULE_25__["default"]({
                 source: this._dataSource,
                 style: function (feature, resolution) {
                     return _this._style(feature);
@@ -3585,9 +3466,9 @@ var MapService = /** @class */ (function () {
                 }
             });
             this._configService.onMapConfigChange.subscribe(function () {
-                _this._view = new ol_View__WEBPACK_IMPORTED_MODULE_25__["default"]({
-                    center: _this._fromLonLat(_this._configService.getMapCenter() || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_CENTER"]),
-                    zoom: _this._configService.getMapDefZoom() || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_ZOOM"],
+                _this._view = new ol_View__WEBPACK_IMPORTED_MODULE_27__["default"]({
+                    center: _this._fromLonLat(_this._configService.getMapCenter() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_CENTER"]),
+                    zoom: _this._configService.getMapDefZoom() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ZOOM"],
                     maxZoom: _this._configService.getMapMaxZoom(),
                     minZoom: _this._configService.getMapMinZoom(),
                     projection: 'EPSG:3857',
@@ -3629,7 +3510,7 @@ var MapService = /** @class */ (function () {
      * @param point2 the second location
      */
     MapService.prototype.getFixedDistance = function (point1, point2) {
-        return Object(ol_sphere_js__WEBPACK_IMPORTED_MODULE_5__["getDistance"])([point1.longitude, point1.latitude], [point2.longitude, point2.latitude]) / this._view.getResolution();
+        return Object(ol_sphere_js__WEBPACK_IMPORTED_MODULE_6__["getDistance"])([point1.longitude, point1.latitude], [point2.longitude, point2.latitude]) / this._view.getResolution();
     };
     /**
      * Return the distance in meters between the specified point and the current location
@@ -3640,7 +3521,7 @@ var MapService = /** @class */ (function () {
         if (this._geolocationIcon.point) {
             var coordinates = this._geolocationIcon.point.getCoordinates();
             coordinates = this._toLonLat(coordinates);
-            return this.getDistanceBetweenPoints(point, new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](coordinates[0], coordinates[1]));
+            return this.getDistanceBetweenPoints(point, new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](coordinates[0], coordinates[1]));
         }
         else
             return -1;
@@ -3677,7 +3558,7 @@ var MapService = /** @class */ (function () {
                 if (_this._features[feature.getId() + ''].properties.noInteraction)
                     return;
                 if (feature.getGeometry().getType() === 'Point') {
-                    var coord = feature.getGeometry().getCoordinates(), l1 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](_this._toLonLat(coord)[0], _this._toLonLat(coord)[1]), l2 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](_this._toLonLat(event.coordinate)[0], _this._toLonLat(event.coordinate)[1]), dist = _this.getFixedDistance(l1, l2);
+                    var coord = feature.getGeometry().getCoordinates(), l1 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](_this._toLonLat(coord)[0], _this._toLonLat(coord)[1]), l2 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](_this._toLonLat(event.coordinate)[0], _this._toLonLat(event.coordinate)[1]), dist = _this.getFixedDistance(l1, l2);
                     if (dist < minPoiDistance) {
                         minPoiDistance = dist;
                         poi = feature;
@@ -3689,7 +3570,7 @@ var MapService = /** @class */ (function () {
                         coord = feature.getGeometry().getClosestPoint(event.coordinate);
                     else
                         coord = feature.getGeometry().getClosestPoint(event.coordinate);
-                    var l1 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](_this._toLonLat(coord)[0], _this._toLonLat(coord)[1]), l2 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](_this._toLonLat(event.coordinate)[0], _this._toLonLat(event.coordinate)[1]), dist = _this.getFixedDistance(l1, l2);
+                    var l1 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](_this._toLonLat(coord)[0], _this._toLonLat(coord)[1]), l2 = new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](_this._toLonLat(event.coordinate)[0], _this._toLonLat(event.coordinate)[1]), dist = _this.getFixedDistance(l1, l2);
                     if (dist < minTrackDistance) {
                         minTrackDistance = dist;
                         track = feature;
@@ -3826,8 +3707,8 @@ var MapService = /** @class */ (function () {
      */
     MapService.prototype.fitExtent = function (extent, padding, duration) {
         extent = this._extentFromLonLat(extent || this._configService.getMapExtent());
-        padding = padding || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_FIT_PADDING"];
-        duration = duration || _constants__WEBPACK_IMPORTED_MODULE_36__["MAP_DEF_ANIMATION_DURATION"];
+        padding = padding || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_FIT_PADDING"];
+        duration = duration || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ANIMATION_DURATION"];
         this._view.fit(extent, {
             padding: padding,
             duration: duration
@@ -3842,8 +3723,8 @@ var MapService = /** @class */ (function () {
         var mapLocation = this._fromLonLat([location.longitude, location.latitude]);
         // Handle point
         if (!this._geolocationIcon.location) {
-            this._geolocationIcon.location = new ol_Feature__WEBPACK_IMPORTED_MODULE_8__["default"]();
-            this._geolocationIcon.point = new ol_geom_Point__WEBPACK_IMPORTED_MODULE_15__["default"](mapLocation);
+            this._geolocationIcon.location = new ol_Feature__WEBPACK_IMPORTED_MODULE_9__["default"]();
+            this._geolocationIcon.point = new ol_geom_Point__WEBPACK_IMPORTED_MODULE_17__["default"](mapLocation);
             this._geolocationIcon.location.setGeometry(this._geolocationIcon.point);
             this._geolocationIcon.location.setStyle(this._locationIconStyle);
         }
@@ -3851,15 +3732,15 @@ var MapService = /** @class */ (function () {
             this._geolocationIcon.point.setCoordinates(mapLocation);
         // Handle accuracy
         if (!this._geolocationIcon.accuracy) {
-            this._geolocationIcon.accuracy = new ol_Feature__WEBPACK_IMPORTED_MODULE_8__["default"]();
-            this._geolocationIcon.circle = new ol_geom_Circle__WEBPACK_IMPORTED_MODULE_7__["default"](mapLocation, location.accuracy);
+            this._geolocationIcon.accuracy = new ol_Feature__WEBPACK_IMPORTED_MODULE_9__["default"]();
+            this._geolocationIcon.circle = new ol_geom_Circle__WEBPACK_IMPORTED_MODULE_8__["default"](mapLocation, location.accuracy);
             this._geolocationIcon.accuracy.setGeometry(this._geolocationIcon.circle);
         }
         else
             this._geolocationIcon.circle.setCenterAndRadius(mapLocation, location.accuracy);
         if (!this._geolocationIcon.layer) {
-            this._geolocationIcon.layer = new ol_layer_Vector__WEBPACK_IMPORTED_MODULE_23__["default"]({
-                source: new ol_source_Vector__WEBPACK_IMPORTED_MODULE_24__["default"]({
+            this._geolocationIcon.layer = new ol_layer_Vector__WEBPACK_IMPORTED_MODULE_25__["default"]({
+                source: new ol_source_Vector__WEBPACK_IMPORTED_MODULE_26__["default"]({
                     features: [this._geolocationIcon.location, this._geolocationIcon.accuracy]
                 }),
                 updateWhileAnimating: true,
@@ -3954,7 +3835,7 @@ var MapService = /** @class */ (function () {
      */
     MapService.prototype.getCenter = function () {
         var center = this._toLonLat(this._view.getCenter());
-        return new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](center[0], center[1]);
+        return new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](center[0], center[1]);
     };
     /**
      * Return the current zoom of the map
@@ -3998,13 +3879,13 @@ var MapService = /** @class */ (function () {
                 element.style.top = '1px';
                 element.style.display = 'block';
                 var coordinates = this._features[id].geometry.coordinates;
-                this._map.addOverlay(new ol_Overlay__WEBPACK_IMPORTED_MODULE_13__["default"]({
+                this._map.addOverlay(new ol_Overlay__WEBPACK_IMPORTED_MODULE_15__["default"]({
                     id: 'icon-' + id,
                     element: element,
                     stopEvent: false,
                     autoPan: false,
                     position: this._fromLonLat(coordinates),
-                    positioning: ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_14__["default"].CENTER_CENTER
+                    positioning: ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_16__["default"].CENTER_CENTER
                 }));
             }
         }
@@ -4037,7 +3918,7 @@ var MapService = /** @class */ (function () {
             ? this._dataSource.getFeatureById(id)
             : undefined;
         if (!feature)
-            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
+            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
         var color = this._modelService.getFeatureColor(id), fillColor = this._modelService.getFeatureFillColor(id), fillOpacity = this._modelService.getFeatureFillOpacity(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
         if ('' + this._selectedFeatureId === '' + id) {
             selected = true;
@@ -4048,11 +3929,11 @@ var MapService = /** @class */ (function () {
         }
         fillColor = 'rgba(' + this._themeService.getRgb(fillColor) + ',' + fillOpacity + ')';
         color = 'rgba(' + this._themeService.getRgb(color) + ',' + strokeOpacity + ')';
-        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-            fill: new ol_style_Fill__WEBPACK_IMPORTED_MODULE_35__["default"]({
+        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+            fill: new ol_style_Fill__WEBPACK_IMPORTED_MODULE_10__["default"]({
                 color: fillColor,
             }),
-            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
+            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_20__["default"]({
                 color: color,
                 width: strokeWidth
             }),
@@ -4068,7 +3949,7 @@ var MapService = /** @class */ (function () {
             ? this._dataSource.getFeatureById(id)
             : undefined;
         if (!feature)
-            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
+            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
         var color = this._modelService.getFeatureColor(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
         if ('' + this._selectedFeatureId === '' + id) {
             selected = true;
@@ -4080,8 +3961,8 @@ var MapService = /** @class */ (function () {
         if (((typeof this._features[id].properties.showArrows === 'undefined' && this._configService.addArrowsOverTracks()) ||
             this._features[id].properties.showArrows === true) && this._view.getZoom() > 12)
             style = this._getArrowStyle(this._dataSource.getFeatureById(id), this._view.getResolution(), color, selected ? 410 : 110);
-        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_18__["default"]({
+        style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+            stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_20__["default"]({
                 color: color,
                 width: strokeWidth
             }),
@@ -4097,7 +3978,7 @@ var MapService = /** @class */ (function () {
             ? this._dataSource.getFeatureById(id)
             : undefined;
         if (!feature)
-            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]()];
+            return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
         if ('' + this._selectedFeatureId === '' + id)
             selected = true;
         if (!selected) {
@@ -4105,8 +3986,8 @@ var MapService = /** @class */ (function () {
             var zoomFactor = currentZoom >= iconZoom ? iconRadius
                 : (currentZoom < minZoom ? minRadius : ((maxRadius - minRadius) / (iconZoom - minZoom)) * (currentZoom - minZoom) + minRadius);
             style = [
-                new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                    image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
+                new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+                    image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
                         src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
                         scale: 0.20 * zoomFactor,
                         color: color
@@ -4122,8 +4003,8 @@ var MapService = /** @class */ (function () {
         else {
             this._removeIconOverlay(id);
             style = [
-                new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                    image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
+                new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+                    image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
                         src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
                         scale: 0.2 * this._configService.getPoiSelectedRadius(),
                         color: '#fff'
@@ -4241,14 +4122,14 @@ var MapService = /** @class */ (function () {
             n = Math.sqrt(n / 100);
             extent = this._view.calculateExtent([mapSize[0] * n, mapSize[1] * n]);
             splitPoints = this._splitLineString(geom, size * resolution * n, { extent: extent, vertices: false });
-            geom = new ol_geom_LineString__WEBPACK_IMPORTED_MODULE_11__["default"](splitPoints);
+            geom = new ol_geom_LineString__WEBPACK_IMPORTED_MODULE_13__["default"](splitPoints);
         }
         extent = this._view.calculateExtent([mapSize[0] + (size * 2), mapSize[1] + (size * 2)]);
         splitPoints = this._splitLineString(geom, size * resolution, { alwaysUp: false, midPoints: true, extent: extent });
         splitPoints.forEach(function (point) {
-            styles.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_19__["default"]({
-                geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_15__["default"]([point[0], point[1]]),
-                image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_10__["default"]({
+            styles.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
+                geometry: new ol_geom_Point__WEBPACK_IMPORTED_MODULE_17__["default"]([point[0], point[1]]),
+                image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
                     src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/line-icon-arrow.png',
                     scale: scale,
                     rotation: point[2],
@@ -4316,13 +4197,13 @@ var MapService = /** @class */ (function () {
                     element.style.top = '1px';
                     element.style.display = 'block';
                     var coordinates = this._features[id].geometry.coordinates;
-                    this._map.addOverlay(new ol_Overlay__WEBPACK_IMPORTED_MODULE_13__["default"]({
+                    this._map.addOverlay(new ol_Overlay__WEBPACK_IMPORTED_MODULE_15__["default"]({
                         id: 'selected-pin-icon',
                         element: element,
                         stopEvent: false,
                         autoPan: false,
                         position: this._fromLonLat(coordinates),
-                        positioning: ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_14__["default"].CENTER_CENTER
+                        positioning: ol_OverlayPositioning__WEBPACK_IMPORTED_MODULE_16__["default"].CENTER_CENTER
                     }));
                 }
             }
@@ -4387,7 +4268,7 @@ var MapService = /** @class */ (function () {
         else {
             var mapFeatures = [];
             try {
-                mapFeatures = (new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_9__["default"]({
+                mapFeatures = (new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_11__["default"]({
                     featureProjection: 'EPSG:3857'
                 })).readFeatures(this._features[id]);
             }
@@ -4569,7 +4450,7 @@ var MapService = /** @class */ (function () {
                 coordinates = this._toLonLat(this._dataSource.getFeatureById(id).getGeometry().getClosestPoint(this._fromLonLat([location.longitude, location.latitude])));
             }
             else if (this._features && this._features[id]) {
-                var feature = (new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_9__["default"]({
+                var feature = (new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_11__["default"]({
                     featureProjection: 'EPSG:3857'
                 })).readFeatures(this._features[id])[0];
                 coordinates = this._toLonLat(feature.getGeometry().getClosestPoint(this._fromLonLat([location.longitude, location.latitude])));
@@ -4583,7 +4464,7 @@ var MapService = /** @class */ (function () {
         }
         if (!coordinates || !coordinates[0] || !coordinates[1])
             coordinates = [undefined, undefined];
-        return new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](coordinates[0], coordinates[1]);
+        return new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](coordinates[0], coordinates[1]);
     };
     /**
      * Return the current location closest point to the feature specified or to the closest
@@ -4596,7 +4477,7 @@ var MapService = /** @class */ (function () {
         if (this._geolocationIcon.point) {
             var coordinates = this._geolocationIcon.point.getCoordinates();
             coordinates = this._toLonLat(coordinates);
-            closest = this.getClosestPoint(new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](coordinates[0], coordinates[1]), id);
+            closest = this.getClosestPoint(new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](coordinates[0], coordinates[1]), id);
         }
         return closest;
     };
@@ -4604,7 +4485,7 @@ var MapService = /** @class */ (function () {
         var length = 0;
         if (feature && feature.geometry && feature.geometry.type === 'LineString') {
             for (var i = 0; i < feature.geometry.coordinates.length - 1; i++) {
-                length += this.getDistanceBetweenPoints(new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](feature.geometry.coordinates[i][0], feature.geometry.coordinates[i][0]), new _classes_clocation__WEBPACK_IMPORTED_MODULE_34__["CLocation"](feature.geometry.coordinates[i + 1][0], feature.geometry.coordinates[i + 1][0]));
+                length += this.getDistanceBetweenPoints(new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](feature.geometry.coordinates[i][0], feature.geometry.coordinates[i][0]), new _classes_clocation__WEBPACK_IMPORTED_MODULE_32__["CLocation"](feature.geometry.coordinates[i + 1][0], feature.geometry.coordinates[i + 1][0]));
             }
         }
         return length;
@@ -4613,11 +4494,11 @@ var MapService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_device_service__WEBPACK_IMPORTED_MODULE_32__["DeviceService"],
-            _config_service__WEBPACK_IMPORTED_MODULE_29__["ConfigService"],
-            _model_service__WEBPACK_IMPORTED_MODULE_30__["ModelService"],
-            _router_service__WEBPACK_IMPORTED_MODULE_33__["RouterService"],
-            _theme_service__WEBPACK_IMPORTED_MODULE_31__["ThemeService"]])
+        __metadata("design:paramtypes", [_device_service__WEBPACK_IMPORTED_MODULE_34__["DeviceService"],
+            _config_service__WEBPACK_IMPORTED_MODULE_33__["ConfigService"],
+            _model_service__WEBPACK_IMPORTED_MODULE_35__["ModelService"],
+            _router_service__WEBPACK_IMPORTED_MODULE_36__["RouterService"],
+            _theme_service__WEBPACK_IMPORTED_MODULE_37__["ThemeService"]])
     ], MapService);
     return MapService;
 }());
