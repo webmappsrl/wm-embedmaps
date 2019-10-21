@@ -3623,18 +3623,50 @@ var MapService = /** @class */ (function () {
      * Draw all the current features, cleaning unexisting features
      */
     MapService.prototype._drawAllFeatures = function () {
+        var _this = this;
         // Remove unwanted features
-        if (this._dataSource) {
-            for (var _i = 0, _a = this._dataSource.getFeatures(); _i < _a.length; _i++) {
+        if (this._fixedDataSource) {
+            for (var _i = 0, _a = this._fixedDataSource.getFeatures(); _i < _a.length; _i++) {
                 var feature = _a[_i];
-                if (typeof this._features[feature.getId()] === 'undefined')
+                if (typeof this._features[feature.getId()] === 'undefined'
+                    || !this._features[feature.getId()].properties.invert
+                    || ['Polygon', 'MultiPolygon'].indexOf(this._features[feature.getId()].geometry.type) === -1)
+                    this._fixedDataSource.removeFeature(feature);
+            }
+        }
+        if (this._dataSource) {
+            for (var _b = 0, _c = this._dataSource.getFeatures(); _b < _c.length; _b++) {
+                var feature = _c[_b];
+                if (typeof this._features[feature.getId()] === 'undefined'
+                    || (this._features[feature.getId()].properties.invert && ['Polygon', 'MultiPolygon'].indexOf(this._features[feature.getId()].geometry.type) !== -1))
                     this._dataSource.removeFeature(feature);
             }
         }
-        // Add/update features
+        // Add/update existing features
         for (var id in this._features) {
-            if (!this._features[id].properties.hide)
-                this._addFeature(id);
+            if (!this._features[id].properties.hide
+                && !(this._features[id].properties.invert && ['Polygon', 'MultiPolygon'].indexOf(this._features[id].geometry.type) !== -1))
+                this._addFeature(id, this._dataSource);
+            else if (!this._features[id].properties.hide
+                && this._features[id].properties.invert
+                && ['Polygon', 'MultiPolygon'].indexOf(this._features[id].geometry.type) !== -1) {
+                if (!this._fixedDataSource || !this._fixedDataLayer) {
+                    this._fixedDataSource = new ol_source_Vector__WEBPACK_IMPORTED_MODULE_26__["default"]({
+                        format: new ol_format_Geojson__WEBPACK_IMPORTED_MODULE_11__["default"]()
+                    });
+                    this._fixedDataLayer = new ol_layer_Vector__WEBPACK_IMPORTED_MODULE_25__["default"]({
+                        source: this._fixedDataSource,
+                        style: function (feature, resolution) {
+                            return _this._style(feature);
+                        },
+                        updateWhileAnimating: true,
+                        updateWhileInteracting: false,
+                        zIndex: 40
+                    });
+                    this._map.addLayer(this._fixedDataLayer);
+                }
+                this._addFeature(id, this._fixedDataSource);
+            }
         }
         if (typeof this._activeFeatures !== 'undefined')
             this.filterFeatures(this._activeFeatures);
@@ -3916,7 +3948,9 @@ var MapService = /** @class */ (function () {
     MapService.prototype._getPolygonStyle = function (id) {
         var style = [], selected = false, feature = this._dataSource.getFeatureById(id)
             ? this._dataSource.getFeatureById(id)
-            : undefined;
+            : (this._fixedDataSource.getFeatureById(id)
+                ? this._fixedDataSource.getFeatureById(id)
+                : undefined);
         if (!feature)
             return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
         var color = this._modelService.getFeatureColor(id), fillColor = this._modelService.getFeatureFillColor(id), fillOpacity = this._modelService.getFeatureFillOpacity(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
@@ -4160,7 +4194,7 @@ var MapService = /** @class */ (function () {
             this.deselectFeature();
         // WRONG CHECK - if a feature is not in the datasource does not mean is a UTFGRID feature
         if (this._features && this._features[id] && this._features[id].properties.hide) {
-            this._addFeature(id);
+            this._addFeature(id, this._dataSource);
             this._utfgridSelectedFeature = this._dataSource.getFeatureById(id);
         }
         if (this._dataSource.getFeatureById(id)) {
@@ -4261,10 +4295,10 @@ var MapService = /** @class */ (function () {
         else
             this.onPopupChange.emit();
     };
-    MapService.prototype._addFeature = function (id) {
+    MapService.prototype._addFeature = function (id, source) {
         var feature;
-        if (this._dataSource.getFeatureById(id))
-            feature = this._dataSource.getFeatureById(id);
+        if (source.getFeatureById(id))
+            feature = source.getFeatureById(id);
         else {
             var mapFeatures = [];
             try {
@@ -4281,7 +4315,7 @@ var MapService = /** @class */ (function () {
             }
             feature = mapFeatures[0];
             feature.setId(id);
-            this._dataSource.addFeature(feature);
+            source.addFeature(feature);
         }
         this._map.render();
     };
@@ -4318,7 +4352,7 @@ var MapService = /** @class */ (function () {
             if (todo[id])
                 continue;
             if (this._features[id] && !this._features[id].properties.hide)
-                this._addFeature(id);
+                this._addFeature(id, this._dataSource);
             todo[id] = true;
         }
         this._map.render();
@@ -4715,6 +4749,10 @@ var ModelService = /** @class */ (function () {
                 if (overlayMeta.preventFilter && feature.properties.preventFilter !== false && feature.properties.preventFilter !== true)
                     feature.properties.preventFilter = overlayMeta.preventFilter;
                 if (['Polygon', 'MultiPolygon'].indexOf(feature.geometry.type) !== -1) {
+                    if (feature.properties.invert === undefined && overlayMeta.invertPolygons)
+                        feature.properties.invert = overlayMeta.invertPolygons;
+                    if (feature.properties.invert)
+                        feature = _this.invertPolygon(feature);
                     if (overlayMeta.fillColor && !feature.properties.fillColor)
                         feature.properties.fillColor = overlayMeta.fillColor;
                     if (overlayMeta.fillOpacity && !feature.properties.fillOpacity)
@@ -4873,6 +4911,25 @@ var ModelService = /** @class */ (function () {
                 resolve();
             });
         });
+    };
+    /**
+     * Invert the area of a polygon
+     *
+     * @param polygon the polygon to invert
+     */
+    ModelService.prototype.invertPolygon = function (polygon) {
+        if (['Polygon', 'MultiPolygon'].indexOf(polygon.geometry.type) !== -1) {
+            var geometry = void 0;
+            if (polygon.geometry.type === 'MultiPolygon')
+                geometry = polygon.geometry.coordinates;
+            else {
+                polygon.geometry.type = 'MultiPolygon';
+                geometry = [polygon.geometry.coordinates];
+            }
+            geometry[0].splice(0, 0, [[0, 90], [180, 90], [180, -90], [0, -90], [-180, -90], [-180, 0], [-180, 90], [0, 90]]);
+            polygon.geometry.coordinates = geometry;
+        }
+        return polygon;
     };
     /**
      * DATA RETRIEVE
