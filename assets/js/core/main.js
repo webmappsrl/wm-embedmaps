@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, GEOLOCATION, TABLES, SHARE, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, GEOLOCATION, OFFLINE, SHARE, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"Parco San Rossore","id":"it.webmapp.sanrossore","customerName":"Parco San Rossore"},"HOME":[{"view":"compact-horizontal","taxonomy":"where","types":["track"],"title":"Le tenute del Parco"},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"I luoghi della visita","terms":["119","26","25"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Ricettività e altri servizi","terms":["130"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":17,"minZoom":10,"defZoom":12,"center":[10.3872,43.6743],"bbox":[10,43,11,45],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}],"overlays":[{"id":"park_bounds","type":"geojson","geojsonUrl":"park_bounds.geojson","noDetails":true,"color":"#014d38","invertPolygons":true}]},"THEME":{"primary":"#014d38","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Merriweather","fontFamilyContent":"Montserrat"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/sanrossore/","startUrl":"/main/explore","hideGlobalMap":false,"beBaseUrl":"http://parcosanrossore.netseven.it/","disableLogin":true,"addArrowsOverTracks":false,"poiMinRadius":0.2,"showHelp":false,"showEditLink":true},"GEOLOCATION":{"record":{"enable":true}},"TABLES":{"details":{"hideElevationChart":true,"hide_ele:max":true,"hide_ele:min":true}},"SHARE":{"deeplinksHost":"parcosanrossore.k.webmapp.it"}};
+module.exports = {"APP":{"name":"Parco Nazionale Foreste Casentinesi","id":"it.net7.parcoforestecasentinesi","iosId":"it.netseven.forestecasentinesi","customerName":"Parco Nazionale"},"HOME":[{"view":"compact-horizontal","taxonomy":"theme","types":["track"],"title":"Cosa fare","subtitle":"Scopri la natura e la storia dell’Area protetta a piedi o in bici","terms":["25","23","19","18","41"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Cosa vedere","subtitle":"I luoghi da visitare, i punti informazione e le strutture didattiche del Parco Nazionale","terms":["21","8"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Ospitalità","subtitle":"Non solo rifugi, ma anche agriturismi, locande e vecchi poderi dall’ospitalità rurale","terms":["5","43","44","47"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":16,"minZoom":5,"defZoom":10.5,"center":[11.8175,43.8912],"bbox":[11.5,43.6,12.1,44.1],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}],"overlays":[{"id":"park_bounds","label":"Confini del Parco","type":"geojson","geojsonUrl":"confini.geojson","noDetails":true,"color":"#588248","preventFilter":true},{"id":"reserve","label":"Riserve naturali","type":"geojson","geojsonUrl":"linee_riserva_integrale.geojson","noDetails":true,"color":"#416d30","preventFilter":true}]},"THEME":{"primary":"#588248","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Montserrat","fontFamilyContent":"Montserrat"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/pnfc/","startUrl":"/main/explore","hideGlobalMap":false,"beBaseUrl":"http://trekking.parcoforesetecasentinesi.it/","disableLogin":true,"addArrowsOverTracks":false,"poiMinRadius":0.1,"poiMaxRadius":1,"poiIconZoom":13.5,"showHelp":false},"GEOLOCATION":{"record":{"enable":true}},"OFFLINE":{"enable":true},"SHARE":{"deeplinksHost":"maps.parcoforestecasentinesi.it","feature":true,"mapCenter":true,"location":true}};
 
 /***/ }),
 
@@ -1915,6 +1915,32 @@ var ConfigService = /** @class */ (function () {
     ConfigService.prototype.addArrowsOverTracks = function () {
         return this._config.OPTIONS.addArrowsOverTracks ? true : false;
     };
+    ConfigService.prototype.getPoiPin = function () {
+        if (!this._config.OPTIONS.poiPinImage || this._config.OPTIONS.poiPinImage === 'webmapp_pin') {
+            return {
+                src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/webmapp_pin.png',
+                scale: 0.2
+            };
+        }
+        else if (this._config.OPTIONS.poiPinImage === 'rt_pin') {
+            return {
+                src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/rt_pin.png',
+                scale: 0.18
+            };
+        }
+        // else if (this._config.OPTIONS.poiPinImage.substring(0, 4) === 'http') {
+        //   return {
+        //     src: this._config.OPTIONS.poiPinImage,
+        //     scale: this._config.OPTIONS.poiPinScale ? this._config.OPTIONS.poiPinScale : 0.2
+        //   }
+        // }
+        else {
+            return {
+                src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/webmapp_pin.png',
+                scale: 0.2
+            };
+        }
+    };
     ConfigService.prototype.getPoiMaxRadius = function () {
         return this._config.OPTIONS.poiMaxRadius ? this._config.OPTIONS.poiMaxRadius : 1.7;
     };
@@ -3424,7 +3450,7 @@ var MapService = /** @class */ (function () {
                     return _this._style(feature);
                 },
                 updateWhileAnimating: true,
-                updateWhileInteracting: false,
+                updateWhileInteracting: true,
                 zIndex: 50
             });
             this._modelService.onReady
@@ -4019,11 +4045,12 @@ var MapService = /** @class */ (function () {
             var maxRadius = this._configService.getPoiMaxRadius(), minRadius = this._configService.getPoiMinRadius(), iconZoom = this._configService.getIconPoiZoom(), iconRadius = this._configService.getPoiIconRadius(), minZoom = this._configService.getPoiMinZoom(), currentZoom = this._view.getZoom();
             var zoomFactor = currentZoom >= iconZoom ? iconRadius
                 : (currentZoom < minZoom ? minRadius : ((maxRadius - minRadius) / (iconZoom - minZoom)) * (currentZoom - minZoom) + minRadius);
+            var pin = this._configService.getPoiPin();
             style = [
                 new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
                     image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
-                        src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
-                        scale: 0.20 * zoomFactor,
+                        src: pin.src,
+                        scale: pin.scale * zoomFactor,
                         color: color
                     }),
                     zIndex: 150
@@ -4036,11 +4063,12 @@ var MapService = /** @class */ (function () {
         }
         else {
             this._removeIconOverlay(id);
+            var pin = this._configService.getPoiPin();
             style = [
                 new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
                     image: new ol_style_Icon__WEBPACK_IMPORTED_MODULE_12__["default"]({
-                        src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/pin.png',
-                        scale: 0.2 * this._configService.getPoiSelectedRadius(),
+                        src: pin.src,
+                        scale: pin.scale * this._configService.getPoiSelectedRadius(),
                         color: '#fff'
                     }),
                     zIndex: 499
