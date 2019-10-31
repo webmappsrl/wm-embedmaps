@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, GEOLOCATION, OFFLINE, SHARE, default */
+/*! exports provided: APP, LANGUAGES, HOME, MAP, THEME, OPTIONS, GEOLOCATION, SHARE, OFFLINE, TABLES, REPORTS, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"Parco Nazionale Foreste Casentinesi","id":"it.net7.parcoforestecasentinesi","iosId":"it.netseven.forestecasentinesi","customerName":"Parco Nazionale"},"HOME":[{"view":"compact-horizontal","taxonomy":"theme","types":["track"],"title":"Cosa fare","subtitle":"Scopri la natura e la storia dell’Area protetta a piedi o in bici","terms":["25","23","19","18","41"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Cosa vedere","subtitle":"I luoghi da visitare, i punti informazione e le strutture didattiche del Parco Nazionale","terms":["21","8"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Ospitalità","subtitle":"Non solo rifugi, ma anche agriturismi, locande e vecchi poderi dall’ospitalità rurale","terms":["5","43","44","47"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":16,"minZoom":5,"defZoom":10.5,"center":[11.8175,43.8912],"bbox":[11.5,43.6,12.1,44.1],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}],"overlays":[{"id":"park_bounds","label":"Confini del Parco","type":"geojson","geojsonUrl":"confini.geojson","noDetails":true,"color":"#588248","preventFilter":true},{"id":"reserve","label":"Riserve naturali","type":"geojson","geojsonUrl":"linee_riserva_integrale.geojson","noDetails":true,"color":"#416d30","preventFilter":true}]},"THEME":{"primary":"#588248","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Montserrat","fontFamilyContent":"Montserrat"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/pnfc/","startUrl":"/main/explore","hideGlobalMap":false,"beBaseUrl":"http://trekking.parcoforesetecasentinesi.it/","disableLogin":true,"addArrowsOverTracks":false,"poiMinRadius":0.1,"poiMaxRadius":1,"poiIconZoom":13.5,"showHelp":false},"GEOLOCATION":{"record":{"enable":true}},"OFFLINE":{"enable":true},"SHARE":{"deeplinksHost":"maps.parcoforestecasentinesi.it","feature":true,"mapCenter":true,"location":true}};
+module.exports = {"APP":{"name":"I Sentieri SAT del Trentino","id":"it.webmapp.trentinosat","customerName":"SAT Trentino"},"LANGUAGES":{"default":"it"},"HOME":[{"view":"compact-horizontal","title":"I nostri sentieri","terms":["21","22"]},{"view":"compact-horizontal","title":"Rifugi e bivacchi","terms":["3","1"]},{"view":"compact-horizontal","title":"Luoghi di interesse e località","terms":["2","4"]}],"MAP":{"maxZoom":16,"minZoom":10,"defZoom":11,"center":[11.1357,46.0612],"bbox":[10.4272,45.6444,11.9935,46.5572],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/trentino/tiles/map/","default":true,"maxNativeZoom":16}],"overlays":[{"id":"sentieri_tratte","label":"Sentieri SAT","type":"utfgrid","tilesUrl":"https://api.webmapp.it/trentino/tiles/sentierisat_new_utfgrid/","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_tratte.geojson","maxZoom":16,"minZoom":10,"noDetails":false,"noInteraction":false},{"id":"punti_appoggio","label":"Punti d'appoggio","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_appoggio.geojson","noDetails":false,"noInteraction":false},{"id":"punti_interesse","label":"Punti d'interesse","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_interesse.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"rifugi","label":"Rifugi","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/rifugi.geojson","noDetails":false,"noInteraction":false},{"id":"sentieri_localita","label":"Località","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_localita.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"sentieri_lunga_percorrenza","label":"Itinerari","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_lunga_percorrenza.geojson","noDetails":false,"noInteraction":false}]},"THEME":{"primary":"#387EF5","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Noto Serif","fontFamilyContent":"Open Sans"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/trentino/","startUrl":"/main/map","disableLogin":true,"hideGlobalMap":false,"poiMinRadius":0.2,"poiMaxRadius":1,"poiIconZoom":13.5,"showMapViewfinder":true},"GEOLOCATION":{"record":{"enable":true,"export":true}},"SHARE":{"deeplinksHost":"trentino.webmapp.it","feature":false,"mapCenter":false,"location":false},"OFFLINE":{"enable":true,"blocks":48},"TABLES":{"details":{"show_wgs84":true,"show_utm":true}},"REPORTS":{"enable":true,"items":[{"title":"Problema riscontrato","excerpt":"Segnalaci i problemi che riscontri nei sentieri e che ritieni opportuno comunicare alla SAT","type":"reportByEmail","fields":[{"label":"Nome","name":"name","mandatory":true,"type":"text","placeholder":"inserisci il tuo nome"},{"label":"Email","name":"email","mandatory":true,"type":"text","placeholder":"inserisci la tua email"},{"label":"Descrizione","name":"description","mandatory":true,"type":"textarea","placeholder":"Un albero caduto in mezzo alla strada ostruisce il passaggio"},{"label":"Foto","name":"picture","mandatory":false,"type":"picture","help":"Scatta una foto che dimostri il problema"},{"name":"emailTo","type":"hidden","value":"sentieri@sat.tn.it"},{"comment":"set type to webappUrl to make it work properly to the app when the new app is activated","name":"webappUrl_","type":"hidden","value":"https://trentino.webmapp.it/"}]}]}};
 
 /***/ }),
 
@@ -3936,6 +3936,7 @@ var MapService = /** @class */ (function () {
                 element.style.position = 'relative';
                 element.style.top = '1px';
                 element.style.display = 'block';
+                element.style.margin = '0';
                 var coordinates = this._features[id].geometry.coordinates;
                 this._map.addOverlay(new ol_Overlay__WEBPACK_IMPORTED_MODULE_15__["default"]({
                     id: 'icon-' + id,
@@ -6104,7 +6105,57 @@ var ThemeService = /** @class */ (function () {
     function ThemeService(_document, _configService) {
         this._document = _document;
         this._configService = _configService;
+        var computedStyle;
         this._style = this._configService.getStyle();
+        try {
+            this._host = this._document.getElementsByTagName('wm-map-container')[0];
+            if (!this._host)
+                this._host = this._document.documentElement;
+        }
+        catch (e) {
+            this._host = this._document.documentElement;
+        }
+        computedStyle = getComputedStyle(this._host);
+        if (computedStyle.getPropertyValue('--ion-color-primary'))
+            this._style.primary = computedStyle.getPropertyValue('--ion-color-primary');
+        if (computedStyle.getPropertyValue('--ion-color-secondary'))
+            this._style.secondary = computedStyle.getPropertyValue('--ion-color-secondary');
+        if (computedStyle.getPropertyValue('--ion-color-tertiary'))
+            this._style.tertiary = computedStyle.getPropertyValue('--ion-color-tertiary');
+        if (computedStyle.getPropertyValue('--ion-color-light'))
+            this._style.light = computedStyle.getPropertyValue('--ion-color-light');
+        if (computedStyle.getPropertyValue('--ion-color-medium'))
+            this._style.medium = computedStyle.getPropertyValue('--ion-color-medium');
+        if (computedStyle.getPropertyValue('--ion-color-dark'))
+            this._style.dark = computedStyle.getPropertyValue('--ion-color-dark');
+        if (computedStyle.getPropertyValue('--ion-color-success'))
+            this._style.success = computedStyle.getPropertyValue('--ion-color-success');
+        if (computedStyle.getPropertyValue('--ion-color-warning'))
+            this._style.warning = computedStyle.getPropertyValue('--ion-color-warning');
+        if (computedStyle.getPropertyValue('--ion-color-danger'))
+            this._style.danger = computedStyle.getPropertyValue('--ion-color-danger');
+        if (computedStyle.getPropertyValue('--font-xxxlg'))
+            this._style.fontXxxlg = computedStyle.getPropertyValue('--font-xxxlg');
+        if (computedStyle.getPropertyValue('--font-xxlg'))
+            this._style.fontXxlg = computedStyle.getPropertyValue('--font-xxlg');
+        if (computedStyle.getPropertyValue('--font-xlg'))
+            this._style.fontXlg = computedStyle.getPropertyValue('--font-xlg');
+        if (computedStyle.getPropertyValue('--font-lg'))
+            this._style.fontLg = computedStyle.getPropertyValue('--font-lg');
+        if (computedStyle.getPropertyValue('--font-md'))
+            this._style.fontMd = computedStyle.getPropertyValue('--font-md');
+        if (computedStyle.getPropertyValue('--font-sm'))
+            this._style.fontSm = computedStyle.getPropertyValue('--font-sm');
+        if (computedStyle.getPropertyValue('--font-xsm'))
+            this._style.fontXsm = computedStyle.getPropertyValue('--font-xsm');
+        if (computedStyle.getPropertyValue('font-family')) {
+            this._style.fontFamilyHeader = computedStyle.getPropertyValue('font-family');
+            this._style.fontFamilyContent = computedStyle.getPropertyValue('font-family');
+        }
+        if (computedStyle.getPropertyValue('--font-family-header'))
+            this._style.fontFamilyHeader = computedStyle.getPropertyValue('--font-family-header');
+        if (computedStyle.getPropertyValue('--font-family-content'))
+            this._style.fontFamilyContent = computedStyle.getPropertyValue('--font-family-content');
         this.setTheme(this._style);
     }
     // Override all global variables with a new theme
@@ -6114,7 +6165,7 @@ var ThemeService = /** @class */ (function () {
     };
     // Define a single CSS variable
     ThemeService.prototype.setVariable = function (name, value) {
-        this._document.documentElement.style.setProperty(name, value);
+        this._host.style.setProperty(name, value);
     };
     /**
      * Return a contrast color based on the color param
@@ -6171,31 +6222,105 @@ var ThemeService = /** @class */ (function () {
     ThemeService.prototype.getFontSize = function (type) {
         switch (type.toLowerCase()) {
             case 'xxxlg':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-xxxlg').replace(/px/g, ''));
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-xxxlg').replace(/px/g, ''));
             case 'xxlg':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-xxlg').replace(/px/g, ''));
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-xxlg').replace(/px/g, ''));
             case 'xlg':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-xlg').replace(/px/g, ''));
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-xlg').replace(/px/g, ''));
             case 'lg':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-lg').replace(/px/g, ''));
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-lg').replace(/px/g, ''));
             case 'md':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-md').replace(/px/g, ''));
-            case 'sm':
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-sm').replace(/px/g, ''));
-            case 'xsm':
             default:
-                return parseInt(getComputedStyle(document.documentElement).getPropertyValue('--font-xsm').replace(/px/g, ''));
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-md').replace(/px/g, ''));
+            case 'sm':
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-sm').replace(/px/g, ''));
+            case 'xsm':
+                return parseInt(getComputedStyle(this._host).getPropertyValue('--font-xsm').replace(/px/g, ''));
         }
     };
     ThemeService.prototype._setGlobalCSS = function (css) {
-        this._document.documentElement.style.cssText = css;
+        for (var i in css) {
+            this._host.style.setProperty(css[i][0], css[i][1]);
+        }
     };
     ThemeService.prototype._CSSTextGenerator = function (colors) {
         colors = __assign({}, defaults, colors);
         var primary = colors.primary, secondary = colors.secondary, tertiary = colors.tertiary, success = colors.success, warning = colors.warning, danger = colors.danger, dark = colors.dark, medium = colors.medium, light = colors.light, fontXxxlg = colors.fontXxxlg, fontXxlg = colors.fontXxlg, fontXlg = colors.fontXlg, fontLg = colors.fontLg, fontMd = colors.fontMd, fontSm = colors.fontSm, fontXsm = colors.fontXsm, fontFamilyHeader = colors.fontFamilyHeader, fontFamilyContent = colors.fontFamilyContent;
         var shadeRatio = 0.1;
         var tintRatio = 0.1;
-        return "\n      --ion-color-base:  light};\n      --ion-color-contrast: " + dark + ";\n      --ion-background-color: " + light + ";\n      --ion-text-color: " + dark + ";\n      --ion-toolbar-background-color: " + this.contrast(light, 0.1) + ";\n      --ion-toolbar-text-color: " + this.contrast(dark, 0.1) + ";\n      --ion-item-background-color: " + this.contrast(light, 0.3) + ";\n      --ion-item-text-color: " + this.contrast(dark, 0.3) + ";\n      --ion-color-primary: " + primary + ";\n      --ion-color-primary-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(primary).array().toString() + ";\n      --ion-color-primary-contrast: " + this.contrast(primary) + ";\n      --ion-color-primary-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(primary)).array().toString() + ";\n      --ion-color-primary-shade:  " + color__WEBPACK_IMPORTED_MODULE_2__(primary).darken(shadeRatio) + ";\n      --ion-color-primary-tint:  " + color__WEBPACK_IMPORTED_MODULE_2__(primary).lighten(tintRatio) + ";\n      --ion-color-secondary: " + secondary + ";\n      --ion-color-secondary-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(secondary).array().toString() + ";\n      --ion-color-secondary-contrast: " + this.contrast(secondary) + ";\n      --ion-color-secondary-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(secondary)).array().toString() + ";\n      --ion-color-secondary-shade:  " + color__WEBPACK_IMPORTED_MODULE_2__(secondary).darken(shadeRatio) + ";\n      --ion-color-secondary-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(secondary).lighten(tintRatio) + ";\n      --ion-color-tertiary:  " + tertiary + ";\n      --ion-color-tertiary-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(tertiary).array().toString() + ";\n      --ion-color-tertiary-contrast: " + this.contrast(tertiary) + ";\n      --ion-color-tertiary-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(tertiary)).array().toString() + ";\n      --ion-color-tertiary-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(tertiary).darken(shadeRatio) + ";\n      --ion-color-tertiary-tint:  " + color__WEBPACK_IMPORTED_MODULE_2__(tertiary).lighten(tintRatio) + ";\n      --ion-color-success: " + success + ";\n      --ion-color-success-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(success).array().toString() + ";\n      --ion-color-success-contrast: " + this.contrast(success) + ";\n      --ion-color-success-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(success)).array().toString() + ";\n      --ion-color-success-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(success).darken(shadeRatio) + ";\n      --ion-color-success-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(success).lighten(tintRatio) + ";\n      --ion-color-warning: " + warning + ";\n      --ion-color-warning-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(warning).array().toString() + ";\n      --ion-color-warning-contrast: " + this.contrast(warning) + ";\n      --ion-color-warning-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(warning)).array().toString() + ";\n      --ion-color-warning-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(warning).darken(shadeRatio) + ";\n      --ion-color-warning-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(warning).lighten(tintRatio) + ";\n      --ion-color-danger: " + danger + ";\n      --ion-color-danger-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(danger).array().toString() + ";\n      --ion-color-danger-contrast: " + this.contrast(danger) + ";\n      --ion-color-danger-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(danger)).array().toString() + ";\n      --ion-color-danger-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(danger).darken(shadeRatio) + ";\n      --ion-color-danger-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(danger).lighten(tintRatio) + ";\n      --ion-color-dark: " + dark + ";\n      --ion-color-dark-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(dark).array().toString() + ";\n      --ion-color-dark-contrast: " + this.contrast(dark) + ";\n      --ion-color-dark-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(dark)).array().toString() + ";\n      --ion-color-dark-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(dark).darken(shadeRatio) + ";\n      --ion-color-dark-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(dark).lighten(tintRatio) + ";\n      --ion-color-medium: " + medium + ";\n      --ion-color-medium-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(medium).array().toString() + ";\n      --ion-color-medium-contrast: " + this.contrast(medium) + ";\n      --ion-color-medium-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(medium)).array().toString() + ";\n      --ion-color-medium-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(medium).darken(shadeRatio) + ";\n      --ion-color-medium-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(medium).lighten(tintRatio) + ";\n      --ion-color-light: " + light + ";\n      --ion-color-light-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(light).array().toString() + ";\n      --ion-color-light-contrast: " + this.contrast(light) + ";\n      --ion-color-light-contrast-rgb: " + color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(light)).array().toString() + ";\n      --ion-color-light-shade: " + color__WEBPACK_IMPORTED_MODULE_2__(light).darken(shadeRatio) + ";\n      --ion-color-light-tint: " + color__WEBPACK_IMPORTED_MODULE_2__(light).lighten(tintRatio) + ";\n      \n      --font-xxxlg: " + fontXxxlg + ";\n      --font-xxlg: " + fontXxlg + ";\n      --font-xlg: " + fontXlg + ";\n      --font-lg: " + fontLg + ";\n      --font-md: " + fontMd + ";\n      --font-sm: " + fontSm + ";\n      --font-xsm: " + fontXsm + ";\n\n      --font-family-header: " + fontFamilyHeader + ";\n      --font-family-content: " + fontFamilyContent + ";\n    ";
+        return [
+            ['--ion-color-base', light],
+            ['--ion-color-contrast', dark],
+            ['--ion-background-color', light],
+            ['--ion-text-color', dark],
+            ['--ion-toolbar-background-color', this.contrast(light, 0.1)],
+            ['--ion-toolbar-text-color', this.contrast(dark, 0.1)],
+            ['--ion-item-background-color', this.contrast(light, 0.3)],
+            ['--ion-item-text-color', this.contrast(dark, 0.3)],
+            ['--ion-color-primary', primary],
+            ['--ion-color-primary-rgb', color__WEBPACK_IMPORTED_MODULE_2__(primary).array().toString()],
+            ['--ion-color-primary-contrast', this.contrast(primary)],
+            ['--ion-color-primary-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(primary)).array().toString()],
+            ['--ion-color-primary-shade', color__WEBPACK_IMPORTED_MODULE_2__(primary).darken(shadeRatio)],
+            ['--ion-color-primary-tint', color__WEBPACK_IMPORTED_MODULE_2__(primary).lighten(tintRatio)],
+            ['--ion-color-secondary', secondary],
+            ['--ion-color-secondary-rgb', color__WEBPACK_IMPORTED_MODULE_2__(secondary).array().toString()],
+            ['--ion-color-secondary-contrast', this.contrast(secondary)],
+            ['--ion-color-secondary-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(secondary)).array().toString()],
+            ['--ion-color-secondary-shade', color__WEBPACK_IMPORTED_MODULE_2__(secondary).darken(shadeRatio)],
+            ['--ion-color-secondary-tint', color__WEBPACK_IMPORTED_MODULE_2__(secondary).lighten(tintRatio)],
+            ['--ion-color-tertiary', tertiary],
+            ['--ion-color-tertiary-rgb', color__WEBPACK_IMPORTED_MODULE_2__(tertiary).array().toString()],
+            ['--ion-color-tertiary-contrast', this.contrast(tertiary)],
+            ['--ion-color-tertiary-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(tertiary)).array().toString()],
+            ['--ion-color-tertiary-shade', color__WEBPACK_IMPORTED_MODULE_2__(tertiary).darken(shadeRatio)],
+            ['--ion-color-tertiary-tint', color__WEBPACK_IMPORTED_MODULE_2__(tertiary).lighten(tintRatio)],
+            ['--ion-color-success', success],
+            ['--ion-color-success-rgb', color__WEBPACK_IMPORTED_MODULE_2__(success).array().toString()],
+            ['--ion-color-success-contrast', this.contrast(success)],
+            ['--ion-color-success-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(success)).array().toString()],
+            ['--ion-color-success-shade', color__WEBPACK_IMPORTED_MODULE_2__(success).darken(shadeRatio)],
+            ['--ion-color-success-tint', color__WEBPACK_IMPORTED_MODULE_2__(success).lighten(tintRatio)],
+            ['--ion-color-warning', warning],
+            ['--ion-color-warning-rgb', color__WEBPACK_IMPORTED_MODULE_2__(warning).array().toString()],
+            ['--ion-color-warning-contrast', this.contrast(warning)],
+            ['--ion-color-warning-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(warning)).array().toString()],
+            ['--ion-color-warning-shade', color__WEBPACK_IMPORTED_MODULE_2__(warning).darken(shadeRatio)],
+            ['--ion-color-warning-tint', color__WEBPACK_IMPORTED_MODULE_2__(warning).lighten(tintRatio)],
+            ['--ion-color-danger', danger],
+            ['--ion-color-danger-rgb', color__WEBPACK_IMPORTED_MODULE_2__(danger).array().toString()],
+            ['--ion-color-danger-contrast', this.contrast(danger)],
+            ['--ion-color-danger-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(danger)).array().toString()],
+            ['--ion-color-danger-shade', color__WEBPACK_IMPORTED_MODULE_2__(danger).darken(shadeRatio)],
+            ['--ion-color-danger-tint', color__WEBPACK_IMPORTED_MODULE_2__(danger).lighten(tintRatio)],
+            ['--ion-color-dark', dark],
+            ['--ion-color-dark-rgb', color__WEBPACK_IMPORTED_MODULE_2__(dark).array().toString()],
+            ['--ion-color-dark-contrast', this.contrast(dark)],
+            ['--ion-color-dark-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(dark)).array().toString()],
+            ['--ion-color-dark-shade', color__WEBPACK_IMPORTED_MODULE_2__(dark).darken(shadeRatio)],
+            ['--ion-color-dark-tint', color__WEBPACK_IMPORTED_MODULE_2__(dark).lighten(tintRatio)],
+            ['--ion-color-medium', medium],
+            ['--ion-color-medium-rgb', color__WEBPACK_IMPORTED_MODULE_2__(medium).array().toString()],
+            ['--ion-color-medium-contrast', this.contrast(medium)],
+            ['--ion-color-medium-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(medium)).array().toString()],
+            ['--ion-color-medium-shade', color__WEBPACK_IMPORTED_MODULE_2__(medium).darken(shadeRatio)],
+            ['--ion-color-medium-tint', color__WEBPACK_IMPORTED_MODULE_2__(medium).lighten(tintRatio)],
+            ['--ion-color-light', light],
+            ['--ion-color-light-rgb', color__WEBPACK_IMPORTED_MODULE_2__(light).array().toString()],
+            ['--ion-color-light-contrast', this.contrast(light)],
+            ['--ion-color-light-contrast-rgb', color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(light)).array().toString()],
+            ['--ion-color-light-shade', color__WEBPACK_IMPORTED_MODULE_2__(light).darken(shadeRatio)],
+            ['--ion-color-light-tint', color__WEBPACK_IMPORTED_MODULE_2__(light).lighten(tintRatio)],
+            ['--font-xxxlg', fontXxxlg],
+            ['--font-xxlg', fontXxlg],
+            ['--font-xlg', fontXlg],
+            ['--font-lg', fontLg],
+            ['--font-md', fontMd],
+            ['--font-sm', fontSm],
+            ['--font-xsm', fontXsm],
+            ['--font-family-header', fontFamilyHeader],
+            ['--font-family-content', fontFamilyContent]
+        ];
     };
     ThemeService.prototype._getCSSVariables = function (colors) {
         colors = __assign({}, defaults, colors);
