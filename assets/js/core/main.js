@@ -6117,45 +6117,45 @@ var ThemeService = /** @class */ (function () {
         }
         computedStyle = getComputedStyle(this._host);
         if (computedStyle.getPropertyValue('--ion-color-primary'))
-            this._style.primary = computedStyle.getPropertyValue('--ion-color-primary');
+            this._style.primary = computedStyle.getPropertyValue('--ion-color-primary').trim();
         if (computedStyle.getPropertyValue('--ion-color-secondary'))
-            this._style.secondary = computedStyle.getPropertyValue('--ion-color-secondary');
+            this._style.secondary = computedStyle.getPropertyValue('--ion-color-secondary').trim();
         if (computedStyle.getPropertyValue('--ion-color-tertiary'))
-            this._style.tertiary = computedStyle.getPropertyValue('--ion-color-tertiary');
+            this._style.tertiary = computedStyle.getPropertyValue('--ion-color-tertiary').trim();
         if (computedStyle.getPropertyValue('--ion-color-light'))
-            this._style.light = computedStyle.getPropertyValue('--ion-color-light');
+            this._style.light = computedStyle.getPropertyValue('--ion-color-light').trim();
         if (computedStyle.getPropertyValue('--ion-color-medium'))
-            this._style.medium = computedStyle.getPropertyValue('--ion-color-medium');
+            this._style.medium = computedStyle.getPropertyValue('--ion-color-medium').trim();
         if (computedStyle.getPropertyValue('--ion-color-dark'))
-            this._style.dark = computedStyle.getPropertyValue('--ion-color-dark');
+            this._style.dark = computedStyle.getPropertyValue('--ion-color-dark').trim();
         if (computedStyle.getPropertyValue('--ion-color-success'))
-            this._style.success = computedStyle.getPropertyValue('--ion-color-success');
+            this._style.success = computedStyle.getPropertyValue('--ion-color-success').trim();
         if (computedStyle.getPropertyValue('--ion-color-warning'))
-            this._style.warning = computedStyle.getPropertyValue('--ion-color-warning');
+            this._style.warning = computedStyle.getPropertyValue('--ion-color-warning').trim();
         if (computedStyle.getPropertyValue('--ion-color-danger'))
-            this._style.danger = computedStyle.getPropertyValue('--ion-color-danger');
+            this._style.danger = computedStyle.getPropertyValue('--ion-color-danger').trim();
         if (computedStyle.getPropertyValue('--font-xxxlg'))
-            this._style.fontXxxlg = computedStyle.getPropertyValue('--font-xxxlg');
+            this._style.fontXxxlg = computedStyle.getPropertyValue('--font-xxxlg').trim();
         if (computedStyle.getPropertyValue('--font-xxlg'))
-            this._style.fontXxlg = computedStyle.getPropertyValue('--font-xxlg');
+            this._style.fontXxlg = computedStyle.getPropertyValue('--font-xxlg').trim();
         if (computedStyle.getPropertyValue('--font-xlg'))
-            this._style.fontXlg = computedStyle.getPropertyValue('--font-xlg');
+            this._style.fontXlg = computedStyle.getPropertyValue('--font-xlg').trim();
         if (computedStyle.getPropertyValue('--font-lg'))
-            this._style.fontLg = computedStyle.getPropertyValue('--font-lg');
+            this._style.fontLg = computedStyle.getPropertyValue('--font-lg').trim();
         if (computedStyle.getPropertyValue('--font-md'))
-            this._style.fontMd = computedStyle.getPropertyValue('--font-md');
+            this._style.fontMd = computedStyle.getPropertyValue('--font-md').trim();
         if (computedStyle.getPropertyValue('--font-sm'))
-            this._style.fontSm = computedStyle.getPropertyValue('--font-sm');
+            this._style.fontSm = computedStyle.getPropertyValue('--font-sm').trim();
         if (computedStyle.getPropertyValue('--font-xsm'))
-            this._style.fontXsm = computedStyle.getPropertyValue('--font-xsm');
+            this._style.fontXsm = computedStyle.getPropertyValue('--font-xsm').trim();
         if (computedStyle.getPropertyValue('font-family')) {
-            this._style.fontFamilyHeader = computedStyle.getPropertyValue('font-family');
-            this._style.fontFamilyContent = computedStyle.getPropertyValue('font-family');
+            this._style.fontFamilyHeader = computedStyle.getPropertyValue('font-family').trim();
+            this._style.fontFamilyContent = computedStyle.getPropertyValue('font-family').trim();
         }
         if (computedStyle.getPropertyValue('--font-family-header'))
-            this._style.fontFamilyHeader = computedStyle.getPropertyValue('--font-family-header');
+            this._style.fontFamilyHeader = computedStyle.getPropertyValue('--font-family-header').trim();
         if (computedStyle.getPropertyValue('--font-family-content'))
-            this._style.fontFamilyContent = computedStyle.getPropertyValue('--font-family-content');
+            this._style.fontFamilyContent = computedStyle.getPropertyValue('--font-family-content').trim();
         this.setTheme(this._style);
     }
     // Override all global variables with a new theme
