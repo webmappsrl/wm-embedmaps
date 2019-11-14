@@ -45822,7 +45822,8 @@ var MapComponent = /** @class */ (function () {
         this.popupUrl = "";
         this.filtersExpanded = false;
         this.openWebLinkFromPopup = this._configService.openWebLinkFromPopup();
-        this.isGeolocationAvailable = !this._deviceService.isBrowser || window.location.protocol === "https:" || this._deviceService.isLocalServer;
+        this.isGeolocationAvailable = this._configService.isGeolocationAvailable()
+            && (!this._deviceService.isBrowser || window.location.protocol === "https:" || this._deviceService.isLocalServer);
         this.showMapViewfinder = this._configService.showMapViewfinder();
     }
     Object.defineProperty(MapComponent.prototype, "update", {

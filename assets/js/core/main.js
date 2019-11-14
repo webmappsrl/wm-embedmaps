@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, LANGUAGES, HOME, MAP, THEME, OPTIONS, GEOLOCATION, SHARE, OFFLINE, TABLES, REPORTS, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"I Sentieri SAT del Trentino","id":"it.webmapp.trentinosat","customerName":"SAT Trentino"},"LANGUAGES":{"default":"it"},"HOME":[{"view":"compact-horizontal","title":"I nostri sentieri","terms":["21","22"]},{"view":"compact-horizontal","title":"Rifugi e bivacchi","terms":["3","1"]},{"view":"compact-horizontal","title":"Luoghi di interesse e località","terms":["2","4"]}],"MAP":{"maxZoom":16,"minZoom":10,"defZoom":11,"center":[11.1357,46.0612],"bbox":[10.4272,45.6444,11.9935,46.5572],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/trentino/tiles/map/","default":true,"maxNativeZoom":16}],"overlays":[{"id":"sentieri_tratte","label":"Sentieri SAT","type":"utfgrid","tilesUrl":"https://api.webmapp.it/trentino/tiles/sentierisat_new_utfgrid/","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_tratte.geojson","maxZoom":16,"minZoom":10,"noDetails":false,"noInteraction":false},{"id":"punti_appoggio","label":"Punti d'appoggio","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_appoggio.geojson","noDetails":false,"noInteraction":false},{"id":"punti_interesse","label":"Punti d'interesse","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/punti_interesse.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"rifugi","label":"Rifugi","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/rifugi.geojson","noDetails":false,"noInteraction":false},{"id":"sentieri_localita","label":"Località","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_localita.geojson","noDetails":false,"noInteraction":false,"minZoom":12},{"id":"sentieri_lunga_percorrenza","label":"Itinerari","type":"geojson","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_lunga_percorrenza.geojson","noDetails":false,"noInteraction":false}]},"THEME":{"primary":"#387EF5","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Noto Serif","fontFamilyContent":"Open Sans"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/trentino/","startUrl":"/main/map","disableLogin":true,"hideGlobalMap":false,"poiMinRadius":0.2,"poiMaxRadius":1,"poiIconZoom":13.5,"showMapViewfinder":true},"GEOLOCATION":{"record":{"enable":true,"export":true}},"SHARE":{"deeplinksHost":"trentino.webmapp.it","feature":false,"mapCenter":false,"location":false},"OFFLINE":{"enable":true,"blocks":48},"TABLES":{"details":{"show_wgs84":true,"show_utm":true}},"REPORTS":{"enable":true,"items":[{"title":"Problema riscontrato","excerpt":"Segnalaci i problemi che riscontri nei sentieri e che ritieni opportuno comunicare alla SAT","type":"reportByEmail","fields":[{"label":"Nome","name":"name","mandatory":true,"type":"text","placeholder":"inserisci il tuo nome"},{"label":"Email","name":"email","mandatory":true,"type":"text","placeholder":"inserisci la tua email"},{"label":"Descrizione","name":"description","mandatory":true,"type":"textarea","placeholder":"Un albero caduto in mezzo alla strada ostruisce il passaggio"},{"label":"Foto","name":"picture","mandatory":false,"type":"picture","help":"Scatta una foto che dimostri il problema"},{"name":"emailTo","type":"hidden","value":"sentieri@sat.tn.it"},{"comment":"set type to webappUrl to make it work properly to the app when the new app is activated","name":"webappUrl_","type":"hidden","value":"https://trentino.webmapp.it/"}]}]}};
+module.exports = {"APP":{"name":"Merlot Reiser","id":"it.webmapp.merlot","customerName":"Merlot Reiser"},"HOME":[{"view":"expanded","title":"Self Guided Experience","subtitle":"Relax and enjoy your ride with our itineraries","taxonomy":"activity","types":["route"]}],"LANGUAGES":{"default":"en","available":[]},"MAP":{"maxZoom":17,"minZoom":6,"defZoom":9,"center":[10,44],"bbox":[9.45,41.71,13.11,45.16],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#6ca858"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/merlot/","startUrl":"/main/explore","hideGlobalMap":true,"beBaseUrl":"http://merlot.be.webmapp.it/","addArrowsOverTracks":true}};
 
 /***/ }),
 
@@ -1808,6 +1808,9 @@ var ConfigService = /** @class */ (function () {
     ConfigService.prototype.openWebLinkFromPopup = function () {
         return this._config && this._config.OPTIONS && this._config.OPTIONS.openWebLinkFromPopup ? true : false;
     };
+    ConfigService.prototype.isGeolocationAvailable = function () {
+        return this._config && this._config.GEOLOCATION && this._config.GEOLOCATION.disable ? false : true;
+    };
     /**
      * MAP
      */
@@ -2573,11 +2576,12 @@ var GeolocationService = /** @class */ (function () {
         if (force)
             this._outsideBboxPresented = false;
         return new Promise(function (resolve, reject) {
-            if (_this._state.isActive) {
+            if (_this._state.isActive
+                || !_this._configService.isGeolocationAvailable()) {
                 resolve(_this._state);
                 return;
             }
-            if (true) {
+            if (!_this._deviceService.isLocalServer && (!_this._deviceService.isBrowser || window.location.protocol === "https:")) {
                 _this._enableMapEventListeners();
                 _this._state.isActive = true;
                 _this._state.isLoading = true;
@@ -2637,7 +2641,39 @@ var GeolocationService = /** @class */ (function () {
                 //   this._start();
                 // });
             }
-            else {}
+            else if (_this._deviceService.isLocalServer) {
+                _this._enableMapEventListeners();
+                _this._state.isActive = true;
+                _this._state.isLoading = true;
+                _this._state.isFollowing = true;
+                _this._state.isRotating = false;
+                _this.onGeolocationStateChange.next(_this._state);
+                setInterval(function () {
+                    var center = _this._configService.getMapCenter(), extent = _this._configService.getMapExtent();
+                    var alt = Math.random() * 5000, lat = center[1], lng = center[0], acc = 5 + Math.random() * 100, speed = 1 + Math.random() * 50, bearing = Math.random() * 360;
+                    if (_this._currentLocation) {
+                        alt = Math.max(10, _this._currentLocation.altitude + (-25 + Math.random() * 50));
+                        lat = Math.max(extent[1], Math.min(extent[3], _this._currentLocation.latitude + (-0.0001 + Math.random() / 5000)));
+                        lng = Math.max(extent[0], Math.min(extent[2], _this._currentLocation.longitude + (-0.0001 + Math.random() / 5000)));
+                        if (!_this._currentLocation.bearing || Number.isNaN(_this._currentLocation.bearing))
+                            bearing = 0;
+                        else
+                            bearing = _this._currentLocation.bearing + (-10 + Math.random() * 20);
+                    }
+                    _this._locationUpdate({
+                        altitude: alt,
+                        latitude: lat,
+                        longitude: lng,
+                        id: 1,
+                        accuracy: acc,
+                        time: Date.now(),
+                        speed: speed,
+                        locationProvider: undefined,
+                        provider: undefined,
+                        bearing: bearing
+                    });
+                }, 2000);
+            }
             resolve(_this._state);
         });
     };
