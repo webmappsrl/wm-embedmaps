@@ -1559,6 +1559,12 @@ var DEF_CONFIG = {
                 default: false
             }
         ]
+    },
+    OPTIONS: {
+        openWebLinkFromPopup: true
+    },
+    GEOLOCATION: {
+        disable: true
     }
 };
 var MAP_DEF_ZOOM = 11;
@@ -1651,6 +1657,12 @@ var DEF_CONFIG = {
                 default: false
             }
         ]
+    },
+    OPTIONS: {
+        openWebLinkFromPopup: true
+    },
+    GEOLOCATION: {
+        disable: true
     }
 };
 var MAP_DEF_ZOOM = 11;
@@ -4984,7 +4996,6 @@ var ModelService = /** @class */ (function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             var overlaysDefinition = JSON.parse(window.localStorage.getItem('wm_overlays_definition')), layers = JSON.parse(window.localStorage.getItem('wm_geojson_layers'));
-            console.log(overlaysDefinition, layers);
             for (var i in layers) {
                 var overlay = overlaysDefinition && overlaysDefinition[i] ? overlaysDefinition[i] : JSON.parse(JSON.stringify(_constants__WEBPACK_IMPORTED_MODULE_8__["DEF_OVERLAY_CONFIG"]));
                 if (!overlaysDefinition || !overlaysDefinition[i])
