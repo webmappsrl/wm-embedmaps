@@ -1488,7 +1488,7 @@ var ETaxonomy;
 /*!******************************!*\
   !*** ./src/app/constants.js ***!
   \******************************/
-/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, DEF_CONFIG, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT, DEF_OVERLAY_CONFIG */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1514,11 +1514,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_TRACK_STROKE_WIDTH", function() { return DEF_TRACK_STROKE_WIDTH; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_POLYGON_STROKE_WIDTH", function() { return DEF_POLYGON_STROKE_WIDTH; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_STROKE_OPACITY", function() { return DEF_FEATURE_STROKE_OPACITY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_CONFIG", function() { return DEF_CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ZOOM", function() { return MAP_DEF_ZOOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_OVERLAY_CONFIG", function() { return DEF_OVERLAY_CONFIG; });
 // WEBAPP HOST
 var WEBAPP_HOST = 'wa.webmapp.it';
 // DATA
@@ -1547,11 +1549,29 @@ var DEF_TRACK_STROKE_WIDTH = 2.5;
 var DEF_POLYGON_STROKE_WIDTH = 1;
 var DEF_FEATURE_STROKE_OPACITY = 1;
 // CONFIG
+var DEF_CONFIG = {
+    MAP: {
+        layers: [
+            {
+                label: "Mappa",
+                type: "maptile",
+                tilesUrl: "https://api.webmapp.it/tiles/",
+                default: false
+            }
+        ]
+    }
+};
 var MAP_DEF_ZOOM = 11;
 var MAP_DEF_CENTER = [0, 0];
 var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
 var MAP_DEF_ANIMATION_DURATION = 500;
 var MAP_DEF_EXTENT = [-180, -85, 180, 85];
+var DEF_OVERLAY_CONFIG = {
+    id: '',
+    type: 'geojson',
+    color: '#f00',
+    icon: 'wm-icon-generic'
+};
 //# sourceMappingURL=constants.js.map
 
 /***/ }),
@@ -1560,7 +1580,7 @@ var MAP_DEF_EXTENT = [-180, -85, 180, 85];
 /*!******************************!*\
   !*** ./src/app/constants.ts ***!
   \******************************/
-/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT */
+/*! exports provided: WEBAPP_HOST, SINGLE_MAP_ID, POI, TRACK, ROUTE, COMPASS_ROTATION_TIMEOUT, CURRENT_SPEED_TIME_WINDOW, GEOLOCATION_TIMEOUT_TIME, MIN_SPEED_FOR_GPS_BEARING, OUT_OF_TRACK_TOAST_DELAY, MAX_SYNC_IMG_DOWNLOAD, RETRY_DELAY, RETRY_TIMES, FORCE_POST_RETRY_DELAY, MERGE_LENGTH_LIMIT, DEF_FEATURE_COLOR, DEF_FEATURE_FILL_COLOR, DEF_FEATURE_FILL_OPACITY, DEF_TRACK_STROKE_WIDTH, DEF_POLYGON_STROKE_WIDTH, DEF_FEATURE_STROKE_OPACITY, DEF_CONFIG, MAP_DEF_ZOOM, MAP_DEF_CENTER, MAP_DEF_FIT_PADDING, MAP_DEF_ANIMATION_DURATION, MAP_DEF_EXTENT, DEF_OVERLAY_CONFIG */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1586,11 +1606,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_TRACK_STROKE_WIDTH", function() { return DEF_TRACK_STROKE_WIDTH; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_POLYGON_STROKE_WIDTH", function() { return DEF_POLYGON_STROKE_WIDTH; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_FEATURE_STROKE_OPACITY", function() { return DEF_FEATURE_STROKE_OPACITY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_CONFIG", function() { return DEF_CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ZOOM", function() { return MAP_DEF_ZOOM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_CENTER", function() { return MAP_DEF_CENTER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_FIT_PADDING", function() { return MAP_DEF_FIT_PADDING; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_ANIMATION_DURATION", function() { return MAP_DEF_ANIMATION_DURATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MAP_DEF_EXTENT", function() { return MAP_DEF_EXTENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEF_OVERLAY_CONFIG", function() { return DEF_OVERLAY_CONFIG; });
 // WEBAPP HOST
 var WEBAPP_HOST = 'wa.webmapp.it';
 // DATA
@@ -1619,11 +1641,29 @@ var DEF_TRACK_STROKE_WIDTH = 2.5;
 var DEF_POLYGON_STROKE_WIDTH = 1;
 var DEF_FEATURE_STROKE_OPACITY = 1;
 // CONFIG
+var DEF_CONFIG = {
+    MAP: {
+        layers: [
+            {
+                label: "Mappa",
+                type: "maptile",
+                tilesUrl: "https://api.webmapp.it/tiles/",
+                default: false
+            }
+        ]
+    }
+};
 var MAP_DEF_ZOOM = 11;
 var MAP_DEF_CENTER = [0, 0];
 var MAP_DEF_FIT_PADDING = [15, 15, 15, 15];
 var MAP_DEF_ANIMATION_DURATION = 500;
 var MAP_DEF_EXTENT = [-180, -85, 180, 85];
+var DEF_OVERLAY_CONFIG = {
+    id: '',
+    type: 'geojson',
+    color: '#f00',
+    icon: 'wm-icon-generic'
+};
 
 
 /***/ }),
@@ -1740,8 +1780,65 @@ var ConfigService = /** @class */ (function () {
         this.onMapConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
         this.onHomeConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
         this._offlineConfigVersion = 0;
+        this.isEmbedded = true; //false;
+        var od = [
+            {
+                id: 'fc-1',
+                type: 'geojson',
+                icon: 'wm-icon-parcopan',
+                color: '#00f'
+            }
+        ];
+        // window.localStorage.setItem('wm_overlays_definition', JSON.stringify(od));
+        var fc = [
+            {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            coordinates: [11, 43],
+                            type: 'Point'
+                        },
+                        properties: {
+                            id: 'fc-id-1',
+                            name: 'Webmapp FeatureCollection 1'
+                        }
+                    }
+                ]
+            },
+            {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            coordinates: [11.001, 43],
+                            type: 'Point'
+                        },
+                        properties: {
+                            id: 'fc-id-1',
+                            name: 'Webmapp FeatureCollection 1b',
+                            icon: 'wm-icon-alpha-sort'
+                        }
+                    }
+                ]
+            }
+        ];
+        // window.localStorage.setItem('wm_geojson_layers', JSON.stringify(fc));
         this.onMapConfigChange.next(this._offlineConfigVersion);
         this.onHomeConfigChange.next(this._offlineConfigVersion);
+        setTimeout(function () {
+            var od = [
+                {
+                    id: 'fc-1',
+                    type: 'geojson',
+                    icon: 'wm-icon-parcopan',
+                    color: '#0ff'
+                }
+            ];
+            // window.localStorage.setItem('wm_overlays_definition', JSON.stringify(od));
+        }, 3000);
     }
     /**
      * Function called during app initialization, to update the configuration
@@ -1765,26 +1862,45 @@ var ConfigService = /** @class */ (function () {
                     }
                 }
             }
-            try {
-                var elem = document.getElementsByTagName('wm-map-container')[0];
-                if (elem) {
-                    url = elem.getAttribute('configJsonUrl');
-                    startUrl = elem.getAttribute('startUrl');
-                    startUrl = startUrl ? startUrl : '/';
+            var elem = document.getElementsByTagName('wm-map-container')[0];
+            if (elem) {
+                url = elem.getAttribute('configJsonUrl');
+                startUrl = elem.getAttribute('startUrl');
+                startUrl = startUrl ? startUrl : '/';
+                _this.isEmbedded = true;
+                if (url) {
+                    _this._communicationService.get(url + '?t=' + Date.now()).subscribe(function (response) {
+                        _this._config = response;
+                        if (!_this._config.OPTIONS)
+                            _this._config.OPTIONS = {};
+                        if (_this._config.OPTIONS.baseUrl[_this._config.OPTIONS.baseUrl.length - 1] !== '/')
+                            _this._config.OPTIONS.baseUrl += '/';
+                        _this._config.OPTIONS.startUrl = startUrl;
+                        resolve();
+                    }, function (err) {
+                        console.error(err);
+                        resolve();
+                    });
+                }
+                else {
+                    _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_6__["DEF_CONFIG"];
+                    resolve();
                 }
             }
-            catch (e) { }
-            _this._communicationService.get(url + '?t=' + Date.now()).subscribe(function (response) {
-                _this._config = response;
-                if (_this._config.OPTIONS.baseUrl[_this._config.OPTIONS.baseUrl.length - 1] !== '/')
-                    _this._config.OPTIONS.baseUrl += '/';
-                _this._config.OPTIONS.startUrl = startUrl;
-                _this._storageService.setConfig(_this._config);
-                resolve();
-            }, function (err) {
-                console.error(err);
-                resolve();
-            });
+            else {
+                _this._communicationService.get(url + '?t=' + Date.now()).subscribe(function (response) {
+                    _this._config = response;
+                    if (!_this._config.OPTIONS)
+                        _this._config.OPTIONS = {};
+                    if (_this._config.OPTIONS.baseUrl[_this._config.OPTIONS.baseUrl.length - 1] !== '/')
+                        _this._config.OPTIONS.baseUrl += '/';
+                    _this._config.OPTIONS.startUrl = startUrl;
+                    resolve();
+                }, function (err) {
+                    console.error(err);
+                    resolve();
+                });
+            }
         });
     };
     ConfigService.prototype.getVersion = function () {
@@ -1794,19 +1910,19 @@ var ConfigService = /** @class */ (function () {
         return this._config.APP ? this._config.APP.name : 'Webmapp';
     };
     ConfigService.prototype.getAppId = function () {
-        return this._config.APP.id ? this._config.APP.id : '';
+        return this._config.APP && this._config.APP.id ? this._config.APP.id : '';
     };
     ConfigService.prototype.getCustomerName = function () {
         return this._config.APP && this._config.APP.customerName ? this._config.APP.customerName : 'Webmapp';
     };
     ConfigService.prototype.getPrivacyUrl = function () {
-        return this._config.OPTIONS.privacyUrl ? this._config.OPTIONS.privacyUrl : 'https://webmapp.it/privacy';
+        return this._config.OPTIONS && this._config.OPTIONS.privacyUrl ? this._config.OPTIONS.privacyUrl : 'https://webmapp.it/privacy';
     };
     ConfigService.prototype.getStartUrl = function () {
-        return this._config.OPTIONS.startUrl ? this._config.OPTIONS.startUrl : '/';
+        return this._config.OPTIONS && this._config.OPTIONS.startUrl ? this._config.OPTIONS.startUrl : '/';
     };
     ConfigService.prototype.openWebLinkFromPopup = function () {
-        return this._config && this._config.OPTIONS && this._config.OPTIONS.openWebLinkFromPopup ? true : false;
+        return this._config.OPTIONS && this._config.OPTIONS.openWebLinkFromPopup ? true : false;
     };
     ConfigService.prototype.isGeolocationAvailable = function () {
         return this._config && this._config.GEOLOCATION && this._config.GEOLOCATION.disable ? false : true;
@@ -1916,16 +2032,16 @@ var ConfigService = /** @class */ (function () {
         return layers;
     };
     ConfigService.prototype.addArrowsOverTracks = function () {
-        return this._config.OPTIONS.addArrowsOverTracks ? true : false;
+        return this._config.OPTIONS && this._config.OPTIONS.addArrowsOverTracks ? true : false;
     };
     ConfigService.prototype.getPoiPin = function () {
-        if (!this._config.OPTIONS.poiPinImage || this._config.OPTIONS.poiPinImage === 'webmapp_pin') {
+        if (!this._config.OPTIONS || !this._config.OPTIONS.poiPinImage || this._config.OPTIONS.poiPinImage === 'webmapp_pin') {
             return {
                 src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/webmapp_pin.png',
                 scale: 0.2
             };
         }
-        else if (this._config.OPTIONS.poiPinImage === 'rt_pin') {
+        else if (this._config.OPTIONS && this._config.OPTIONS.poiPinImage === 'rt_pin') {
             return {
                 src: '/wp-content/plugins/wm-embedmaps/assets/js/core/assets/images/rt_pin.png',
                 scale: 0.18
@@ -1945,23 +2061,23 @@ var ConfigService = /** @class */ (function () {
         }
     };
     ConfigService.prototype.getPoiMaxRadius = function () {
-        return this._config.OPTIONS.poiMaxRadius ? this._config.OPTIONS.poiMaxRadius : 1.7;
+        return this._config.OPTIONS && this._config.OPTIONS.poiMaxRadius ? this._config.OPTIONS.poiMaxRadius : 1.7;
     };
     ConfigService.prototype.getPoiMinRadius = function () {
-        return this._config.OPTIONS.poiMinRadius && this._config.OPTIONS.poiMinRadius <= this.getPoiMaxRadius() ? this._config.OPTIONS.poiMinRadius : 0.2;
+        return this._config.OPTIONS && this._config.OPTIONS.poiMinRadius && this._config.OPTIONS.poiMinRadius <= this.getPoiMaxRadius() ? this._config.OPTIONS.poiMinRadius : 0.2;
     };
     ConfigService.prototype.getPoiMinZoom = function () {
-        return this._config.OPTIONS.poiMinZoom && this._config.OPTIONS.poiMinZoom > this.getMapMinZoom() ? this._config.OPTIONS.poiMinZoom : this.getMapMinZoom();
+        return this._config.OPTIONS && this._config.OPTIONS.poiMinZoom && this._config.OPTIONS.poiMinZoom > this.getMapMinZoom() ? this._config.OPTIONS.poiMinZoom : this.getMapMinZoom();
     };
     ConfigService.prototype.getPoiIconRadius = function () {
-        return this._config.OPTIONS.poiIconRadius && this._config.OPTIONS.poiIconRadius >= 1.7 && this._config.OPTIONS.poiIconRadius >= this.getPoiMaxRadius() ? this._config.OPTIONS.poiIconRadius
+        return this._config.OPTIONS && this._config.OPTIONS.poiIconRadius && this._config.OPTIONS.poiIconRadius >= 1.7 && this._config.OPTIONS.poiIconRadius >= this.getPoiMaxRadius() ? this._config.OPTIONS.poiIconRadius
             : Math.max(1.7, this.getPoiMaxRadius());
     };
     ConfigService.prototype.getIconPoiZoom = function () {
-        return this._config.OPTIONS.poiIconZoom ? this._config.OPTIONS.poiIconZoom : 15;
+        return this._config.OPTIONS && this._config.OPTIONS.poiIconZoom ? this._config.OPTIONS.poiIconZoom : 15;
     };
     ConfigService.prototype.getPoiSelectedRadius = function () {
-        return this._config.OPTIONS.poiSelectedRadius && this._config.OPTIONS.poiSelectedRadius >= 2.5 && this._config.OPTIONS.poiSelectedRadius > this.getPoiIconRadius() ? this._config.OPTIONS.poiSelectedRadius
+        return this._config.OPTIONS && this._config.OPTIONS.poiSelectedRadius && this._config.OPTIONS.poiSelectedRadius >= 2.5 && this._config.OPTIONS.poiSelectedRadius > this.getPoiIconRadius() ? this._config.OPTIONS.poiSelectedRadius
             : Math.max(2.5, this.getPoiIconRadius() + 0.3);
     };
     ConfigService.prototype.showMapViewfinder = function () {
@@ -1971,22 +2087,22 @@ var ConfigService = /** @class */ (function () {
      * DATA
      */
     ConfigService.prototype.getTaxonomyUrl = function (type) {
-        return this._config.OPTIONS.baseUrl + 'taxonomies/' + type + '.json';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'taxonomies/' + type + '.json';
     };
     ConfigService.prototype.getFeatureBaseUrl = function () {
-        return this._config.OPTIONS.baseUrl + 'geojson/';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'geojson/';
     };
     ConfigService.prototype.getRouteBaseUrl = function () {
-        return this._config.OPTIONS.baseUrl + 'routes/';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'routes/';
     };
     ConfigService.prototype.getRouteImageBaseUrl = function (id) {
-        return this._config.OPTIONS.baseUrl + 'media/route_images/' + id + '_map_400x300.png';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'media/route_images/' + id + '_map_400x300.png';
     };
     ConfigService.prototype.getDefaultMapBaseUrl = function () {
-        return this._config.OPTIONS.baseUrl + 'tiles/';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'tiles/';
     };
     ConfigService.prototype.getImageBaseUrl = function () {
-        return this._config.OPTIONS.baseUrl + 'media/';
+        return this._config.OPTIONS && this._config.OPTIONS.baseUrl + 'media/';
     };
     /**
      * LANGUAGES
@@ -4669,6 +4785,11 @@ var ModelService = /** @class */ (function () {
         this._load().then(function () {
             _this.onReady.next(true);
         });
+        if (this._configService.isEmbedded) {
+            document.addEventListener('wm_doverlays_updated', function () {
+                _this._load();
+            });
+        }
     }
     ModelService.prototype.getStartUrl = function () {
         return '/';
@@ -4908,6 +5029,22 @@ var ModelService = /** @class */ (function () {
             }
         });
     };
+    ModelService.prototype._loadLocalOverlayLayers = function () {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            var overlaysDefinition = JSON.parse(window.localStorage.getItem('wm_overlays_definition')), layers = JSON.parse(window.localStorage.getItem('wm_geojson_layers'));
+            console.log(overlaysDefinition, layers);
+            for (var i in layers) {
+                var overlay = overlaysDefinition[i] ? overlaysDefinition[i] : JSON.parse(JSON.stringify(_constants__WEBPACK_IMPORTED_MODULE_8__["DEF_OVERLAY_CONFIG"]));
+                if (!overlaysDefinition[i]) {
+                    overlay.id = 'wm-default-config-' + i;
+                    overlay.color = '#' + Math.round(0xffffff * Math.random()).toString(16);
+                }
+                _this._loadFeaturesFromOverlay(overlay, layers[i]);
+            }
+            resolve();
+        });
+    };
     ModelService.prototype._loadFeatures = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
@@ -4949,6 +5086,9 @@ var ModelService = /** @class */ (function () {
             var overlays = _this._configService.getOverlayLayers();
             for (var i in overlays) {
                 promises.push(_this._loadOverlayLayer(overlays[i]));
+            }
+            if (_this._configService.isEmbedded) {
+                promises.push(_this._loadLocalOverlayLayers());
             }
             var updateFeatureTranslations = function () {
                 for (var i in _this._features) {
