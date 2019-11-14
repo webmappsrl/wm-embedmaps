@@ -1781,64 +1781,8 @@ var ConfigService = /** @class */ (function () {
         this.onHomeConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
         this._offlineConfigVersion = 0;
         this.isEmbedded = true; //false;
-        var od = [
-            {
-                id: 'fc-1',
-                type: 'geojson',
-                icon: 'wm-icon-parcopan',
-                color: '#00f'
-            }
-        ];
-        // window.localStorage.setItem('wm_overlays_definition', JSON.stringify(od));
-        var fc = [
-            {
-                type: 'FeatureCollection',
-                features: [
-                    {
-                        type: 'Feature',
-                        geometry: {
-                            coordinates: [11, 43],
-                            type: 'Point'
-                        },
-                        properties: {
-                            id: 'fc-id-1',
-                            name: 'Webmapp FeatureCollection 1'
-                        }
-                    }
-                ]
-            },
-            {
-                type: 'FeatureCollection',
-                features: [
-                    {
-                        type: 'Feature',
-                        geometry: {
-                            coordinates: [11.001, 43],
-                            type: 'Point'
-                        },
-                        properties: {
-                            id: 'fc-id-1',
-                            name: 'Webmapp FeatureCollection 1b',
-                            icon: 'wm-icon-alpha-sort'
-                        }
-                    }
-                ]
-            }
-        ];
-        // window.localStorage.setItem('wm_geojson_layers', JSON.stringify(fc));
         this.onMapConfigChange.next(this._offlineConfigVersion);
         this.onHomeConfigChange.next(this._offlineConfigVersion);
-        setTimeout(function () {
-            var od = [
-                {
-                    id: 'fc-1',
-                    type: 'geojson',
-                    icon: 'wm-icon-parcopan',
-                    color: '#0ff'
-                }
-            ];
-            // window.localStorage.setItem('wm_overlays_definition', JSON.stringify(od));
-        }, 3000);
     }
     /**
      * Function called during app initialization, to update the configuration
@@ -1926,6 +1870,9 @@ var ConfigService = /** @class */ (function () {
     };
     ConfigService.prototype.isGeolocationAvailable = function () {
         return this._config && this._config.GEOLOCATION && this._config.GEOLOCATION.disable ? false : true;
+    };
+    ConfigService.prototype.hasK = function () {
+        return this._config && this._config.OPTIONS && this._config.OPTIONS.baseUrl ? true : false;
     };
     /**
      * MAP
@@ -4840,6 +4787,10 @@ var ModelService = /** @class */ (function () {
     ModelService.prototype._getTaxonomies = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
+            if (!_this._configService.hasK()) {
+                resolve();
+                return;
+            }
             var promises = [];
             for (var taxonomy in Object.keys(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])) {
                 promises.push(_this._populateTaxonomy(taxonomy));
