@@ -4745,7 +4745,7 @@ var ModelService = /** @class */ (function () {
             _this.onReady.next(true);
         });
         if (this._configService.isEmbedded) {
-            document.addEventListener('wm_doverlays_updated', function () {
+            document.addEventListener('wm_overlays_updated', function () {
                 _this._load();
             });
         }
