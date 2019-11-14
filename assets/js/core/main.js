@@ -4987,10 +4987,8 @@ var ModelService = /** @class */ (function () {
             console.log(overlaysDefinition, layers);
             for (var i in layers) {
                 var overlay = overlaysDefinition && overlaysDefinition[i] ? overlaysDefinition[i] : JSON.parse(JSON.stringify(_constants__WEBPACK_IMPORTED_MODULE_8__["DEF_OVERLAY_CONFIG"]));
-                if (!overlaysDefinition[i]) {
-                    overlay.id = 'wm-default-config-' + i;
-                    overlay.color = '#' + Math.round(0xffffff * Math.random()).toString(16);
-                }
+                if (!overlaysDefinition || !overlaysDefinition[i])
+                    overlay.id = 'wm-default-layer-' + i;
                 _this._loadFeaturesFromOverlay(overlay, layers[i]);
             }
             resolve();
