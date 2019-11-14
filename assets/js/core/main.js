@@ -4986,7 +4986,7 @@ var ModelService = /** @class */ (function () {
             var overlaysDefinition = JSON.parse(window.localStorage.getItem('wm_overlays_definition')), layers = JSON.parse(window.localStorage.getItem('wm_geojson_layers'));
             console.log(overlaysDefinition, layers);
             for (var i in layers) {
-                var overlay = overlaysDefinition[i] ? overlaysDefinition[i] : JSON.parse(JSON.stringify(_constants__WEBPACK_IMPORTED_MODULE_8__["DEF_OVERLAY_CONFIG"]));
+                var overlay = overlaysDefinition && overlaysDefinition[i] ? overlaysDefinition[i] : JSON.parse(JSON.stringify(_constants__WEBPACK_IMPORTED_MODULE_8__["DEF_OVERLAY_CONFIG"]));
                 if (!overlaysDefinition[i]) {
                     overlay.id = 'wm-default-config-' + i;
                     overlay.color = '#' + Math.round(0xffffff * Math.random()).toString(16);
