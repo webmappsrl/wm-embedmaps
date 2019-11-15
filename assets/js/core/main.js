@@ -1230,8 +1230,7 @@ var AppComponent = /** @class */ (function () {
                         _this._mapService.fitExtent();
                 }
             }, 0);
-            _this._modelService.onReady
-                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(function (ready) { return ready; }))
+            _this._mapService.onMapUpdated
                 .subscribe(function () {
                 _this._mapService.centerFeatureLayer();
             });
@@ -3237,6 +3236,7 @@ var MapService = /** @class */ (function () {
         this._isReady = false;
         this.onReady = new rxjs__WEBPACK_IMPORTED_MODULE_1__["ReplaySubject"](1);
         this.onReady.next(this._isReady);
+        this.onMapUpdated = new rxjs__WEBPACK_IMPORTED_MODULE_1__["ReplaySubject"](1);
         this.onDrag = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.onZoom = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.onClick = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -3760,6 +3760,7 @@ var MapService = /** @class */ (function () {
             this._isReady = true;
             this.onReady.next(this._isReady);
         }
+        this.onMapUpdated.next(Date.now());
     };
     /**
      * Draw all the current features, cleaning unexisting features
