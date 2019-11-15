@@ -45897,7 +45897,7 @@ var MapComponent = /** @class */ (function () {
                         t.push(taxonomies[i][j]);
                 }
             }
-            _this.taxonomies = t;
+            _this.taxonomies = t.length > 0 ? t : undefined;
         });
         this._mapService.onTaxonomyFiltersChange
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["takeUntil"])(this._destroyer))
@@ -45909,7 +45909,7 @@ var MapComponent = /** @class */ (function () {
             }
             _this.activeFiltersNumber = active;
             _this.totalFiltersNumber = Object.keys(filters).length;
-            _this.filters = filters;
+            _this.filters = Object.keys(filters).length > 1 ? filters : undefined;
         });
     };
     MapComponent.prototype.ionViewDidLeave = function () {
