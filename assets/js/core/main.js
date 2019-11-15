@@ -1230,6 +1230,11 @@ var AppComponent = /** @class */ (function () {
                         _this._mapService.fitExtent();
                 }
             }, 0);
+            _this._modelService.onReady
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(function (ready) { return ready; }))
+                .subscribe(function () {
+                _this._mapService.fitExtent();
+            });
         });
     };
     AppComponent = __decorate([
@@ -4746,7 +4751,9 @@ var ModelService = /** @class */ (function () {
         });
         if (this._configService.isEmbedded) {
             document.addEventListener('wm_overlays_updated', function () {
-                _this._load();
+                _this._load().then(function () {
+                    _this.onReady.next(true);
+                });
             });
         }
     }
