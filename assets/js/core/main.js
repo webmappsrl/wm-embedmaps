@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, OFFLINE, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"Merlot Reiser","id":"it.webmapp.merlot","customerName":"Merlot Reiser"},"HOME":[{"view":"expanded","title":"Self Guided Experience","subtitle":"Relax and enjoy your ride with our itineraries","taxonomy":"activity","types":["route"]}],"LANGUAGES":{"default":"en","available":[]},"MAP":{"maxZoom":17,"minZoom":6,"defZoom":9,"center":[10,44],"bbox":[9.45,41.71,13.11,45.16],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#6ca858"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/merlot/","startUrl":"/main/explore","hideGlobalMap":true,"beBaseUrl":"http://merlot.be.webmapp.it/","addArrowsOverTracks":true}};
+module.exports = {"APP":{"name":"Parco Naturale Paneveggio Pale di San Martino","id":"it.webmapp.parcopan","customerName":"Parco Naturale"},"HOME":[{"view":"expanded","taxonomy":"theme","types":["track"],"title":"Natura incontaminata","subtitle":"Scopri il parco seguendo i nostri percorsi suggeriti"},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"I luoghi della visita","subtitle":"Laghi, rocce, ghiacciai e tanto altro ancora","terms":["365","371","369","380"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Il territorio del Parco","subtitle":"I centri visitatori, i comuni del Parco e altre informazioni","terms":["372","382","381"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":16,"minZoom":10,"defZoom":12,"center":[11.8031,46.2612],"bbox":[11.3457,46.02,12.05,46.6025],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":16}],"overlays":[{"id":"utfgrid_sat","label":"Sentieri Sat","type":"utfgrid","tilesUrl":"https://a.webmapp.it/trentino/tiles/sentierisat_utfgrid/","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_tratte.geojson","minZoom":10,"maxZoom":16},{"id":"park_bounds","label":"Confini del Parco","type":"geojson","geojsonUrl":"confine_parco.geojson","noDetails":true}]},"THEME":{"primary":"#7ab400","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Roboto Slab","fontFamilyContent":"Roboto"},"OPTIONS":{"baseUrl":"http://46.101.124.52/k.webmapp.it/parcopan/","startUrl":"/main/explore","beBaseUrl":"http://parcopan.org/","disableLogin":true,"addArrowsOverTracks":true,"poiSelectedRadius":2,"poiIconZoom":15,"poiIconRadius":1,"poiMaxRadius":1,"poiMinRadius":0.3,"poiMinZoom":10},"OFFLINE":{"enable":true}};
 
 /***/ }),
 
@@ -3552,6 +3552,7 @@ var MapService = /** @class */ (function () {
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["auditTime"])(30))
                 .subscribe(function () {
                 _this.adjust();
+                _this.centerFeatureLayer();
             });
             this._view.on('change:resolution', function (event) {
                 var tmp = event;
