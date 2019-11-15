@@ -1233,7 +1233,7 @@ var AppComponent = /** @class */ (function () {
             _this._modelService.onReady
                 .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(function (ready) { return ready; }))
                 .subscribe(function () {
-                _this._mapService.fitExtent();
+                _this._mapService.centerFeatureLayer();
             });
         });
     };
