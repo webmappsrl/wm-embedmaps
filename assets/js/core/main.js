@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, OFFLINE, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"Parco Naturale Paneveggio Pale di San Martino","id":"it.webmapp.parcopan","customerName":"Parco Naturale"},"HOME":[{"view":"expanded","taxonomy":"theme","types":["track"],"title":"Natura incontaminata","subtitle":"Scopri il parco seguendo i nostri percorsi suggeriti"},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"I luoghi della visita","subtitle":"Laghi, rocce, ghiacciai e tanto altro ancora","terms":["365","371","369","380"]},{"view":"compact-horizontal","taxonomy":"webmapp_category","types":["poi"],"title":"Il territorio del Parco","subtitle":"I centri visitatori, i comuni del Parco e altre informazioni","terms":["372","382","381"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":16,"minZoom":10,"defZoom":12,"center":[11.8031,46.2612],"bbox":[11.3457,46.02,12.05,46.6025],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":16}],"overlays":[{"id":"utfgrid_sat","label":"Sentieri Sat","type":"utfgrid","tilesUrl":"https://a.webmapp.it/trentino/tiles/sentierisat_utfgrid/","geojsonUrl":"https://k.webmapp.it/trentino/geojson/sentieri_tratte.geojson","minZoom":10,"maxZoom":16},{"id":"park_bounds","label":"Confini del Parco","type":"geojson","geojsonUrl":"confine_parco.geojson","noDetails":true}]},"THEME":{"primary":"#7ab400","tertiary":"#00ffff","dark":"#484848","fontFamilyHeader":"Roboto Slab","fontFamilyContent":"Roboto"},"OPTIONS":{"baseUrl":"http://46.101.124.52/k.webmapp.it/parcopan/","startUrl":"/main/explore","beBaseUrl":"http://parcopan.org/","disableLogin":true,"addArrowsOverTracks":true,"poiSelectedRadius":2,"poiIconZoom":15,"poiIconRadius":1,"poiMaxRadius":1,"poiMinRadius":0.3,"poiMinZoom":10},"OFFLINE":{"enable":true}};
+module.exports = {"APP":{"name":"Merlot Reiser","id":"it.webmapp.merlot","customerName":"Merlot Reiser"},"HOME":[{"view":"expanded","title":"Self Guided Experience","subtitle":"Relax and enjoy your ride with our itineraries","taxonomy":"activity","types":["route"]}],"LANGUAGES":{"default":"en","available":["nb"]},"MAP":{"maxZoom":16,"minZoom":6,"defZoom":9,"center":[10,44],"bbox":[9.45,41.71,13.11,45.16],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#6ca858"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/merlot/","startUrl":"/main/explore","hideGlobalMap":true,"beBaseUrl":"http://merlot.be.webmapp.it/","addArrowsOverTracks":true}};
 
 /***/ }),
 
@@ -4098,7 +4098,7 @@ var MapService = /** @class */ (function () {
                 : undefined);
         if (!feature)
             return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
-        var color = this._modelService.getFeatureColor(id), fillColor = this._modelService.getFeatureFillColor(id), fillOpacity = this._modelService.getFeatureFillOpacity(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
+        var color = this._modelService.getFeatureColor(id), fillColor = this._modelService.getFeatureFillColor(id), fillOpacity = this._modelService.getFeatureFillOpacity(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id), lineDash = this._modelService.getFeatureLineDash(id);
         if ('' + this._selectedFeatureId === '' + id) {
             selected = true;
             fillOpacity = Math.min(1, fillOpacity + 0.1);
@@ -4114,7 +4114,8 @@ var MapService = /** @class */ (function () {
             }),
             stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_20__["default"]({
                 color: color,
-                width: strokeWidth
+                width: strokeWidth,
+                lineDash: lineDash
             }),
             zIndex: selected ? 400 : 100
         }));
@@ -4129,7 +4130,7 @@ var MapService = /** @class */ (function () {
             : undefined;
         if (!feature)
             return [new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]()];
-        var color = this._modelService.getFeatureColor(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id);
+        var color = this._modelService.getFeatureColor(id), strokeWidth = this._modelService.getFeatureStrokeWidth(id), strokeOpacity = this._modelService.getFeatureStrokeOpacity(id), lineDash = this._modelService.getFeatureLineDash(id);
         if ('' + this._selectedFeatureId === '' + id) {
             selected = true;
             strokeWidth = Math.min(5, strokeWidth + 2);
@@ -4143,7 +4144,8 @@ var MapService = /** @class */ (function () {
         style.push(new ol_style_Style__WEBPACK_IMPORTED_MODULE_21__["default"]({
             stroke: new ol_style_Stroke__WEBPACK_IMPORTED_MODULE_20__["default"]({
                 color: color,
-                width: strokeWidth
+                width: strokeWidth,
+                lineDash: lineDash
             }),
             zIndex: selected ? 400 : 100
         }));
@@ -4906,6 +4908,8 @@ var ModelService = /** @class */ (function () {
                     feature.properties.icon = overlayMeta.icon;
                 if (overlayMeta.preventFilter && feature.properties.preventFilter !== false && feature.properties.preventFilter !== true)
                     feature.properties.preventFilter = overlayMeta.preventFilter;
+                if (overlayMeta.lineDash && typeof feature.properties.lineDash === 'undefined')
+                    feature.properties.lineDash = overlayMeta.lineDash;
                 if (['Polygon', 'MultiPolygon'].indexOf(feature.geometry.type) !== -1) {
                     if (feature.properties.invert === undefined && overlayMeta.invertPolygons)
                         feature.properties.invert = overlayMeta.invertPolygons;
@@ -4977,6 +4981,8 @@ var ModelService = /** @class */ (function () {
                                 term.strokeWidth = overlay.metadati.strokeWidth;
                             if (overlay.metadati.strokeOpacity)
                                 term.strokeOpacity = overlay.metadati.strokeOpacity;
+                            if (overlay.metadati.lineDash)
+                                term.lineDash = overlay.metadati.lineDash;
                             if (overlay.metadati.icon)
                                 term.icon = overlay.metadati.icon;
                             else if (overlay.metadati.iconaSvg)
@@ -5722,6 +5728,79 @@ var ModelService = /** @class */ (function () {
             }
         }
         return icon;
+    };
+    /**
+     * Return the lineDash array of the taxonomy
+     *
+     * @param id the id of the taxonomy
+     */
+    ModelService.prototype.getTaxonomyLineDash = function (id) {
+        id = "" + id;
+        var lineDash = undefined;
+        for (var i in this._taxonomies) {
+            for (var taxId in this._taxonomies[i]) {
+                if (taxId === id) {
+                    if (this._taxonomies[i][taxId].lineDash)
+                        lineDash = this._taxonomies[i][taxId].lineDash;
+                    else if (this._taxonomies[i][taxId].parent)
+                        lineDash = this.getTaxonomyLineDash(this._taxonomies[i][taxId].parent);
+                    break;
+                }
+            }
+            if (lineDash && lineDash.length && lineDash.length > 0)
+                break;
+        }
+        return lineDash;
+    };
+    /**
+     * Return the lineDash array of the feature
+     *
+     * @param id the id of the feature
+     */
+    ModelService.prototype.getFeatureLineDash = function (id) {
+        id = "" + id;
+        if (!this._features[id])
+            return undefined;
+        var lineDash = undefined;
+        if (this._features[id].properties.lineDash)
+            lineDash = this._features[id].properties.lineDash;
+        else {
+            if (this._features[id].properties.taxonomy) {
+                var taxonomyIds = [];
+                if (this._features[id].geometry.type === 'Point' && this._features[id].properties.route) {
+                    for (var i in this._features[id].properties.taxonomy) {
+                        if (i !== 'webmapp_category') {
+                            for (var j in this._features[id].properties.taxonomy[i]) {
+                                taxonomyIds.push("" + this._features[id].properties.taxonomy[i][j]);
+                            }
+                        }
+                    }
+                }
+                else if (this._features[id].geometry.type === 'Point') {
+                    if (this._features[id].properties.taxonomy.webmapp_category) {
+                        for (var i in this._features[id].properties.taxonomy.webmapp_category) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy.webmapp_category[i]);
+                        }
+                    }
+                }
+                else {
+                    if (this._features[id].properties.taxonomy.activity) {
+                        for (var i in this._features[id].properties.taxonomy.activity) {
+                            taxonomyIds.push("" + this._features[id].properties.taxonomy.activity[i]);
+                        }
+                    }
+                }
+                if (taxonomyIds.length > 0) {
+                    for (var _i = 0, taxonomyIds_7 = taxonomyIds; _i < taxonomyIds_7.length; _i++) {
+                        var i = taxonomyIds_7[_i];
+                        lineDash = this.getTaxonomyLineDash(i);
+                        if (lineDash && lineDash.length && lineDash.length > 1)
+                            break;
+                    }
+                }
+            }
+        }
+        return lineDash;
     };
     /**
      * Return a string with the url of the image to use (switching between online and offline)
