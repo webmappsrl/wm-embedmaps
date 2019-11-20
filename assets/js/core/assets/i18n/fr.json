@@ -46,7 +46,8 @@
             "stages": "étapes",
             "code": "code",
             "languages": "langues",
-            "downloadGpx": "télécharger la piste GPX"
+            "downloadGpx": "télécharger la piste GPX",
+            "osmUrl": "Voir sur OpenStreetMap"
         },
         "open": "ouvert",
         "close": "fermé",

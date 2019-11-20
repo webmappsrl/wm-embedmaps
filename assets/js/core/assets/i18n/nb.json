@@ -1,0 +1,243 @@
+{
+    "lang": {
+        "de": "deutsch",
+        "en": "english",
+        "es": "español",
+        "fr": "français",
+        "it": "italiano",
+        "nb": "norsk"
+    },
+    "taxonomy": {
+        "webmapp_category": "interessepunkter",
+        "activity": "Aktivitet",
+        "theme": "Tema",
+        "when": "Når",
+        "where": "Hvor",
+        "who": "Hvem"
+    },
+    "details": {
+        "readAll": "les alt",
+        "hide": "gjem",
+        "info": "informasjon",
+        "contactsTitle": "plassering & kontakt",
+        "routeVoucher": "{{customerName}} kunde",
+        "routeDownload": "download",
+        "routeOpen": "åpne",
+        "routeDelete": "slett",
+        "navigate": "naviger",
+        "table": {
+            "difficulty": "vanskelighetsgrad",
+            "ref": "referansenummer",
+            "scale": "vanskelighetsgrad",
+            "caiScale": "vanskelighetsgrad",
+            "mtbScale": "terrengsykkel vanskelighetsgrad",
+            "operator": "kompetanse",
+            "from": "start",
+            "to": "slutt",
+            "distance": "distanse",
+            "duration": "tid",
+            "durationBackward": "tid bakover",
+            "ascent": "oppover",
+            "descent": "nedover",
+            "ele": "høydenivå",
+            "eleMax": "maks høydenivå",
+            "eleMin": "min høydenivå",
+            "eleFrom": "høydenivå start",
+            "eleTo": "høydenivå ankomst",
+            "stages": "etapper",
+            "code": "kode",
+            "languages": "språk",
+            "downloadGpx": "last ned GPX fil",
+            "capacity": "Senger: {{capacity}}",
+            "drinkingWater": "Med drikkevann",
+            "noDrinkingWater": "Uten drikkevann",
+            "osmUrl": "Se på OpenStreetMap"
+        },
+        "open": "åpne",
+        "close": "lukk",
+        "moreInfoTitle": "mer informasjon",
+        "website": "Nettside"
+    },
+    "alert": {
+        "warning": "varsel",
+        "activateGPS": "For å dra nytte av appens funksjoner må du aktivere GPS. Vil du gjøre det nå?",
+        "gpsAuthorization": "Appen har ikke tilgang til din posisjon. Funksjoner som er basert på din posisjon er derfor ikke tilgjengelige. For å ta i bruk disse funksjonene må du autorisere tilgangen til din posisjon i enhetens innstillinger",
+        "outsideExtent": "Det ser ut som om du er utenfor kartområdet. Lokaliseringen av din posisjon vil bli deaktivert. Du kan slå på lokaliseringen når som helst ved å trykke på ikonet på kartet",
+        "routeDownload": "Du er i ferd med å laste ned turen. Vil du fortsette?",
+        "mapDownload": "Du er i ferd med å laste ned kartet. Vil du fortsette?",
+        "downloadError": "Det har skjedd en feil i løpet av nedlastingen. Vennligst prøv igjen senere",
+        "wrongLogin": "Login mislykket. Vennligst sjekk brukernavn og passord",
+        "genericError": "Det har skjedd en feil. Vennligst prøv igjen senere",
+        "loginNeededDownload": "For å laste ned denne turen må du være innlogget. Vil du logge  deg inn nå?",
+        "voucherMessage": "Sett inn din reise kode",
+        "voucherPlaceholder": "kode",
+        "voucherExpired": "Koden er utløpt",
+        "voucherError": "Ugyldig kode. Vennligst prøv igjen",
+        "discardRecordedTrack": "Du er i ferd med å slette den registrerte turen. Vil du fortsette?",
+        "discardChanges": "Ved å velge ok vil alle endringer bli slettet. Vil du fortsette?",
+        "copiedLink": "Linken ble kopiert til utklippstavlen",
+        "copiedCoordinates": "Koordinatene ble kopiert til utklippstavlen",
+        "userAlreadyExists": "Denne epost-adressen {{email}} er allerede i bruk. Vennligst logg inn",
+        "abortDownload": "Er du sikker på at du vil avbryte nedlastingen?",
+        "resumeTrackRecord": "Appen har blitt stoppet under registreringen av en tur. Hva vil du gjøre?",
+        "storageAuthorization": "Appen har ikke tilgang til lagringen for å laste ned filene. For å ta dem i bruk må du autorisere tilgang til lagringen i enhetens innstillinger",
+        "fileDownload": "Nedlasting {{filename}}",
+        "fileDownloadError": "Det har skjedd en feil under nedlastingen. Vennligst prøv igjen senere",
+        "fileDownloadSuccess": "Filen har blitt lastet ned til {{dest}}",
+        "exportMessage": "Sett inn epost-adressen der du vil motta den eksporterte ruten",
+        "exportEmailPlaceholder": "epost",
+        "exportSuccessfull": "Ruten har blitt eksportert",
+        "exportError": "Det har skjedd en feil under eksporteringen. Vennligst sjekk din tilkobling eller prøv igjen senere",
+        "offlineDuringInitialization": "Det ser ut som om du ikke er koblet til. Koble deg på nett for å laste ned datapakken som trenges for å starte appen den første gangen.",
+        "initializationTooLong": "Det er problemer med tilkoblingen. Sjekk din tilkobling. Du må koble deg på nett for å laste ned datapakken som trenges for å starte appen den første gangen."
+    },
+    "buttons": {
+        "ok": "ok",
+        "cancel": "avbryt",
+        "delete": "slett",
+        "save": "lagre",
+        "edit": "rediger",
+        "share": "del"
+    },
+    "navigation": {
+        "pause": "pause",
+        "resume": "fortsett",
+        "stop": "avslutt",
+        "toast": "Vær forsiktig, du er {{distance}}m utenfor ruten",
+        "notification": "Navigerer",
+        "tooFar": "Du er for langt fra ruten for å kunne starte navigeringen"
+    },
+    "settings": {
+        "title": "instillinger",
+        "languageRadio": "Velg språk",
+        "login": "logg in",
+        "logout": "logg ut",
+        "privacyHeader": "personvern",
+        "privacy": "Les <a href=\"{{url}}\" target=\"blank\">privacy policy</a>",
+        "appHeader": "app",
+        "appDeveloped": "App utviklet av Webmapp Srl",
+        "appVersion": "Versjon {{version}}"
+    },
+    "main": {
+        "search": "søk",
+        "loading": "laster...",
+        "actions": {
+            "list": "liste",
+            "map": "kart",
+            "filter": "filter",
+            "order": "organiser"
+        }
+    },
+    "home": {
+        "whatToDo": "Hva vil du gjøre?",
+        "seeAll": "se alt"
+    },
+    "menu": {
+        "explore": "utforsk",
+        "search": "søk",
+        "settings": "innstillinger",
+        "exitRoute": "forlat turen",
+        "myRoutes": "mine turer",
+        "stages": "etapper",
+        "help": "hjelp",
+        "attribution": "attribusjon",
+        "offline": "offline",
+        "credits": "kreditering"
+    },
+    "credits": {
+        "webmappContent1": "Appen {{appName}} er utviklet og blir vedlikeholdt av Webmapp.<br> Webmapp lager kart på nett, mobil og papir for Nature & Adventure Tourism.<br>Mer informasjon finner du på nettsiden vår ",
+        "webmappContent2": " eller ta kontakt på <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+        "map": "Kart",
+        "mapContent": "© Webmapp, distribuert med lisensen CC BY-NC-SA",
+        "cartographicData": "Kartografisk data",
+        "cartographicDataContent": "© OpenStreetMap bidragsytere"
+    },
+    "modals": {
+        "routeDownload": {
+            "mapDownloadTitle": "Laster ned kartet",
+            "routeDownloadTitle": "Du laster ned turen {{name}}",
+            "setup": "Første setup",
+            "map": "Nedlasting av kart",
+            "data": "Nedlasting av data",
+            "media": "Nedlasting av media",
+            "install": "Installering",
+            "doNotInterrupt": "Vennligst ikke lukk appen mens installeringen pågår",
+            "error": "Nedlastingen har blitt midlertidig avbrutt. Sjekk om du fortsatt er koblet til nettet. Nedlastingen vil fortsette så snart som mulig"
+        },
+        "login": {
+            "loginHeader": "Sett inn epost og passord for å logge deg inn",
+            "username": "brukernavn",
+            "password": "passord",
+            "login": "innlogging",
+            "missingFields": "Fyll inn nødvendig informasjon",
+            "passwordRecovery": "har du glemt passordet?",
+            "signupHeader": "Fyll inn følgende informasjon for å registrere deg",
+            "signup": "registrering",
+            "firstName": "navn",
+            "lastName": "etternavn",
+            "email": "epost",
+            "passwordConfirm": "bekreft passord",
+            "newsletter": "Jeg ønsker å motta nyhetsbrevet",
+            "privacy": "Jeg bekrefter vilkårene i <a href=\"{{privacy}}\" target=\"blank\">privacy policy</a>",
+            "backToLogin": "tilbake til innloggingen"
+        },
+        "saveTrack": {
+            "saveTitle": "lagre den registrerte turen",
+            "editTitle": "rediger turen",
+            "trackName": "Registrert tur {{id}}",
+            "name": "turens tittel",
+            "description": "legg til en beskrivelse",
+            "presetLabel": "Forhåndsinnstilte farger",
+            "selectColor": "Velg farge"
+        },
+        "filters": {
+            "title": "filter",
+            "reset": "tilakestille",
+            "apply": "bruk filtrene",
+            "activateAll": "aktiver alle",
+            "deactivateAll": "deaktiver alle"
+        },
+        "report": {
+            "title": "rapporter din posisjon",
+            "send": "send rapport",
+            "reportNotSent": "Rapporten har blitt akseptert og blir sendt så snart som mulig",
+            "reportSent": "Rapporten har blitt sendt",
+            "featureUnavailable": "Funksjonen er ikke tilgjengelig i browseren",
+            "selectPictureSource": "Velg",
+            "cameraSource": "Ta et bilde",
+            "photolibrarySource": "Bruk et bilde fra din bibliotek"
+        }
+    },
+    "popover": {
+        "mapCenter": "kart senter koordinater:",
+        "shareCoordinates": "del koordinatene",
+        "shareLocation": "del din posisjon",
+        "recordTrack": "registrer tur",
+        "beEdit": "rediger online",
+        "report": "rapporter din posisjon",
+        "export": "eksporter"
+    },
+    "help": {
+        "0": "Etter registreringen kan du med et enkelt klikk <span class='bold'>laste ned turer</span> til din mobil.",
+        "1": "Hver tur har <span class='bold'>kartreferanse</span> der du finner våre utvalgte <span class='bold'>interessepunkter</span>.",
+        "2": "Ved å trykke <span class='bold'>på ikonen</span> får du tilgang til beskrivelsen, bilder og annen informasjon om <span class='bold'>interessepunkt</span>.",
+        "3": "Ved å trykke på <span class='bold'>lokaliserings knappen</span> kan du se hvor du befinner deg (den blå prikken på kartet).",
+        "4": "Ved å trykke en gang til på <span class='bold'>lokaliserings knappen</span> aktiverer du <span class='bold'>kompass modusen</span> og kartet vil rotere og orientere seg mot nord."
+    },
+    "offline": {
+        "title": "Offline kart",
+        "download": "nedlasting",
+        "delete": "slett",
+        "open": "aktiver offline",
+        "close": "deaktiver offline",
+        "textContent": "Last ned kart og aktiver offline-modus"
+    },
+    "search": {
+        "poiDivider": "Interessepunkter",
+        "routeDivider": "Turer",
+        "trackDivider": "Etapper",
+        "poiEmptyList": "Ingen interessepunkter funnet",
+        "trackEmptyList": "Ingen turer funnet",
+        "routeEmptyList": "Ingen turer funnet"
+    }
+}

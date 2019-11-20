@@ -46,7 +46,8 @@
             "stages": "etappen",
             "code": "code",
             "languages": "sprachen",
-            "downloadGpx": "laden Sie den GPX-Track herunter"
+            "downloadGpx": "laden Sie den GPX-Track herunter",
+            "osmUrl": "Siehe auf OpenStreetMap"
         },
         "open": "offen",
         "close": "geschlossen",

@@ -46,7 +46,8 @@
             "stages": "stages",
             "code": "code",
             "languages": "languages",
-            "downloadGpx": "download the GPX track"
+            "downloadGpx": "download the GPX track",
+            "osmUrl": "See on OpenStreetMap"
         },
         "open": "open",
         "close": "close",

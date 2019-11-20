@@ -46,7 +46,8 @@
             "stages": "tappe",
             "code": "codice",
             "languages": "lingue",
-            "downloadGpx": "scarica il tracciato GPX"
+            "downloadGpx": "scarica il tracciato GPX",
+            "osmUrl": "Vedi su OpenStreetMap"
         },
         "open": "aperto",
         "close": "chiuso",
