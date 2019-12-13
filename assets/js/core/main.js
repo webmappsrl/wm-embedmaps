@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, default */
+/*! exports provided: APP, tmpHome, HOME, LANGUAGES, MAP, THEME, OPTIONS, REPORTS, PAGES, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"Mappa Sentiero Italia","id":"it.webmapp.simap","customerName":"CAI"},"HOME":[{"title":"Italia insulare","view":"title"},{"view":"compact-horizontal","taxonomy":"where","terms":["358","374"]},{"title":"Italia meridionale","view":"title"},{"view":"compact-horizontal","taxonomy":"where","terms":["373","378","372","371","370"]},{"title":"Italia centrale","view":"title"},{"view":"compact-horizontal","taxonomy":"where","terms":["369","368","366"]},{"title":"Italia settentrionale","view":"title"},{"view":"compact-horizontal","taxonomy":"where","terms":["366","365","360","379","364","363","362","361"]}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":16,"minZoom":6,"defZoom":7,"center":[12.648,42.592],"bbox":[5.42,35.05,19.66,47.72],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":16}]},"THEME":{"primary":"#1E73BE","fontFamilyHeader":"Montserrat Light","fontFamilyContent":"Lato"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/simap/","startUrl":"/main/explore","disableLogin":true,"showEditLink":true}};
+module.exports = {"APP":{"name":"maydayEarth","id":"it.webmapp.mde","customerName":"maydayEarth"},"tmpHome":{"view":"compact-pictures","taxonomy":"webmapp_category","terms":["358"],"title":"Campagne in corso","subtitle":"Guarda le campagne aperte e dai un tuo contributo."},"HOME":[{"view":"title","title":"maydayEarth"},{"view":"compact-pictures","taxonomy":"webmapp_category","terms":["363"],"title":"Campagne riuscite","subtitle":"Guarda le campagne che hanno raggiunto l’obiettivo."}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":17,"minZoom":4,"defZoom":9,"center":[10.4023,43.7157],"bbox":[5.42,35.05,19.66,47.72],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#20842c","secondary":"#bfcb1c","fontFamilyHeader":"Source Sans Pro","fontFamilyContent":"Source Sans Pro"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/mde/","startUrl":"/main/explore","beBaseUrl":"http://mde.be.webmapp.it/","addArrowsOverTracks":true,"poiMinRadius":1},"REPORTS":{"enable":true,"items":[{"title":"Partecipa","excerpt":"Crea una nuova campagna con MaydayEarth","type":"createPoi","showInMap":true,"locale":"it","fields":[{"label":"Inserisci il nome della campagna","name":"title","mandatory":true,"type":"text","placeholder":"campagna maydayEarth"},{"label":"Descrivi la campagna","name":"content","mandatory":true,"type":"textarea","placeholder":"campagna maydayEarth"},{"label":"Galleria","name":"gallery","mandatory":false,"limit":5,"type":"gallery"},{"label":"Data della campagna","name":"campaign_date","mandatory":true,"type":"date","maxDate":"2025","minDate":"+30"},{"name":"webmapp_category","type":"hidden","value":["358"]}]}]},"PAGES":[{"menuPosition":"middle","url":"https://a3h7e3.mailupclient.com/frontend/forms/Subscription.aspx?idList=1&idForm=1&guid=aafa5375-bcf1-4e06-965a-e3a98b626156","externalUrl":true,"icon":"mail","title":"Newsletter"},{"menuPosition":"middle","url":"http://mde.be.webmapp.it/wp-json/wp/v2/pages/1070","isWordpressPage":true,"icon":"wm-icon-android-earth"},{"menuPosition":"middle","url":"http://mde.be.webmapp.it/wp-json/wp/v2/pages/1068","isWordpressPage":true,"icon":"people"}]};
 
 /***/ }),
 
@@ -1762,9 +1762,8 @@ var _config_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack
 var version_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! version.json */ "./version.json", 1);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _communication_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./communication.service */ "./src/app/services/communication.service.ts");
-/* harmony import */ var _storage_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./storage.service */ "./src/app/services/storage.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../constants.js */ "./src/app/constants.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../constants.js */ "./src/app/constants.js");
 /**
  * Config Service
  *
@@ -1784,19 +1783,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 // TODO find a way to type the config
 
 
 var ConfigService = /** @class */ (function () {
-    function ConfigService(_communicationService, _storageService) {
+    function ConfigService(_communicationService) {
         this._communicationService = _communicationService;
-        this._storageService = _storageService;
         console.info("Core version " + version_json__WEBPACK_IMPORTED_MODULE_1__["version"]);
-        this.onMapConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
-        this.onHomeConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_5__["ReplaySubject"](1);
+        this.onMapConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
+        this.onHomeConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
         this._offlineConfigVersion = 0;
-        this.isEmbedded = true; //false;
+        this.isEmbedded = false;
         this.onMapConfigChange.next(this._offlineConfigVersion);
         this.onHomeConfigChange.next(this._offlineConfigVersion);
     }
@@ -1825,6 +1822,7 @@ var ConfigService = /** @class */ (function () {
             var elem = document.getElementsByTagName('wm-map-container')[0];
             if (elem) {
                 url = elem.getAttribute('configJsonUrl');
+                var baseUrl = elem.getAttribute('baseUrl');
                 startUrl = elem.getAttribute('startUrl');
                 startUrl = startUrl ? startUrl : '/';
                 _this.isEmbedded = true;
@@ -1843,7 +1841,9 @@ var ConfigService = /** @class */ (function () {
                     });
                 }
                 else {
-                    _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_6__["DEF_CONFIG"];
+                    _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_5__["DEF_CONFIG"];
+                    if (baseUrl)
+                        _this._config.OPTIONS.baseUrl = baseUrl;
                     resolve();
                 }
             }
@@ -1947,10 +1947,10 @@ var ConfigService = /** @class */ (function () {
     };
     ConfigService.prototype.areMapExtentDefined = function () {
         var extent = this.getMapExtent();
-        return extent[0] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][0]
-            && extent[1] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][1]
-            && extent[2] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][2]
-            && extent[3] === _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"][3]
+        return extent[0] === _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"][0]
+            && extent[1] === _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"][1]
+            && extent[2] === _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"][2]
+            && extent[3] === _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"][3]
             ? false : true;
     };
     ConfigService.prototype.getMapExtent = function () {
@@ -1960,7 +1960,7 @@ var ConfigService = /** @class */ (function () {
         else if (this._config.MAP.bbox && this._config.MAP.bbox.length && this._config.MAP.bbox.length === 4)
             extent = [this._config.MAP.bbox[0], this._config.MAP.bbox[1], this._config.MAP.bbox[2], this._config.MAP.bbox[3]];
         else
-            extent = _constants_js__WEBPACK_IMPORTED_MODULE_6__["MAP_DEF_EXTENT"];
+            extent = _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"];
         return extent;
     };
     ConfigService.prototype.getBaseLayers = function () {
@@ -2170,8 +2170,7 @@ var ConfigService = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_communication_service__WEBPACK_IMPORTED_MODULE_3__["CommunicationService"],
-            _storage_service__WEBPACK_IMPORTED_MODULE_4__["StorageService"]])
+        __metadata("design:paramtypes", [_communication_service__WEBPACK_IMPORTED_MODULE_3__["CommunicationService"]])
     ], ConfigService);
     return ConfigService;
 }());

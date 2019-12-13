@@ -8,14 +8,27 @@ function wm_render_maps_shortcode($atts)
         "height" => "",
         "config_url" => "",
         "geojson_url" => "",
+        "base_url" => "",
     ), $atts));
 
-    if ($config_url !== '') {
+    if ($config_url != '') {
         ?>
-    <wm-map-container configJsonUrl="<?php echo $config_url ?>" <?php if ($height !== '') {
-            echo "style=\"height: $height\"";
+    <wm-map-container <?php echo " configJsonUrl=\"$config_url\"";
+        if ($height != '') {
+            echo " style=\"height: $height\"";
         }
-        ?>></wm-map-container>
+        ?>
+        ></wm-map-container>
+    <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
+    <?php
+} elseif ($base_url != '') {
+        ?>
+    <wm-map-container <?php echo " baseUrl=\"$base_url\"";
+        if ($height != '') {
+            echo " style=\"height: $height\"";
+        }
+        ?>
+        ></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
