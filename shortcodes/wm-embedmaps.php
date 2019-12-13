@@ -4,7 +4,6 @@ add_shortcode('wm-embedmaps', 'wm_render_maps_shortcode');
 function wm_render_maps_shortcode($atts)
 {
     ob_start();
-    $height = '';
     extract(shortcode_atts(array(
         "height" => "",
         "config_url" => "",
@@ -13,7 +12,7 @@ function wm_render_maps_shortcode($atts)
     if ($config_url !== '') {
         ?>
     <wm-map-container configJsonUrl="<?php echo $config_url ?>" <?php if ($height !== '') {
-            echo "style:\"height: $height\"";
+            echo "style=\"height: $height\"";
         }
         ?>></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
@@ -64,7 +63,7 @@ function wm_render_maps_shortcode($atts)
         }
         ?>
     <wm-map-container class='<?php echo $post_type ?>' <?php if ($height !== '') {
-            echo "style:\"height: $height\"";
+            echo "style=\"height: $height\"";
         }
         ?>></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
