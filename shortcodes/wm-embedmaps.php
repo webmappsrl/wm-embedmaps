@@ -32,27 +32,28 @@ function wm_render_maps_shortcode($atts)
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
-        $layer = array(
-            'type' => 'FeatureCollection',
-            'features' => array(
-                array(
-                    'type' => 'Feature',
-                    'geometry' => array(),
-                    'properties' => array(
-                        'id' => $post_id,
-                        'web' => get_the_permalink(),
-                        'image' => get_the_post_thumbnail_url(),
-                        'name' => get_the_title(),
-                    ),
-                ),
-            ),
-        );
-
+        $layer = null;
         if ($geojson_url) {
             $layer = json_decode(file_get_contents($geojson_url), true);
         } else {
             $post_id = get_the_ID();
             $post_type = get_post_type($post_id);
+
+            $layer = array(
+                'type' => 'FeatureCollection',
+                'features' => array(
+                    array(
+                        'type' => 'Feature',
+                        'geometry' => array(),
+                        'properties' => array(
+                            'id' => $post_id,
+                            'web' => get_the_permalink(),
+                            'image' => get_the_post_thumbnail_url(),
+                            'name' => get_the_title(),
+                        ),
+                    ),
+                ),
+            );
 
             if ($post_type == 'poi') {
                 $poi_coord = get_field('n7webmap_coord', $post_id);
@@ -80,7 +81,7 @@ function wm_render_maps_shortcode($atts)
             }
         }
         ?>
-    <wm-map-container class='<?php echo $post_type ?>' <?php if ($height !== '') {
+    <wm-map-container class='<?php echo $post_type ?>' <?php if ($height != '') {
             echo "style=\"height: $height\"";
         }
         ?>></wm-map-container>
