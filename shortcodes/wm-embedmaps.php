@@ -7,6 +7,7 @@ function wm_render_maps_shortcode($atts)
     extract(shortcode_atts(array(
         "height" => "",
         "config_url" => "",
+        "geojson_url" => "",
     ), $atts));
 
     if ($config_url !== '') {
@@ -18,9 +19,6 @@ function wm_render_maps_shortcode($atts)
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
-        $post_id = get_the_ID();
-        $post_type = get_post_type($post_id);
-
         $layer = array(
             'type' => 'FeatureCollection',
             'features' => array(
@@ -37,29 +35,36 @@ function wm_render_maps_shortcode($atts)
             ),
         );
 
-        if ($post_type == 'poi') {
-            $poi_coord = get_field('n7webmap_coord', $post_id);
-            $lat = $poi_coord['lat'];
-            $lng = $poi_coord['lng'];
-            $geometry = array(
-                'type' => 'Point',
-                'coordinates' => array(
-                    floatval($lng),
-                    floatval($lat),
-                ),
-            );
-            $layer['features'][0]['geometry'] = $geometry;
-        } elseif ($post_type == 'track') {
-            $track_geojson = get_field('n7webmap_geojson');
-        } elseif ($post_type == 'route') {
-            $geometry = array(
-                'type' => 'Point',
-                'coordinates' => array(
-                    floatval(get_field('vn_longitude', $post_id)),
-                    floatval(get_field('vn_latitude', $post_id)),
-                ),
-            );
-            $layer['features'][0]['geometry'] = $geometry;
+        if ($geojson_url) {
+            $layer = json_decode(file_get_contents($geojson_url), true);
+        } else {
+            $post_id = get_the_ID();
+            $post_type = get_post_type($post_id);
+
+            if ($post_type == 'poi') {
+                $poi_coord = get_field('n7webmap_coord', $post_id);
+                $lat = $poi_coord['lat'];
+                $lng = $poi_coord['lng'];
+                $geometry = array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        floatval($lng),
+                        floatval($lat),
+                    ),
+                );
+                $layer['features'][0]['geometry'] = $geometry;
+            } elseif ($post_type == 'track') {
+                $track_geojson = get_field('n7webmap_geojson');
+            } elseif ($post_type == 'route') {
+                $geometry = array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        floatval(get_field('vn_longitude', $post_id)),
+                        floatval(get_field('vn_latitude', $post_id)),
+                    ),
+                );
+                $layer['features'][0]['geometry'] = $geometry;
+            }
         }
         ?>
     <wm-map-container class='<?php echo $post_type ?>' <?php if ($height !== '') {
