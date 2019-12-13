@@ -5,14 +5,14 @@ function wm_render_maps_shortcode($atts)
 {
     ob_start();
     $height = '';
-    if (array_key_exists('height', $atts)) {
-        $height = $atts['height'];
-    }
+    extract(shortcode_atts(array(
+        "height" => "",
+        "config_url" => "",
+    ), $atts));
 
-    if (array_key_exists('config_url', $atts)) {
-        $url = $atts['config_url'];
+    if ($config_url !== '') {
         ?>
-    <wm-map-container configJsonUrl="<?php echo $url ?>" <?php if ($height !== '') {
+    <wm-map-container configJsonUrl="<?php echo $config_url ?>" <?php if ($height !== '') {
             echo "style:\"height: $height\"";
         }
         ?>></wm-map-container>
