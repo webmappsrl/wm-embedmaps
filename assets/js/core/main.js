@@ -1921,7 +1921,7 @@ var ConfigService = /** @class */ (function () {
         return this._config.MAP.defZoom && typeof this._config.MAP.defZoom === 'number' ? this._config.MAP.defZoom : undefined;
     };
     ConfigService.prototype.getMapFitLayerMaxZoom = function () {
-        return this._config.MAP.fitLayerMaxZoom && typeof this._config.MAP.fitLayerMaxZoom === 'number' ? Math.max(this._config.MAP.fitLayerMaxZoom, this.getMapMaxZoom()) : 17;
+        return this._config.MAP.fitLayerMaxZoom && typeof this._config.MAP.fitLayerMaxZoom === 'number' ? Math.min(Math.max(this._config.MAP.fitLayerMaxZoom, this.getMapMinZoom()), this.getMapMaxZoom()) : 17;
     };
     ConfigService.prototype.getMapCenter = function () {
         var valid = true;
