@@ -1841,8 +1841,8 @@ var ConfigService = /** @class */ (function () {
                     _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_5__["DEF_CONFIG"];
                     if (baseUrl)
                         _this._config.OPTIONS.baseUrl = baseUrl[baseUrl.length - 1] === '/' ? baseUrl : baseUrl + '/';
-                    if (fitLayerMaxZoom && !Number.isNaN(parseInt(fitLayerMaxZoom)))
-                        _this._config.MAP.fitLayerMaxZoom = parseInt(fitLayerMaxZoom);
+                    if (fitLayerMaxZoom && !Number.isNaN(parseFloat(fitLayerMaxZoom)))
+                        _this._config.MAP.fitLayerMaxZoom = parseFloat(fitLayerMaxZoom);
                     if (disableClickInMap && disableClickInMap === 'true')
                         _this._config.OPTIONS.disableClickInMap = true;
                     resolve();
@@ -4173,7 +4173,7 @@ var MapService = /** @class */ (function () {
                     zIndex: 150
                 })
             ];
-            if (this._view.getZoom() > this._configService.getIconPoiZoom())
+            if (this._view.getZoom() >= this._configService.getIconPoiZoom())
                 this._addIconOverlay(id);
             else
                 this._removeIconOverlay(id);
