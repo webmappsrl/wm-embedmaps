@@ -6,3 +6,6 @@
   Version: 0.0.1
   Author URI: http://webmapp.it
  */
+require ('shortcodes/wm-embedmaps.php');
+
+?>
