@@ -1792,10 +1792,7 @@ var ConfigService = /** @class */ (function () {
         console.info("Core version " + version_json__WEBPACK_IMPORTED_MODULE_1__["version"]);
         this.onMapConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
         this.onHomeConfigChange = new rxjs__WEBPACK_IMPORTED_MODULE_4__["ReplaySubject"](1);
-        this._offlineConfigVersion = 0;
         this.isEmbedded = false;
-        this.onMapConfigChange.next(this._offlineConfigVersion);
-        this.onHomeConfigChange.next(this._offlineConfigVersion);
     }
     /**
      * Function called during app initialization, to update the configuration
@@ -1822,7 +1819,7 @@ var ConfigService = /** @class */ (function () {
             var elem = document.getElementsByTagName('wm-map-container')[0];
             if (elem) {
                 url = elem.getAttribute('configJsonUrl');
-                var baseUrl = elem.getAttribute('baseUrl');
+                var baseUrl = elem.getAttribute('baseUrl') || undefined, fitLayerMaxZoom = elem.getAttribute('fitLayerMaxZoom') || undefined, disableClickInMap = elem.getAttribute('disableClickInMap') || undefined;
                 startUrl = elem.getAttribute('startUrl');
                 startUrl = startUrl ? startUrl : '/';
                 _this.isEmbedded = true;
@@ -1843,7 +1840,11 @@ var ConfigService = /** @class */ (function () {
                 else {
                     _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_5__["DEF_CONFIG"];
                     if (baseUrl)
-                        _this._config.OPTIONS.baseUrl = baseUrl;
+                        _this._config.OPTIONS.baseUrl = baseUrl[baseUrl.length - 1] === '/' ? baseUrl : baseUrl + '/';
+                    if (fitLayerMaxZoom && !Number.isNaN(parseInt(fitLayerMaxZoom)))
+                        _this._config.MAP.fitLayerMaxZoom = parseInt(fitLayerMaxZoom);
+                    if (disableClickInMap && disableClickInMap === 'true')
+                        _this._config.OPTIONS.disableClickInMap = true;
                     resolve();
                 }
             }
@@ -1857,6 +1858,7 @@ var ConfigService = /** @class */ (function () {
                     _this._config.OPTIONS.startUrl = startUrl;
                     resolve();
                 }, function (err) {
+                    _this._config = _constants_js__WEBPACK_IMPORTED_MODULE_5__["DEF_CONFIG"];
                     console.error(err);
                     resolve();
                 });
@@ -1906,35 +1908,23 @@ var ConfigService = /** @class */ (function () {
         }
         return valid;
     };
+    ConfigService.prototype.enableMapClickInteraction = function () {
+        return this._config.OPTIONS && this._config.OPTIONS.disableClickInMap ? false : true;
+    };
     ConfigService.prototype.getMapMaxZoom = function () {
-        if (this._offlineMapConfig && this._offlineMapConfig.maxZoom && typeof this._offlineMapConfig.maxZoom === 'number')
-            return this._offlineMapConfig.maxZoom;
-        else
-            return this._config.MAP.maxZoom && typeof this._config.MAP.maxZoom === 'number' ? this._config.MAP.maxZoom : 17;
+        return this._config.MAP.maxZoom && typeof this._config.MAP.maxZoom === 'number' ? this._config.MAP.maxZoom : 17;
     };
     ConfigService.prototype.getMapMinZoom = function () {
-        if (this._offlineMapConfig && this._offlineMapConfig.minZoom && typeof this._offlineMapConfig.minZoom === 'number')
-            return this._offlineMapConfig.minZoom;
-        else
-            return this._config.MAP.minZoom && typeof this._config.MAP.minZoom === 'number' ? this._config.MAP.minZoom : 1;
+        return this._config.MAP.minZoom && typeof this._config.MAP.minZoom === 'number' ? this._config.MAP.minZoom : 1;
     };
     ConfigService.prototype.getMapDefZoom = function () {
-        if (this._offlineMapConfig && this._offlineMapConfig.defZoom && typeof this._offlineMapConfig.defZoom === 'number')
-            return this._offlineMapConfig.defZoom;
-        else
-            return this._config.MAP.defZoom && typeof this._config.MAP.defZoom === 'number' ? this._config.MAP.defZoom : undefined;
+        return this._config.MAP.defZoom && typeof this._config.MAP.defZoom === 'number' ? this._config.MAP.defZoom : undefined;
+    };
+    ConfigService.prototype.getMapFitLayerMaxZoom = function () {
+        return this._config.MAP.fitLayerMaxZoom && typeof this._config.MAP.fitLayerMaxZoom === 'number' ? Math.max(this._config.MAP.fitLayerMaxZoom, this.getMapMaxZoom()) : 17;
     };
     ConfigService.prototype.getMapCenter = function () {
         var valid = true;
-        if (this._offlineMapConfig && this._offlineMapConfig.center && this._offlineMapConfig.center.length === 2) {
-            this._offlineMapConfig.center.forEach(function (item) {
-                if (typeof item !== 'number')
-                    valid = false;
-            });
-            if (valid)
-                return [this._offlineMapConfig.center[0], this._offlineMapConfig.center[1]];
-        }
-        valid = true;
         if (this._config.MAP.center && this._config.MAP.center.length === 2) {
             this._config.MAP.center.forEach(function (item) {
                 if (typeof item !== 'number')
@@ -1955,9 +1945,7 @@ var ConfigService = /** @class */ (function () {
     };
     ConfigService.prototype.getMapExtent = function () {
         var extent;
-        if (this._offlineMapConfig && this._offlineMapConfig.bbox && this._offlineMapConfig.bbox.length && this._offlineMapConfig.bbox.length === 4)
-            extent = [this._offlineMapConfig.bbox[0], this._offlineMapConfig.bbox[1], this._offlineMapConfig.bbox[2], this._offlineMapConfig.bbox[3]];
-        else if (this._config.MAP.bbox && this._config.MAP.bbox.length && this._config.MAP.bbox.length === 4)
+        if (this._config.MAP.bbox && this._config.MAP.bbox.length && this._config.MAP.bbox.length === 4)
             extent = [this._config.MAP.bbox[0], this._config.MAP.bbox[1], this._config.MAP.bbox[2], this._config.MAP.bbox[3]];
         else
             extent = _constants_js__WEBPACK_IMPORTED_MODULE_5__["MAP_DEF_EXTENT"];
@@ -1978,14 +1966,7 @@ var ConfigService = /** @class */ (function () {
     };
     ConfigService.prototype.getOverlayLayers = function () {
         var layers = [];
-        if (this._offlineMapConfig && this._offlineMapConfig.overlays) {
-            this._offlineMapConfig.overlays.forEach(function (layer) {
-                if (typeof layer.type === 'string' &&
-                    layer.type !== '')
-                    layers.push(layer);
-            });
-        }
-        else if (this._config.MAP.overlays) {
+        if (this._config.MAP.overlays) {
             this._config.MAP.overlays.forEach(function (layer) {
                 if (typeof layer.type === 'string' &&
                     layer.type !== '')
@@ -3592,21 +3573,23 @@ var MapService = /** @class */ (function () {
                 });
             });
             this._map.addLayer(this._dataLayer);
-            this._map.on('click', function (event) {
-                if (_this._previousClickTimeout) {
-                    clearInterval(_this._previousClickTimeout);
-                    _this._previousClickTimeout = undefined;
-                    return;
-                }
-                else {
-                    _this._previousClickTimeout = setTimeout(function () {
-                        if (_this._isInteractive) {
-                            _this._checkFeatureClick(event);
-                        }
+            if (this._configService.enableMapClickInteraction()) {
+                this._map.on('click', function (event) {
+                    if (_this._previousClickTimeout) {
+                        clearInterval(_this._previousClickTimeout);
                         _this._previousClickTimeout = undefined;
-                    }, 250);
-                }
-            });
+                        return;
+                    }
+                    else {
+                        _this._previousClickTimeout = setTimeout(function () {
+                            if (_this._isInteractive) {
+                                _this._checkFeatureClick(event);
+                            }
+                            _this._previousClickTimeout = undefined;
+                        }, 250);
+                    }
+                });
+            }
             this._configService.onMapConfigChange.subscribe(function () {
                 _this._view = new ol_View__WEBPACK_IMPORTED_MODULE_27__["default"]({
                     center: _this._fromLonLat(_this._configService.getMapCenter() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_CENTER"]),
@@ -3870,8 +3853,22 @@ var MapService = /** @class */ (function () {
      * Center the map to the extent of the current features layer
      */
     MapService.prototype.centerFeatureLayer = function () {
-        if (this._dataSource.getFeatures().length > 0)
-            this.fitExtent(this._extentToLonLat(this._dataSource.getExtent()));
+        if (this._dataSource.getFeatures().length > 0) {
+            var viewTmp = new ol_View__WEBPACK_IMPORTED_MODULE_27__["default"]({
+                center: this._fromLonLat(this._configService.getMapCenter() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_CENTER"]),
+                zoom: this._configService.getMapDefZoom() || _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ZOOM"],
+                maxZoom: this._configService.getMapFitLayerMaxZoom(),
+                minZoom: this._configService.getMapMinZoom(),
+                projection: 'EPSG:3857',
+                extent: this._extentFromLonLat(this._configService.getMapExtent())
+            });
+            viewTmp.fit(this._dataSource.getExtent());
+            this._view.animate({
+                center: viewTmp.getCenter(),
+                zoom: viewTmp.getZoom(),
+                duration: _constants__WEBPACK_IMPORTED_MODULE_31__["MAP_DEF_ANIMATION_DURATION"]
+            });
+        }
     };
     /**
      * Center the map to the specified extent
