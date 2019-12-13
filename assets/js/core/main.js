@@ -1921,7 +1921,7 @@ var ConfigService = /** @class */ (function () {
         return this._config.MAP.defZoom && typeof this._config.MAP.defZoom === 'number' ? this._config.MAP.defZoom : undefined;
     };
     ConfigService.prototype.getMapFitLayerMaxZoom = function () {
-        return this._config.MAP.fitLayerMaxZoom && typeof this._config.MAP.fitLayerMaxZoom === 'number' ? Math.min(Math.max(this._config.MAP.fitLayerMaxZoom, this.getMapMinZoom()), this.getMapMaxZoom()) : 17;
+        return this._config.MAP.fitLayerMaxZoom && typeof this._config.MAP.fitLayerMaxZoom === 'number' ? Math.min(Math.max(this._config.MAP.fitLayerMaxZoom, this.getMapMinZoom()), this.getMapMaxZoom()) : 14;
     };
     ConfigService.prototype.getMapCenter = function () {
         var valid = true;
@@ -2018,7 +2018,7 @@ var ConfigService = /** @class */ (function () {
             : Math.max(1.7, this.getPoiMaxRadius());
     };
     ConfigService.prototype.getIconPoiZoom = function () {
-        return this._config.OPTIONS && this._config.OPTIONS.poiIconZoom ? this._config.OPTIONS.poiIconZoom : 15;
+        return this._config.OPTIONS && this._config.OPTIONS.poiIconZoom ? this._config.OPTIONS.poiIconZoom : this.getMapFitLayerMaxZoom();
     };
     ConfigService.prototype.getPoiSelectedRadius = function () {
         return this._config.OPTIONS && this._config.OPTIONS.poiSelectedRadius && this._config.OPTIONS.poiSelectedRadius >= 2.5 && this._config.OPTIONS.poiSelectedRadius > this.getPoiIconRadius() ? this._config.OPTIONS.poiSelectedRadius
