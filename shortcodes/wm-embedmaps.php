@@ -4,6 +4,9 @@ add_shortcode('wm-embedmaps', 'wm_render_maps_shortcode');
 function wm_render_maps_shortcode($atts)
 {
     ob_start();
+    
+		
+
     extract(shortcode_atts(array(
         "height" => "",
         "config_url" => "",
@@ -47,6 +50,9 @@ function wm_render_maps_shortcode($atts)
             $post_id = get_the_ID();
             $post_type = get_post_type($post_id);
 
+            $term_color = '';
+            $term_icon = '';
+            
             $layer = array(
                 'type' => 'FeatureCollection',
                 'features' => array(
@@ -64,6 +70,14 @@ function wm_render_maps_shortcode($atts)
             );
 
             if ($post_type == 'poi') {
+                $terms = get_the_terms( $post_id , 'webmapp_category' );
+                foreach ( $terms as $term )
+                {
+                    $term_icon = get_field( 'wm_taxonomy_icon',$term );
+                    $term_color = get_field( 'wm_taxonomy_color',$term );
+                }
+                $layer['features'][0]['properties']['color'] = $term_color;
+                $layer['features'][0]['properties']['icon'] = $term_icon;
                 $poi_coord = get_field('n7webmap_coord', $post_id);
                 $lat = $poi_coord['lat'];
                 $lng = $poi_coord['lng'];
@@ -104,7 +118,7 @@ function wm_render_maps_shortcode($atts)
     <script type="text/javascript">
         var layers = [<?php echo json_encode($layer); ?>];
         var definitions = [{
-            id: 'vn-routes',
+            id: 'wm-default-id',
             icon: 'wm-icon-flag',
             color: '#f00'
         }];
