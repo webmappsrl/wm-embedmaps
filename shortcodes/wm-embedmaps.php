@@ -45,7 +45,7 @@ function wm_render_maps_shortcode($atts)
         if ($geojson_url) {
             $split = explode(',', $geojson_url);
             foreach ($split as $u) {
-                array_push($layers, json_decode(file_get_contents($geojson_url), true));
+                array_push($layers, json_decode(file_get_contents($u), true));
             }
         } else {
             $post_id = get_the_ID();
