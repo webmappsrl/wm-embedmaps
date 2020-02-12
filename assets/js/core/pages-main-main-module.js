@@ -45137,14 +45137,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_theme_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/services/theme.service */ "./src/app/services/theme.service.ts");
 /* harmony import */ var src_app_services_geolocation_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! src/app/services/geolocation.service */ "./src/app/services/geolocation.service.ts");
 /* harmony import */ var src_app_services_config_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! src/app/services/config.service */ "./src/app/services/config.service.ts");
-/* harmony import */ var src_app_services_communication_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/app/services/communication.service */ "./src/app/services/communication.service.ts");
-/* harmony import */ var src_app_services_languages_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/app/services/languages.service */ "./src/app/services/languages.service.ts");
-/* harmony import */ var src_app_services_router_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! src/app/services/router.service */ "./src/app/services/router.service.ts");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! src/app/classes/clocation */ "./src/app/classes/clocation.ts");
-/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var src_app_constants__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! src/app/constants */ "./src/app/constants.ts");
+/* harmony import */ var src_app_services_languages_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! src/app/services/languages.service */ "./src/app/services/languages.service.ts");
+/* harmony import */ var src_app_services_router_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! src/app/services/router.service */ "./src/app/services/router.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! src/app/classes/clocation */ "./src/app/classes/clocation.ts");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
+/* harmony import */ var src_app_constants__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! src/app/constants */ "./src/app/constants.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45176,18 +45174,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var DetailsComponent = /** @class */ (function () {
-    function DetailsComponent(_alertController, _clipboardService, _communicationService, _configService, _deviceService, _domSanitizer, _file, _geolocationService, _languagesService, _launchNavigator, _mapService, _modalController, _modelService, _route, _routerService, _themeService, _toastController, _translateService) {
+    function DetailsComponent(_clipboardService, _configService, _deviceService, _domSanitizer, _geolocationService, _languagesService, _launchNavigator, _mapService, _modalController, _modelService, _route, _routerService, _themeService, _toastController, _translateService) {
         var _this = this;
-        this._alertController = _alertController;
         this._clipboardService = _clipboardService;
-        this._communicationService = _communicationService;
         this._configService = _configService;
         this._deviceService = _deviceService;
         this._domSanitizer = _domSanitizer;
-        this._file = _file;
         this._geolocationService = _geolocationService;
         this._languagesService = _languagesService;
         this._launchNavigator = _launchNavigator;
@@ -45294,7 +45287,7 @@ var DetailsComponent = /** @class */ (function () {
                     _this._mapService.rotate(0);
                 }, 500);
                 if (_this._feature.geometry && (_this._feature.geometry.type === "LineString" || _this._feature.geometry.type === "MultiLineString")) {
-                    _this.type = src_app_constants__WEBPACK_IMPORTED_MODULE_23__["TRACK"];
+                    _this.type = src_app_constants__WEBPACK_IMPORTED_MODULE_21__["TRACK"];
                     var timeForward = _this._configService.showDurationForward() && _this._feature.properties['duration:forward'] ? _this._feature.properties['duration:forward'] : undefined;
                     if (typeof timeForward === 'string') {
                         if (!Number.isNaN(parseInt(timeForward.slice(-1))))
@@ -45382,7 +45375,7 @@ var DetailsComponent = /** @class */ (function () {
                         _this.wgs84Coords += ' W ' + _this._feature.geometry.coordinates[0].toFixed(4).replace('.', ',');
                 }
                 if (_this._configService.showUtmCoords() && _this._feature.geometry.type === 'Point') {
-                    var coords = _this._mapService.getUTMCoords(new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_20__["CLocation"](_this._feature.geometry.coordinates[0], _this._feature.geometry.coordinates[1]));
+                    var coords = _this._mapService.getUTMCoords(new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_19__["CLocation"](_this._feature.geometry.coordinates[0], _this._feature.geometry.coordinates[1]));
                     if (coords[1] >= 0)
                         _this.utmCoords = 'N ' + coords[1].toString().replace('.', ',');
                     else
@@ -45481,10 +45474,10 @@ var DetailsComponent = /** @class */ (function () {
             for (var pos = 0; pos < this._feature.geometry.coordinates.length - 2; pos++) {
                 var l1 = void 0, l2 = void 0;
                 if (typeof this._feature.geometry.coordinates[pos] !== 'number') {
-                    l1 = new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_20__["CLocation"](this._feature.geometry.coordinates[pos][0], this._feature.geometry.coordinates[pos][1]);
+                    l1 = new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_19__["CLocation"](this._feature.geometry.coordinates[pos][0], this._feature.geometry.coordinates[pos][1]);
                 }
                 if (typeof this._feature.geometry.coordinates[pos + 1] !== 'number') {
-                    l2 = new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_20__["CLocation"](this._feature.geometry.coordinates[pos + 1][0], this._feature.geometry.coordinates[pos + 1][1]);
+                    l2 = new src_app_classes_clocation__WEBPACK_IMPORTED_MODULE_19__["CLocation"](this._feature.geometry.coordinates[pos + 1][0], this._feature.geometry.coordinates[pos + 1][1]);
                 }
                 currentDistance += this._mapService.getDistanceBetweenPoints(l1, l2);
                 if (pos % step === 0) {
@@ -45659,21 +45652,18 @@ var DetailsComponent = /** @class */ (function () {
             encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
             styles: [__webpack_require__(/*! ./details.component.scss */ "./src/app/components/main/details/details.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"],
-            ngx_clipboard__WEBPACK_IMPORTED_MODULE_21__["ClipboardService"],
-            src_app_services_communication_service__WEBPACK_IMPORTED_MODULE_16__["CommunicationService"],
+        __metadata("design:paramtypes", [ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__["ClipboardService"],
             src_app_services_config_service__WEBPACK_IMPORTED_MODULE_15__["ConfigService"],
             src_app_services_device_service__WEBPACK_IMPORTED_MODULE_8__["DeviceService"],
-            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__["DomSanitizer"],
-            _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_22__["File"],
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_18__["DomSanitizer"],
             src_app_services_geolocation_service__WEBPACK_IMPORTED_MODULE_14__["GeolocationService"],
-            src_app_services_languages_service__WEBPACK_IMPORTED_MODULE_17__["LanguagesService"],
+            src_app_services_languages_service__WEBPACK_IMPORTED_MODULE_16__["LanguagesService"],
             _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_6__["LaunchNavigator"],
             src_app_services_map_service__WEBPACK_IMPORTED_MODULE_9__["MapService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ModalController"],
             src_app_services_model_service__WEBPACK_IMPORTED_MODULE_10__["ModelService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
-            src_app_services_router_service__WEBPACK_IMPORTED_MODULE_18__["RouterService"],
+            src_app_services_router_service__WEBPACK_IMPORTED_MODULE_17__["RouterService"],
             src_app_services_theme_service__WEBPACK_IMPORTED_MODULE_13__["ThemeService"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["ToastController"],
             _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateService"]])
@@ -46094,10 +46084,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-i18n-country-select */ "./node_modules/ngx-i18n-country-select/fesm5/ngx-i18n-country-select.js");
-/* harmony import */ var ngx_color_picker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-color-picker */ "./node_modules/ngx-color-picker/dist/ngx-color-picker.es5.js");
-/* harmony import */ var _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./gallery/gallery.component */ "./src/app/components/modals/gallery/gallery.component.ts");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GalleryComponent", function() { return _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_8__["GalleryComponent"]; });
+/* harmony import */ var ngx_color_picker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-color-picker */ "./node_modules/ngx-color-picker/dist/ngx-color-picker.es5.js");
+/* harmony import */ var _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./gallery/gallery.component */ "./src/app/components/modals/gallery/gallery.component.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "GalleryComponent", function() { return _gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__["GalleryComponent"]; });
 
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -46113,23 +46102,21 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var ModalsComponentsModule = /** @class */ (function () {
     function ModalsComponentsModule() {
     }
     ModalsComponentsModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_8__["GalleryComponent"]],
+            declarations: [_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__["GalleryComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["IonicModule"].forRoot(),
                 _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
                 _ngx_translate_core__WEBPACK_IMPORTED_MODULE_4__["TranslateModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormsModule"],
-                ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_6__["I18nCountrySelectModule"],
-                ngx_color_picker__WEBPACK_IMPORTED_MODULE_7__["ColorPickerModule"]
+                ngx_color_picker__WEBPACK_IMPORTED_MODULE_6__["ColorPickerModule"]
             ],
-            exports: [_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_8__["GalleryComponent"]]
+            exports: [_gallery_gallery_component__WEBPACK_IMPORTED_MODULE_7__["GalleryComponent"]]
         })
     ], ModalsComponentsModule);
     return ModalsComponentsModule;

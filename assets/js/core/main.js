@@ -4,10 +4,10 @@
 /*!*********************!*\
   !*** ./config.json ***!
   \*********************/
-/*! exports provided: APP, tmpHome, HOME, LANGUAGES, MAP, THEME, OPTIONS, REPORTS, PAGES, default */
+/*! exports provided: APP, HOME, LANGUAGES, MAP, THEME, OPTIONS, PAGES, default */
 /***/ (function(module) {
 
-module.exports = {"APP":{"name":"maydayEarth","id":"it.webmapp.mde","customerName":"maydayEarth"},"tmpHome":{"view":"compact-pictures","taxonomy":"webmapp_category","terms":["358"],"title":"Campagne in corso","subtitle":"Guarda le campagne aperte e dai un tuo contributo."},"HOME":[{"view":"title","title":"maydayEarth"},{"view":"compact-pictures","taxonomy":"webmapp_category","terms":["363"],"title":"Campagne riuscite","subtitle":"Guarda le campagne che hanno raggiunto l’obiettivo."}],"LANGUAGES":{"default":"it"},"MAP":{"maxZoom":17,"minZoom":4,"defZoom":9,"center":[10.4023,43.7157],"bbox":[5.42,35.05,19.66,47.72],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#20842c","secondary":"#bfcb1c","fontFamilyHeader":"Source Sans Pro","fontFamilyContent":"Source Sans Pro"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/mde/","startUrl":"/main/explore","beBaseUrl":"http://mde.be.webmapp.it/","addArrowsOverTracks":true,"poiMinRadius":1},"REPORTS":{"enable":true,"items":[{"title":"Partecipa","excerpt":"Crea una nuova campagna con MaydayEarth","type":"createPoi","showInMap":true,"locale":"it","fields":[{"label":"Inserisci il nome della campagna","name":"title","mandatory":true,"type":"text","placeholder":"campagna maydayEarth"},{"label":"Descrivi la campagna","name":"content","mandatory":true,"type":"textarea","placeholder":"campagna maydayEarth"},{"label":"Galleria","name":"gallery","mandatory":false,"limit":5,"type":"gallery"},{"label":"Data della campagna","name":"campaign_date","mandatory":true,"type":"date","maxDate":"2025","minDate":"+30"},{"name":"webmapp_category","type":"hidden","value":["358"]}]}]},"PAGES":[{"menuPosition":"middle","url":"https://a3h7e3.mailupclient.com/frontend/forms/Subscription.aspx?idList=1&idForm=1&guid=aafa5375-bcf1-4e06-965a-e3a98b626156","externalUrl":true,"icon":"mail","title":"Newsletter"},{"menuPosition":"middle","url":"http://mde.be.webmapp.it/wp-json/wp/v2/pages/1070","isWordpressPage":true,"icon":"wm-icon-android-earth"},{"menuPosition":"middle","url":"http://mde.be.webmapp.it/wp-json/wp/v2/pages/1068","isWordpressPage":true,"icon":"people"}]};
+module.exports = {"APP":{"name":"Merlot Reiser","id":"it.webmapp.merlot","customerName":"Merlot Reiser"},"HOME":[{"view":"expanded","title":"Self Guided Experience","subtitle":"Relax and enjoy your ride with our itineraries","locale":"en","types":["route"],"terms":["453","443","442","444","441","436","435","437","439","438"],"translations":{"nb":{"title":"Merlot Reiser","subtitle":"En digital veibeskrivelse for din reise med oss"}}}],"LANGUAGES":{"default":"nb","available":["en"]},"MAP":{"maxZoom":16,"minZoom":4,"defZoom":9,"center":[10,44],"layers":[{"label":"Mappa","type":"maptile","tilesUrl":"https://api.webmapp.it/tiles/","default":false,"maxNativeZoom":17}]},"THEME":{"primary":"#6ca858"},"OPTIONS":{"baseUrl":"https://k.webmapp.it/merlot/","startUrl":"/main/explore","hideGlobalMap":true,"beBaseUrl":"http://merlot.be.webmapp.it/","addArrowsOverTracks":true,"poiMinRadius":1,"privacyUrl":"https://www.merlot.no/personvernerklaering","downloadRoutesInWebapp":true},"PAGES":[{"menuPosition":"credits","url":"credits.html"}]};
 
 /***/ }),
 
@@ -836,221 +836,6 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ "./node_modules/i18n-iso-countries/langs lazy recursive ^\\.\\/.*\\.json$":
-/*!************************************************************************************!*\
-  !*** ./node_modules/i18n-iso-countries/langs lazy ^\.\/.*\.json$ namespace object ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./ar.json": [
-		"./node_modules/i18n-iso-countries/langs/ar.json",
-		173
-	],
-	"./az.json": [
-		"./node_modules/i18n-iso-countries/langs/az.json",
-		174
-	],
-	"./be.json": [
-		"./node_modules/i18n-iso-countries/langs/be.json",
-		175
-	],
-	"./bg.json": [
-		"./node_modules/i18n-iso-countries/langs/bg.json",
-		176
-	],
-	"./bs.json": [
-		"./node_modules/i18n-iso-countries/langs/bs.json",
-		177
-	],
-	"./ca.json": [
-		"./node_modules/i18n-iso-countries/langs/ca.json",
-		178
-	],
-	"./cs.json": [
-		"./node_modules/i18n-iso-countries/langs/cs.json",
-		179
-	],
-	"./da.json": [
-		"./node_modules/i18n-iso-countries/langs/da.json",
-		180
-	],
-	"./de.json": [
-		"./node_modules/i18n-iso-countries/langs/de.json",
-		181
-	],
-	"./el.json": [
-		"./node_modules/i18n-iso-countries/langs/el.json",
-		182
-	],
-	"./en.json": [
-		"./node_modules/i18n-iso-countries/langs/en.json",
-		183
-	],
-	"./es.json": [
-		"./node_modules/i18n-iso-countries/langs/es.json",
-		184
-	],
-	"./et.json": [
-		"./node_modules/i18n-iso-countries/langs/et.json",
-		185
-	],
-	"./fa.json": [
-		"./node_modules/i18n-iso-countries/langs/fa.json",
-		186
-	],
-	"./fi.json": [
-		"./node_modules/i18n-iso-countries/langs/fi.json",
-		187
-	],
-	"./fr.json": [
-		"./node_modules/i18n-iso-countries/langs/fr.json",
-		188
-	],
-	"./he.json": [
-		"./node_modules/i18n-iso-countries/langs/he.json",
-		189
-	],
-	"./hr.json": [
-		"./node_modules/i18n-iso-countries/langs/hr.json",
-		190
-	],
-	"./hu.json": [
-		"./node_modules/i18n-iso-countries/langs/hu.json",
-		191
-	],
-	"./hy.json": [
-		"./node_modules/i18n-iso-countries/langs/hy.json",
-		192
-	],
-	"./id.json": [
-		"./node_modules/i18n-iso-countries/langs/id.json",
-		193
-	],
-	"./it.json": [
-		"./node_modules/i18n-iso-countries/langs/it.json",
-		194
-	],
-	"./ja.json": [
-		"./node_modules/i18n-iso-countries/langs/ja.json",
-		195
-	],
-	"./ka.json": [
-		"./node_modules/i18n-iso-countries/langs/ka.json",
-		196
-	],
-	"./kk.json": [
-		"./node_modules/i18n-iso-countries/langs/kk.json",
-		197
-	],
-	"./ko.json": [
-		"./node_modules/i18n-iso-countries/langs/ko.json",
-		198
-	],
-	"./ky.json": [
-		"./node_modules/i18n-iso-countries/langs/ky.json",
-		199
-	],
-	"./lt.json": [
-		"./node_modules/i18n-iso-countries/langs/lt.json",
-		200
-	],
-	"./lv.json": [
-		"./node_modules/i18n-iso-countries/langs/lv.json",
-		201
-	],
-	"./mk.json": [
-		"./node_modules/i18n-iso-countries/langs/mk.json",
-		202
-	],
-	"./mn.json": [
-		"./node_modules/i18n-iso-countries/langs/mn.json",
-		203
-	],
-	"./nb.json": [
-		"./node_modules/i18n-iso-countries/langs/nb.json",
-		204
-	],
-	"./nl.json": [
-		"./node_modules/i18n-iso-countries/langs/nl.json",
-		205
-	],
-	"./nn.json": [
-		"./node_modules/i18n-iso-countries/langs/nn.json",
-		206
-	],
-	"./pl.json": [
-		"./node_modules/i18n-iso-countries/langs/pl.json",
-		207
-	],
-	"./pt.json": [
-		"./node_modules/i18n-iso-countries/langs/pt.json",
-		208
-	],
-	"./ro.json": [
-		"./node_modules/i18n-iso-countries/langs/ro.json",
-		209
-	],
-	"./ru.json": [
-		"./node_modules/i18n-iso-countries/langs/ru.json",
-		210
-	],
-	"./sk.json": [
-		"./node_modules/i18n-iso-countries/langs/sk.json",
-		211
-	],
-	"./sl.json": [
-		"./node_modules/i18n-iso-countries/langs/sl.json",
-		212
-	],
-	"./sr.json": [
-		"./node_modules/i18n-iso-countries/langs/sr.json",
-		213
-	],
-	"./sv.json": [
-		"./node_modules/i18n-iso-countries/langs/sv.json",
-		214
-	],
-	"./tr.json": [
-		"./node_modules/i18n-iso-countries/langs/tr.json",
-		215
-	],
-	"./uk.json": [
-		"./node_modules/i18n-iso-countries/langs/uk.json",
-		216
-	],
-	"./uz.json": [
-		"./node_modules/i18n-iso-countries/langs/uz.json",
-		217
-	],
-	"./zh.json": [
-		"./node_modules/i18n-iso-countries/langs/zh.json",
-		218
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
-	return __webpack_require__.e(ids[1]).then(function() {
-		var id = ids[0];
-		return __webpack_require__.t(id, 3);
-	});
-}
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = "./node_modules/i18n-iso-countries/langs lazy recursive ^\\.\\/.*\\.json$";
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
 /***/ "./src/$$_lazy_route_resource lazy recursive":
 /*!**********************************************************!*\
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
@@ -1263,14 +1048,13 @@ var AppComponent = /** @class */ (function () {
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
-/*! exports provided: HttpLoaderFactory, initConfig, setUpI18nCountrySelect, AppModule */
+/*! exports provided: HttpLoaderFactory, initConfig, AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HttpLoaderFactory", function() { return HttpLoaderFactory; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initConfig", function() { return initConfig; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setUpI18nCountrySelect", function() { return setUpI18nCountrySelect; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
@@ -1281,29 +1065,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngx-translate/http-loader */ "./node_modules/@ngx-translate/http-loader/fesm5/ngx-translate-http-loader.js");
-/* harmony import */ var ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-i18n-country-select */ "./node_modules/ngx-i18n-country-select/fesm5/ngx-i18n-country-select.js");
-/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
-/* harmony import */ var _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/background-geolocation/ngx */ "./node_modules/@ionic-native/background-geolocation/ngx/index.js");
-/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
-/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
-/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
-/* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
-/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/ngx/index.js");
-/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
-/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
-/* harmony import */ var _services_config_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/config.service */ "./src/app/services/config.service.ts");
-/* harmony import */ var _services_router_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/router.service */ "./src/app/services/router.service.ts");
-/* harmony import */ var _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @ionic-native/diagnostic/ngx */ "./node_modules/@ionic-native/diagnostic/ngx/index.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm5/ionic-storage.js");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
+/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/launch-navigator/ngx */ "./node_modules/@ionic-native/launch-navigator/ngx/index.js");
+/* harmony import */ var _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/sqlite/ngx */ "./node_modules/@ionic-native/sqlite/ngx/index.js");
+/* harmony import */ var _services_config_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/config.service */ "./src/app/services/config.service.ts");
+/* harmony import */ var _services_router_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/router.service */ "./src/app/services/router.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1325,20 +1101,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
-
-
-
 function HttpLoaderFactory(http) {
     return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_8__["TranslateHttpLoader"](http, "/wp-content/plugins/wm-embedmaps/assets/js/core/assets/i18n/", ".json");
 }
 function initConfig(configService) {
     return function () { return configService.initialize(); };
-}
-function setUpI18nCountrySelect(service) {
-    return function () { return service.use(['de', 'en', 'es', 'fr', 'it']); };
 }
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -1358,30 +1125,21 @@ var AppModule = /** @class */ (function () {
                         deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]]
                     }
                 }),
-                _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot({
+                _ionic_storage__WEBPACK_IMPORTED_MODULE_9__["IonicStorageModule"].forRoot({
                     name: '__wmdb',
                     driverOrder: ['indexeddb', 'sqlite', 'websql', 'localstorage']
                 }),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]
             ],
             providers: [
-                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_24__["APP_BASE_HREF"], useValue: '/' },
+                { provide: _angular_common__WEBPACK_IMPORTED_MODULE_17__["APP_BASE_HREF"], useValue: '/' },
                 { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
-                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: initConfig, deps: [_services_config_service__WEBPACK_IMPORTED_MODULE_21__["ConfigService"], _services_router_service__WEBPACK_IMPORTED_MODULE_22__["RouterService"]], multi: true },
-                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: setUpI18nCountrySelect, deps: [ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectService"]], multi: true },
-                _ionic_native_background_geolocation_ngx__WEBPACK_IMPORTED_MODULE_11__["BackgroundGeolocation"],
-                ngx_clipboard__WEBPACK_IMPORTED_MODULE_12__["ClipboardModule"],
-                _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_23__["Diagnostic"],
-                _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_13__["DeviceOrientation"],
-                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_14__["File"],
-                _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_15__["Geolocation"],
-                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"],
-                _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_17__["Keyboard"],
-                _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_18__["LaunchNavigator"],
-                _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_19__["SQLite"],
-                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_20__["WebView"],
-                ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectService"],
-                ngx_i18n_country_select__WEBPACK_IMPORTED_MODULE_9__["I18nCountrySelectModule"]
+                { provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"], useFactory: initConfig, deps: [_services_config_service__WEBPACK_IMPORTED_MODULE_15__["ConfigService"], _services_router_service__WEBPACK_IMPORTED_MODULE_16__["RouterService"]], multi: true },
+                ngx_clipboard__WEBPACK_IMPORTED_MODULE_10__["ClipboardModule"],
+                _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_11__["DeviceOrientation"],
+                _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__["Geolocation"],
+                _ionic_native_launch_navigator_ngx__WEBPACK_IMPORTED_MODULE_13__["LaunchNavigator"],
+                _ionic_native_sqlite_ngx__WEBPACK_IMPORTED_MODULE_14__["SQLite"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
@@ -1439,28 +1197,6 @@ var CTaxonomies = /** @class */ (function () {
     return CTaxonomies;
 }());
 
-
-
-/***/ }),
-
-/***/ "./src/app/classes/elocation-state.enum.ts":
-/*!*************************************************!*\
-  !*** ./src/app/classes/elocation-state.enum.ts ***!
-  \*************************************************/
-/*! exports provided: ELocationState */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ELocationState", function() { return ELocationState; });
-var ELocationState;
-(function (ELocationState) {
-    ELocationState[ELocationState["ENABLED"] = 0] = "ENABLED";
-    ELocationState[ELocationState["ENABLED_WHEN_IN_USE"] = 1] = "ENABLED_WHEN_IN_USE";
-    ELocationState[ELocationState["NOT_ENABLED"] = 2] = "NOT_ENABLED";
-    ELocationState[ELocationState["NOT_AUTHORIZED"] = 4] = "NOT_AUTHORIZED";
-    ELocationState[ELocationState["SETTINGS"] = 5] = "SETTINGS";
-})(ELocationState || (ELocationState = {}));
 
 
 /***/ }),
@@ -2172,13 +1908,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeviceService", function() { return DeviceService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/diagnostic/ngx */ "./node_modules/@ionic-native/diagnostic/ngx/index.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
-/* harmony import */ var _storage_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storage.service */ "./src/app/services/storage.service.ts");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm5/ngx-translate-core.js");
-/* harmony import */ var _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../classes/elocation-state.enum */ "./src/app/classes/elocation-state.enum.ts");
-/* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
+/* harmony import */ var _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic-native/device-orientation/ngx */ "./node_modules/@ionic-native/device-orientation/ngx/index.js");
 /**
  * Device Service
  *
@@ -2198,21 +1928,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
 var DeviceService = /** @class */ (function () {
-    function DeviceService(_alertController, _deviceOrientation, _diagnostic, _keyboard, _storageService, _translateService) {
+    function DeviceService(_deviceOrientation) {
         var _this = this;
-        this._alertController = _alertController;
         this._deviceOrientation = _deviceOrientation;
-        this._diagnostic = _diagnostic;
-        this._keyboard = _keyboard;
-        this._storageService = _storageService;
-        this._translateService = _translateService;
         this._onResize = new rxjs__WEBPACK_IMPORTED_MODULE_1__["ReplaySubject"](1);
         this._onResize.next({
             width: window.innerWidth,
@@ -2220,8 +1939,6 @@ var DeviceService = /** @class */ (function () {
         });
         this.onResize = this._onResize;
         this.isBrowser = !window.cordova || window.cordova.platformId === 'browser' ? true : false;
-        this.isAndroid = window.cordova && window.cordova.platformId === 'android' ? true : false;
-        this.isIos = window.cordova && window.cordova.platformId === 'ios' ? true : false;
         this.isLgScreen = +window.innerWidth >= 768;
         this.isLocalServer = window.location.href.indexOf('localhost') !== -1;
         window.addEventListener('resize', function () {
@@ -2232,147 +1949,6 @@ var DeviceService = /** @class */ (function () {
             });
         });
     }
-    /**
-     * GPS
-     */
-    DeviceService.prototype._enableGPSPermissions = function () {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            var check = function (authorized, value) {
-                if (authorized) {
-                    if (typeof value !== 'undefined'
-                        && value === _this._diagnostic.permissionStatus.GRANTED_WHEN_IN_USE) {
-                        resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].ENABLED_WHEN_IN_USE);
-                    }
-                    else {
-                        resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].ENABLED);
-                    }
-                }
-                else {
-                    if (typeof value !== 'undefined'
-                        && value === _this._diagnostic.permissionStatus.DENIED_ALWAYS)
-                        resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_AUTHORIZED);
-                    else {
-                        _this._diagnostic.requestLocationAuthorization(_this._diagnostic.locationAuthorizationMode.ALWAYS).then(function (status) {
-                            switch (status) {
-                                case _this._diagnostic.permissionStatus.GRANTED:
-                                    _this._storageService.setGpsPermissionStatus(_this._diagnostic.permissionStatus.GRANTED);
-                                    resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].ENABLED);
-                                    break;
-                                case _this._diagnostic.permissionStatus.GRANTED_WHEN_IN_USE:
-                                    _this._storageService.setGpsPermissionStatus(_this._diagnostic.permissionStatus.GRANTED_WHEN_IN_USE);
-                                    resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].ENABLED_WHEN_IN_USE);
-                                    break;
-                                case _this._diagnostic.permissionStatus.DENIED:
-                                    if (_this.isIos)
-                                        _this._storageService.setGpsPermissionStatus(_this._diagnostic.permissionStatus.DENIED_ALWAYS);
-                                    else
-                                        _this._storageService.setGpsPermissionStatus(_this._diagnostic.permissionStatus.DENIED);
-                                    resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_AUTHORIZED);
-                                    break;
-                                case _this._diagnostic.permissionStatus.DENIED_ALWAYS:
-                                    _this._storageService.setGpsPermissionStatus(_this._diagnostic.permissionStatus.DENIED_ALWAYS);
-                                    resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_AUTHORIZED);
-                                    break;
-                            }
-                        }, function (error) {
-                            reject(error);
-                        });
-                    }
-                }
-            };
-            _this._diagnostic.isLocationAuthorized().then(function (authorized) {
-                _this._storageService.getGpsPermissionStatus().then(function (value) {
-                    check(authorized, value);
-                }, function () {
-                    check(authorized);
-                });
-            });
-        });
-    };
-    /**
-     * Handle permissions for location and try to activate the location service
-     * Emit LocationState.ENABLED or LocationState.ENABLED_WHEN_IN_USE if location is available. For LocationState.NOT_ENABLED and
-     * LocationState.SETTINGS values, subscribe to DeviceService.onLocationStateChanged
-     *
-     * @param force true if the check must trigger the popups
-     */
-    DeviceService.prototype.enableGPS = function (force) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this._enableGPSPermissions().then(function (authorized) {
-                if (authorized === _classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_AUTHORIZED) {
-                    resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_AUTHORIZED);
-                }
-                else {
-                    _this._diagnostic.isLocationEnabled().then(function (enabled) {
-                        if (enabled) {
-                            resolve(authorized);
-                        }
-                        else {
-                            if (force) {
-                                _this._alertController.create({
-                                    header: _this._translateService.instant('alert.warning'),
-                                    message: _this._translateService.instant('alert.activateGPS'),
-                                    buttons: [
-                                        {
-                                            text: _this._translateService.instant('buttons.cancel'),
-                                            role: 'cancel',
-                                            cssClass: 'secondary',
-                                            handler: function () {
-                                                resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_ENABLED);
-                                            }
-                                        }, {
-                                            text: _this._translateService.instant('buttons.ok'),
-                                            cssClass: 'primary',
-                                            handler: function () {
-                                                if (_this.isIos) {
-                                                    _this._diagnostic.switchToSettings();
-                                                }
-                                                else {
-                                                    _this._diagnostic.switchToLocationSettings();
-                                                }
-                                                resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].SETTINGS);
-                                            }
-                                        }
-                                    ]
-                                }).then(function (alert) {
-                                    alert.present();
-                                });
-                            }
-                            else {
-                                resolve(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_ENABLED);
-                            }
-                        }
-                    }, function (error) {
-                        reject(error);
-                    });
-                }
-            }, function (error) {
-                reject(error);
-            });
-        });
-    };
-    /**
-     * Listen to GPS toggle and emit true if gps is active and permission are enabled, false otherwise
-     */
-    // TODO Possible memory leak if registering more than once
-    DeviceService.prototype.onLocationStateChange = function () {
-        var _this = this;
-        return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](function (observer) {
-            _this._diagnostic.registerLocationStateChangeHandler(function (state) {
-                if ((_this.isAndroid && state !== _this._diagnostic.locationMode.LOCATION_OFF) ||
-                    (_this.isIos && (state === _this._diagnostic.permissionStatus.GRANTED ||
-                        state === _this._diagnostic.permissionStatus.GRANTED_WHEN_IN_USE))) {
-                    observer.next(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].ENABLED);
-                }
-                else {
-                    observer.next(_classes_elocation_state_enum__WEBPACK_IMPORTED_MODULE_7__["ELocationState"].NOT_ENABLED);
-                }
-            });
-            return { unsubscribe: function () { } };
-        });
-    };
     /**
      * Compass
      */
@@ -2400,30 +1976,11 @@ var DeviceService = /** @class */ (function () {
             };
         });
     };
-    /**
-     * Make the keyboard open
-     */
-    DeviceService.prototype.openKeyboard = function () {
-        if (!this.isBrowser && !this._keyboard.isVisible)
-            this._keyboard.show();
-    };
-    /**
-     * Make the keyboard close
-     */
-    DeviceService.prototype.closeKeyboard = function () {
-        if (!this.isBrowser && this._keyboard.isVisible)
-            this._keyboard.hide();
-    };
     DeviceService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"],
-            _ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_4__["DeviceOrientation"],
-            _ionic_native_diagnostic_ngx__WEBPACK_IMPORTED_MODULE_2__["Diagnostic"],
-            _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_8__["Keyboard"],
-            _storage_service__WEBPACK_IMPORTED_MODULE_5__["StorageService"],
-            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateService"]])
+        __metadata("design:paramtypes", [_ionic_native_device_orientation_ngx__WEBPACK_IMPORTED_MODULE_2__["DeviceOrientation"]])
     ], DeviceService);
     return DeviceService;
 }());
@@ -2669,36 +2226,6 @@ var GeolocationService = /** @class */ (function () {
                 }, function (err) {
                     console.warn(err);
                 });
-                // if (this._locationWatch) {
-                //   try {
-                //     this._locationWatch.unsubscribe();
-                //   }
-                //   catch (e) { }
-                // }
-                // this._locationWatch = this._geolocation.watchPosition({
-                //   timeout: GEOLOCATION_TIMEOUT_TIME,
-                //   enableHighAccuracy: true
-                // });
-                // this._locationWatch.subscribe((location: Geoposition) => {
-                //   if (location && location.coords) {
-                //     let rawLocation: BackgroundGeolocationResponse = {
-                //       id: -1,
-                //       longitude: location.coords.longitude,
-                //       latitude: location.coords.latitude,
-                //       altitude: location.coords.altitude,
-                //       accuracy: location.coords.accuracy,
-                //       speed: location.coords.speed,
-                //       bearing: location.coords.heading,
-                //       time: location.timestamp,
-                //       provider: undefined,
-                //       locationProvider: undefined
-                //     };
-                //     this._locationUpdate(rawLocation, false);
-                //   }
-                // }, (err: any) => {
-                //   console.warn(err);
-                //   this._start();
-                // });
             }
             else if (_this._deviceService.isLocalServer) {
                 _this._enableMapEventListeners();
@@ -4783,13 +4310,17 @@ var ModelService = /** @class */ (function () {
     ModelService.prototype._populateTaxonomy = function (taxonomy) {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            _this._communicationService.get(_this._configService.getTaxonomyUrl(Object.values(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])[taxonomy]) + '?t=' + Date.now()).subscribe(function (json) {
-                _this._saveTaxonomy(json, Object.values(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])[taxonomy]);
-                resolve();
-            }, function (err) {
-                console.warn(err);
-                resolve();
-            });
+            if (_this._configService.hasK()) {
+                _this._communicationService.get(_this._configService.getTaxonomyUrl(Object.values(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])[taxonomy]) + '?t=' + Date.now()).subscribe(function (json) {
+                    _this._saveTaxonomy(json, Object.values(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])[taxonomy]);
+                    resolve();
+                }, function (err) {
+                    console.warn(err);
+                    resolve();
+                });
+            }
+            else
+                resolve({});
         });
     };
     ModelService.prototype._saveTaxonomy = function (json, type) {
@@ -4806,15 +4337,15 @@ var ModelService = /** @class */ (function () {
     ModelService.prototype._getTaxonomies = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
-            if (!_this._configService.hasK()) {
-                resolve();
-                return;
-            }
             var promises = [];
             for (var taxonomy in Object.keys(_classes_etaxonomy_enum__WEBPACK_IMPORTED_MODULE_6__["ETaxonomy"])) {
                 promises.push(_this._populateTaxonomy(taxonomy));
             }
             Promise.all(promises).then(function () {
+                var overlays = _this._configService.getOverlayLayers();
+                for (var i in overlays) {
+                    _this._taxonomies = _this._createTaxonomy(overlays[i], _this._taxonomies);
+                }
                 _this._onTaxonomyChange.next(_this._taxonomies);
                 for (var i in _this._taxononmyEvents) {
                     _this._taxononmyEvents[i].next(_this._taxonomies[i]);
@@ -4825,6 +4356,48 @@ var ModelService = /** @class */ (function () {
                 resolve();
             });
         });
+    };
+    /**
+     * Create the taxonomy for the overlay if necessary and return the new taxonomies
+     *
+     * @param overlayMeta the overlay definition
+     * @param taxonomies the current taxonomies
+     */
+    ModelService.prototype._createTaxonomy = function (overlayMeta, taxonomies) {
+        if (overlayMeta.id && overlayMeta.label && overlayMeta.createTaxonomy && (overlayMeta.createTaxonomy === 'webmapp_category' || overlayMeta.createTaxonomy === 'activity')) {
+            if (!taxonomies)
+                taxonomies = new _classes_ctaxonomies__WEBPACK_IMPORTED_MODULE_7__["CTaxonomies"]();
+            if (!taxonomies[overlayMeta.createTaxonomy])
+                taxonomies[overlayMeta.createTaxonomy] = {};
+            taxonomies[overlayMeta.createTaxonomy][overlayMeta.id] = {
+                id: overlayMeta.id,
+                name: overlayMeta.label,
+                locale: overlayMeta.locale || this._languagesService.getCurrentLang(),
+                items: {
+                    poi: []
+                },
+                taxonomy: overlayMeta.createTaxonomy
+            };
+            if (overlayMeta.description)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].description = overlayMeta.description;
+            if (overlayMeta.translations)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].translations = overlayMeta.translations;
+            if (overlayMeta.color)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].color = overlayMeta.color;
+            if (overlayMeta.strokeWidth)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].strokeWidth = overlayMeta.strokeWidth;
+            if (overlayMeta.strokeOpacity)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].strokeOpacity = overlayMeta.strokeOpacity;
+            if (overlayMeta.icon)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].icon = overlayMeta.icon;
+            if (overlayMeta.lineDash)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].lineDash = overlayMeta.lineDash;
+            if (overlayMeta.fillColor)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].fillColor = overlayMeta.fillColor;
+            if (overlayMeta.fillOpacity)
+                taxonomies[overlayMeta.createTaxonomy][overlayMeta.id].fillOpacity = overlayMeta.fillOpacity;
+        }
+        return taxonomies;
     };
     ModelService.prototype._downloadFeature = function (id) {
         var _this = this;
@@ -6122,33 +5695,6 @@ var StorageService = /** @class */ (function () {
             });
         }
     };
-    StorageService.prototype.setOverlay = function (value, id, routeId) {
-        if (routeId)
-            return this._set('wm-route_' + routeId + '-overlay_' + id, value);
-        else
-            return this._set('wm-overlay_' + id, value);
-    };
-    StorageService.prototype.getOverlay = function (id, routeId) {
-        if (routeId)
-            return this._get('wm-route_' + routeId + '-overlay_' + id);
-        else
-            return this._get('wm-overlay_' + id);
-    };
-    StorageService.prototype.removeOverlay = function (id, routeId) {
-        if (routeId)
-            return this._remove('wm-route_' + routeId + '-overlay_' + id);
-        else
-            return this._remove('wm-overlay_' + id);
-    };
-    StorageService.prototype.setConfig = function (value) {
-        return this._set('wm-config_json', value);
-    };
-    StorageService.prototype.getConfig = function () {
-        return this._get('wm-config_json');
-    };
-    StorageService.prototype.removeConfig = function () {
-        return this._remove('wm-config_json');
-    };
     StorageService.prototype.setLanguage = function (value) {
         return this._set('wm-lang', value);
     };
@@ -6157,87 +5703,6 @@ var StorageService = /** @class */ (function () {
     };
     StorageService.prototype.removeLanguage = function () {
         return this._remove('wm-lang');
-    };
-    StorageService.prototype.setTaxonomy = function (type, value, routeId) {
-        if (routeId)
-            return this._set('wm-route_' + routeId + '-taxonomy_' + type, value);
-        else
-            return this._set('wm-taxonomy_' + type, value);
-    };
-    StorageService.prototype.getTaxonomy = function (type, routeId) {
-        if (routeId)
-            return this._get('wm-route_' + routeId + '-taxonomy_' + type);
-        else
-            return this._get('wm-taxonomy_' + type);
-    };
-    StorageService.prototype.removeTaxonomy = function (type, routeId) {
-        if (routeId)
-            return this._remove('wm-route_' + routeId + '-taxonomy_' + type);
-        else
-            return this._remove('wm-taxonomy_' + type);
-    };
-    StorageService.prototype.setFeature = function (id, value, routeId) {
-        if (routeId)
-            return this._set('wm-route_' + routeId + '-feature_' + id, value);
-        else
-            return this._set('wm-feature_' + id, value);
-    };
-    StorageService.prototype.getFeature = function (id, routeId) {
-        if (routeId)
-            return this._get('wm-route_' + routeId + '-feature_' + id);
-        else
-            return this._get('wm-feature_' + id);
-    };
-    StorageService.prototype.removeFeature = function (id, routeId) {
-        if (routeId)
-            return this._remove('wm-route_' + routeId + '-feature_' + id);
-        else
-            return this._remove('wm-feature_' + id);
-    };
-    StorageService.prototype.setRoute = function (id, value) {
-        return this._set('wm-route_' + id, value);
-    };
-    StorageService.prototype.getRoute = function (id) {
-        return this._get('wm-route_' + id);
-    };
-    StorageService.prototype.removeRoute = function (id) {
-        return this._remove('wm-route_' + id);
-    };
-    StorageService.prototype.setGpsPermissionStatus = function (value) {
-        return this._set('wm-gps_permission_status', value);
-    };
-    StorageService.prototype.getGpsPermissionStatus = function () {
-        return this._get('wm-gps_permission_status');
-    };
-    StorageService.prototype.removeGpsPermissionStatus = function () {
-        return this._remove('wm-gps_permission_status');
-    };
-    StorageService.prototype.setSingleMapStatus = function (value) {
-        return this._set('wm-single_map_status', value);
-    };
-    StorageService.prototype.getSingleMapStatus = function () {
-        return this._get('wm-single_map_status');
-    };
-    StorageService.prototype.removeSingleMapStatus = function () {
-        return this._get('wm-single_map_status');
-    };
-    StorageService.prototype.removeRouteData = function (routeId) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this._storage.keys().then(function (keys) {
-                var promises = [];
-                for (var _i = 0, keys_1 = keys; _i < keys_1.length; _i++) {
-                    var key = keys_1[_i];
-                    if (key.indexOf('wm-route_' + routeId) !== -1 && key !== 'wm-route_' + routeId)
-                        promises.push(_this._remove(key));
-                }
-                Promise.all(promises).then(function () {
-                    resolve();
-                }, function (err) {
-                    reject(err);
-                });
-            });
-        });
     };
     StorageService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -6541,85 +6006,6 @@ var ThemeService = /** @class */ (function () {
             ['--font-family-header', fontFamilyHeader],
             ['--font-family-content', fontFamilyContent]
         ];
-    };
-    ThemeService.prototype._getCSSVariables = function (colors) {
-        colors = __assign({}, defaults, colors);
-        var primary = colors.primary, secondary = colors.secondary, tertiary = colors.tertiary, success = colors.success, warning = colors.warning, danger = colors.danger, dark = colors.dark, medium = colors.medium, light = colors.light, fontXxxlg = colors.fontXxxlg, fontXxlg = colors.fontXxlg, fontXlg = colors.fontXlg, fontLg = colors.fontLg, fontMd = colors.fontMd, fontSm = colors.fontSm, fontXsm = colors.fontXsm, fontFamilyHeader = colors.fontFamilyHeader, fontFamilyContent = colors.fontFamilyContent;
-        var shadeRatio = 0.1;
-        var tintRatio = 0.1;
-        return {
-            '--ion-color-base': light,
-            '--ion-color-contrast': dark,
-            '--ion-background-color': light,
-            '--ion-text-color': dark,
-            '--ion-toolbar-background-color': this.contrast(light, 0.1),
-            '--ion-toolbar-text-color': this.contrast(dark, 0.1),
-            '--ion-item-background-color': this.contrast(light, 0.3),
-            '--ion-item-text-color': this.contrast(dark, 0.3),
-            '--ion-color-primary': primary,
-            '--ion-color-primary-rgb': color__WEBPACK_IMPORTED_MODULE_2__(primary).array().toString(),
-            '--ion-color-primary-contrast': this.contrast(primary),
-            '--ion-color-primary-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(primary)).array().toString(),
-            '--ion-color-primary-shade': color__WEBPACK_IMPORTED_MODULE_2__(primary).darken(shadeRatio),
-            '--ion-color-primary-tint': color__WEBPACK_IMPORTED_MODULE_2__(primary).lighten(tintRatio),
-            '--ion-color-secondary': secondary,
-            '--ion-color-secondary-rgb': color__WEBPACK_IMPORTED_MODULE_2__(secondary).array().toString(),
-            '--ion-color-secondary-contrast': this.contrast(secondary),
-            '--ion-color-secondary-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(secondary)).array().toString(),
-            '--ion-color-secondary-shade': color__WEBPACK_IMPORTED_MODULE_2__(secondary).darken(shadeRatio),
-            '--ion-color-secondary-tint': color__WEBPACK_IMPORTED_MODULE_2__(secondary).lighten(tintRatio),
-            '--ion-color-tertiary': tertiary,
-            '--ion-color-tertiary-rgb': color__WEBPACK_IMPORTED_MODULE_2__(tertiary).array().toString(),
-            '--ion-color-tertiary-contrast': this.contrast(tertiary),
-            '--ion-color-tertiary-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(tertiary)).array().toString(),
-            '--ion-color-tertiary-shade': color__WEBPACK_IMPORTED_MODULE_2__(tertiary).darken(shadeRatio),
-            '--ion-color-tertiary-tint': color__WEBPACK_IMPORTED_MODULE_2__(tertiary).lighten(tintRatio),
-            '--ion-color-success': success,
-            '--ion-color-success-rgb': color__WEBPACK_IMPORTED_MODULE_2__(success).array().toString(),
-            '--ion-color-success-contrast': this.contrast(success),
-            '--ion-color-success-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(success)).array().toString(),
-            '--ion-color-success-shade': color__WEBPACK_IMPORTED_MODULE_2__(success).darken(shadeRatio),
-            '--ion-color-success-tint': color__WEBPACK_IMPORTED_MODULE_2__(success).lighten(tintRatio),
-            '--ion-color-warning': warning,
-            '--ion-color-warning-rgb': color__WEBPACK_IMPORTED_MODULE_2__(warning).array().toString(),
-            '--ion-color-warning-contrast': this.contrast(warning),
-            '--ion-color-warning-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(warning)).array().toString(),
-            '--ion-color-warning-shade': color__WEBPACK_IMPORTED_MODULE_2__(warning).darken(shadeRatio),
-            '--ion-color-warning-tint': color__WEBPACK_IMPORTED_MODULE_2__(warning).lighten(tintRatio),
-            '--ion-color-danger': danger,
-            '--ion-color-danger-rgb': color__WEBPACK_IMPORTED_MODULE_2__(danger).array().toString(),
-            '--ion-color-danger-contrast': this.contrast(danger),
-            '--ion-color-danger-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(danger)).array().toString(),
-            '--ion-color-danger-shade': color__WEBPACK_IMPORTED_MODULE_2__(danger).darken(shadeRatio),
-            '--ion-color-danger-tint': color__WEBPACK_IMPORTED_MODULE_2__(danger).lighten(tintRatio),
-            '--ion-color-dark': dark,
-            '--ion-color-dark-rgb': color__WEBPACK_IMPORTED_MODULE_2__(dark).array().toString(),
-            '--ion-color-dark-contrast': this.contrast(dark),
-            '--ion-color-dark-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(dark)).array().toString(),
-            '--ion-color-dark-shade': color__WEBPACK_IMPORTED_MODULE_2__(dark).darken(shadeRatio),
-            '--ion-color-dark-tint': color__WEBPACK_IMPORTED_MODULE_2__(dark).lighten(tintRatio),
-            '--ion-color-medium': medium,
-            '--ion-color-medium-rgb': color__WEBPACK_IMPORTED_MODULE_2__(medium).array().toString(),
-            '--ion-color-medium-contrast': this.contrast(medium),
-            '--ion-color-medium-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(medium)).array().toString(),
-            '--ion-color-medium-shade': color__WEBPACK_IMPORTED_MODULE_2__(medium).darken(shadeRatio),
-            '--ion-color-medium-tint': color__WEBPACK_IMPORTED_MODULE_2__(medium).lighten(tintRatio),
-            '--ion-color-light': light,
-            '--ion-color-light-rgb': color__WEBPACK_IMPORTED_MODULE_2__(light).array().toString(),
-            '--ion-color-light-contrast': this.contrast(light),
-            '--ion-color-light-contrast-rgb': color__WEBPACK_IMPORTED_MODULE_2__(this.contrast(light)).array().toString(),
-            '--ion-color-light-shade': color__WEBPACK_IMPORTED_MODULE_2__(light).darken(shadeRatio),
-            '--ion-color-light-tint': color__WEBPACK_IMPORTED_MODULE_2__(light).lighten(tintRatio),
-            '--font-xxxlg': fontXxxlg,
-            '--font-xxlg': fontXxlg,
-            '--font-xlg': fontXlg,
-            '--font-lg': fontLg,
-            '--font-md': fontMd,
-            '--font-sm': fontSm,
-            '--font-xsm': fontXsm,
-            '--font-family-header': fontFamilyHeader,
-            '--font-family-content': fontFamilyContent
-        };
     };
     ThemeService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
