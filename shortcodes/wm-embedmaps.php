@@ -119,15 +119,35 @@ function wm_render_maps_shortcode($atts)
     <!-- Embededmaps script -->
     <script type="text/javascript">
         var layers = [<?php
-foreach ($layers as $l) {
+$definitions = array();
+        $id = 0;
+        foreach ($layers as $l) {
             echo json_encode($l) . ',';
+
+            if (array_key_exists('properties', $l) && array_key_exists('name', $l['properties'])) {
+                array_push($definitions, array(
+                    'id' => array_key_exists('id', $l['properties']) ? $l['properties']['id'] : 'wm-def-id-' . $id,
+                    'label' => $l['properties']['name'],
+                    'color' => array_key_exists('color', $l['properties']) ? $l['properties']['color'] : null,
+                    'icon' => array_key_exists('icon', $l['properties']) ? $l['properties']['icon'] : 'wm-icon-generic',
+                    'createTaxonomy' => 'webmapp_category',
+                ));
+            } else {
+                array_push($definitions, array(
+                    'id' => 'wm-def-id-' . $id,
+                    'color' => null,
+                    'icon' => 'wm-icon-generic',
+                ));
+            }
+
+            $id++;
         }
         ?>];
-        var definitions = [{
-            id: 'wm-default-id',
-            icon: 'wm-icon-flag',
-            color: '#f00'
-        }];
+        var definitions = [<?php
+foreach ($definitions as $d) {
+            echo json_encode($d) . ',';
+        }
+        ?>];
         window.localStorage.setItem('wm_geojson_layers', JSON.stringify(layers));
         window.localStorage.setItem('wm_overlays_definition', JSON.stringify(definitions));
         document.dispatchEvent(new Event('wm_overlays_updated'));
