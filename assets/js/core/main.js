@@ -4346,6 +4346,12 @@ var ModelService = /** @class */ (function () {
                 for (var i in overlays) {
                     _this._taxonomies = _this._createTaxonomy(overlays[i], _this._taxonomies);
                 }
+                var overlaysDefinition = JSON.parse(window.localStorage.getItem('wm_overlays_definition'));
+                if (overlaysDefinition) {
+                    for (var i in overlaysDefinition) {
+                        _this._taxonomies = _this._createTaxonomy(overlaysDefinition[i], _this._taxonomies);
+                    }
+                }
                 _this._onTaxonomyChange.next(_this._taxonomies);
                 for (var i in _this._taxononmyEvents) {
                     _this._taxononmyEvents[i].next(_this._taxonomies[i]);
