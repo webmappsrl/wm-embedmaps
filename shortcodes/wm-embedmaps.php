@@ -4,8 +4,6 @@ add_shortcode('wm-embedmaps', 'wm_render_maps_shortcode');
 function wm_render_maps_shortcode($atts)
 {
     ob_start();
-    
-		
 
     extract(shortcode_atts(array(
         "height" => "",
@@ -43,16 +41,19 @@ function wm_render_maps_shortcode($atts)
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
-        $layer = null;
+        $layers = array();
         if ($geojson_url) {
-            $layer = json_decode(file_get_contents($geojson_url), true);
+            $split = explode(',', $geojson_url);
+            foreach ($split as $u) {
+                array_push($layers, json_decode(file_get_contents($geojson_url), true));
+            }
         } else {
             $post_id = get_the_ID();
             $post_type = get_post_type($post_id);
 
             $term_color = '';
             $term_icon = '';
-            
+
             $layer = array(
                 'type' => 'FeatureCollection',
                 'features' => array(
@@ -70,11 +71,10 @@ function wm_render_maps_shortcode($atts)
             );
 
             if ($post_type == 'poi') {
-                $terms = get_the_terms( $post_id , 'webmapp_category' );
-                foreach ( $terms as $term )
-                {
-                    $term_icon = get_field( 'wm_taxonomy_icon',$term );
-                    $term_color = get_field( 'wm_taxonomy_color',$term );
+                $terms = get_the_terms($post_id, 'webmapp_category');
+                foreach ($terms as $term) {
+                    $term_icon = get_field('wm_taxonomy_icon', $term);
+                    $term_color = get_field('wm_taxonomy_color', $term);
                 }
                 $layer['features'][0]['properties']['color'] = $term_color;
                 $layer['features'][0]['properties']['icon'] = $term_icon;
@@ -101,6 +101,8 @@ function wm_render_maps_shortcode($atts)
                 );
                 $layer['features'][0]['geometry'] = $geometry;
             }
+
+            array_push($layers, $layer);
         }
         ?>
     <wm-map-container class='<?php echo $post_type ?>' <?php if ($height != '') {
@@ -116,7 +118,11 @@ function wm_render_maps_shortcode($atts)
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <!-- Embededmaps script -->
     <script type="text/javascript">
-        var layers = [<?php echo json_encode($layer); ?>];
+        var layers = [<?php
+foreach ($layers as $l) {
+            echo json_encode($l) . ',';
+        }
+        ?>];
         var definitions = [{
             id: 'wm-default-id',
             icon: 'wm-icon-flag',
