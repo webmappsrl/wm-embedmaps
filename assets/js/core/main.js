@@ -4370,7 +4370,7 @@ var ModelService = /** @class */ (function () {
      * @param taxonomies the current taxonomies
      */
     ModelService.prototype._createTaxonomy = function (overlayMeta, taxonomies) {
-        if (overlayMeta.id && overlayMeta.label && overlayMeta.createTaxonomy && ['webmapp_category, activity, theme, when, where, who'].indexOf(overlayMeta.createTaxonomy) !== -1) {
+        if (overlayMeta.id && overlayMeta.label && overlayMeta.createTaxonomy && ['webmapp_category', 'activity', 'theme', 'when', 'where', 'who'].indexOf(overlayMeta.createTaxonomy) !== -1) {
             if (!taxonomies)
                 taxonomies = new _classes_ctaxonomies__WEBPACK_IMPORTED_MODULE_7__["CTaxonomies"]();
             if (!taxonomies[overlayMeta.createTaxonomy])
@@ -4496,7 +4496,7 @@ var ModelService = /** @class */ (function () {
                         feature.properties.fillOpacity = overlayMeta.fillOpacity;
                 }
                 if (overlayMeta.id && overlayMeta.label && overlayMeta.createTaxonomy
-                    && ['webmapp_category, activity, theme, when, where, who'].indexOf(overlayMeta.createTaxonomy) !== -1) {
+                    && ['webmapp_category', 'activity', 'theme', 'when', 'where', 'who'].indexOf(overlayMeta.createTaxonomy) !== -1) {
                     if (!feature.properties.taxonomy)
                         feature.properties.taxonomy = {};
                     if (!feature.properties.taxonomy[overlayMeta.createTaxonomy])
