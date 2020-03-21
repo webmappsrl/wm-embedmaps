@@ -28,7 +28,8 @@ if (validDisplays.indexOf(hostStyle.display) === -1)
 
 if (!hostStyle.height) host.style.height = "100%";
 if (!hostStyle.minHeight) host.style.minHeight = "400px";
-if (!hostStyle.width || hostStyle.width === "auto") host.style.width = "100%";
+if (!hostStyle.width || hostStyle.width === "auto" || hostStyle.width[0] == "0")
+  host.style.width = "100%";
 if (!hostStyle.minWidth) host.style.minWidth = "600px";
 appRoot.style.height = "100%";
 appRoot.style.width = "100%";
