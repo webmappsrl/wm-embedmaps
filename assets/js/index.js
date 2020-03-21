@@ -16,7 +16,7 @@ var baseUrl = "/wp-content/plugins/wm-embedmaps/assets/js/core/",
   appRoot = document.createElement("app-root"),
   runtime = document.createElement("script"),
   polyfills = document.createElement("script"),
-  styles = document.createElement("script"),
+  styles = document.createElement("link"),
   main = document.createElement("script"),
   // vendor = document.createElement("script"),
   hostStyle = getComputedStyle(host);
@@ -35,7 +35,9 @@ appRoot.style.width = "100%";
 host.appendChild(appRoot);
 runtime.src = baseUrl + "runtime.js";
 polyfills.src = baseUrl + "polyfills.js";
-styles.src = baseUrl + "styles.js";
+styles.rel = "stylesheet";
+styles.type = "text/css";
+styles.href = baseUrl + "styles.css";
 main.src = baseUrl + "main.js";
 // vendor.src = baseUrl + 'vendor.js';
 document.head.appendChild(runtime);
