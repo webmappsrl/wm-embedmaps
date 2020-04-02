@@ -13,7 +13,7 @@ var baseUrl = "/wp-content/plugins/wm-embedmaps/assets/js/core/",
     "table",
     "table-cell"
   ],
-  appRoot = document.createElement("app-root"),
+  appRoot = document.createElement("wm-embedmaps-root"),
   runtime = document.createElement("script"),
   polyfills = document.createElement("script"),
   styles = document.createElement("link"),
