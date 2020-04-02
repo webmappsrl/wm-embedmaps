@@ -22,7 +22,7 @@ function wm_render_maps_shortcode($atts)
             echo " style=\"height: $height\"";
         }
         if ($route != '') {
-            echo " route=\"$height\"";
+            echo " route=\"$route\"";
         }
         ?>
         ></wm-map-container>
@@ -41,7 +41,7 @@ function wm_render_maps_shortcode($atts)
             echo " disableClickInMap=\"$disable_click_in_map\"";
         }
         if ($route != '') {
-            echo " route=\"$height\"";
+            echo " route=\"$route\"";
         }
         ?>
         ></wm-map-container>
@@ -122,7 +122,7 @@ function wm_render_maps_shortcode($atts)
             echo " disableClickInMap=\"$disable_click_in_map\"";
         }
         if ($route != '') {
-            echo " route=\"$height\"";
+            echo " route=\"$route\"";
         }
         ?>></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
