@@ -1,237 +1,238 @@
 {
-    "lang": {
-        "de": "deutsch",
-        "en": "english",
-        "es": "español",
-        "fr": "français",
-        "it": "italiano"
+  "lang": {
+    "de": "deutsch",
+    "en": "english",
+    "es": "español",
+    "fr": "français",
+    "it": "italiano"
+  },
+  "taxonomy": {
+    "webmapp_category": "puntos de interés",
+    "activity": "actividades",
+    "theme": "temas",
+    "when": "cuando",
+    "where": "donde",
+    "who": "quién"
+  },
+  "details": {
+    "readAll": "lee todo",
+    "hide": "oculta",
+    "info": "informacciónes",
+    "contactsTitle": "ubicación y contactos",
+    "routeVoucher": "Cliente {{customerName}}",
+    "routeDownload": "descarga",
+    "routeOpen": "abre",
+    "routeDelete": "elimina",
+    "navigate": "naviga",
+    "table": {
+      "difficulty": "dificultad",
+      "ref": "numero de ruta",
+      "scale": "dificultad",
+      "caiScale": "dificultad",
+      "mtbScale": "dificultades de bicicleta de montaña",
+      "operator": "pericia",
+      "from": "punto de partida",
+      "to": "punto de llegada",
+      "distance": "largo",
+      "duration": "tiempo",
+      "durationBackward": "tiempo de retorno",
+      "ascent": "gradiente +",
+      "descent": "gradiente -",
+      "ele": "elevación",
+      "eleMax": "elevación máxima",
+      "eleMin": "elevación mínima",
+      "eleFrom": "precio inicial",
+      "eleTo": "tarifa de llegada",
+      "stages": "etapas",
+      "code": "código",
+      "languages": "idiomas",
+      "downloadGpx": "descargar la pista GPX",
+      "osmUrl": "Ver en OpenStreetMap"
     },
-    "taxonomy": {
-        "webmapp_category": "puntos de interés",
-        "activity": "actividades",
-        "theme": "temas",
-        "when": "cuando",
-        "where": "donde",
-        "who": "quién"
-    },
-    "details": {
-        "readAll": "lee todo",
-        "hide": "oculta",
-        "info": "informacciónes",
-        "contactsTitle": "ubicación y contactos",
-        "routeVoucher": "Cliente {{customerName}}",
-        "routeDownload": "descarga",
-        "routeOpen": "abre",
-        "routeDelete": "elimina",
-        "navigate": "naviga",
-        "table": {
-            "difficulty": "dificultad",
-            "ref": "numero de ruta",
-            "scale": "dificultad",
-            "caiScale": "dificultad",
-            "mtbScale": "dificultades de bicicleta de montaña",
-            "operator": "pericia",
-            "from": "punto de partida",
-            "to": "punto de llegada",
-            "distance": "largo",
-            "duration": "tiempo",
-            "durationBackward": "tiempo de retorno",
-            "ascent": "gradiente +",
-            "descent": "gradiente -",
-            "ele": "elevación",
-            "eleMax": "elevación máxima",
-            "eleMin": "elevación mínima",
-            "eleFrom": "precio inicial",
-            "eleTo": "tarifa de llegada",
-            "stages": "etapas",
-            "code": "código",
-            "languages": "idiomas",
-            "downloadGpx": "descargar la pista GPX",
-            "osmUrl": "Ver en OpenStreetMap"
-        },
-        "open": "abierto",
-        "close": "cerrado",
-        "moreInfoTitle": "otras informacciones",
-        "website": "Sitio web"
-    },
-    "alert": {
-        "warning": "cuidado",
-        "activateGPS": "Para acceder a todas las funcionalidad de esta aplicación tienes que encender el GPS. ¿Quieres hacerlo ahora?",
-        "gpsAuthorization": "La aplicacióne no puede utilizar tu ubicación y todas la funcionalidad relativas no podrán ser utilizadas. Para utilizarlas tienes que autorizar el uso de tu ubicación desde los ajustes de tu móvil",
-        "outsideExtent": "Parece que estés fuera de los límites de la mapa. La ubicación serà apagada el la aplicación. Podràs encenderla nuevamente cuando quieras simplemente premendo el botón dedicado en la mapa",
-        "routeDownload": "Estás a punto de descargar la ruta. Quieres proceder?",
-        "mapDownload": "Estás a punto de descargar la mapa. Quieres proceder?",
-        "downloadError": "Se ha producido un error durante la descarga. Por favor vuelva a intentarlo más tarde",
-        "wrongLogin": "No se pudo acceder. Comprueba que has introducido tu nombre de usuario y contraseña correctamente",
-        "genericError": "Ocurrió un error. Por favor, inténtelo de nuevo más tarde",
-        "loginNeededDownload": "Para descargar esta ruta necesitas iniciar sesión. ¿Quieres hacerlo ahora?",
-        "voucherMessage": "Ingrese el código de su paquete de viaje",
-        "voucherPlaceholder": "código",
-        "voucherExpired": "Este código ha caducado",
-        "voucherError": "El código introducido no es válido. Comprueba que lo has introducido correctamente",
-        "discardRecordedTrack": "Estás a punto de borrar la ruta que grabaste. ¿Quieres proceder de todos modos?",
-        "discardChanges": "Al continuar perderás los cambios realizados. ¿Quieres continuar?",
-        "copiedLink": "Enlace copiado al portapapeles",
-        "copiedCoordinates": "Coordenadas copiadas al portapapeles.",
-        "userAlreadyExists": "El correo {{email}} ya ha sido registrado. Inicia sesión para iniciar sesión",
-        "abortDownload": "¿Seguro que quieres abortar la descarga?",
-        "resumeTrackRecord": "La aplicación fue interrumpida al grabar una ruta. ¿Cómo quieres proceder?",
-        "storageAuthorization": "La aplicación no tiene permiso para descargar el archivo. Para descargar, deberá autorizar la aplicación a través de la configuración de su dispositivo",
-        "fileDownload": "Descarga del archivo {{filename}} en curso",
-        "fileDownloadError": "Se produjo un error al descargar el archivo. Por favor vuelve a intentarlo más tarde",
-        "fileDownloadSuccess": "El archivo fue descargado exitosamente en {{dest}}",
-        "exportMessage": "Inserte el correo electrónico donde desea recibir la pista exportada",
-        "exportEmailPlaceholder": "correo electrónico",
-        "exportSuccessfull": "Ruta exportada con exito",
-        "exportError": "Se ha producido un error al exportar la ruta. Comprueba si estás conectado o vuelve a intentarlo más tarde"
-    },
-    "buttons": {
-        "ok": "vale",
-        "cancel": "cancelar",
-        "delete": "eliminar",
-        "save": "guardar",
-        "edit": "editar",
-        "share": "compartir"
-    },
-    "navigation": {
-        "pause": "pausar",
-        "resume": "retomar",
-        "stop": "parar",
-        "toast": "Ten cuidado, te has despedido desde el camino de {{distance}}m",
-        "notification": "Navegación activa",
-        "tooFar": "Estas demasiado lejos para iniciar la navegación"
-    },
-    "settings": {
-        "title": "ajustes",
-        "languageRadio": "Elige el idioma",
-        "login": "iniciar sesión",
-        "logout": "cerrar sesión",
-        "privacyHeader": "privacidad",
-        "privacy": "Lea la <a href=\"{{url}}\" target=\"blank\">política de privacidad</a>",
-        "appHeader": "aplicación",
-        "appDeveloped": "Aplicación desarrollada por Webmapp Srl",
-        "appVersion": "Versión {{version}}"
-    },
-    "main": {
-        "search": "buscar",
-        "loading": "cargando...",
-        "actions": {
-            "list": "lista",
-            "map": "mapa",
-            "filter": "filtrar",
-            "order": "orden"
-        }
-    },
-    "home": {
-        "whatToDo": "¿Que quieres hacer?",
-        "seeAll": "ver todo"
-    },
-    "menu": {
-        "explore": "descubrir",
-        "search": "buscar",
-        "settings": "ajustes",
-        "exitRoute": "salir de la ruta",
-        "myRoutes": "mis rutas",
-        "stages": "tapas",
-        "help": "ayuda",
-        "attribution": "atribución",
-        "offline": "sin conexión",
-        "credits": "creditos"
-    },
-    "credits": {
-        "webmappContent1": "La aplicación {{appName}} es desarrollada y mantenida por Webmapp. <br> Webmapp crea servicios de mapas web, aplicaciones móviles y mapas impresos para turismo de naturaleza y aventura. <br> Para obtener más información, visite nuestro sitio web ",
-        "webmappContent2": " o escríbanos a <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
-        "map": "Mapa",
-        "mapContent": "© Webmapp, distribuido bajo licencia CC BY-NC-SA",
-        "cartographicData": "Datos cartograficos",
-        "cartographicDataContent": "© OpenStreetMap Contributors"
-    },
-    "modals": {
-        "routeDownload": {
-            "mapDownloadTitle": "Estás descargando la mapa",
-            "routeDownloadTitle": "Estás descargando la ruta: {{name}}",
-            "setup": "Configuración inicial",
-            "map": "Descarga de la mapa",
-            "data": "Descarga de los datos",
-            "media": "Descarga de los medios",
-            "install": "Instalación",
-            "doNotInterrupt": "No cierre la aplicación durante la fase de instalación de datos",
-            "error": "La descarga se ha detenido momentáneamente. Asegúrese de que está conectado a la red de datos. La descarga se reanudará tan pronto como sea posible."
-        },
-        "login": {
-            "loginHeader": "Introduzca el correo electrónico y la contraseña para iniciar sesión",
-            "username": "nombre de usuario",
-            "password": "contraseña",
-            "login": "iniciar sesión",
-            "missingFields": "Rellene todos los campos requeridos",
-            "passwordRecovery": "¿Se te olvidó tu contraseña?",
-            "signupHeader": "Inserta los siguientes campos para registrarte",
-            "signup": "regístrate",
-            "firstName": "nombre",
-            "lastName": "apellido",
-            "email": "correo electrónico",
-            "passwordConfirm": "confirmar contraseña",
-            "newsletter": "Quiero suscribirme al boletín",
-            "privacy": "Acepto los términos de la <a href=\"{{privacy}}\" target=\"blank\">política de privacidad</a>",
-            "backToLogin": "volver al login"
-        },
-        "saveTrack": {
-            "saveTitle": "guardar la ruta",
-            "editTitle": "editando la ruta",
-            "trackName": "Ruta grabada {{id}}",
-            "name": "título de la ruta",
-            "description": "añadir una descripción",
-            "presetLabel": "Colores preestablecidos",
-            "selectColor": "Seleccionar el color"
-        },
-        "filters": {
-            "title": "filtros",
-            "reset": "reiniciar",
-            "apply": "aplicar filtros",
-            "activateAll": "activar todos",
-            "deactivateAll": "desactivar todos"
-        },
-        "report": {
-            "title": "señale su posición",
-            "send": "enviar informe",
-            "reportNotSent": "El informe ha sido aceptado y se enviará lo antes posible.",
-            "reportSent": "Informe enviado con éxito",
-            "featureUnavailable": "Funcionalidad no disponible en el navegador",
-            "selectPictureSource": "elegir",
-            "cameraSource": "Tomar una foto",
-            "photolibrarySource": "Usa una foto de tu biblioteca"
-        }
-    },
-    "popover": {
-        "mapCenter": "coordenadas del centro del mapa:",
-        "shareCoordinates": "compartir las coordenadas",
-        "shareLocation": "compartir tu ubicación",
-        "recordTrack": "grabar una ruta",
-        "beEdit": "modificar en línea",
-        "report": "señale su posición",
-        "export": "exportar"
-    },
-    "help": {
-        "0": "Después de registrarse, con solo un clic podrá <span class='bold'>descargar las rutas</span> en su dispositivo",
-        "1": "Cada ruta tiene un <span class='bold'>mapa de referencia</span> donde hay los <span class='bold'>puntos de interés</span> seleccionados por nosotros.",
-        "2": "Al hacer clic en <span class='bold'>en el icono</span>, puede acceder a la descripción, la galería de fotos y otra información sobre ese <span class='bold'>punto de interés</span>.",
-        "3": "Al hacer clic en <span class='bold'>el botón de geolocalización</span> puede ver su posición (el punto azul en el mapa).",
-        "4": "Al hacer clic nuevamente en <span class='bold'>el botón de geolocalización</span>, se activa el <span class='bold'>modo de brújula</span> y el mapa girará y se orientará hacia Nord."
-    },
-    "offline": {
-        "title": "Mapa offline",
-        "download": "descarga",
-        "delete": "borrar",
-        "open": "activar modo sin conexión",
-        "close": "apagar modo sin conexión",
-        "textContent": "Descarga la mapa y activa el modo sin conexión"
-    },
-    "search": {
-        "poiDivider": "Puntos de interes",
-        "routeDivider": "Itinerarios",
-        "trackDivider": "Rutas",
-        "poiEmptyList": "No se encontraron puntos de interés",
-        "trackEmptyList": "Ninguna ruta encontrada",
-        "routeEmptyList": "No se encontró itinerario."
+    "open": "abierto",
+    "close": "cerrado",
+    "moreInfoTitle": "otras informacciones",
+    "website": "Sitio web",
+    "trackSwitchText": "etapas"
+  },
+  "alert": {
+    "warning": "cuidado",
+    "activateGPS": "Para acceder a todas las funcionalidad de esta aplicación tienes que encender el GPS. ¿Quieres hacerlo ahora?",
+    "gpsAuthorization": "La aplicacióne no puede utilizar tu ubicación y todas la funcionalidad relativas no podrán ser utilizadas. Para utilizarlas tienes que autorizar el uso de tu ubicación desde los ajustes de tu móvil",
+    "outsideExtent": "Parece que estés fuera de los límites de la mapa. La ubicación serà apagada el la aplicación. Podràs encenderla nuevamente cuando quieras simplemente premendo el botón dedicado en la mapa",
+    "routeDownload": "Estás a punto de descargar la ruta. Quieres proceder?",
+    "mapDownload": "Estás a punto de descargar la mapa. Quieres proceder?",
+    "downloadError": "Se ha producido un error durante la descarga. Por favor vuelva a intentarlo más tarde",
+    "wrongLogin": "No se pudo acceder. Comprueba que has introducido tu nombre de usuario y contraseña correctamente",
+    "genericError": "Ocurrió un error. Por favor, inténtelo de nuevo más tarde",
+    "loginNeededDownload": "Para descargar esta ruta necesitas iniciar sesión. ¿Quieres hacerlo ahora?",
+    "voucherMessage": "Ingrese el código de su paquete de viaje",
+    "voucherPlaceholder": "código",
+    "voucherExpired": "Este código ha caducado",
+    "voucherError": "El código introducido no es válido. Comprueba que lo has introducido correctamente",
+    "discardRecordedTrack": "Estás a punto de borrar la ruta que grabaste. ¿Quieres proceder de todos modos?",
+    "discardChanges": "Al continuar perderás los cambios realizados. ¿Quieres continuar?",
+    "copiedLink": "Enlace copiado al portapapeles",
+    "copiedCoordinates": "Coordenadas copiadas al portapapeles.",
+    "userAlreadyExists": "El correo {{email}} ya ha sido registrado. Inicia sesión para iniciar sesión",
+    "abortDownload": "¿Seguro que quieres abortar la descarga?",
+    "resumeTrackRecord": "La aplicación fue interrumpida al grabar una ruta. ¿Cómo quieres proceder?",
+    "storageAuthorization": "La aplicación no tiene permiso para descargar el archivo. Para descargar, deberá autorizar la aplicación a través de la configuración de su dispositivo",
+    "fileDownload": "Descarga del archivo {{filename}} en curso",
+    "fileDownloadError": "Se produjo un error al descargar el archivo. Por favor vuelve a intentarlo más tarde",
+    "fileDownloadSuccess": "El archivo fue descargado exitosamente en {{dest}}",
+    "exportMessage": "Inserte el correo electrónico donde desea recibir la pista exportada",
+    "exportEmailPlaceholder": "correo electrónico",
+    "exportSuccessfull": "Ruta exportada con exito",
+    "exportError": "Se ha producido un error al exportar la ruta. Comprueba si estás conectado o vuelve a intentarlo más tarde"
+  },
+  "buttons": {
+    "ok": "vale",
+    "cancel": "cancelar",
+    "delete": "eliminar",
+    "save": "guardar",
+    "edit": "editar",
+    "share": "compartir"
+  },
+  "navigation": {
+    "pause": "pausar",
+    "resume": "retomar",
+    "stop": "parar",
+    "toast": "Ten cuidado, te has despedido desde el camino de {{distance}}m",
+    "notification": "Navegación activa",
+    "tooFar": "Estas demasiado lejos para iniciar la navegación"
+  },
+  "settings": {
+    "title": "ajustes",
+    "languageRadio": "Elige el idioma",
+    "login": "iniciar sesión",
+    "logout": "cerrar sesión",
+    "privacyHeader": "privacidad",
+    "privacy": "Lea la <a href=\"{{url}}\" target=\"blank\">política de privacidad</a>",
+    "appHeader": "aplicación",
+    "appDeveloped": "Aplicación desarrollada por Webmapp Srl",
+    "appVersion": "Versión {{version}}"
+  },
+  "main": {
+    "search": "buscar",
+    "loading": "cargando...",
+    "actions": {
+      "list": "lista",
+      "map": "mapa",
+      "filter": "filtrar",
+      "order": "orden"
     }
+  },
+  "home": {
+    "whatToDo": "¿Que quieres hacer?",
+    "seeAll": "ver todo"
+  },
+  "menu": {
+    "explore": "descubrir",
+    "search": "buscar",
+    "settings": "ajustes",
+    "exitRoute": "salir de la ruta",
+    "myRoutes": "mis rutas",
+    "stages": "tapas",
+    "help": "ayuda",
+    "attribution": "atribución",
+    "offline": "sin conexión",
+    "credits": "creditos"
+  },
+  "credits": {
+    "webmappContent1": "La aplicación {{appName}} es desarrollada y mantenida por Webmapp. <br> Webmapp crea servicios de mapas web, aplicaciones móviles y mapas impresos para turismo de naturaleza y aventura. <br> Para obtener más información, visite nuestro sitio web ",
+    "webmappContent2": " o escríbanos a <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+    "map": "Mapa",
+    "mapContent": "© Webmapp, distribuido bajo licencia CC BY-NC-SA",
+    "cartographicData": "Datos cartograficos",
+    "cartographicDataContent": "© OpenStreetMap Contributors"
+  },
+  "modals": {
+    "routeDownload": {
+      "mapDownloadTitle": "Estás descargando la mapa",
+      "routeDownloadTitle": "Estás descargando la ruta: {{name}}",
+      "setup": "Configuración inicial",
+      "map": "Descarga de la mapa",
+      "data": "Descarga de los datos",
+      "media": "Descarga de los medios",
+      "install": "Instalación",
+      "doNotInterrupt": "No cierre la aplicación durante la fase de instalación de datos",
+      "error": "La descarga se ha detenido momentáneamente. Asegúrese de que está conectado a la red de datos. La descarga se reanudará tan pronto como sea posible."
+    },
+    "login": {
+      "loginHeader": "Introduzca el correo electrónico y la contraseña para iniciar sesión",
+      "username": "nombre de usuario",
+      "password": "contraseña",
+      "login": "iniciar sesión",
+      "missingFields": "Rellene todos los campos requeridos",
+      "passwordRecovery": "¿Se te olvidó tu contraseña?",
+      "signupHeader": "Inserta los siguientes campos para registrarte",
+      "signup": "regístrate",
+      "firstName": "nombre",
+      "lastName": "apellido",
+      "email": "correo electrónico",
+      "passwordConfirm": "confirmar contraseña",
+      "newsletter": "Quiero suscribirme al boletín",
+      "privacy": "Acepto los términos de la <a href=\"{{privacy}}\" target=\"blank\">política de privacidad</a>",
+      "backToLogin": "volver al login"
+    },
+    "saveTrack": {
+      "saveTitle": "guardar la ruta",
+      "editTitle": "editando la ruta",
+      "trackName": "Ruta grabada {{id}}",
+      "name": "título de la ruta",
+      "description": "añadir una descripción",
+      "presetLabel": "Colores preestablecidos",
+      "selectColor": "Seleccionar el color"
+    },
+    "filters": {
+      "title": "filtros",
+      "reset": "reiniciar",
+      "apply": "aplicar filtros",
+      "activateAll": "activar todos",
+      "deactivateAll": "desactivar todos"
+    },
+    "report": {
+      "title": "señale su posición",
+      "send": "enviar informe",
+      "reportNotSent": "El informe ha sido aceptado y se enviará lo antes posible.",
+      "reportSent": "Informe enviado con éxito",
+      "featureUnavailable": "Funcionalidad no disponible en el navegador",
+      "selectPictureSource": "elegir",
+      "cameraSource": "Tomar una foto",
+      "photolibrarySource": "Usa una foto de tu biblioteca"
+    }
+  },
+  "popover": {
+    "mapCenter": "coordenadas del centro del mapa:",
+    "shareCoordinates": "compartir las coordenadas",
+    "shareLocation": "compartir tu ubicación",
+    "recordTrack": "grabar una ruta",
+    "beEdit": "modificar en línea",
+    "report": "señale su posición",
+    "export": "exportar"
+  },
+  "help": {
+    "0": "Después de registrarse, con solo un clic podrá <span class='bold'>descargar las rutas</span> en su dispositivo",
+    "1": "Cada ruta tiene un <span class='bold'>mapa de referencia</span> donde hay los <span class='bold'>puntos de interés</span> seleccionados por nosotros.",
+    "2": "Al hacer clic en <span class='bold'>en el icono</span>, puede acceder a la descripción, la galería de fotos y otra información sobre ese <span class='bold'>punto de interés</span>.",
+    "3": "Al hacer clic en <span class='bold'>el botón de geolocalización</span> puede ver su posición (el punto azul en el mapa).",
+    "4": "Al hacer clic nuevamente en <span class='bold'>el botón de geolocalización</span>, se activa el <span class='bold'>modo de brújula</span> y el mapa girará y se orientará hacia Nord."
+  },
+  "offline": {
+    "title": "Mapa offline",
+    "download": "descarga",
+    "delete": "borrar",
+    "open": "activar modo sin conexión",
+    "close": "apagar modo sin conexión",
+    "textContent": "Descarga la mapa y activa el modo sin conexión"
+  },
+  "search": {
+    "poiDivider": "Puntos de interes",
+    "routeDivider": "Itinerarios",
+    "trackDivider": "Rutas",
+    "poiEmptyList": "No se encontraron puntos de interés",
+    "trackEmptyList": "Ninguna ruta encontrada",
+    "routeEmptyList": "No se encontró itinerario."
+  }
 }

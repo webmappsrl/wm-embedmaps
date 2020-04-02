@@ -1,237 +1,238 @@
 {
-    "lang": {
-        "de": "deutsch",
-        "en": "english",
-        "es": "español",
-        "fr": "français",
-        "it": "italiano"
+  "lang": {
+    "de": "deutsch",
+    "en": "english",
+    "es": "español",
+    "fr": "français",
+    "it": "italiano"
+  },
+  "taxonomy": {
+    "webmapp_category": "punti di interesse",
+    "activity": "Attività",
+    "theme": "Temi",
+    "when": "Quando",
+    "where": "Dove",
+    "who": "Chi"
+  },
+  "details": {
+    "readAll": "leggi tutto",
+    "hide": "nascondi",
+    "info": "informazioni",
+    "contactsTitle": "location & contatti",
+    "routeVoucher": "Cliente {{customerName}}",
+    "routeDownload": "scarica",
+    "routeOpen": "apri",
+    "routeDelete": "elimina",
+    "navigate": "naviga",
+    "table": {
+      "difficulty": "difficoltà",
+      "ref": "numero sentiero",
+      "scale": "difficoltà",
+      "caiScale": "difficoltà",
+      "mtbScale": "difficoltà in mountain-bike",
+      "operator": "competenza",
+      "from": "punto di partenza",
+      "to": "punto di arrivo",
+      "distance": "lunghezza",
+      "duration": "durata",
+      "durationBackward": "durata ritorno",
+      "ascent": "dislivello +",
+      "descent": "dislivello -",
+      "ele": "quota",
+      "eleMax": "quota massima",
+      "eleMin": "quota minima",
+      "eleFrom": "quota di partenza",
+      "eleTo": "quota di arrivo",
+      "stages": "tappe",
+      "code": "codice",
+      "languages": "lingue",
+      "downloadGpx": "scarica il tracciato GPX",
+      "osmUrl": "Vedi su OpenStreetMap"
     },
-    "taxonomy": {
-        "webmapp_category": "punti di interesse",
-        "activity": "Attività",
-        "theme": "Temi",
-        "when": "Quando",
-        "where": "Dove",
-        "who": "Chi"
-    },
-    "details": {
-        "readAll": "leggi tutto",
-        "hide": "nascondi",
-        "info": "informazioni",
-        "contactsTitle": "location & contatti",
-        "routeVoucher": "Cliente {{customerName}}",
-        "routeDownload": "scarica",
-        "routeOpen": "apri",
-        "routeDelete": "elimina",
-        "navigate": "naviga",
-        "table": {
-            "difficulty": "difficoltà",
-            "ref": "numero sentiero",
-            "scale": "difficoltà",
-            "caiScale": "difficoltà",
-            "mtbScale": "difficoltà in mountain-bike",
-            "operator": "competenza",
-            "from": "punto di partenza",
-            "to": "punto di arrivo",
-            "distance": "lunghezza",
-            "duration": "durata",
-            "durationBackward": "durata ritorno",
-            "ascent": "dislivello +",
-            "descent": "dislivello -",
-            "ele": "quota",
-            "eleMax": "quota massima",
-            "eleMin": "quota minima",
-            "eleFrom": "quota di partenza",
-            "eleTo": "quota di arrivo",
-            "stages": "tappe",
-            "code": "codice",
-            "languages": "lingue",
-            "downloadGpx": "scarica il tracciato GPX",
-            "osmUrl": "Vedi su OpenStreetMap"
-        },
-        "open": "aperto",
-        "close": "chiuso",
-        "moreInfoTitle": "altre informazioni",
-        "website": "Sito web"
-    },
-    "alert": {
-        "warning": "attenzione",
-        "activateGPS": "Sembra che tu abbia il GPS disattivato. Per accedere a tutte le funzionalità dell'app occorre attivarlo. Vuoi farlo ora?",
-        "gpsAuthorization": "L'app non può accedere alla tua posizione. Le funzionalità che si basano su questa non potranno essere utilizzate. Per poterle riattivare dovrai autorizzare l'applicazione all'utilizzo della posizione tramite le impostazioni del tuo dispositivo",
-        "outsideExtent": "Sembra che tu sia fuori dai limiti della mappa. La geolocalizzazione verrà disabilitata. La potrai riabilitare quando vuoi semplicemente premendo il bottone in mappa",
-        "routeDownload": "Stai per eseguire il download dell'itinerario. Vuoi procedere?",
-        "mapDownload": "Stai per eseguire il download della mappa. Vuoi procedere?",
-        "downloadError": "Si è verificato un errore durante il download dell'itinerario. Riprova più tardi",
-        "wrongLogin": "Non è stato possibile accedere. Controlla di aver inserito correttamente username e password",
-        "genericError": "Si è verificato un errore. Riprova più tardi",
-        "loginNeededDownload": "Per poter scaricare l'itinerario occorre eseguire il login. Vuoi farlo ora?",
-        "voucherMessage": "Inserisci il codice del tuo pacchetto di viaggio",
-        "voucherPlaceholder": "codice",
-        "voucherExpired": "Il codice di viaggio che hai utilizzato è scaduto",
-        "voucherError": "Il codice inserito non è valido. Controlla di averlo inserito correttamente",
-        "discardRecordedTrack": "Stai per eliminare la traccia che hai registrato. Vuoi procedere comunque?",
-        "discardChanges": "Continuando perderai le modifiche effettuate. Vuoi continuare?",
-        "copiedLink": "Link copiato negli appunti",
-        "copiedCoordinates": "Coordinate copiate negli appunti",
-        "userAlreadyExists": "La mail {{email}} è già stata registrata. Esegui il login per accedere",
-        "abortDownload": "Sei sicuro di voler interrompere il download?",
-        "resumeTrackRecord": "L'applicazione è stata interrotta durante la registrazione di un percorso. Come vuoi procedere?",
-        "storageAuthorization": "L'app non dispone dei permessi per scaricare il file. Per eseguire il download dovrai autorizzare l'applicazione tramite le impostazioni del tuo dispositivo",
-        "fileDownload": "Scaricamento del file {{filename}} in corso",
-        "fileDownloadError": "Si è verificato un errore durante il download del file. Riprova più tardi",
-        "fileDownloadSuccess": "Il file è stato scaricato con successo in {{dest}}",
-        "exportMessage": "Inserisci l'email alla quale inviare la traccia",
-        "exportEmailPlaceholder": "email",
-        "exportSuccessfull": "Traccia esportata con successo",
-        "exportError": "Si è verificato un errore in fase di esportazione della traccia. Controlla di essere connesso o riprova più tardi"
-    },
-    "buttons": {
-        "ok": "ok",
-        "cancel": "annulla",
-        "delete": "elimina",
-        "save": "salva",
-        "edit": "modifica",
-        "share": "condividi"
-    },
-    "navigation": {
-        "pause": "pausa",
-        "resume": "riprendi",
-        "stop": "interrompi",
-        "toast": "Attento, ti sei allontanato dal percorso di {{distance}}m",
-        "notification": "Navigazione attiva",
-        "tooFar": "Sei troppo distante dal percorso per poterlo navigare"
-    },
-    "settings": {
-        "title": "impostazioni",
-        "languageRadio": "Scegli la lingua",
-        "login": "accedi",
-        "logout": "esci",
-        "privacyHeader": "privacy",
-        "privacy": "Leggi la <a href=\"{{url}}\" target=\"blank\">normativa sulla privacy</a>",
-        "appHeader": "app",
-        "appDeveloped": "App sviluppata da Webmapp Srl",
-        "appVersion": "Versione {{version}}"
-    },
-    "main": {
-        "search": "cerca",
-        "loading": "caricamento...",
-        "actions": {
-            "list": "lista",
-            "map": "mappa",
-            "filter": "filtra",
-            "order": "ordina"
-        }
-    },
-    "home": {
-        "whatToDo": "Cosa vuoi fare?",
-        "seeAll": "vedi tutto"
-    },
-    "menu": {
-        "explore": "scopri",
-        "search": "cerca",
-        "settings": "impostazioni",
-        "exitRoute": "esci dall'itinerario",
-        "myRoutes": "i miei percorsi",
-        "stages": "tappe",
-        "help": "aiuto",
-        "attribution": "attribution",
-        "offline": "offline",
-        "credits": "credits"
-    },
-    "credits": {
-        "webmappContent1": "La app {{appName}} è sviluppata e mantenuta da Webmapp.<br> Webmapp realizza servizi cartografici web, app mobile, e cartografia stampata per il Turismo Natura & Avventura.<br>Per maggiori informazioni visitate il nostro sito web ",
-        "webmappContent2": " o scriveteci all'indirizzo <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
-        "map": "Mappa",
-        "mapContent": "© Webmapp, distribuita con licenza CC BY-NC-SA",
-        "cartographicData": "Dati cartografici",
-        "cartographicDataContent": "© OpenStreetMap Contributors"
-    },
-    "modals": {
-        "routeDownload": {
-            "mapDownloadTitle": "Stai scaricando la mappa",
-            "routeDownloadTitle": "Stai scaricando l'itinerario {{name}}",
-            "setup": "Setup iniziale",
-            "map": "Download della mappa",
-            "data": "Download dei dati",
-            "media": "Download dei media",
-            "install": "Installazione",
-            "doNotInterrupt": "Non chiudere l'applicazione durante la fase di installazione dei dati",
-            "error": "Il download si è momentaneamente interrotto. Assicurati di essere connesso alla rete dati. Il download riprenderà appena possibile."
-        },
-        "login": {
-            "loginHeader": "Inserisci email e password per accedere",
-            "username": "username",
-            "password": "password",
-            "login": "accedi",
-            "missingFields": "Compila tutti i campi richiesti",
-            "passwordRecovery": "password dimenticata?",
-            "signupHeader": "Inserisci i seguenti campi per registrarti",
-            "signup": "registrati",
-            "firstName": "nome",
-            "lastName": "cognome",
-            "email": "email",
-            "passwordConfirm": "conferma password",
-            "newsletter": "Voglio iscrivermi alla newsletter",
-            "privacy": "Accetto le condizioni dell'informativa sulla <a href=\"{{privacy}}\" target=\"blank\">privacy</a>",
-            "backToLogin": "torna al login"
-        },
-        "saveTrack": {
-            "saveTitle": "salva il percorso",
-            "editTitle": "modifica il percorso",
-            "trackName": "Percorso registrato {{id}}",
-            "name": "titolo del percorso",
-            "description": "aggiungi una descrizione",
-            "presetLabel": "Colori predefiniti",
-            "selectColor": "Seleziona un colore"
-        },
-        "filters": {
-            "title": "filtri",
-            "reset": "reset",
-            "apply": "applica filtri",
-            "activateAll": "attiva tutti",
-            "deactivateAll": "disattiva tutti"
-        },
-        "report": {
-            "title": "segnala la tua posizione",
-            "send": "invia segnalazione",
-            "reportNotSent": "La segnalazione è stata presa in carico e sarà inviata appena possibile",
-            "reportSent": "Segnalazione inviata con successo",
-            "featureUnavailable": "Funzionalità non disponibile nel browser",
-            "selectPictureSource": "Scegli",
-            "cameraSource": "Scatta una foto",
-            "photolibrarySource": "Usa una foto della tua libreria"
-        }
-    },
-    "popover": {
-        "mapCenter": "coordinate centro mappa:",
-        "shareCoordinates": "condividi le coordinate",
-        "shareLocation": "condividi la tua posizione",
-        "recordTrack": "registra un percorso",
-        "beEdit": "modifica online",
-        "report": "segnala la tua posizione",
-        "export": "esporta"
-    },
-    "help": {
-        "0": "Dopo esserti registrato, con un semplice click potrai <span class='bold'>scaricare gli itinerari</span> sul tuo telefono.",
-        "1": "Ogni itinerario ha una <span class='bold'>mappa di riferimento</span> nella quale sono presenti i vari <span class='bold'>punti di interesse</span> da noi scrupolosamente selezionati.",
-        "2": "Cliccando <span class='bold'>sull'icona</span> è possibile accedere alla descrizione, alle foto e alle altre informazioni del <span class='bold'>punto di interesse</span>.",
-        "3": "Cliccando <span class='bold'>sul bottone di geolocalizzazione</span> è possibile visualizzare la propria posizione (punto blu in mappa).",
-        "4": "Cliccando nuovamente <span class='bold'>sul bottone di geolocalizzazione</span> si attiva la <span class='bold'>modalità bussola</span> e la mappa ruota e si orienta secondo il Nord."
-    },
-    "offline": {
-        "title": "Mappa offline",
-        "download": "scarica",
-        "delete": "elimina",
-        "open": "attiva offline",
-        "close": "disattiva offline",
-        "textContent": "Scarica la mappa e abilita la funzione di navigazione offline."
-    },
-    "search": {
-        "poiDivider": "Punti di interesse",
-        "routeDivider": "Itinerari",
-        "trackDivider": "Percorsi",
-        "poiEmptyList": "Nessun punto di interesse trovato",
-        "trackEmptyList": "Nessun percorso trovato",
-        "routeEmptyList": "Nessun itinerario trovato"
+    "open": "aperto",
+    "close": "chiuso",
+    "moreInfoTitle": "altre informazioni",
+    "website": "Sito web",
+    "trackSwitchText": "tappe"
+  },
+  "alert": {
+    "warning": "attenzione",
+    "activateGPS": "Sembra che tu abbia il GPS disattivato. Per accedere a tutte le funzionalità dell'app occorre attivarlo. Vuoi farlo ora?",
+    "gpsAuthorization": "L'app non può accedere alla tua posizione. Le funzionalità che si basano su questa non potranno essere utilizzate. Per poterle riattivare dovrai autorizzare l'applicazione all'utilizzo della posizione tramite le impostazioni del tuo dispositivo",
+    "outsideExtent": "Sembra che tu sia fuori dai limiti della mappa. La geolocalizzazione verrà disabilitata. La potrai riabilitare quando vuoi semplicemente premendo il bottone in mappa",
+    "routeDownload": "Stai per eseguire il download dell'itinerario. Vuoi procedere?",
+    "mapDownload": "Stai per eseguire il download della mappa. Vuoi procedere?",
+    "downloadError": "Si è verificato un errore durante il download dell'itinerario. Riprova più tardi",
+    "wrongLogin": "Non è stato possibile accedere. Controlla di aver inserito correttamente username e password",
+    "genericError": "Si è verificato un errore. Riprova più tardi",
+    "loginNeededDownload": "Per poter scaricare l'itinerario occorre eseguire il login. Vuoi farlo ora?",
+    "voucherMessage": "Inserisci il codice del tuo pacchetto di viaggio",
+    "voucherPlaceholder": "codice",
+    "voucherExpired": "Il codice di viaggio che hai utilizzato è scaduto",
+    "voucherError": "Il codice inserito non è valido. Controlla di averlo inserito correttamente",
+    "discardRecordedTrack": "Stai per eliminare la traccia che hai registrato. Vuoi procedere comunque?",
+    "discardChanges": "Continuando perderai le modifiche effettuate. Vuoi continuare?",
+    "copiedLink": "Link copiato negli appunti",
+    "copiedCoordinates": "Coordinate copiate negli appunti",
+    "userAlreadyExists": "La mail {{email}} è già stata registrata. Esegui il login per accedere",
+    "abortDownload": "Sei sicuro di voler interrompere il download?",
+    "resumeTrackRecord": "L'applicazione è stata interrotta durante la registrazione di un percorso. Come vuoi procedere?",
+    "storageAuthorization": "L'app non dispone dei permessi per scaricare il file. Per eseguire il download dovrai autorizzare l'applicazione tramite le impostazioni del tuo dispositivo",
+    "fileDownload": "Scaricamento del file {{filename}} in corso",
+    "fileDownloadError": "Si è verificato un errore durante il download del file. Riprova più tardi",
+    "fileDownloadSuccess": "Il file è stato scaricato con successo in {{dest}}",
+    "exportMessage": "Inserisci l'email alla quale inviare la traccia",
+    "exportEmailPlaceholder": "email",
+    "exportSuccessfull": "Traccia esportata con successo",
+    "exportError": "Si è verificato un errore in fase di esportazione della traccia. Controlla di essere connesso o riprova più tardi"
+  },
+  "buttons": {
+    "ok": "ok",
+    "cancel": "annulla",
+    "delete": "elimina",
+    "save": "salva",
+    "edit": "modifica",
+    "share": "condividi"
+  },
+  "navigation": {
+    "pause": "pausa",
+    "resume": "riprendi",
+    "stop": "interrompi",
+    "toast": "Attento, ti sei allontanato dal percorso di {{distance}}m",
+    "notification": "Navigazione attiva",
+    "tooFar": "Sei troppo distante dal percorso per poterlo navigare"
+  },
+  "settings": {
+    "title": "impostazioni",
+    "languageRadio": "Scegli la lingua",
+    "login": "accedi",
+    "logout": "esci",
+    "privacyHeader": "privacy",
+    "privacy": "Leggi la <a href=\"{{url}}\" target=\"blank\">normativa sulla privacy</a>",
+    "appHeader": "app",
+    "appDeveloped": "App sviluppata da Webmapp Srl",
+    "appVersion": "Versione {{version}}"
+  },
+  "main": {
+    "search": "cerca",
+    "loading": "caricamento...",
+    "actions": {
+      "list": "lista",
+      "map": "mappa",
+      "filter": "filtra",
+      "order": "ordina"
     }
+  },
+  "home": {
+    "whatToDo": "Cosa vuoi fare?",
+    "seeAll": "vedi tutto"
+  },
+  "menu": {
+    "explore": "scopri",
+    "search": "cerca",
+    "settings": "impostazioni",
+    "exitRoute": "esci dall'itinerario",
+    "myRoutes": "i miei percorsi",
+    "stages": "tappe",
+    "help": "aiuto",
+    "attribution": "attribution",
+    "offline": "offline",
+    "credits": "credits"
+  },
+  "credits": {
+    "webmappContent1": "La app {{appName}} è sviluppata e mantenuta da Webmapp.<br> Webmapp realizza servizi cartografici web, app mobile, e cartografia stampata per il Turismo Natura & Avventura.<br>Per maggiori informazioni visitate il nostro sito web ",
+    "webmappContent2": " o scriveteci all'indirizzo <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+    "map": "Mappa",
+    "mapContent": "© Webmapp, distribuita con licenza CC BY-NC-SA",
+    "cartographicData": "Dati cartografici",
+    "cartographicDataContent": "© OpenStreetMap Contributors"
+  },
+  "modals": {
+    "routeDownload": {
+      "mapDownloadTitle": "Stai scaricando la mappa",
+      "routeDownloadTitle": "Stai scaricando l'itinerario {{name}}",
+      "setup": "Setup iniziale",
+      "map": "Download della mappa",
+      "data": "Download dei dati",
+      "media": "Download dei media",
+      "install": "Installazione",
+      "doNotInterrupt": "Non chiudere l'applicazione durante la fase di installazione dei dati",
+      "error": "Il download si è momentaneamente interrotto. Assicurati di essere connesso alla rete dati. Il download riprenderà appena possibile."
+    },
+    "login": {
+      "loginHeader": "Inserisci email e password per accedere",
+      "username": "username",
+      "password": "password",
+      "login": "accedi",
+      "missingFields": "Compila tutti i campi richiesti",
+      "passwordRecovery": "password dimenticata?",
+      "signupHeader": "Inserisci i seguenti campi per registrarti",
+      "signup": "registrati",
+      "firstName": "nome",
+      "lastName": "cognome",
+      "email": "email",
+      "passwordConfirm": "conferma password",
+      "newsletter": "Voglio iscrivermi alla newsletter",
+      "privacy": "Accetto le condizioni dell'informativa sulla <a href=\"{{privacy}}\" target=\"blank\">privacy</a>",
+      "backToLogin": "torna al login"
+    },
+    "saveTrack": {
+      "saveTitle": "salva il percorso",
+      "editTitle": "modifica il percorso",
+      "trackName": "Percorso registrato {{id}}",
+      "name": "titolo del percorso",
+      "description": "aggiungi una descrizione",
+      "presetLabel": "Colori predefiniti",
+      "selectColor": "Seleziona un colore"
+    },
+    "filters": {
+      "title": "filtri",
+      "reset": "reset",
+      "apply": "applica filtri",
+      "activateAll": "attiva tutti",
+      "deactivateAll": "disattiva tutti"
+    },
+    "report": {
+      "title": "segnala la tua posizione",
+      "send": "invia segnalazione",
+      "reportNotSent": "La segnalazione è stata presa in carico e sarà inviata appena possibile",
+      "reportSent": "Segnalazione inviata con successo",
+      "featureUnavailable": "Funzionalità non disponibile nel browser",
+      "selectPictureSource": "Scegli",
+      "cameraSource": "Scatta una foto",
+      "photolibrarySource": "Usa una foto della tua libreria"
+    }
+  },
+  "popover": {
+    "mapCenter": "coordinate centro mappa:",
+    "shareCoordinates": "condividi le coordinate",
+    "shareLocation": "condividi la tua posizione",
+    "recordTrack": "registra un percorso",
+    "beEdit": "modifica online",
+    "report": "segnala la tua posizione",
+    "export": "esporta"
+  },
+  "help": {
+    "0": "Dopo esserti registrato, con un semplice click potrai <span class='bold'>scaricare gli itinerari</span> sul tuo telefono.",
+    "1": "Ogni itinerario ha una <span class='bold'>mappa di riferimento</span> nella quale sono presenti i vari <span class='bold'>punti di interesse</span> da noi scrupolosamente selezionati.",
+    "2": "Cliccando <span class='bold'>sull'icona</span> è possibile accedere alla descrizione, alle foto e alle altre informazioni del <span class='bold'>punto di interesse</span>.",
+    "3": "Cliccando <span class='bold'>sul bottone di geolocalizzazione</span> è possibile visualizzare la propria posizione (punto blu in mappa).",
+    "4": "Cliccando nuovamente <span class='bold'>sul bottone di geolocalizzazione</span> si attiva la <span class='bold'>modalità bussola</span> e la mappa ruota e si orienta secondo il Nord."
+  },
+  "offline": {
+    "title": "Mappa offline",
+    "download": "scarica",
+    "delete": "elimina",
+    "open": "attiva offline",
+    "close": "disattiva offline",
+    "textContent": "Scarica la mappa e abilita la funzione di navigazione offline."
+  },
+  "search": {
+    "poiDivider": "Punti di interesse",
+    "routeDivider": "Itinerari",
+    "trackDivider": "Percorsi",
+    "poiEmptyList": "Nessun punto di interesse trovato",
+    "trackEmptyList": "Nessun percorso trovato",
+    "routeEmptyList": "Nessun itinerario trovato"
+  }
 }
