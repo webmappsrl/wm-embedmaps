@@ -16,9 +16,8 @@ var baseUrl = "/wp-content/plugins/wm-embedmaps/assets/js/core/",
   appRoot = document.createElement("wm-embedmaps-root"),
   runtime = document.createElement("script"),
   polyfills = document.createElement("script"),
-  styles = document.createElement("link"),
+  styles = document.createElement("style"),
   main = document.createElement("script"),
-  // vendor = document.createElement("script"),
   hostStyle = getComputedStyle(host);
 
 if (validPositions.indexOf(hostStyle.position) === -1)
@@ -37,15 +36,17 @@ appRoot.style.width = "100%";
 host.appendChild(appRoot);
 runtime.src = baseUrl + "runtime.js";
 polyfills.src = baseUrl + "polyfills.js";
-styles.rel = "stylesheet";
-styles.type = "text/css";
 styles.scoped = true;
-styles.href = baseUrl + "styles.css";
 main.src = baseUrl + "main.js";
-// vendor.src = baseUrl + 'vendor.js';
 document.head.appendChild(runtime);
 document.head.appendChild(polyfills);
-// document.head.appendChild(styles);
 document.head.appendChild(main);
-host.appendChild(styles);
-// document.head.appendChild(vendor);
+
+var stylesRequest = new XMLHttpRequest();
+stylesRequest.addEventListener("load", (event) => {
+  if (event && event.target && event.target.responseText)
+    styles.innerHTML = event.target.responseText;
+  host.appendChild(styles);
+});
+stylesRequest.open("GET", baseUrl + "styles.css");
+stylesRequest.send();
