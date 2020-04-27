@@ -36,7 +36,7 @@ appRoot.style.width = "100%";
 host.appendChild(appRoot);
 runtime.src = baseUrl + "runtime.js";
 polyfills.src = baseUrl + "polyfills.js";
-styles.scoped = true;
+styles.setAttribute("scoped", "");
 main.src = baseUrl + "main.js";
 document.head.appendChild(runtime);
 document.head.appendChild(polyfills);
@@ -46,7 +46,7 @@ var stylesRequest = new XMLHttpRequest();
 stylesRequest.addEventListener("load", (event) => {
   if (event && event.target && event.target.responseText)
     styles.innerHTML = event.target.responseText;
-  host.appendChild(styles);
+  host.parent.appendChild(styles);
 });
 stylesRequest.open("GET", baseUrl + "styles.css");
 stylesRequest.send();
