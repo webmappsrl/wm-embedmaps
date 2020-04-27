@@ -11,7 +11,7 @@ var baseUrl = "/wp-content/plugins/wm-embedmaps/assets/js/core/",
     "inline-grid",
     "list-item",
     "table",
-    "table-cell"
+    "table-cell",
   ],
   appRoot = document.createElement("wm-embedmaps-root"),
   runtime = document.createElement("script"),
@@ -26,7 +26,8 @@ if (validPositions.indexOf(hostStyle.position) === -1)
 if (validDisplays.indexOf(hostStyle.display) === -1)
   host.style.display = "inline-block";
 
-if (!hostStyle.height) host.style.height = "100%";
+if (!hostStyle.height || (hostStyle.height === "0px" && !host.style.height))
+  host.style.height = "100%";
 if (!hostStyle.minHeight) host.style.minHeight = "400px";
 if (!hostStyle.width || hostStyle.width === "auto" || hostStyle.width[0] == "0")
   host.style.width = "100%";
