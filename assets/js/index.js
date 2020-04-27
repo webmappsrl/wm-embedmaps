@@ -46,7 +46,7 @@ var stylesRequest = new XMLHttpRequest();
 stylesRequest.addEventListener("load", (event) => {
   if (event && event.target && event.target.responseText)
     styles.innerHTML = event.target.responseText;
-  host.parent.appendChild(styles);
+  host.parentElement.appendChild(styles);
 });
 stylesRequest.open("GET", baseUrl + "styles.css");
 stylesRequest.send();
