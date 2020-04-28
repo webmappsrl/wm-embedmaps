@@ -145,8 +145,8 @@ $definitions = array();
             } else {
                 array_push($definitions, array(
                     'id' => 'wm-def-id-' . $id,
-                    'color' => null,
-                    'icon' => 'wm-icon-generic',
+                    'color' => '#f00',
+                    'icon' => 'wm-icon-flag',
                 ));
             }
 
