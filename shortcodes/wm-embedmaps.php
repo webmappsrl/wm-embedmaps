@@ -6,45 +6,47 @@ function wm_render_maps_shortcode($atts)
     ob_start();
 
     extract(shortcode_atts(array(
-        "height" => "",
-        "config_url" => "",
-        "geojson_url" => "",
         "base_url" => "",
-        "fit_layer_max_zoom" => "",
+        "color" => "",
+        "config_url" => "",
         "disable_click_in_map" => "",
+        "feature_color" => "",
+        "fit_layer_max_zoom" => "",
+        "geojson_url" => "",
+        "height" => "",
         "route" => "",
     ), $atts));
 
+    $htmlAttributes = '';
+
+    if ($base_url != '') {
+        $htmlAttributes .= " baseUrl=\"$base_url\"";
+    }
+    if ($color != '') {
+        $htmlAttributes .= " color=\"$color\"";
+    }
     if ($config_url != '') {
+        $htmlAttributes .= " configJsonUrl=\"$config_url\"";
+    }
+    if ($disable_click_in_map != '') {
+        $htmlAttributes .= " disableClickInMap=\"$disable_click_in_map\"";
+    }
+    if ($feature_color != '') {
+        $htmlAttributes .= " featureColor=\"$feature_color\"";
+    }
+    if ($fit_layer_max_zoom != '') {
+        $htmlAttributes .= " fitLayerMaxZoom=\"$fit_layer_max_zoom\"";
+    }
+    if ($height != '') {
+        $htmlAttributes .= " style=\"height: $height\"";
+    }
+    if ($route != '') {
+        $htmlAttributes .= " route=\"$route\"";
+    }
+
+    if ($config_url != '' || $base_url != '') {
         ?>
-    <wm-map-container <?php echo " configJsonUrl=\"$config_url\"";
-        if ($height != '') {
-            echo " style=\"height: $height\"";
-        }
-        if ($route != '') {
-            echo " route=\"$route\"";
-        }
-        ?>
-        ></wm-map-container>
-    <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
-    <?php
-} elseif ($base_url != '') {
-        ?>
-    <wm-map-container <?php echo " baseUrl=\"$base_url\"";
-        if ($height != '') {
-            echo " style=\"height: $height\"";
-        }
-        if ($fit_layer_max_zoom != '') {
-            echo " fitLayerMaxZoom=\"$fit_layer_max_zoom\"";
-        }
-        if ($disable_click_in_map != '') {
-            echo " disableClickInMap=\"$disable_click_in_map\"";
-        }
-        if ($route != '') {
-            echo " route=\"$route\"";
-        }
-        ?>
-        ></wm-map-container>
+    <wm-map-container <?php echo $htmlAttributes; ?>></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
@@ -112,19 +114,7 @@ function wm_render_maps_shortcode($atts)
             array_push($layers, $layer);
         }
         ?>
-    <wm-map-container class='<?php echo $post_type ?>' <?php if ($height != '') {
-            echo "style=\"height: $height\"";
-        }
-        if ($fit_layer_max_zoom != '') {
-            echo " fitLayerMaxZoom=\"$fit_layer_max_zoom\"";
-        }
-        if ($disable_click_in_map != '') {
-            echo " disableClickInMap=\"$disable_click_in_map\"";
-        }
-        if ($route != '') {
-            echo " route=\"$route\"";
-        }
-        ?>></wm-map-container>
+    <wm-map-container class='<?php echo $post_type ?>' <?php echo $htmlAttributes; ?>></wm-map-container>
     <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <!-- Embededmaps script -->
     <script type="text/javascript">
