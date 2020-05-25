@@ -47,7 +47,7 @@ function wm_render_maps_shortcode($atts)
     if ($config_url != '' || $base_url != '') {
         ?>
     <wm-map-container <?php echo $htmlAttributes; ?>></wm-map-container>
-    <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
+    <script type="text/javascript" src="/new/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <?php
 } else {
         $layers = array();
@@ -115,7 +115,7 @@ function wm_render_maps_shortcode($atts)
         }
         ?>
     <wm-map-container class='<?php echo $post_type ?>' <?php echo $htmlAttributes; ?>></wm-map-container>
-    <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
+    <script type="text/javascript" src="/new/wp-content/plugins/wm-embedmaps/assets/js/index.js"></script>
     <!-- Embededmaps script -->
     <script type="text/javascript">
         var layers = [<?php
