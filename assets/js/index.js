@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-  var baseUrl = "/wp-content/plugins/wm-embedmaps/assets/js/core/",
+  var baseUrl = "/new/wp-content/plugins/wm-embedmaps/assets/js/core/",
     host = document.getElementsByTagName("wm-map-container")[0],
     validPositions = ["absolute", "relative", "sticky"],
     validDisplays = [
