@@ -37,6 +37,8 @@ window.addEventListener("load", () => {
   )
     host.style.width = "100%";
   if (!hostStyle.minWidth) host.style.minWidth = "600px";
+  host.style.boxShadow = "0px -2px 5px 0px #cccccc";
+
   appRoot.style.height = "100%";
   appRoot.style.width = "100%";
   host.appendChild(appRoot);
@@ -46,10 +48,8 @@ window.addEventListener("load", () => {
   styles.type = "text/css";
   styles.href = baseUrl + "styles.css";
   main.src = baseUrl + "main.js";
-  // vendor.src = baseUrl + 'vendor.js';
   document.head.appendChild(runtime);
   document.head.appendChild(polyfills);
   document.head.appendChild(styles);
   document.head.appendChild(main);
-  // document.head.appendChild(vendor);
 });
