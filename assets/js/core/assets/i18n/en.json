@@ -19,6 +19,7 @@
     "hide": "hide",
     "info": "informations",
     "contactsTitle": "location & contacts",
+    "satWebsitePlaceholder": "Go to details",
     "routeVoucher": "{{customerName}} customer",
     "routeDownload": "download",
     "routeOpen": "open",
