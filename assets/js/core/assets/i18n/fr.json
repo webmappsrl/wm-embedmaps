@@ -19,6 +19,7 @@
     "hide": "cachez",
     "info": "informations",
     "contactsTitle": "localisation et contacts",
+    "satWebsitePlaceholder": "Accéder au dossier",
     "routeVoucher": "Client {{customerName}}",
     "routeDownload": "téléchargez",
     "routeOpen": "ouvrez",

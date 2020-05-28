@@ -19,6 +19,7 @@
     "hide": "verbergen",
     "info": "info",
     "contactsTitle": "standort und kontakte",
+    "satWebsitePlaceholder": "Gehen Sie zur Datei",
     "routeVoucher": "{{customerName}}-kunde",
     "routeDownload": "herunterladen",
     "routeOpen": "offnen",
