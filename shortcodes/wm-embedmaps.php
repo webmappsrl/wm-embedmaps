@@ -10,6 +10,7 @@ function wm_render_maps_shortcode($atts)
         "color" => "",
         "config_url" => "",
         "disable_click_in_map" => "",
+        "disable_interactions" => "",
         "feature_color" => "",
         "fit_layer_max_zoom" => "",
         "geojson_url" => "",
@@ -30,6 +31,9 @@ function wm_render_maps_shortcode($atts)
     }
     if ($disable_click_in_map != '') {
         $htmlAttributes .= " disableClickInMap=\"$disable_click_in_map\"";
+    }
+    if ($disable_interactions != '') {
+        $htmlAttributes .= " disableInteractions=\"$disable_interactions\"";
     }
     if ($feature_color != '') {
         $htmlAttributes .= " featureColor=\"$feature_color\"";
