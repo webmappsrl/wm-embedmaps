@@ -60,62 +60,66 @@ function wm_render_maps_shortcode($atts)
             foreach ($split as $u) {
                 array_push($layers, json_decode(file_get_contents($u), true));
             }
-        } else {
-            $post_id = get_the_ID();
+        }
+
+        $post_id = get_the_ID();
+        if ($post_id) {
             $post_type = get_post_type($post_id);
+            if ($post_type == 'poi' || $post_type == 'track' || $post_type == 'route') {
 
-            $term_color = '';
-            $term_icon = '';
+                $term_color = '';
+                $term_icon = '';
 
-            $layer = array(
-                'type' => 'FeatureCollection',
-                'features' => array(
-                    array(
-                        'type' => 'Feature',
-                        'geometry' => array(),
-                        'properties' => array(
-                            'id' => $post_id,
-                            'web' => get_the_permalink(),
-                            'image' => get_the_post_thumbnail_url(),
-                            'name' => get_the_title(),
+                $layer = array(
+                    'type' => 'FeatureCollection',
+                    'features' => array(
+                        array(
+                            'type' => 'Feature',
+                            'geometry' => array(),
+                            'properties' => array(
+                                'id' => $post_id,
+                                'web' => get_the_permalink(),
+                                'image' => get_the_post_thumbnail_url(),
+                                'name' => get_the_title(),
+                            ),
                         ),
                     ),
-                ),
-            );
+                );
 
-            if ($post_type == 'poi') {
-                $terms = get_the_terms($post_id, 'webmapp_category');
-                foreach ($terms as $term) {
-                    $term_icon = get_field('wm_taxonomy_icon', $term);
-                    $term_color = get_field('wm_taxonomy_color', $term);
+                if ($post_type == 'poi') {
+                    $terms = get_the_terms($post_id, 'webmapp_category');
+                    foreach ($terms as $term) {
+                        $term_icon = get_field('wm_taxonomy_icon', $term);
+                        $term_color = get_field('wm_taxonomy_color', $term);
+                    }
+                    $layer['features'][0]['properties']['color'] = $term_color;
+                    $layer['features'][0]['properties']['icon'] = $term_icon;
+                    $poi_coord = get_field('n7webmap_coord', $post_id);
+                    $lat = $poi_coord['lat'];
+                    $lng = $poi_coord['lng'];
+                    $geometry = array(
+                        'type' => 'Point',
+                        'coordinates' => array(
+                            floatval($lng),
+                            floatval($lat),
+                        ),
+                    );
+                    $layer['features'][0]['geometry'] = $geometry;
+                } elseif ($post_type == 'track') {
+                    $track_geojson = get_field('n7webmap_geojson');
+                } elseif ($post_type == 'route') {
+                    $geometry = array(
+                        'type' => 'Point',
+                        'coordinates' => array(
+                            floatval(get_field('vn_longitude', $post_id)),
+                            floatval(get_field('vn_latitude', $post_id)),
+                        ),
+                    );
+                    $layer['features'][0]['geometry'] = $geometry;
                 }
-                $layer['features'][0]['properties']['color'] = $term_color;
-                $layer['features'][0]['properties']['icon'] = $term_icon;
-                $poi_coord = get_field('n7webmap_coord', $post_id);
-                $lat = $poi_coord['lat'];
-                $lng = $poi_coord['lng'];
-                $geometry = array(
-                    'type' => 'Point',
-                    'coordinates' => array(
-                        floatval($lng),
-                        floatval($lat),
-                    ),
-                );
-                $layer['features'][0]['geometry'] = $geometry;
-            } elseif ($post_type == 'track') {
-                $track_geojson = get_field('n7webmap_geojson');
-            } elseif ($post_type == 'route') {
-                $geometry = array(
-                    'type' => 'Point',
-                    'coordinates' => array(
-                        floatval(get_field('vn_longitude', $post_id)),
-                        floatval(get_field('vn_latitude', $post_id)),
-                    ),
-                );
-                $layer['features'][0]['geometry'] = $geometry;
-            }
 
-            array_push($layers, $layer);
+                array_push($layers, $layer);
+            }
         }
         ?>
     <wm-map-container class='<?php echo $post_type ?>' <?php echo $htmlAttributes; ?>></wm-map-container>
