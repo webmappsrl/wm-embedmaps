@@ -4,7 +4,10 @@
     "en": "english",
     "es": "español",
     "fr": "français",
-    "it": "italiano"
+    "it": "italiano",
+    "nb": "norsk",
+    "fa": "فارسی",
+    "nl": "nederlands"
   },
   "taxonomy": {
     "webmapp_category": "points d’intérêt",
@@ -15,16 +18,19 @@
     "who": "qui"
   },
   "details": {
-    "readAll": "lisez tout",
-    "hide": "cachez",
+    "readAll": "tout lire",
+    "hide": "cacher",
     "info": "informations",
     "contactsTitle": "localisation et contacts",
-    "satWebsitePlaceholder": "Accéder au dossier",
     "routeVoucher": "Client {{customerName}}",
     "routeDownload": "téléchargez",
-    "routeOpen": "ouvrez",
+    "routeOpen": "ouvrir",
     "routeDelete": "supprimer",
     "navigate": "navigation",
+    "adopted": "Cette voie a déjà été adoptée le {{date}}",
+    "notAdopted": "Ce chemin n'a encore été adopté par personne: voulez-vous être le premier?",
+    "adoptTrack": "adopter le chemin",
+    "reportTrackReconnaissance": "rapport de reconnaissance",
     "table": {
       "difficulty": "difficulté",
       "ref": "numéro de chemin",
@@ -48,23 +54,33 @@
       "code": "code",
       "languages": "langues",
       "downloadGpx": "télécharger la piste GPX",
-      "osmUrl": "Voir sur OpenStreetMap"
+      "downloadKml": "télécharger la piste KML",
+      "capacity": "Lits: {{capacity}}",
+      "drinkingWater": "Avec de l'eau potable",
+      "noDrinkingWater": "Sans eau potable",
+      "osmUrl": "Voir sur OpenStreetMap",
+      "imageGalleryUrl": "Voir la galerie photo",
+      "creatorName": "Directeur",
+      "eventDate": "Date de l'événement"
     },
     "open": "ouvert",
     "close": "fermé",
     "moreInfoTitle": "autre information",
     "website": "Site Internet",
-    "trackSwitchText": "étapes"
+    "relatedPoiTitle": "endroits",
+    "trackSwitchText": "étapes",
+    "stopRouting": "itinéraire d'arrivée",
+    "routingTips": "Cliquez sur la carte pour dessiner votre itinéraire"
   },
   "alert": {
     "warning": "attention",
     "activateGPS": "Il semble que votre GPS soit désactivé. Il faut l'activer pour accéder à toutes les fonctionnaliés de l'App. Voulez-vous le faire maintenant?",
     "gpsAuthorization": "Toutes les fonctionnalités liées à votre position sont désactivées. Vous pouvez les activer en autorisant l'utilisation de votre position grâce aux paramétrages de votre dispositif",
     "outsideExtent": "Il semble que vous soyez hors des limites de la carte",
-    "routeDownload": "Vous êtes sur le point de télécharger l'itinéraire. Voulez-vous poursuivre?",
+    "routeDownload": "Vous êtes sur le point de télécharger l'itinéraire. Environ {{size}} Mo seront téléchargés sur votre appareil. Voulez-vous poursuivre?",
+    "noDownloadAvailable": "Cet itinéraire n'est pas encore disponible en téléchargement. Essayez de télécharger à nouveau dans quelques jours",
     "mapDownload": "Vous êtes sur le point de télécharger la carte. Voulez-vous continuer?",
     "downloadError": "Une erreur s'est produite lors du téléchargement. Veuillez réessayer ultérieurement",
-    "wrongLogin": "Nous ne parvenons pas à vous identifier. Veuillez s’il vous plait vérifiez que vous avez correctement saisi votre identifiant (email) ou votre mot de passe",
     "genericError": "Une erreur est survenue. Veuillez réessayer plus tard",
     "loginNeededDownload": "Pour télécharger l'itinéraire, vous devez vous connecter. Voulez-vous le faire maintenant?",
     "voucherMessage": "Entrez le code de votre forfait",
@@ -85,7 +101,23 @@
     "exportMessage": "Entrez le email pour envoyer le morceau à",
     "exportEmailPlaceholder": "email",
     "exportSuccessfull": "Suivre exporté avec succès",
-    "exportError": "Une erreur s'est produite lors de l'exportation de la piste. Vérifiez d'être connecté ou réessayez plus tard"
+    "exportError": "Une erreur s'est produite lors de l'exportation de la piste. Vérifiez d'être connecté ou réessayez plus tard",
+    "offlineDuringInitialization": "Connexion Internet absente. Connectez-vous au réseau pour télécharger les données nécessaires au démarrage de l'application pour la première fois.",
+    "initializationTooLong": "Problèmes de connexion Internet. Assurez-vous d'être connecté au réseau pour télécharger les données nécessaires au démarrage de l'application pour la première fois.",
+    "routingNotSupported": "Le tracé de chemin n'est pas pris en charge sur les écrans de cette taille. Pour reprendre le dessin, restaurez la taille précédente du moniteur. En cliquant sur ok, vous continuez avec la sauvegarde de l'itinéraire que vous avez tracé jusqu'à présent.",
+    "routingPointNotValid": "Point invalide sélectionné",
+    "loginNeeded": "Pour utiliser cette fonction, vous devez être connecté",
+    "operationNotPermitted": "Vous n'êtes pas autorisé à utiliser cette fonctionnalité",
+    "geolocationNeeded": "Pour pouvoir accéder à cette fonctionnalité, vous devez être géolocalisé",
+    "sessionExpired": "Session expirée. Connectez-vous pour continuer",
+    "tooManyRoutingPoint": "Vous avez dépassé le nombre limite de points sélectionnables",
+    "routePassword": "Itinéraire protégé par mot de passe",
+    "routePasswordMessage": "Entrez le mot de passe pour télécharger cet itinéraire",
+    "routePasswordPlaceholder": "mot de passe",
+    "wrongRoutePassword": "Le mot de passe entré n'est pas valide",
+    "backButtonLeaveRoute": "Appuyez à nouveau pour quitter l'itinéraire",
+    "backButtonLeaveApp": "Appuyez à nouveau pour fermer l'application",
+    "logoutWarning": "Êtes-vous sûr de vouloir vous déconnecter?"
   },
   "buttons": {
     "ok": "ok",
@@ -93,7 +125,9 @@
     "delete": "supprimer",
     "save": "sauver",
     "edit": "modifier",
-    "share": "partager"
+    "share": "partager",
+    "shareLink": "partager l'URL",
+    "continue": "continue"
   },
   "navigation": {
     "pause": "pause",
@@ -101,7 +135,8 @@
     "stop": "arrêtez",
     "toast": "Méfiez-vous, vous vous êtes égaré du chemin de {{distance}}m",
     "notification": "Navigation active",
-    "tooFar": "Vous êtes actuellement trop loin pour commencer la navigation"
+    "tooFar": "Vous êtes actuellement trop loin pour commencer la navigation",
+    "trackName": "Itinéraire enregistré"
   },
   "settings": {
     "title": "paramétres",
@@ -110,9 +145,12 @@
     "logout": "se déconnecter",
     "privacyHeader": "politique de confidentialité",
     "privacy": "Lire la <a href=\"{{url}}\" target=\"blank\">politique de confidentialité</a>",
+    "termsAndConditionsHeader": "Termes et Conditions",
+    "termsAndConditions": "Lire i <a href=\"{{url}}\" target=\"blank\">Termes et Conditions</a>",
     "appHeader": "app",
     "appDeveloped": "Application développée par Webmapp Srl",
-    "appVersion": "Version {{version}}"
+    "appVersion": "Version {{version}}",
+    "loggedInLabel": "Vous êtes connecté en tant que <b>{{firstName}} {{lastName}}</b> (<b>{{email}}</b>)"
   },
   "main": {
     "search": "chercher",
@@ -126,7 +164,8 @@
   },
   "home": {
     "whatToDo": "Que veux-tu faire?",
-    "seeAll": "tout voir"
+    "seeAll": "tout voir",
+    "noElements": "Aucun article"
   },
   "menu": {
     "explore": "découvrir",
@@ -138,7 +177,8 @@
     "help": "aider",
     "attribution": "attribution",
     "offline": "hors ligne",
-    "credits": "crédits"
+    "credits": "crédits",
+    "pois": "points d'intérêt"
   },
   "credits": {
     "webmappContent1": "L'application {{appName}} est développée et gérée par Webmapp. <br> Webmapp crée des services de cartographie Web, des applications mobiles et des cartes imprimées pour Nature & Adventure Tourism. <br> Pour plus d'informations, visitez notre site Web ",
@@ -161,21 +201,23 @@
       "error": "Le téléchargement est momentanément arrêté. Assurez-vous que vous êtes connecté au réseau de données. Le téléchargement reprendra dès que possible."
     },
     "login": {
-      "loginHeader": "Entrez votre email et votre mot de passe pour vous connecter",
+      "loginHeader": "Saisissez votre e-mail et votre mot de passe pour accéder à {{customerName}}",
       "username": "nom d'utilisateur",
       "password": "mot de passe",
       "login": "connexion",
       "missingFields": "Remplissez tous les champs obligatoires",
       "passwordRecovery": "mot de passe oublié?",
-      "signupHeader": "Complétez les champs suivants pour vous inscrire",
+      "signupHeader": "Saisissez les champs suivants pour vous inscrire à {{customerName}}",
       "signup": "s'inscrire",
       "firstName": "prénom",
       "lastName": "nom de famille",
       "email": "email",
       "passwordConfirm": "confirmez le mot de passe",
       "newsletter": "Je m'inscris à la newsletter",
-      "privacy": "J'accepte les termes de la <a href=\"{{privacy}}\" target=\"blank\">politique de confidentialité</a>",
-      "backToLogin": "retour à la connexion"
+      "privacy": "J'accepte les termes de la <a href=\"{{url}}\" target=\"blank\">politique de confidentialité</a>",
+      "termsAndConditions": "J'accepte i <a href=\"{{url}}\" target=\"blank\">termes et conditions</a>",
+      "backToLogin": "retour à la connexion",
+      "countrySelectPlaceholder": "Veuillez choisir..."
     },
     "saveTrack": {
       "saveTitle": "enregistrer l'itinéraire",
@@ -201,7 +243,20 @@
       "featureUnavailable": "Fonctionnalité non disponible dans le navigateur",
       "selectPictureSource": "choisir",
       "cameraSource": "Prendre une photo",
-      "photolibrarySource": "Utilisez une photo de votre bibliothèque"
+      "photolibrarySource": "Utilisez une photo de votre bibliothèque",
+      "datePlaceholder": "Choisissez une date"
+    },
+    "adopt": {
+      "reconnaissanceHeader": "Entrez vos données personnelles",
+      "header": "Entrez vos données personnelles",
+      "missingFields": "Remplissez tous les champs obligatoires",
+      "firstName": "Nom",
+      "lastName": "nom",
+      "cai": "section cai",
+      "address": "adresse, code postal, pays et ville",
+      "phone": "téléphone",
+      "mobile": "portable",
+      "email": "email"
     }
   },
   "popover": {
@@ -211,7 +266,12 @@
     "recordTrack": "enregistrer un itinéraire",
     "beEdit": "modifier en ligne",
     "report": "signaler votre position",
-    "export": "exportations"
+    "export": "exportations",
+    "switchMapLayer": "carte de base",
+    "routing": "dessiner un chemin",
+    "attendEvent": "participe",
+    "updateEvent": "ajouter des photos",
+    "endEvent": "fin"
   },
   "help": {
     "0": "Après votre inscription, vous pourrez <span class='bold'>télécharger les itinéraires</bold> sur votre appareil en un seul clic",
@@ -235,5 +295,50 @@
     "poiEmptyList": "Aucun point d'intérêt trouvé",
     "trackEmptyList": "Aucun itinéraire trouvé",
     "routeEmptyList": "Aucun itinéraire trouvé"
+  },
+  "routing": {
+    "trackName": "Chemin conçu"
+  },
+  "events": {
+    "loginNeeded": "Pour participer à l'événement, vous devez vous connecter avec votre compte",
+    "errors": {
+      "alreadyAttending": "Vous êtes déjà sur la liste des participants à l'événement",
+      "notEnded": "Il n'est pas possible de clôturer une campagne avant la date de diffusion",
+      "alreadyEnded": "La campagne est déjà clôturée: l'opération demandée ne peut pas être effectuée",
+      "onlyCreatorCanEnd": "Opération non autorisée. Seul le créateur de l'événement peut décider d'y mettre fin",
+      "cannotUpdate": "Cette campagne ne peut pas être mise à jour",
+      "onlyCreatorCanUpdate": "Opération non autorisée. Seul le créateur de l'événement peut ajouter de nouvelles images"
+    },
+    "attend": {
+      "sure": "Êtes-vous sûr de vouloir participer à cet événement?",
+      "success": "Vous avez confirmé avec succès votre participation à l'événement"
+    },
+    "end": {
+      "title": "Mettre fin à l'événement",
+      "submit": "Conclure",
+      "success": "L'événement s'est terminé avec succès. Le changement sera visible dans l'application dans quelques jours",
+      "sure": "Voulez-vous vraiment clôturer cette campagne?"
+    },
+    "update": {
+      "title": "Ajouter des photos à la galerie",
+      "submit": "continue",
+      "success": "La galerie a été mise à jour avec succès. Le changement sera visible dans l'application dans quelques jours"
+    }
+  },
+  "form": {
+    "allFieldsMandatory": "Tous les champs sont obligatoires"
+  },
+  "errors": {
+    "login": {
+      "403": "Mot de passe ou email incorrect. Vérifiez que vous ayez entré votre nom d’utilisateur et votre mot de passe correctement",
+      "404": "On ne pouvait pas y accéder. Vérifiez que vous êtes connecté au réseau et réessayez."
+    },
+    "signup": {
+      "401": "L'adresse e-mail est déjà enregistrée. Vous pouvez vous connecter avec votre email et votre mot de passe",
+      "404": "L'enregistrement n'a pas pu être terminé. Vérifiez que vous êtes connecté au réseau et réessayez"
+    }
+  },
+  "map": {
+    "defaultCreatePoiLabel": "Signaler un nouveau point d'intérêt"
   }
 }

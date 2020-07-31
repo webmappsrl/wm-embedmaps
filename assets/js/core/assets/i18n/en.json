@@ -4,7 +4,10 @@
     "en": "english",
     "es": "español",
     "fr": "français",
-    "it": "italiano"
+    "it": "italiano",
+    "nb": "norsk",
+    "fa": "فارسی",
+    "nl": "nederlands"
   },
   "taxonomy": {
     "webmapp_category": "points of interest",
@@ -17,14 +20,17 @@
   "details": {
     "readAll": "read all",
     "hide": "hide",
-    "info": "informations",
+    "info": "information",
     "contactsTitle": "location & contacts",
-    "satWebsitePlaceholder": "Go to details",
     "routeVoucher": "{{customerName}} customer",
     "routeDownload": "download",
     "routeOpen": "open",
     "routeDelete": "delete",
     "navigate": "navigate",
+    "adopted": "This path has already been adopted on {{date}}",
+    "notAdopted": "This path has not yet been adopted by anyone: do you want to be the first?",
+    "adoptTrack": "adopt the path",
+    "reportTrackReconnaissance": "reconnaissance report",
     "table": {
       "difficulty": "difficulty",
       "ref": "path number",
@@ -48,23 +54,33 @@
       "code": "code",
       "languages": "languages",
       "downloadGpx": "download the GPX track",
-      "osmUrl": "See on OpenStreetMap"
+      "downloadKml": "download the KML track",
+      "capacity": "Beds: {{capacity}}",
+      "drinkingWater": "With drinking water",
+      "noDrinkingWater": "Without drinking water",
+      "osmUrl": "See on OpenStreetMap",
+      "imageGalleryUrl": "See the photo gallery",
+      "creatorName": "Manager",
+      "eventDate": "Event date"
     },
     "open": "open",
     "close": "close",
     "moreInfoTitle": "more info",
     "website": "Website",
-    "trackSwitchText": "stages"
+    "relatedPoiTitle": "places",
+    "trackSwitchText": "stage",
+    "stopRouting": "finish route",
+    "routingTips": "Click the map to draw the route"
   },
   "alert": {
     "warning": "warning",
     "activateGPS": "In order to access to all the features of the app you have to enable the GPS. Do you want to do it now?",
     "gpsAuthorization": "The app can not access your position and the features based on it will not be available. In order to use them you have to authorize the use of your position from your device settings",
     "outsideExtent": "It seems that you are outside the map bounds. The geolocation will be disabled. You can enable it again any time you want simply by pressing the dedicated button in the map",
-    "routeDownload": "You are about to download the route. Do you want to proceed?",
+    "routeDownload": "You are about to download tise route. This process will download approximately {{size}} MB of data to your device. Do you want to proceed?",
+    "noDownloadAvailable": "This route is not yet available for download. Try downloading it again in a few days",
     "mapDownload": "You are about to download the map. Do you want to proceed?",
     "downloadError": "An error occurred during the download. Please retry later",
-    "wrongLogin": "Unable to login. Please check username and password",
     "genericError": "An error occurred. Please try again later",
     "loginNeededDownload": "In order to download this route you need to be logged in. Do you want to do it now?",
     "voucherMessage": "Insert your travel code",
@@ -85,7 +101,23 @@
     "exportMessage": "Insert the email where you want to receive the exported track",
     "exportEmailPlaceholder": "email",
     "exportSuccessfull": "Route exported successfully",
-    "exportError": "An error accurred during the export. Please check your connection or retry later"
+    "exportError": "An error accurred during the export. Please check your connection or retry later",
+    "offlineDuringInitialization": "It seems that you are offline. Go online to download the data needed for the first app initialization.",
+    "initializationTooLong": "Some connection problem are occurring. Check your connection and go online to download the data needed for the first app initialization.",
+    "routingNotSupported": "The route drawing is not supported for this screen size. To continue please restore the previous size. By clicking OK you will terminate the draw of the route",
+    "routingPointNotValid": "The selected point is not valid",
+    "loginNeeded": "You have to log in in order to access this feature",
+    "operationNotPermitted": "You do not have the permissions to access this feature",
+    "geolocationNeeded": "In order to access this feature you need to be geolocalized",
+    "sessionExpired": "Session expired. Log in to continue",
+    "tooManyRoutingPoint": "You have exceeded the limit number of selectable points",
+    "routePassword": "Password protected route",
+    "routePasswordMessage": "Insert the password to download this route",
+    "routePasswordPlaceholder": "password",
+    "wrongRoutePassword": "Wrong password",
+    "backButtonLeaveRoute": "Press again to leave the route",
+    "backButtonLeaveApp": "Press again to close the app",
+    "logoutWarning": "Are you sure you want to logout?"
   },
   "buttons": {
     "ok": "ok",
@@ -93,7 +125,9 @@
     "delete": "delete",
     "save": "save",
     "edit": "edit",
-    "share": "share"
+    "share": "share",
+    "shareLink": "share URL",
+    "continue": "continue"
   },
   "navigation": {
     "pause": "pause",
@@ -101,7 +135,8 @@
     "stop": "stop",
     "toast": "Be careful, you moved away from the path by {{distance}}m",
     "notification": "Navigating",
-    "tooFar": "You are currently too far to start the navigation"
+    "tooFar": "You are currently too far to start the navigation",
+    "trackName": "Recorded route"
   },
   "settings": {
     "title": "settings",
@@ -110,9 +145,12 @@
     "logout": "logout",
     "privacyHeader": "privacy",
     "privacy": "Read the <a href=\"{{url}}\" target=\"blank\">privacy policy</a>",
+    "termsAndConditionsHeader": "Terms and Conditions",
+    "termsAndConditions": "Read the <a href=\"{{url}}\" target=\"blank\">terms and conditions</a>",
     "appHeader": "app",
     "appDeveloped": "App developed by Webmapp Srl",
-    "appVersion": "Version {{version}}"
+    "appVersion": "Version {{version}}",
+    "loggedInLabel": "You are logged in as <b>{{firstName}} {{lastName}}</b> (<b>{{email}}</b>)"
   },
   "main": {
     "search": "search",
@@ -126,7 +164,8 @@
   },
   "home": {
     "whatToDo": "What do you want to do?",
-    "seeAll": "see all"
+    "seeAll": "see all",
+    "noElements": "Empty"
   },
   "menu": {
     "explore": "discover",
@@ -138,7 +177,8 @@
     "help": "help",
     "attribution": "attribution",
     "offline": "offline",
-    "credits": "credits"
+    "credits": "credits",
+    "pois": "points of interest"
   },
   "credits": {
     "webmappContent1": "The app {{appName}} is developed and mantained by Webmapp.<br> Webmapp creates web, mobile and printed maps for Nature & Adventure Tourism.<br>For more information please visit our website ",
@@ -161,21 +201,23 @@
       "error": "The download has been temporarily interrupted. Make sure you are connected to the network. The download will resume as soon as possible"
     },
     "login": {
-      "loginHeader": "Insert email and password to login",
+      "loginHeader": "Insert email and password to login to {{customerName}}",
       "username": "username",
       "password": "password",
       "login": "login",
       "missingFields": "Fill all the required fields",
       "passwordRecovery": "forgot password?",
-      "signupHeader": "Insert the following fields to sign up",
+      "signupHeader": "Insert the following fields to sign up to {{customerName}}",
       "signup": "sign up",
       "firstName": "name",
       "lastName": "last name",
       "email": "email",
       "passwordConfirm": "password confirm",
       "newsletter": "I want to subscribe to the newsletter",
-      "privacy": "I agree to the terms of the <a href=\"{{privacy}}\" target=\"blank\">privacy policy</a>",
-      "backToLogin": "back to login"
+      "privacy": "I agree to the terms of the <a href=\"{{url}}\" target=\"blank\">privacy policy</a>",
+      "termsAndConditions": "I agree to the <a href=\"{{url}}\" target=\"blank\">terms and conditions</a>",
+      "backToLogin": "back to login",
+      "countrySelectPlaceholder": "Please choose..."
     },
     "saveTrack": {
       "saveTitle": "save the recorded route",
@@ -201,7 +243,20 @@
       "featureUnavailable": "Feature not available in the browser",
       "selectPictureSource": "Choose",
       "cameraSource": "Take a picture",
-      "photolibrarySource": "Use a picture from your library"
+      "photolibrarySource": "Use a picture from your library",
+      "datePlaceholder": "Select a date"
+    },
+    "adopt": {
+      "reconnaissanceHeader": "Enter your personal data",
+      "header": "Enter your personal data",
+      "missingFields": "Fill in all the required fields",
+      "firstName": "first name",
+      "lastName": "last name",
+      "cai": "cai section",
+      "address": "address, post code, country and city",
+      "phone": "telephone",
+      "mobile": "mobile phone",
+      "email": "email"
     }
   },
   "popover": {
@@ -211,7 +266,12 @@
     "recordTrack": "record route",
     "beEdit": "edit online",
     "report": "report your location",
-    "export": "export"
+    "export": "export",
+    "switchMapLayer": "base map",
+    "routing": "draw a route",
+    "attendEvent": "attend",
+    "updateEvent": "add pictures",
+    "endEvent": "end"
   },
   "help": {
     "0": "After signing up, with just a click you would be able to <span class='bold'>download the routes</span> to your device.",
@@ -235,5 +295,50 @@
     "poiEmptyList": "No points of interest found",
     "trackEmptyList": "No route found",
     "routeEmptyList": "No route found"
+  },
+  "routing": {
+    "trackName": "Designed path"
+  },
+  "events": {
+    "loginNeeded": "In order to participate in the event, you need to log in with your account",
+    "errors": {
+      "alreadyAttending": "You are already on the list of participants in the event",
+      "notEnded": "It is not possible to close a campaign before the running date",
+      "alreadyEnded": "The campaign is already closed: the requested operation cannot be performed",
+      "onlyCreatorCanEnd": "Operation not allowed. Only the creator of the event can decide to end it",
+      "cannotUpdate": "This campaign cannot be updated",
+      "onlyCreatorCanUpdate": "Operation not allowed. Only the creator of the event can add new images"
+    },
+    "attend": {
+      "sure": "Are you sure you want to participate in this event?",
+      "success": "You have successfully confirmed your participation in the event"
+    },
+    "end": {
+      "title": "End event",
+      "submit": "End",
+      "success": "Event successfully concluded. The change will be visible in the app within a couple of days",
+      "sure": "Are you sure you want to close this campaign?"
+    },
+    "update": {
+      "title": "Add photos to the gallery",
+      "submit": "Continue",
+      "success": "Gallery successfully updated. The change will be visible in the app within a couple of days"
+    }
+  },
+  "form": {
+    "allFieldsMandatory": "All fields are mandatory"
+  },
+  "errors": {
+    "login": {
+      "403": "Unable to log in. Wrong username or password",
+      "404": "Unable to log in. Please check your network connection and try again"
+    },
+    "signup": {
+      "401": "This email address is already registered. You can log in with your email and password",
+      "404": "Registration could not be completed. Please, check your connection and try again"
+    }
+  },
+  "map": {
+    "defaultCreatePoiLabel": "Report a new point of interest"
   }
 }
