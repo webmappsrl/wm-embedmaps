@@ -161,8 +161,10 @@ foreach ($definitions as $d) {
             echo json_encode($d) . ',';
         }
         ?>];
-        window.localStorage.setItem('wm_geojson_layers', JSON.stringify(layers));
-        window.localStorage.setItem('wm_overlays_definition', JSON.stringify(definitions));
+        window['em-embedmaps'] = {
+            'wm_geojson_layers': JSON.stringify(layers),
+            'wm_overlays_definition': JSON.stringify(definitions)
+        };
         document.dispatchEvent(new Event('wm_overlays_updated'));
     </script>
     <!-- END Embededmaps script -->
