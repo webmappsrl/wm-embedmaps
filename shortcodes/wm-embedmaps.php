@@ -161,7 +161,7 @@ foreach ($definitions as $d) {
             echo json_encode($d) . ',';
         }
         ?>];
-        window['em-embedmaps'] = {
+        window['wm-embedmaps'] = {
             'wm_geojson_layers': JSON.stringify(layers),
             'wm_overlays_definition': JSON.stringify(definitions)
         };
