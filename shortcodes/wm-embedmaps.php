@@ -18,6 +18,7 @@ function wm_render_maps_shortcode($atts)
         "route" => "",
         "lang" => "",
         "enable_search" => "",
+        "fullscreen" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -53,7 +54,10 @@ function wm_render_maps_shortcode($atts)
         $htmlAttributes .= " lang=\"$lang\"";
     }
     if ($enable_search != '') {
-        $htmlAttributes .= " lang=\"$enable_search\"";
+        $htmlAttributes .= " enableSearch=\"$enable_search\"";
+    }
+    if ($fullscreen != '') {
+        $htmlAttributes .= " fullscreen=\"$fullscreen\"";
     }
 
     $layers = array();
