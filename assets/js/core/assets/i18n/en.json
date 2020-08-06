@@ -22,6 +22,7 @@
     "hide": "hide",
     "info": "information",
     "contactsTitle": "location & contacts",
+    "satWebsitePlaceholder": "Go to the file",
     "routeVoucher": "{{customerName}} customer",
     "routeDownload": "download",
     "routeOpen": "open",
@@ -307,7 +308,8 @@
       "alreadyEnded": "The campaign is already closed: the requested operation cannot be performed",
       "onlyCreatorCanEnd": "Operation not allowed. Only the creator of the event can decide to end it",
       "cannotUpdate": "This campaign cannot be updated",
-      "onlyCreatorCanUpdate": "Operation not allowed. Only the creator of the event can add new images"
+      "onlyCreatorCanUpdate": "Operation not allowed. Only the creator of the event can add new images",
+      "403": "You don't have permission to edit this event"
     },
     "attend": {
       "sure": "Are you sure you want to participate in this event?",

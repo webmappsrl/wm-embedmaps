@@ -22,6 +22,7 @@
     "hide": "cacher",
     "info": "informations",
     "contactsTitle": "localisation et contacts",
+    "satWebsitePlaceholder": "Aller au dossier",
     "routeVoucher": "Client {{customerName}}",
     "routeDownload": "téléchargez",
     "routeOpen": "ouvrir",
@@ -307,7 +308,8 @@
       "alreadyEnded": "La campagne est déjà clôturée: l'opération demandée ne peut pas être effectuée",
       "onlyCreatorCanEnd": "Opération non autorisée. Seul le créateur de l'événement peut décider d'y mettre fin",
       "cannotUpdate": "Cette campagne ne peut pas être mise à jour",
-      "onlyCreatorCanUpdate": "Opération non autorisée. Seul le créateur de l'événement peut ajouter de nouvelles images"
+      "onlyCreatorCanUpdate": "Opération non autorisée. Seul le créateur de l'événement peut ajouter de nouvelles images",
+      "403": "Vous n'êtes pas autorisé à modifier cet événement"
     },
     "attend": {
       "sure": "Êtes-vous sûr de vouloir participer à cet événement?",

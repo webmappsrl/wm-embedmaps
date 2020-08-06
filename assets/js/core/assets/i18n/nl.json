@@ -22,6 +22,7 @@
     "hide": "verbergen",
     "info": "nieuws",
     "contactsTitle": "locatie & contacten",
+    "satWebsitePlaceholder": "Ga naar het bestand",
     "routeVoucher": "{{customerName}} klant",
     "routeDownload": "downloaden",
     "routeOpen": "open",
@@ -307,7 +308,8 @@
       "alreadyEnded": "De campagne is al gesloten: de gevraagde bewerking kan niet worden uitgevoerd",
       "onlyCreatorCanEnd": "Operatie niet toegestaan. Alleen de maker van het evenement kan beslissen om het te beëindigen",
       "cannotUpdate": "Deze campagne kan niet worden bijgewerkt",
-      "onlyCreatorCanUpdate": "Operatie niet toegestaan. Alleen de maker van het evenement kan nieuwe afbeeldingen toevoegen"
+      "onlyCreatorCanUpdate": "Operatie niet toegestaan. Alleen de maker van het evenement kan nieuwe afbeeldingen toevoegen",
+      "403": "Je hebt geen toestemming om deze afspraak te bewerken"
     },
     "attend": {
       "sure": "Weet u zeker dat u aan dit evenement wilt deelnemen?",
