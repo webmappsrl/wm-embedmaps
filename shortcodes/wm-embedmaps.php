@@ -18,6 +18,7 @@ function wm_render_maps_shortcode($atts)
         "route" => "",
         "lang" => "",
         "enable_search" => "",
+        "fullscreen" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -53,7 +54,10 @@ function wm_render_maps_shortcode($atts)
         $htmlAttributes .= " lang=\"$lang\"";
     }
     if ($enable_search != '') {
-        $htmlAttributes .= " lang=\"$enable_search\"";
+        $htmlAttributes .= " enableSearch=\"$enable_search\"";
+    }
+    if ($fullscreen != '') {
+        $htmlAttributes .= " fullscreen=\"$fullscreen\"";
     }
 
     $layers = array();
@@ -161,8 +165,10 @@ foreach ($definitions as $d) {
             echo json_encode($d) . ',';
         }
         ?>];
-        window.localStorage.setItem('wm_geojson_layers', JSON.stringify(layers));
-        window.localStorage.setItem('wm_overlays_definition', JSON.stringify(definitions));
+        window['wm-embedmaps'] = {
+            'wm_geojson_layers': JSON.stringify(layers),
+            'wm_overlays_definition': JSON.stringify(definitions)
+        };
         document.dispatchEvent(new Event('wm_overlays_updated'));
     </script>
     <!-- END Embededmaps script -->

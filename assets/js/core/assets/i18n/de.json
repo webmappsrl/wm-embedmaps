@@ -22,6 +22,7 @@
     "hide": "verbergen",
     "info": "info",
     "contactsTitle": "standort und kontakte",
+    "satWebsitePlaceholder": "Gehen Sie zur Datei",
     "routeVoucher": "{{customerName}}-kunde",
     "routeDownload": "herunterladen",
     "routeOpen": "offnen",
@@ -307,7 +308,8 @@
       "alreadyEnded": "Die Kampagne ist bereits geschlossen: Der angeforderte Vorgang kann nicht ausgeführt werden",
       "onlyCreatorCanEnd": "Betrieb nicht erlaubt. Nur der Ersteller des Ereignisses kann entscheiden, es zu beenden",
       "cannotUpdate": "Diese Kampagne kann nicht aktualisiert werden",
-      "onlyCreatorCanUpdate": "Betrieb nicht erlaubt. Nur der Ersteller des Ereignisses kann neue Bilder hinzufügen"
+      "onlyCreatorCanUpdate": "Betrieb nicht erlaubt. Nur der Ersteller des Ereignisses kann neue Bilder hinzufügen",
+      "403": "Sie haben keine Berechtigung, dieses Ereignis zu bearbeiten"
     },
     "attend": {
       "sure": "Sind Sie sicher, dass Sie an dieser Veranstaltung teilnehmen möchten?",

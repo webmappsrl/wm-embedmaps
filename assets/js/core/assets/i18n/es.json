@@ -22,6 +22,7 @@
     "hide": "oculta",
     "info": "informacciónes",
     "contactsTitle": "ubicación y contactos",
+    "satWebsitePlaceholder": "Ir al archivo",
     "routeVoucher": "Cliente {{customerName}}",
     "routeDownload": "descarga",
     "routeOpen": "abre",
@@ -307,7 +308,8 @@
       "alreadyEnded": "La campaña ya está cerrada: la operación solicitada no se puede realizar",
       "onlyCreatorCanEnd": "Operacion no permitida. Solo el creador del evento puede decidir terminarlo",
       "cannotUpdate": "Esta campaña no se puede actualizar.",
-      "onlyCreatorCanUpdate": "Operacion no permitida. Solo el creador del evento puede agregar nuevas imágenes"
+      "onlyCreatorCanUpdate": "Operacion no permitida. Solo el creador del evento puede agregar nuevas imágenes",
+      "403": "No tienes permiso para editar este evento"
     },
     "attend": {
       "sure": "¿Estás seguro de que quieres participar en este evento?",

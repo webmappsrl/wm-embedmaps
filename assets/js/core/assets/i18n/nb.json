@@ -22,6 +22,7 @@
     "hide": "gjem",
     "info": "informasjon",
     "contactsTitle": "plassering & kontakt",
+    "satWebsitePlaceholder": "Gå til filen",
     "routeVoucher": "{{customerName}} kunde",
     "routeDownload": "download",
     "routeOpen": "åpne",
@@ -307,7 +308,8 @@
       "alreadyEnded": "Kampanjen er allerede avsluttet: den forespurte operasjonen kan ikke utføres",
       "onlyCreatorCanEnd": "Operasjon ikke tillatt. Bare skaperen av arrangementet kan bestemme seg for å avslutte det",
       "cannotUpdate": "Denne kampanjen kan ikke oppdateres",
-      "onlyCreatorCanUpdate": "Operasjon ikke tillatt. Bare skaperen av arrangementet kan legge til nye bilder"
+      "onlyCreatorCanUpdate": "Operasjon ikke tillatt. Bare skaperen av arrangementet kan legge til nye bilder",
+      "403": "Du har ikke tillatelse til å redigere denne hendelsen"
     },
     "attend": {
       "sure": "Er du sikker på at du vil være med på dette arrangementet?",
