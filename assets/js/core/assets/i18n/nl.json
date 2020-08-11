@@ -1,0 +1,346 @@
+{
+  "lang": {
+    "de": "deutsch",
+    "en": "english",
+    "es": "español",
+    "fr": "français",
+    "it": "italiano",
+    "nb": "norsk",
+    "fa": "فارسی",
+    "nl": "nederlands"
+  },
+  "taxonomy": {
+    "webmapp_category": "aandachtspunten",
+    "activity": "werkzaamheid",
+    "theme": "thema",
+    "when": "wanneer",
+    "where": "waar",
+    "who": "wie"
+  },
+  "details": {
+    "readAll": "alles lezen",
+    "hide": "verbergen",
+    "info": "nieuws",
+    "contactsTitle": "locatie & contacten",
+    "satWebsitePlaceholder": "Ga naar het bestand",
+    "routeVoucher": "{{customerName}} klant",
+    "routeDownload": "downloaden",
+    "routeOpen": "open",
+    "routeDelete": "verwijderen",
+    "navigate": "navigeren",
+    "adopted": "Dit pad is al gevolgd op {{date}}",
+    "notAdopted": "Dit pad is nog door niemand gevolgd: wil jij de eerste zijn?",
+    "adoptTrack": "het pad volgen",
+    "reportTrackReconnaissance": "verkenningsrapport",
+    "table": {
+      "difficulty": "moeilijkheid",
+      "ref": "pad nummer",
+      "scale": "moeilijkheid",
+      "caiScale": "moeilijkheid",
+      "mtbScale": "mountainbike moeilijkheid",
+      "operator": "bevoegdheid",
+      "from": "startpunt",
+      "to": "aankomstpunt",
+      "distance": "lengte",
+      "duration": "looptijd",
+      "durationBackward": "duur achteruit",
+      "ascent": "beklimming",
+      "descent": "afdaling",
+      "ele": "verhoging",
+      "eleMax": "maximale hoogte",
+      "eleMin": "mijn hoogte",
+      "eleFrom": "starthoogte",
+      "eleTo": "aankomende hoogte",
+      "stages": "stadia",
+      "code": "code",
+      "languages": "talen",
+      "downloadGpx": "download het GPX-nummer",
+      "downloadKml": "download de KML-track",
+      "capacity": "bedden: {{capacity}}",
+      "drinkingWater": "Met drinkwater",
+      "noDrinkingWater": "Zonder drinkwater",
+      "osmUrl": "Zie op OpenStreetMap",
+      "imageGalleryUrl": "Zie de fotogalerij",
+      "creatorName": "Manager",
+      "eventDate": "Datum van het evenement"
+    },
+    "open": "Open",
+    "close": "dichtbij",
+    "moreInfoTitle": "meer informatie",
+    "website": "Website",
+    "relatedPoiTitle": "plaatsen",
+    "trackSwitchText": "stadia",
+    "stopRouting": "route voltooien",
+    "routingTips": "Klik op de kaart om de route te tekenen"
+  },
+  "alert": {
+    "warning": "waarschuwing",
+    "activateGPS": "Om toegang te krijgen tot alle functies van de app moet je GPS inschakelen. Wil je het nu doen?",
+    "gpsAuthorization": "De app heeft geen toegang tot uw positie en de daarop gebaseerde functies zijn niet beschikbaar. Om ze te gebruiken, moet u het gebruik van uw positie autoriseren vanuit uw apparaatinstellingen",
+    "outsideExtent": "Het lijkt erop dat u zich buiten de kaartgrenzen bevindt. De geolocatie wordt uitgeschakeld. U kunt het op elk gewenst moment weer inschakelen door eenvoudig op de speciale knop op de kaart te drukken",
+    "routeDownload": "U staat op het punt de reisroute te downloaden. Er wordt ongeveer {{size}} MB gedownload naar uw apparaat. Wil je doorgaan?",
+    "noDownloadAvailable": "Deze route is nog niet beschikbaar om te downloaden. Probeer het over een paar dagen opnieuw te downloaden",
+    "mapDownload": "U staat op het punt de kaart te downloaden. Wil je doorgaan?",
+    "downloadError": "Er is een fout opgetreden tijdens het downloaden. Probeer het later opnieuw",
+    "genericError": "Er is een fout opgetreden. Probeer het later opnieuw",
+    "loginNeededDownload": "Om deze route te downloaden, moet je ingelogd zijn. Wil je het nu doen?",
+    "voucherMessage": "Voer uw reiscode in",
+    "voucherPlaceholder": "code",
+    "voucherExpired": "Deze code is verlopen",
+    "voucherError": "Ongeldige code. Probeer het opnieuw",
+    "discardRecordedTrack": "Je gaat de opgenomen route verwijderen. Wil je doorgaan?",
+    "discardChanges": "Als u OK selecteert, worden alle wijzigingen ongedaan gemaakt. Wil je doorgaan?",
+    "copiedLink": "Link gekopieerd naar klembord",
+    "copiedCoordinates": "Coördinaten gekopieerd naar klembord",
+    "userAlreadyExists": "De e-mail {{email}} is al gebruikt. Probeer in plaats daarvan in te loggen",
+    "abortDownload": "Weet u zeker dat u de download wilt afbreken?",
+    "resumeTrackRecord": "De toepassing is beëindigd tijdens het opnemen van een nummer. Wat wil je doen?",
+    "storageAuthorization": "De app heeft geen toegang tot uw opslag om het bestand te downloaden. Om ze te gebruiken, moet u het gebruik van uw opslag autoriseren vanuit uw apparaatinstellingen",
+    "fileDownload": "Downloaden {{filename}}",
+    "fileDownloadError": "Er is een fout opgetreden tijdens het downloaden. Probeer het later opnieuw",
+    "fileDownloadSuccess": "Het bestand is succesvol gedownload in {{dest}}",
+    "exportMessage": "Voer de e-mail in waar u de geëxporteerde track wilt ontvangen",
+    "exportEmailPlaceholder": "e-mail",
+    "exportSuccessfull": "Route succesvol geëxporteerd",
+    "exportError": "Er is een fout opgetreden tijdens het exporteren. Controleer je verbinding of probeer het later opnieuw",
+    "offlineDuringInitialization": "Het lijkt erop dat je offline bent. Ga online om de gegevens te downloaden die nodig zijn voor de eerste initialisatie van de app.",
+    "initializationTooLong": "Er is een verbindingsprobleem opgetreden. Controleer uw verbinding en ga online om de gegevens te downloaden die nodig zijn voor de eerste app-initialisatie.",
+    "routingNotSupported": "De routetekening wordt niet ondersteund voor dit schermformaat. Herstel de vorige grootte om door te gaan. Door op OK te klikken, beëindigt u de trekking van de route",
+    "routingPointNotValid": "Het geselecteerde punt is niet geldig",
+    "loginNeeded": "U moet inloggen om toegang te krijgen tot deze functie",
+    "operationNotPermitted": "U hebt geen toestemming om deze functie te gebruiken",
+    "geolocationNeeded": "Om toegang te krijgen tot deze functie, moet u geolokaliseerd zijn",
+    "sessionExpired": "Sessie verlopen. Log in om door te gaan",
+    "tooManyRoutingPoint": "U heeft het limietaantal selecteerbare punten overschreden",
+    "routePassword": "Wachtwoord beveiligde route",
+    "routePasswordMessage": "Voer het wachtwoord in om deze route te downloaden",
+    "routePasswordPlaceholder": "wachtwoord",
+    "wrongRoutePassword": "Verkeerd wachtwoord",
+    "backButtonLeaveRoute": "Druk opnieuw om de route te verlaten",
+    "backButtonLeaveApp": "Druk opnieuw om de app te sluiten",
+    "logoutWarning": "Weet je zeker dat je wilt uitloggen?"
+  },
+  "buttons": {
+    "ok": "OK",
+    "cancel": "annuleren",
+    "delete": "verwijderen",
+    "save": "opslaan",
+    "edit": "Bewerk",
+    "share": "delen",
+    "shareLink": "URL delen",
+    "continue": "ga verder"
+  },
+  "navigation": {
+    "pause": "pauze",
+    "resume": "hervat",
+    "stop": "hou op",
+    "toast": "Wees voorzichtig, u bent {{distance}} m van het pad verwijderd",
+    "notification": "Navigeren",
+    "tooFar": "U bent momenteel te ver om de navigatie te starten",
+    "trackName": "Opgenomen route"
+  },
+  "settings": {
+    "title": "instellingen",
+    "languageRadio": "Kies de taal",
+    "login": "Log in",
+    "logout": "uitloggen",
+    "privacyHeader": "privacy",
+    "privacy": "Lees de <a href=\"{{url}}\" target=\"blank\">privacybeleid</a>",
+    "termsAndConditionsHeader": "Voorwaarden",
+    "termsAndConditions": "Lees ik <a href=\"{{url}}\" target=\"blank\">voorwaarden</a>",
+    "appHeader": "app",
+    "appDeveloped": "App ontwikkeld door Webmapp Srl",
+    "appVersion": "Versie {{version}}",
+    "loggedInLabel": "Je bent ingelogd als <b>{{firstName}} {{lastName}}</b> (<b>{{email}}</b>)"
+  },
+  "main": {
+    "search": "zoeken",
+    "loading": "bezig met laden...",
+    "actions": {
+      "list": "lijst",
+      "map": "kaart",
+      "filter": "filter",
+      "order": "bestellen"
+    }
+  },
+  "home": {
+    "whatToDo": "Wat wil je doen?",
+    "seeAll": "alles zien",
+    "noElements": "Leeg"
+  },
+  "menu": {
+    "explore": "Ontdek",
+    "search": "zoeken",
+    "settings": "instellingen",
+    "exitRoute": "afrit route",
+    "myRoutes": "mijn routes",
+    "stages": "stadia",
+    "help": "helpen",
+    "attribution": "attributie",
+    "offline": "offline",
+    "credits": "credits",
+    "pois": "aandachtspunten"
+  },
+  "credits": {
+    "webmappContent1": "De app {{appName}} is ontwikkeld en onderhouden door Webmapp.<br> Webmapp maakt web-, mobiele en gedrukte kaarten voor natuur- en avontuurtoerisme. <br> Bezoek onze website voor meer informatie ",
+    "webmappContent2": " of neem contact met ons op via <a href=\"mailto:info@webmapp.it\">info@webmapp.it</a>",
+    "map": "Kaart",
+    "mapContent": "© Webmapp, gedistribueerd met licentie CC BY-NC-SA",
+    "cartographicData": "Cartografische gegevens",
+    "cartographicDataContent": "© OpenStreetMap Contributors"
+  },
+  "modals": {
+    "routeDownload": {
+      "mapDownloadTitle": "Downloaden van de kaart",
+      "routeDownloadTitle": "U downloadt de route {{name}}",
+      "setup": "Initiële setup",
+      "map": "Kaart downloaden",
+      "data": "Gegevens downloaden",
+      "media": "Media downloaden",
+      "install": "Installeren",
+      "doNotInterrupt": "Sluit de app niet tijdens het installatieproces",
+      "error": "De download is tijdelijk onderbroken. Zorg ervoor dat u bent verbonden met het netwerk. De download wordt zo snel mogelijk hervat"
+    },
+    "login": {
+      "loginHeader": "Voer e-mailadres en wachtwoord in om in te loggen {{customerName}}",
+      "username": "gebruikersnaam",
+      "password": "wachtwoord",
+      "login": "Log in",
+      "missingFields": "Vul alle verplichte velden in",
+      "passwordRecovery": "Wachtwoord vergeten?",
+      "signupHeader": "Voer de volgende velden in om u aan te melden {{customerName}}",
+      "signup": "inschrijven",
+      "firstName": "naam",
+      "lastName": "achternaam",
+      "email": "e-mail",
+      "passwordConfirm": "wachtwoord bevestigen",
+      "newsletter": "Ik wil me inschrijven voor de nieuwsbrief",
+      "privacy": "Ik ga akkoord met de voorwaarden van de <a href=\"{{url}}\" target=\"blank\">privacybeleid</a>",
+      "termsAndConditions": "Ik accepteer ik <a href=\"{{url}}\" target=\"blank\">voorwaarden</a>",
+      "backToLogin": "terug naar Inloggen",
+      "countrySelectPlaceholder": "Gelieve te kiezen..."
+    },
+    "saveTrack": {
+      "saveTitle": "sla de opgenomen route op",
+      "editTitle": "de route bewerken",
+      "trackName": "Opgenomen route {{id}}",
+      "name": "route titel",
+      "description": "voeg een beschrijving toe",
+      "presetLabel": "Vooraf ingestelde kleuren",
+      "selectColor": "Selecteer kleur"
+    },
+    "filters": {
+      "title": "filter",
+      "reset": "reset",
+      "apply": "filters toepassen",
+      "activateAll": "schakel alles in",
+      "deactivateAll": "schakel alles uit"
+    },
+    "report": {
+      "title": "rapporteer uw locatie",
+      "send": "Verzend rapport",
+      "reportNotSent": "Het rapport is geaccepteerd en wordt zo snel mogelijk verzonden",
+      "reportSent": "Rapport succesvol verzonden",
+      "featureUnavailable": "Functie niet beschikbaar in de browser",
+      "selectPictureSource": "Kiezen",
+      "cameraSource": "Maak een foto",
+      "photolibrarySource": "Gebruik een afbeelding uit uw bibliotheek",
+      "datePlaceholder": "Selecteer een datum"
+    },
+    "adopt": {
+      "reconnaissanceHeader": "Voer uw persoonlijke gegevens in",
+      "header": "Voer uw persoonlijke gegevens in",
+      "missingFields": "Vul alle verplichte velden in",
+      "firstName": "naam",
+      "lastName": "achternaam",
+      "cai": "cai sectie",
+      "address": "adres, postcode, land en stad",
+      "phone": "telefoon",
+      "mobile": "mobiele telefoon",
+      "email": "e-mail"
+    }
+  },
+  "popover": {
+    "mapCenter": "coördinaten van het midden van de kaart:",
+    "shareCoordinates": "deel de coördinaten",
+    "shareLocation": "deel uw locatie",
+    "recordTrack": "route opnemen",
+    "beEdit": "online bewerken",
+    "report": "rapporteer uw locatie",
+    "export": "exporteren",
+    "switchMapLayer": "basiskaart",
+    "routing": "teken een route",
+    "attendEvent": "doet mee",
+    "updateEvent": "Voeg foto's toe",
+    "endEvent": "einde"
+  },
+  "help": {
+    "0": "Na aanmelding zou je dat met slechts een klik kunnen doen <span class='bold'>download de routes</span> naar uw apparaat.",
+    "1": "Elke route heeft een <span class='bold'>referentiekaart</span> waar zijn de <span class='bold'>aandachtspunten</span> door ons geselecteerd.",
+    "2": "Door te klikken <span class='bold'>op het pictogram</span> u hebt toegang tot de beschrijving, de fotogalerij en andere informatie daarover <span class='bold'>punt van belang</span>.",
+    "3": "Door te klikken <span class='bold'>de geolocatieknop</span> u kunt uw positie zien (het blu-punt op de kaart).",
+    "4": "Door nogmaals te klikken <span class='bold'>de geolocatieknop</span> u activeert de <span class='bold'>kompasmodus</span> en de kaart draait en oriënteert naar Nord."
+  },
+  "offline": {
+    "title": "Offline kaart",
+    "download": "downloaden",
+    "delete": "verwijderen",
+    "open": "offline inschakelen",
+    "close": "offline uitschakelen",
+    "textContent": "Download de kaart en schakel de offline modus in"
+  },
+  "search": {
+    "poiDivider": "Aandachtspunten",
+    "routeDivider": "routes",
+    "trackDivider": "Sporen",
+    "poiEmptyList": "Geen interessante plaatsen gevonden",
+    "trackEmptyList": "Geen route gevonden",
+    "routeEmptyList": "Geen route gevonden"
+  },
+  "routing": {
+    "trackName": "Ontworpen pad"
+  },
+  "events": {
+    "loginNeeded": "Om deel te nemen aan het evenement moet je inloggen met je account",
+    "errors": {
+      "alreadyAttending": "Je staat al op de lijst met deelnemers aan het evenement",
+      "notEnded": "Het is niet mogelijk om een ​​campagne voor de lopende datum af te sluiten",
+      "alreadyEnded": "De campagne is al gesloten: de gevraagde bewerking kan niet worden uitgevoerd",
+      "onlyCreatorCanEnd": "Operatie niet toegestaan. Alleen de maker van het evenement kan beslissen om het te beëindigen",
+      "cannotUpdate": "Deze campagne kan niet worden bijgewerkt",
+      "onlyCreatorCanUpdate": "Operatie niet toegestaan. Alleen de maker van het evenement kan nieuwe afbeeldingen toevoegen",
+      "403": "Je hebt geen toestemming om deze afspraak te bewerken"
+    },
+    "attend": {
+      "sure": "Weet u zeker dat u aan dit evenement wilt deelnemen?",
+      "success": "U heeft uw deelname aan het evenement met succes bevestigd"
+    },
+    "end": {
+      "title": "Beëindig het evenement",
+      "submit": "Concluderen",
+      "success": "Evenement succesvol afgesloten. De wijziging is binnen enkele dagen zichtbaar in de app",
+      "sure": "Weet u zeker dat u deze campagne wilt sluiten?"
+    },
+    "update": {
+      "title": "Voeg foto's toe aan de galerij",
+      "submit": "Ga verder",
+      "success": "Galerij succesvol bijgewerkt. De wijziging is binnen enkele dagen zichtbaar in de app"
+    }
+  },
+  "form": {
+    "allFieldsMandatory": "Alle velden zijn verplicht"
+  },
+  "errors": {
+    "login": {
+      "403": "Kan niet inloggen. Verkeerde gebruikersnaam of wachtwoord",
+      "404": "Kan niet inloggen. Controleer uw netwerkverbinding en probeer het opnieuw"
+    },
+    "signup": {
+      "401": "Dit emailadres is al geregistreerd. U kunt inloggen met uw e-mailadres en wachtwoord",
+      "404": "Registratie kon niet worden voltooid. Controleer je verbinding en probeer het opnieuw"
+    }
+  },
+  "map": {
+    "defaultCreatePoiLabel": "Meld een nieuw aandachtspunt"
+  }
+}
