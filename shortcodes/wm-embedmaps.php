@@ -1,7 +1,7 @@
 <?php
 
-add_shortcode('wm-embedmaps', 'wm_render_maps_shortcode');
-function wm_render_maps_shortcode($atts)
+add_shortcode('wm-embedmaps', 'wm_render_embedmaps_shortcode');
+function wm_render_embedmaps_shortcode($atts)
 {
     ob_start();
 
