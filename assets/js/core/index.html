@@ -21,6 +21,16 @@
   <link rel="stylesheet" href="/wp-content/plugins/wm-embedmaps/assets/js/core/styles.css"></head>
 
   <body>
+    <!-- <wm-map-container
+      style="
+        display: inline-block;
+        width: 50vw;
+        height: 100vh;
+        position: relative;
+      "
+    >
+      <wm-embedmaps-root></wm-embedmaps-root>
+    </wm-map-container> -->
     <wm-embedmaps-root
       style="
         display: inline-block;
@@ -29,7 +39,7 @@
         position: relative;
       "
     ></wm-embedmaps-root>
-    <!-- <wm-embedmaps-technical-info
+    <wm-embedmaps-technical-info
       style="
         display: inline-block;
         width: 25vw;
@@ -38,6 +48,7 @@
         top: 0;
         left: 50vw;
       "
+      wm-related-poi="true"
     ></wm-embedmaps-technical-info>
     <wm-embedmaps-elevation-chart
       style="
@@ -58,6 +69,6 @@
         top: 0vh;
         left: 75vw;
       "
-    ></wm-embedmaps-related-poi> -->
+    ></wm-embedmaps-related-poi>
   <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/runtime.js"></script><script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/polyfills.js"></script><script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/main.js"></script></body>
 </html>

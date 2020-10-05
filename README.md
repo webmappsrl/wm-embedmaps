@@ -57,6 +57,10 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 #### 3.2.2 Parameters
 
+This shortcode can be configured to match the user needs. The currently available parameters are:
+
+- `related_poi` | boolean: true if the technical info should contains also the list of related poi
+
 #### 3.2.3 Examples
 
 ### 3.3 Elevation Chart Shortcode

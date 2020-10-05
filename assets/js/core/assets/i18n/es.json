@@ -71,7 +71,8 @@
     "relatedPoiTitle": "lugares",
     "trackSwitchText": "etapas",
     "stopRouting": "termina ruta",
-    "routingTips": "Haga clic en el mapa para trazar su ruta"
+    "routingTips": "Haga clic en el mapa para trazar su ruta",
+    "showMoreUrl": "saber más"
   },
   "alert": {
     "warning": "cuidado",
