@@ -45,7 +45,11 @@ This shortcode can be configured to match the user needs. The currently availabl
 - `feature_color`: use this color as the default color for the features in the map. A feature can have a color property specified that will overwrite this option
 - `color`: use this color as ptheme primary color. Default: '#3880ff'
 
-#### 3.1.3 Examples
+#### 3.1.3 Style
+
+This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+#### 3.1.4 Examples
 
 ### 3.2 Technical Info Shortcode
 
@@ -61,7 +65,11 @@ This shortcode can be configured to match the user needs. The currently availabl
 
 - `related_poi` | boolean: true if the technical info should contains also the list of related poi
 
-#### 3.2.3 Examples
+#### 3.2.3 Style
+
+This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+#### 3.2.4 Examples
 
 ### 3.3 Elevation Chart Shortcode
 
@@ -73,7 +81,21 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 #### 3.3.2 Parameters
 
-#### 3.3.3 Examples
+#### 3.3.3 Style
+
+This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+- --wm-line-color: #00ffff; | set the color of the line - default primary color
+- --wm-line-width: 3; | set the width of the line - default 1
+- --wm-fill-color: #00ff00; | set the fill color of the graph. Use rgba(0,0,0,0); to make it transparent - default primary color
+- --wm-point-border-color: #ff0000; | set the color of the point border - default primary color
+- --wm-point-fill-color: #ff00ff; | set the color of the point - default primary color
+- --wm-point-radius: 1; | set the radius of the point - default 1
+- --wm-point-hover-border-color: #ffff00; | set the color of the point border when hovering it - default primary color
+- --wm-point-hover-fill-color: #0000ff; | set the color of the point when hovering it - default primary color
+- --wm-point-hover-radius: 5; | set the radius of the point when hovering it - default 5
+
+#### 3.3.4 Examples
 
 ### 3.4 Related Pois Shortcode
 
@@ -85,7 +107,11 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 #### 3.4.2 Parameters
 
-#### 3.4.3 Examples
+#### 3.4.3 Style
+
+This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+#### 3.4.4 Examples
 
 ## 4 Built With
 
