@@ -94,6 +94,12 @@ This shortcode can be personalized to look like the user's needs. It is possible
 - --wm-point-hover-border-color: #ffff00; | set the color of the point border when hovering it - default primary color
 - --wm-point-hover-fill-color: #0000ff; | set the color of the point when hovering it - default primary color
 - --wm-point-hover-radius: 5; | set the radius of the point when hovering it - default 5
+- --wm-tooltip-background-color: #64758a; | set the background color of the tooltip
+- --wm-tooltip-border-color: #64758a; | set the border color of the tooltip
+- --wm-tooltip-border-width: 1; | set the border width of the tooltip
+- --wm-tooltip-color: #ffffff; | set the text color of the tooltip content
+- --wm-tooltip-title-font-size: 20; | set the size in px of the title of the tooltip (elevation)
+- --wm-tooltip-label-font-size: 15px; | set the size in px of the label of the tooltip (distance)
 
 #### 3.3.4 Examples
 
