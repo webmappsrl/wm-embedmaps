@@ -85,21 +85,25 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
-- --wm-line-color: #00ffff; | set the color of the line - default primary color
-- --wm-line-width: 3; | set the width of the line - default 1
-- --wm-fill-color: #00ff00; | set the fill color of the graph. Use rgba(0,0,0,0); to make it transparent - default primary color
-- --wm-point-border-color: #ff0000; | set the color of the point border - default primary color
-- --wm-point-fill-color: #ff00ff; | set the color of the point - default primary color
-- --wm-point-radius: 1; | set the radius of the point - default 1
-- --wm-point-hover-border-color: #ffff00; | set the color of the point border when hovering it - default primary color
-- --wm-point-hover-fill-color: #0000ff; | set the color of the point when hovering it - default primary color
-- --wm-point-hover-radius: 5; | set the radius of the point when hovering it - default 5
-- --wm-tooltip-background-color: #64758a; | set the background color of the tooltip
-- --wm-tooltip-border-color: #64758a; | set the border color of the tooltip
-- --wm-tooltip-border-width: 1; | set the border width of the tooltip
-- --wm-tooltip-color: #ffffff; | set the text color of the tooltip content
-- --wm-tooltip-title-font-size: 20; | set the size in px of the title of the tooltip (elevation)
-- --wm-tooltip-label-font-size: 15px; | set the size in px of the label of the tooltip (distance)
+- **--wm-line-color**: _#00ffff_; | set the color of the line - default primary color
+- **--wm-line-width**: _3_; | set the width of the line - default 1
+- **--wm-fill-color**: _#00ff00_; | set the fill color of the graph. Use rgba(0,0,0,0); to make it transparent - default primary color
+- **--wm-point-border-color**: _#ff0000_; | set the color of the point border - default primary color
+- **--wm-point-fill-color**: _#ff00ff_; | set the color of the point - default primary color
+- **--wm-point-radius**: _1_; | set the radius of the point - default 1
+- **--wm-point-hover-border-color**: _#ffff00_; | set the color of the point border when hovering it - default primary color
+- **--wm-point-hover-fill-color**: _#0000ff_; | set the color of the point when hovering it - default primary color
+- **--wm-point-hover-radius**: _5_; | set the radius of the point when hovering it - default 5
+- **--wm-tooltip-background-color**: _#64758a_; | set the background color of the tooltip - default black
+- **--wm-tooltip-border-color**: _#64758a_; | set the border color of the tooltip - default black
+- **--wm-tooltip-border-width**: _1_; | set the border width of the tooltip - default 1
+- **--wm-tooltip-color**: _#ffffff_; | set the text color of the tooltip content - default white
+- **--wm-tooltip-title-font-size**: _20_; | set the size in px of the title of the tooltip (elevation) - default depends on font size
+- **--wm-tooltip-label-font-size**: _15_; | set the size in px of the label of the tooltip (distance) - default depends on font size
+- **--wm-hide-grid**: _1_; | set to a positive number to hide the grid in the chart - default 0
+- **--wm-max-x-values**: _4_; | set the maximum number of x values in the x axis (the real number depends on factors like number of points, width and more) - default 8
+- **--wm-max-y-values**: _3_; | set the maximum number of y values in the y axis (the real number depends on factors like total elevation difference and more) - default auto defined by chart script
+- **--wm-points-number**: _50_; | set the number of point to draw. Low values means softer but less precise chart line - default 50, between [5, 800]
 
 #### 3.3.4 Examples
 
