@@ -20,25 +20,27 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="stylesheet" href="/wp-content/plugins/wm-embedmaps/assets/js/core/styles.css"></head>
 
-  <body skipFeaturesDownload="true">
-    <!-- <wm-map-container
+  <body>
+    <wm-map-container
       style="
         display: inline-block;
         width: 50vw;
         height: 100vh;
         position: relative;
       "
+      configJsonUrl="https://k.webmapp.it/vdc/config_test.json"
+      detailsFeatureId="2118"
     >
       <wm-embedmaps-root></wm-embedmaps-root>
-    </wm-map-container> -->
-    <wm-embedmaps-root
+    </wm-map-container>
+    <!-- <wm-embedmaps-root
       style="
         display: inline-block;
         width: 50vw;
         height: 100vh;
         position: relative;
       "
-    ></wm-embedmaps-root>
+    ></wm-embedmaps-root> -->
     <wm-embedmaps-technical-info
       style="
         display: inline-block;
@@ -48,7 +50,7 @@
         top: 30vh;
         left: 50vw;
       "
-      wm-related-poi="true"
+      wm-related-poi="false"
     ></wm-embedmaps-technical-info>
     <wm-embedmaps-elevation-chart
       style="
@@ -79,7 +81,7 @@
         --wm-points-number: 50;
       "
     ></wm-embedmaps-elevation-chart>
-    <wm-embedmaps-technical-info
+    <wm-embedmaps-related-poi
       style="
         display: inline-block;
         width: 25vw;
@@ -88,48 +90,6 @@
         top: 30vh;
         left: 75vw;
       "
-    ></wm-embedmaps-technical-info>
-    <!-- <wm-embedmaps-related-poi
-      style="
-        display: inline-block;
-        width: 25vw;
-        height: 70vh;
-        position: absolute;
-        top: 30vh;
-        left: 75vw;
-      "
-    ></wm-embedmaps-related-poi> -->
-    <script>
-      setTimeout(() => {
-        let geojson = [
-          {
-            type: "FeatureCollection",
-            features: [
-              {
-                type: "Feature",
-                geometry: {
-                  type: "Point",
-                  coordinates: [11, 43],
-                },
-                properties: {
-                  id: "123",
-                  name: "NOME DEL CAZZO",
-                  color: "#f00",
-                  icon: "wm-icon-generic",
-                  taxonomy: {
-                    webmapp_category: [13],
-                  },
-                },
-              },
-            ],
-          },
-        ];
-
-        window["wm-embedmaps"] = {
-          wm_geojson_layers: JSON.stringify(geojson),
-        };
-        document.dispatchEvent(new Event("wm_overlays_updated"));
-      }, 10000);
-    </script>
+    ></wm-embedmaps-related-poi>
   <script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/runtime.js"></script><script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/polyfills.js"></script><script type="text/javascript" src="/wp-content/plugins/wm-embedmaps/assets/js/core/main.js"></script></body>
 </html>
