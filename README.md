@@ -44,6 +44,8 @@ This shortcode can be configured to match the user needs. The currently availabl
 - `route`: load the specified route. It can be an id (it will need a base_url to load the route properly) or an url (for relative urls it will also need the base_url)
 - `feature_color`: use this color as the default color for the features in the map. A feature can have a color property specified that will overwrite this option
 - `color`: use this color as ptheme primary color. Default: '#3880ff'
+- `use_only_geojson_url`: set to true if you want to show only the geojson url data and not the data from the config_url you specified
+- `details_feature_id`: use this field to specify a feature id to show in the map directly with the details opened
 
 #### 3.1.3 Style
 
@@ -63,7 +65,7 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be configured to match the user needs. The currently available parameters are:
 
-- `related_poi` | boolean: true if the technical info should contains also the list of related poi
+- `wm-related-poi` | boolean: true if the technical info should contains also the list of related poi
 
 #### 3.2.3 Style
 

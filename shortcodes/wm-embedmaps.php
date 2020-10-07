@@ -19,6 +19,8 @@ function wm_render_embedmaps_shortcode($atts)
         "lang" => "",
         "enable_search" => "",
         "fullscreen" => "",
+        "use_only_geojson_url" => "",
+        "details_feature_id" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -58,6 +60,12 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($fullscreen != '') {
         $htmlAttributes .= " fullscreen=\"$fullscreen\"";
+    }
+    if ($use_only_geojson_url != '') {
+        $htmlAttributes .= " skipFeaturesDownload=\"$use_only_geojson_url\"";
+    }
+    if ($details_feature_id != '') {
+        $htmlAttributes .= " detailsFeatureId=\"$details_feature_id\"";
     }
 
     $layers = array();
