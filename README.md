@@ -48,12 +48,19 @@ This shortcode can be configured to match the user needs. The currently availabl
 - `details_feature_id`: use this field to specify a feature id to show in the map directly with the details opened
 - `hide_lateral_panel`: use this field to make the map never show the lateral panel for details, search and stuff
 - `related_poi_click_behaviour`: define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url). Default to "open"
+- `taxonomy_types`: define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`. By default all the taxonomy types are downloaded
+- `taxonomy_terms`: define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`. By default all the taxonomy terms are downloaded
+- `post_types`: define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`. By default all the post types are downloaded
 
 #### 3.1.3 Style
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
-#### 3.1.4 Examples
+#### 3.1.4 FAQ
+
+The parameters `taxonomy_types`, `taxonomy_terms` and `post_types` could cause problems when used with the `details_feature_id` (both alone or all together). At the current build status please try to not use them together
+
+#### 3.1.5 Examples
 
 ### 3.2 Technical Info Shortcode
 

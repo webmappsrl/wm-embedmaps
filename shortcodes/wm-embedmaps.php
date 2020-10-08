@@ -23,6 +23,9 @@ function wm_render_embedmaps_shortcode($atts)
         "details_feature_id" => "",
         "hide_lateral_panel" => "",
         "related_poi_click_behaviour" => "",
+        "taxonomy_types" => "",
+        "taxonomy_terms" => "",
+        "post_types" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -74,6 +77,15 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($related_poi_click_behaviour != '') {
         $htmlAttributes .= " relatedPoiClickBehaviour=\"$related_poi_click_behaviour\"";
+    }
+    if ($taxonomy_types != '') {
+        $htmlAttributes .= " taxonomyTypes=\"$taxonomy_types\"";
+    }
+    if ($taxonomy_terms != '') {
+        $htmlAttributes .= " taxonomyTerms=\"$taxonomy_terms\"";
+    }
+    if ($post_types != '') {
+        $htmlAttributes .= " featureTypes=\"$post_types\"";
     }
 
     $layers = array();
