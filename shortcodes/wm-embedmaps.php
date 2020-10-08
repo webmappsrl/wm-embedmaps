@@ -21,6 +21,7 @@ function wm_render_embedmaps_shortcode($atts)
         "fullscreen" => "",
         "use_only_geojson_url" => "",
         "details_feature_id" => "",
+        "hide_lateral_panel" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -66,6 +67,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($details_feature_id != '') {
         $htmlAttributes .= " detailsFeatureId=\"$details_feature_id\"";
+    }
+    if ($hide_lateral_panel != '') {
+        $htmlAttributes .= " hideLateralPanel=\"$hide_lateral_panel\"";
     }
 
     $layers = array();
