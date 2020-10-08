@@ -47,6 +47,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 - `use_only_geojson_url`: set to true if you want to show only the geojson url data and not the data from the config_url you specified
 - `details_feature_id`: use this field to specify a feature id to show in the map directly with the details opened
 - `hide_lateral_panel`: use this field to make the map never show the lateral panel for details, search and stuff
+- `related_poi_click_behaviour`: define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url). Default to "open"
 
 #### 3.1.3 Style
 

@@ -22,6 +22,7 @@ function wm_render_embedmaps_shortcode($atts)
         "use_only_geojson_url" => "",
         "details_feature_id" => "",
         "hide_lateral_panel" => "",
+        "related_poi_click_behaviour" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -70,6 +71,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($hide_lateral_panel != '') {
         $htmlAttributes .= " hideLateralPanel=\"$hide_lateral_panel\"";
+    }
+    if ($related_poi_click_behaviour != '') {
+        $htmlAttributes .= " relatedPoiClickBehaviour=\"$related_poi_click_behaviour\"";
     }
 
     $layers = array();
