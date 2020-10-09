@@ -197,7 +197,7 @@ foreach ($definitions as $d) {
             'wm_geojson_layers': JSON.stringify(layers),
             'wm_overlays_definition': JSON.stringify(definitions)
         };
-        document.dispatchEvent(new Event('wm_overlays_updated'));
+        document.dispatchEvent(new Event('wm_embedmaps_overlays_updated'));
     </script>
     <!-- END Embededmaps script -->
     <?php
