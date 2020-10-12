@@ -85,15 +85,17 @@ This shortcode can be configured to match the user needs. The currently availabl
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
---wm-grid-template-columns: 1fr 1fr;
---wm-value-font-size: 1em;
---wm-value-font-weight: 500;
---wm-value-text-align: left;
---wm-value-color: #ff0000;
---wm-label-font-size: 1em;
---wm-label-font-weight: 500;
---wm-label-text-align: left;
---wm-label-color: #ff00ff;
+| Parameter                    | Default              | Description                                           | FAQ                                                         |
+| ---------------------------- | -------------------- | ----------------------------------------------------- | ----------------------------------------------------------- |
+| `--wm-grid-template-columns` | `1fr 1fr`            | Define the template of the technical info             |                                                             |
+| `--wm-value-font-size`       | `17px`               | Define the font-size of the technical info value      | This default value could vary due to the `config_url` param |
+| `--wm-value-font-weight`     | `normal`             | Define the font-weight of the technical info value    |                                                             |
+| `--wm-value-text-align`      | `left`               | Define the text alignment of the technical info value |                                                             |
+| `--wm-value-color`           | `black`              | Define the color of the technical info value          | This default value could vary due to the `config_url` param |
+| `--wm-label-font-size`       | `17px`               | Define the font-size of the technical info label      | This default value could vary due to the `config_url` param |
+| `--wm-label-font-weight`     | `normal`             | Define the font-weight of the technical info label    |                                                             |
+| `--wm-label-text-align`      | `left`               | Define the text alignment of the technical info label |                                                             |
+| `--wm-label-color`           | `rgba(0, 0, 0, 0.7)` | Define the color of the technical info label          | This default value could vary due to the `config_url` param |
 
 Every technical info has also a specific class named `wm_embedmaps-[technical_info_key]` where the technical info key can be found in the parameter `wm-config` in the list
 
