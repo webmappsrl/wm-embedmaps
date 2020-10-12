@@ -7,12 +7,16 @@ function wm_render_technical_info_shortcode($atts)
 
     extract(shortcode_atts(array(
         "related_poi" => "",
+        "config" => "",
     ), $atts));
 
     $htmlAttributes = '';
 
     if ($related_poi != '') {
         $htmlAttributes .= " wm-related-poi=\"$related_poi\"";
+    }
+    if ($config != '') {
+        $htmlAttributes .= " wm-config=\"$config\"";
     }
     ?>
     <wm-embedmaps-technical-info <?php echo $htmlAttributes; ?>></wm-embedmaps-technical-info>
