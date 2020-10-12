@@ -98,7 +98,7 @@ This shortcode can be personalized to look like the user's needs. It is possible
 | `--wm-label-text-align`      | `left`               | Define the text alignment of the technical info label |                                                             |
 | `--wm-label-color`           | `rgba(0, 0, 0, 0.7)` | Define the color of the technical info label          | This default value could vary due to the `config_url` param |
 
-Every technical info has also a specific class named `wm_embedmaps-[technical_info_key]` where the technical info key can be found in the parameter `wm-config` in the list
+Every technical info has also a specific class named `wm_embedmaps-[technical_info_key]` where the technical info key can be found in the parameter `wm-config` in the list.
 
 #### 3.2.4 Examples
 
@@ -151,6 +151,24 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 #### 3.4.3 Style
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+--wm-show-numbers: 1;
+--wm-title-font-size: 25px;
+--wm-subtitle-font-size: 30px;
+--wm-number-font-size: 30px;
+--wm-title-color: #ff0000;
+--wm-subtitle-color: #ff00ff;
+--wm-number-color: #ff00ff;
+--wm-title-font-weight: 700;
+--wm-subtitle-font-weight: 300;
+--wm-number-font-weight: 700;
+--wm-title-line-clamp: 1;
+--wm-subtitle-line-clamp: 1;
+--wm-bottom-border-width: 0px;
+--wm-bottom-border-color: #0000ff;
+--wm-hide-header: 1;
+--wm-hide-subtitle: 0;
+--wm-hide-images: 1;
 
 #### 3.4.4 Examples
 
