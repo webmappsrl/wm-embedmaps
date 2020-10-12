@@ -51,7 +51,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `hide_lateral_panel`          | `boolean` | `false`     | use this field to make the map never show the lateral panel for details, search and stuff                                                                                                                                                    |                                                      |
 | `related_poi_click_behaviour` | `string`  | `open`      | define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url)                                                                                   |                                                      |
 | `taxonomy_types`              | `string`  | `undefined` | define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded     |
-| `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 |                                                      |
+| `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded     |
 | `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded         |
 
 #### 3.1.3 Style
@@ -76,11 +76,26 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be configured to match the user needs. The currently available parameters are:
 
-- `wm-related-poi` | boolean: true if the technical info should contains also the list of related poi
+| Parameter        | Type      | Default     | Description                                                                                                                                                                                                                                                                                           | FAQ                                                                   |
+| ---------------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `wm-related-poi` | `boolean` | `false`     | Set to `true` if the technical info should contains also the list of related poi                                                                                                                                                                                                                      |                                                                       |
+| `wm-config`      | `string`  | `undefined` | A string with all the info to show separated by commas `,`. Available infos: `ele_from`, `ele_to`, `ele_max`, `ele_min`, `distance`, `duration_forward`, `duration_backward`, `ascent`, `descent`, `from`, `to`, `operator`, `scale`, `cai_scale`, `mtb_scale`, `ref`, `difficulty`, `stages`, `code` | If `undefined` all the info will be visible based on the feature type |
 
 #### 3.2.3 Style
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+--wm-grid-template-columns: 1fr 1fr;
+--wm-value-font-size: 1em;
+--wm-value-font-weight: 500;
+--wm-value-text-align: left;
+--wm-value-color: #ff0000;
+--wm-label-font-size: 1em;
+--wm-label-font-weight: 500;
+--wm-label-text-align: left;
+--wm-label-color: #ff00ff;
+
+Every technical info has also a specific class named `wm_embedmaps-[technical_info_key]` where the technical info key can be found in the parameter `wm-config` in the list
 
 #### 3.2.4 Examples
 
