@@ -53,6 +53,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `taxonomy_types`              | `string`  | `undefined` | define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded     |
 | `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded     |
 | `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded         |
+| `hide_taxonomy_filters`       | `boolean` | `false`     | Set to true to hide the taxonomy filters in map                                                                                                                                                                                              |                                                      |
 
 #### 3.1.3 Style
 

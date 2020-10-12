@@ -26,6 +26,7 @@ function wm_render_embedmaps_shortcode($atts)
         "taxonomy_types" => "",
         "taxonomy_terms" => "",
         "post_types" => "",
+        "hide_taxonomy_filters" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -86,6 +87,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($post_types != '') {
         $htmlAttributes .= " featureTypes=\"$post_types\"";
+    }
+    if ($hide_taxonomy_filters != '') {
+        $htmlAttributes .= " hideTaxonomyFilters=\"$hide_taxonomy_filters\"";
     }
 
     $layers = array();
