@@ -35,29 +35,41 @@ It can be used alone or with any other shortcode created by this plugin. Every f
 
 This shortcode can be configured to match the user needs. The currently available parameters are:
 
-| Parameter                     | Type      | Default     | Description                                                                                                                                                                                                                                  | FAQ                                                  |
-| ----------------------------- | --------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| `height`                      | `string`  | `100%`      | set the content height (which by default is 100% of the container). Accept any CSS value included unit. E.g. '200px', '50vh', '80%'                                                                                                          |                                                      |
-| `config_url`                  | `string`  | `undefined` | load the specified config.json to configure the plugin                                                                                                                                                                                       | To know more about this parameters please contact us |
-| `base_url`                    | `string`  | `undefined` | use this url as a base url                                                                                                                                                                                                                   | To know more about this parameters please contact us |
-| `geojson_url`                 | `string`  | `undefined` | load the specified geojson from url in the resulting map                                                                                                                                                                                     |                                                      |
-| `fit_layer_max_zoom`          | `number`  | `16`        | set the max zoom when fitting layer bounds in the map. Useful to make the map accessible at high zoom levels but to force it to keep a medium zoom level during actions like center on a specific feature. Must be a number between 0 and 16 |                                                      |
-| `disable_click_in_map`        | `boolean` | `false`     | make the map not react at click event. This means no popups are opened neither features can be selected from the map                                                                                                                         |                                                      |
-| `route`                       | `string`  | `undefined` | load the specified route. It can be an id (it will need a base_url to load the route properly) or an url (for relative urls it will also need the base_url)                                                                                  |                                                      |
-| `feature_color`               | `string`  | `undefined` | use this color as the default color for the features in the map. A feature can have a color property specified that will overwrite this option                                                                                               |                                                      |
-| `color`                       | `string`  | `#3880ff`   | use this color as theme primary color                                                                                                                                                                                                        |                                                      |
-| `use_only_geojson_url`        | `boolean` | `false`     | set to true if you want to show only the geojson url data and not the data from the config_url you specified                                                                                                                                 |                                                      |
-| `details_feature_id`          | `string`  | `undefined` | use this field to specify a feature id to show in the map directly with the details opened                                                                                                                                                   |                                                      |
-| `hide_lateral_panel`          | `boolean` | `false`     | use this field to make the map never show the lateral panel for details, search and stuff                                                                                                                                                    |                                                      |
-| `related_poi_click_behaviour` | `string`  | `open`      | define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url)                                                                                   |                                                      |
-| `taxonomy_types`              | `string`  | `undefined` | define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded     |
-| `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded     |
-| `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded         |
-| `hide_taxonomy_filters`       | `boolean` | `false`     | Set to true to hide the taxonomy filters in map                                                                                                                                                                                              |                                                      |
+| Parameter                     | Type      | Default     | Description                                                                                                                                                                                                                                  | FAQ                                                          |
+| ----------------------------- | --------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `height`                      | `string`  | `100%`      | set the content height (which by default is 100% of the container). Accept any CSS value included unit. E.g. '200px', '50vh', '80%'                                                                                                          |                                                              |
+| `config_url`                  | `string`  | `undefined` | load the specified config.json to configure the plugin                                                                                                                                                                                       | To know more about this parameters please contact us         |
+| `base_url`                    | `string`  | `undefined` | use this url as a base url                                                                                                                                                                                                                   | To know more about this parameters please contact us         |
+| `geojson_url`                 | `string`  | `undefined` | load the specified geojson from url in the resulting map                                                                                                                                                                                     |                                                              |
+| `fit_layer_max_zoom`          | `number`  | `16`        | set the max zoom when fitting layer bounds in the map. Useful to make the map accessible at high zoom levels but to force it to keep a medium zoom level during actions like center on a specific feature. Must be a number between 0 and 16 |                                                              |
+| `disable_click_in_map`        | `boolean` | `false`     | make the map not react at click event. This means no popups are opened neither features can be selected from the map                                                                                                                         |                                                              |
+| `route`                       | `string`  | `undefined` | load the specified route. It can be an id (it will need a base_url to load the route properly) or an url (for relative urls it will also need the base_url)                                                                                  |                                                              |
+| `feature_color`               | `string`  | `undefined` | use this color as the default color for the features in the map. A feature can have a color property specified that will overwrite this option                                                                                               |                                                              |
+| `color`                       | `string`  | `#3880ff`   | use this color as theme primary color                                                                                                                                                                                                        |                                                              |
+| `use_only_geojson_url`        | `boolean` | `false`     | set to true if you want to show only the geojson url data and not the data from the config_url you specified                                                                                                                                 |                                                              |
+| `details_feature_id`          | `string`  | `undefined` | use this field to specify a feature id to show in the map directly with the details opened                                                                                                                                                   |                                                              |
+| `hide_lateral_panel`          | `boolean` | `false`     | use this field to make the map never show the lateral panel for details, search and stuff                                                                                                                                                    |                                                              |
+| `related_poi_click_behaviour` | `string`  | `open`      | define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url)                                                                                   |                                                              |
+| `taxonomy_types`              | `string`  | `undefined` | define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded             |
+| `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded             |
+| `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded                 |
+| `hide_taxonomy_filters`       | `boolean` | `false`     | Set to true to hide the taxonomy filters in map                                                                                                                                                                                              |                                                              |
+| `fullscreen_on_text`          | `string`  | `undefined` | Set the html to be seen when the fullscreen is on and can be toggled off                                                                                                                                                                     | Values starting with `wm-icon` will resolve as Webmapp Icons |
+| `fullscreen_off_text`         | `string`  | `undefined` | Set the html to be seen when the fullscreen is off and can be toggled on                                                                                                                                                                     | Values starting with `wm-icon` will resolve as Webmapp Icons |
 
 #### 3.1.3 Style
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
+
+- --wm-actions-color: #00ffff;
+- --wm-actions-background: #ff00ff;
+- --wm-actions-hover-color: #00ff00;
+- --wm-actions-hover-background: #ff0000;
+- --wm-actions-fullscreen-horizontal-padding: 5px;
+- --wm-actions-top: 20px;
+- --wm-actions-right: 20px;
+- --wm-actions-bottom: unset;
+- --wm-actions-left: unset;
 
 #### 3.1.4 FAQ
 
@@ -152,23 +164,23 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
---wm-show-numbers: 1;
---wm-title-font-size: 25px;
---wm-subtitle-font-size: 30px;
---wm-number-font-size: 30px;
---wm-title-color: #ff0000;
---wm-subtitle-color: #ff00ff;
---wm-number-color: #ff00ff;
---wm-title-font-weight: 700;
---wm-subtitle-font-weight: 300;
---wm-number-font-weight: 700;
---wm-title-line-clamp: 1;
---wm-subtitle-line-clamp: 1;
---wm-bottom-border-width: 0px;
---wm-bottom-border-color: #0000ff;
---wm-hide-header: 1;
---wm-hide-subtitle: 0;
---wm-hide-images: 1;
+- --wm-show-numbers: 1;
+- --wm-title-font-size: 25px;
+- --wm-subtitle-font-size: 30px;
+- --wm-number-font-size: 30px;
+- --wm-title-color: #ff0000;
+- --wm-subtitle-color: #ff00ff;
+- --wm-number-color: #ff00ff;
+- --wm-title-font-weight: 700;
+- --wm-subtitle-font-weight: 300;
+- --wm-number-font-weight: 700;
+- --wm-title-line-clamp: 1;
+- --wm-subtitle-line-clamp: 1;
+- --wm-bottom-border-width: 0px;
+- --wm-bottom-border-color: #0000ff;
+- --wm-hide-header: 1;
+- --wm-hide-subtitle: 0;
+- --wm-hide-images: 1;
 
 #### 3.4.4 Examples
 

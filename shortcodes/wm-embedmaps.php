@@ -27,6 +27,8 @@ function wm_render_embedmaps_shortcode($atts)
         "taxonomy_terms" => "",
         "post_types" => "",
         "hide_taxonomy_filters" => "",
+        "fullscreen_on_text" => "",
+        "fullscreen_off_text" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -90,6 +92,12 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($hide_taxonomy_filters != '') {
         $htmlAttributes .= " hideTaxonomyFilters=\"$hide_taxonomy_filters\"";
+    }
+    if ($fullscreen_on_text != '') {
+        $htmlAttributes .= " fullscreenOnText=\"$fullscreen_on_text\"";
+    }
+    if ($fullscreen_off_text != '') {
+        $htmlAttributes .= " fullscreenOffText=\"$fullscreen_off_text\"";
     }
 
     $layers = array();
