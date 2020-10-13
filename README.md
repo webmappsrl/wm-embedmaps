@@ -61,15 +61,13 @@ This shortcode can be configured to match the user needs. The currently availabl
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
-- --wm-actions-color: #00ffff;
-- --wm-actions-background: #ff00ff;
-- --wm-actions-hover-color: #00ff00;
-- --wm-actions-hover-background: #ff0000;
-- --wm-actions-fullscreen-horizontal-padding: 5px;
-- --wm-actions-top: 20px;
-- --wm-actions-right: 20px;
-- --wm-actions-bottom: unset;
-- --wm-actions-left: unset;
+| Parameter                                    | Default   | Description                                                                                            | FAQ |
+| -------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------ | --- |
+| `--wm-actions-color`                         | `#000000` | Define the text color of the top right action buttons (fullscreen, options and filters)                |     |
+| `--wm-actions-background`                    | `#ffffff` | Define the background color of the top right action buttons (fullscreen, options and filters)          |     |
+| `--wm-actions-hover-color`                   | `#000000` | Define the text color of the top right action buttons (fullscreen, options and filters) on hover       |     |
+| `--wm-actions-hover-background`              | `#cccccc` | Define the background color of the top right action buttons (fullscreen, options and filters) on hover |     |
+| `--wm-actions-fullscreen-horizontal-padding` | `5px`     | Define the horizontal padding of the fullscreen button                                                 |     |
 
 #### 3.1.4 FAQ
 
