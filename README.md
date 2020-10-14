@@ -1,7 +1,33 @@
 # wm-embedmaps
 
 Allow to embed the Webmapp Map in a wordpress enviromnent
-This software is developed and mantained by WEBMAPP TEAM (see authors). Please fill free to contact us (info@webmapp.it) for any question.
+This software is developed and mantained by WEBMAPP TEAM (see [Authors](#6-authors)). Please fill free to contact us (info@webmapp.it) for any question.
+
+- [1 Develop](#1-develop)
+- [2 Installation](#2-installation)
+- [3 Usage](#3-usage)
+  - [3.1 Main Shortcode](#31-main-shortcode)
+    - [3.1.1 Shortcode](#311-shortcode)
+    - [3.1.2 Parameters](#312-parameters)
+    - [3.1.3 Style](#313-style)
+    - [3.1.4 FAQ](#314-faq)
+    - [3.1.5 Examples](#315-examples)
+  - [3.2 Technical Info Shortcode](#32-technical-info-shortcode)
+    - [3.2.2 Parameters](#322-parameters)
+    - [3.2.3 Style](#323-style)
+    - [3.2.4 Examples](#324-examples)
+  - [3.3 Elevation Chart Shortcode](#33-elevation-chart-shortcode)
+    - [3.3.2 Parameters](#332-parameters)
+    - [3.3.3 Style](#333-style)
+    - [3.3.4 Examples](#334-examples)
+  - [3.4 Related Pois Shortcode](#34-related-pois-shortcode)
+    - [3.4.2 Parameters](#342-parameters)
+    - [3.4.3 Style](#343-style)
+    - [3.4.4 Examples](#344-examples)
+- [4 Built With](#4-built-with)
+- [5 Contributing](#5-contributing)
+- [6 Authors](#6-authors)
+- [8 License](#8-license)
 
 ## 1 Develop
 
@@ -9,7 +35,7 @@ Firstly you need to clone the repo
 
 `git clone git@github.com:webmappsrl/wm-embedmaps.git`
 
-This code only allows to develop the shortcode and some othe php/Wordpress related parts. To start developing the proper plugin code you should contact us at info@webmapp.it
+This code only allows to develop the shortcode and some other php/Wordpress related features. To start developing the proper plugin code you should contact us at info@webmapp.it
 
 ## 2 Installation
 
@@ -126,25 +152,27 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
-- **--wm-line-color**: _#00ffff_; | set the color of the line - default primary color
-- **--wm-line-width**: _3_; | set the width of the line - default 1
-- **--wm-fill-color**: _#00ff00_; | set the fill color of the graph. Use rgba(0,0,0,0); to make it transparent - default primary color
-- **--wm-point-border-color**: _#ff0000_; | set the color of the point border - default primary color
-- **--wm-point-fill-color**: _#ff00ff_; | set the color of the point - default primary color
-- **--wm-point-radius**: _1_; | set the radius of the point - default 1
-- **--wm-point-hover-border-color**: _#ffff00_; | set the color of the point border when hovering it - default primary color
-- **--wm-point-hover-fill-color**: _#0000ff_; | set the color of the point when hovering it - default primary color
-- **--wm-point-hover-radius**: _5_; | set the radius of the point when hovering it - default 5
-- **--wm-tooltip-background-color**: _#64758a_; | set the background color of the tooltip - default black
-- **--wm-tooltip-border-color**: _#64758a_; | set the border color of the tooltip - default black
-- **--wm-tooltip-border-width**: _1_; | set the border width of the tooltip - default 1
-- **--wm-tooltip-color**: _#ffffff_; | set the text color of the tooltip content - default white
-- **--wm-tooltip-title-font-size**: _20_; | set the size in px of the title of the tooltip (elevation) - default depends on font size
-- **--wm-tooltip-label-font-size**: _15_; | set the size in px of the label of the tooltip (distance) - default depends on font size
-- **--wm-hide-grid**: _1_; | set to a positive number to hide the grid in the chart - default 0
-- **--wm-max-x-values**: _4_; | set the maximum number of x values in the x axis (the real number depends on factors like number of points, width and more) - default 8
-- **--wm-max-y-values**: _3_; | set the maximum number of y values in the y axis (the real number depends on factors like total elevation difference and more) - default auto defined by chart script
-- **--wm-points-number**: _50_; | set the number of point to draw. Low values means softer but less precise chart line - default 50, between [5, 800]
+| Parameter                       | Default    | Description                                                                          | FAQ                                                                                                          |
+| ------------------------------- | ---------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `--wm-line-color`               | `$primary` | Set the color of the line                                                            | The primary color can be configured using the `config_url` param                                             |
+| `--wm-line-width`               | `1`        | Set the width of the chart line                                                      |                                                                                                              |
+| `--wm-fill-color`               | `$primary` | Set the fill color of the chart                                                      | Use `rgba(0,0,0,0)` to make it transparent. The primary color can be configured using the `config_url` param |
+| `--wm-point-border-color`       | `$primary` | Set the color of the border of the points                                            | The primary color can be configured using the `config_url`                                                   |
+| `--wm-point-fill-color`         | `$primary` | Set the color of the points                                                          | The primary color can be configured using the `config_url`                                                   |
+| `--wm-point-radius`             | `1`        | Set the radius of the point 1                                                        |
+| `--wm-point-hover-border-color` | `$primary` | Set the color of the border of the points when hovering them                         | The primary color can be configured using the `config_url`                                                   |
+| `--wm-point-hover-fill-color`   | `$primary` | Set the color of the points while hovering them                                      | The primary color can be configured using the `config_url`                                                   |
+| `--wm-point-hover-radius`       | `5`        | Set the radius of the point when hovering it                                         |
+| `--wm-tooltip-background-color` | `#000000`  | Set the background color of the tooltip                                              |
+| `--wm-tooltip-border-color`     | `#000000`  | Set the border color of the tooltip                                                  |
+| `--wm-tooltip-border-width`     | `1`        | Set the border width of the tooltip                                                  |
+| `--wm-tooltip-color`            | `#ffffff`  | Set the text color of the tooltip text                                               |
+| `--wm-tooltip-title-font-size`  | `17`       | Set the size in px of the title of the tooltip (elevation)                           |
+| `--wm-tooltip-label-font-size`  | `15`       | Set the size in px of the label of the tooltip (distance)                            |
+| `--wm-hide-grid`                | `0`        | Set to a positive number to hide the grid in the chart                               |
+| `--wm-max-x-values`             | `8`        | Set the maximum number of x values in the x axis                                     | The real number depends on factors like number of points, width and more                                     |
+| `--wm-max-y-values`             | `8`        | Set the maximum number of y values in the y axis                                     | The real number depends on factors like total elevation difference and more                                  |
+| `--wm-points-number`            | `50`       | Set the number of point to draw. Low values means softer but less precise chart line | The value must be within 5 and 800                                                                           |
 
 #### 3.3.4 Examples
 
@@ -162,23 +190,25 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 This shortcode can be personalized to look like the user's needs. It is possible to set the following CSS variables that will be used as CSS parameters inside the various components:
 
-- --wm-show-numbers: 1;
-- --wm-title-font-size: 25px;
-- --wm-subtitle-font-size: 30px;
-- --wm-number-font-size: 30px;
-- --wm-title-color: #ff0000;
-- --wm-subtitle-color: #ff00ff;
-- --wm-number-color: #ff00ff;
-- --wm-title-font-weight: 700;
-- --wm-subtitle-font-weight: 300;
-- --wm-number-font-weight: 700;
-- --wm-title-line-clamp: 1;
-- --wm-subtitle-line-clamp: 1;
-- --wm-bottom-border-width: 0px;
-- --wm-bottom-border-color: #0000ff;
-- --wm-hide-header: 1;
-- --wm-hide-subtitle: 0;
-- --wm-hide-images: 1;
+| Parameter                   | Default   | Description                                                                        | FAQ                                                         |
+| --------------------------- | --------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `--wm-show-numbers`         | `0`       | A positive number cause the related poi numeration to show                         |                                                             |
+| `--wm-title-font-size`      | `20px`    | The font size of the title of the related poi                                      |                                                             |
+| `--wm-subtitle-font-size`   | `17px`    | The font size of the subtitle of the related poi                                   |                                                             |
+| `--wm-number-font-size`     | `20px`    | The font size of the numeration of the related poi                                 |                                                             |
+| `--wm-title-color`          | `#ffffff` | The title color of the related poi                                                 | If the image is not present the default switch to `#000000` |
+| `--wm-subtitle-color`       | `#ffffff` | The subtitle color of the related poi                                              | If the image is not present the default switch to `#000000` |
+| `--wm-number-color`         | `#ffffff` | The number color of the related poi                                                | If the image is not present the default switch to `#000000` |
+| `--wm-title-font-weight`    | `normal`  | The weight of the title of the related poi                                         |                                                             |
+| `--wm-subtitle-font-weight` | `normal`  | The weight of the subtitle of the related poi                                      |                                                             |
+| `--wm-number-font-weight`   | `normal`  | The weight of the numeration of the related poi                                    |                                                             |
+| `--wm-title-line-clamp`     | `2`       | The maximum number of lines for the title of the related poi                       |                                                             |
+| `--wm-subtitle-line-clamp`  | `1`       | The maximum number of lines for the subtitle of the related poi                    |                                                             |
+| `--wm-bottom-border-width`  | `1px`     | The width of the line separation between two related poi                           |                                                             |
+| `--wm-bottom-border-color`  | `#989aa2` | The color of the line separation between two related poi                           |                                                             |
+| `--wm-hide-header`          | `0`       | Hide the header (icon and text) usually visible on the top of the related poi list |                                                             |
+| `--wm-hide-subtitle`        | `0`       | Hide the subtitle of the related pois                                              |                                                             |
+| `--wm-hide-images`          | `0`       | Hide the image of the related pois                                                 |                                                             |
 
 #### 3.4.4 Examples
 
