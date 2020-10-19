@@ -71,7 +71,8 @@
     "relatedPoiTitle": "plaatsen",
     "trackSwitchText": "stadia",
     "stopRouting": "route voltooien",
-    "routingTips": "Klik op de kaart om de route te tekenen"
+    "routingTips": "Klik op de kaart om de route te tekenen",
+    "showMoreUrl": "uitvinden"
   },
   "alert": {
     "warning": "waarschuwing",

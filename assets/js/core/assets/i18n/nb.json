@@ -71,7 +71,8 @@
     "relatedPoiTitle": "steder",
     "trackSwitchText": "stadier",
     "stopRouting": "målgang",
-    "routingTips": "Klikk på kartet for å tegne ruten"
+    "routingTips": "Klikk på kartet for å tegne ruten",
+    "showMoreUrl": "finne ut"
   },
   "alert": {
     "warning": "varsel",

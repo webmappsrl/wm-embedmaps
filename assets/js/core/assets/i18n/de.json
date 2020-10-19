@@ -71,7 +71,8 @@
     "relatedPoiTitle": "orte",
     "trackSwitchText": "Bühne",
     "stopRouting": "route speichern",
-    "routingTips": "Klicken Sie auf die Karte, um Ihre Route zu zeichnen"
+    "routingTips": "Klicken Sie auf die Karte, um Ihre Route zu zeichnen",
+    "showMoreUrl": "rausfinden"
   },
   "alert": {
     "warning": "achtung",

@@ -71,7 +71,8 @@
     "relatedPoiTitle": "luoghi",
     "trackSwitchText": "tappe",
     "stopRouting": "termina percorso",
-    "routingTips": "Clicca in mappa per disegnare il tuo percorso"
+    "routingTips": "Clicca in mappa per disegnare il tuo percorso",
+    "showMoreUrl": "scopri"
   },
   "alert": {
     "warning": "attenzione",

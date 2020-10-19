@@ -1,7 +1,7 @@
 <?php
 
-add_shortcode('wm-embedmaps', 'wm_render_maps_shortcode');
-function wm_render_maps_shortcode($atts)
+add_shortcode('wm-embedmaps', 'wm_render_embedmaps_shortcode');
+function wm_render_embedmaps_shortcode($atts)
 {
     ob_start();
 
@@ -19,6 +19,16 @@ function wm_render_maps_shortcode($atts)
         "lang" => "",
         "enable_search" => "",
         "fullscreen" => "",
+        "use_only_geojson_url" => "",
+        "details_feature_id" => "",
+        "hide_lateral_panel" => "",
+        "related_poi_click_behaviour" => "",
+        "taxonomy_types" => "",
+        "taxonomy_terms" => "",
+        "post_types" => "",
+        "hide_taxonomy_filters" => "",
+        "fullscreen_on_text" => "",
+        "fullscreen_off_text" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -58,6 +68,36 @@ function wm_render_maps_shortcode($atts)
     }
     if ($fullscreen != '') {
         $htmlAttributes .= " fullscreen=\"$fullscreen\"";
+    }
+    if ($use_only_geojson_url != '') {
+        $htmlAttributes .= " skipFeaturesDownload=\"$use_only_geojson_url\"";
+    }
+    if ($details_feature_id != '') {
+        $htmlAttributes .= " detailsFeatureId=\"$details_feature_id\"";
+    }
+    if ($hide_lateral_panel != '') {
+        $htmlAttributes .= " hideLateralPanel=\"$hide_lateral_panel\"";
+    }
+    if ($related_poi_click_behaviour != '') {
+        $htmlAttributes .= " relatedPoiClickBehaviour=\"$related_poi_click_behaviour\"";
+    }
+    if ($taxonomy_types != '') {
+        $htmlAttributes .= " taxonomyTypes=\"$taxonomy_types\"";
+    }
+    if ($taxonomy_terms != '') {
+        $htmlAttributes .= " taxonomyTerms=\"$taxonomy_terms\"";
+    }
+    if ($post_types != '') {
+        $htmlAttributes .= " featureTypes=\"$post_types\"";
+    }
+    if ($hide_taxonomy_filters != '') {
+        $htmlAttributes .= " hideTaxonomyFilters=\"$hide_taxonomy_filters\"";
+    }
+    if ($fullscreen_on_text != '') {
+        $htmlAttributes .= " fullscreenOnText=\"$fullscreen_on_text\"";
+    }
+    if ($fullscreen_off_text != '') {
+        $htmlAttributes .= " fullscreenOffText=\"$fullscreen_off_text\"";
     }
 
     $layers = array();
@@ -169,7 +209,7 @@ foreach ($definitions as $d) {
             'wm_geojson_layers': JSON.stringify(layers),
             'wm_overlays_definition': JSON.stringify(definitions)
         };
-        document.dispatchEvent(new Event('wm_overlays_updated'));
+        document.dispatchEvent(new Event('wm_embedmaps_overlays_updated'));
     </script>
     <!-- END Embededmaps script -->
     <?php

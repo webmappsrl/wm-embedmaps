@@ -71,7 +71,8 @@
     "relatedPoiTitle": "مکان",
     "trackSwitchText": "مراحل",
     "stopRouting": "راه پایان",
-    "routingTips": "برای ترسیم مسیر خود بر روی نقشه کلیک کنید"
+    "routingTips": "برای ترسیم مسیر خود بر روی نقشه کلیک کنید",
+    "showMoreUrl": "پیدا کردن"
   },
   "alert": {
     "warning": "توجه",

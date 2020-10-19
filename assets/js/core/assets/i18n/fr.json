@@ -71,7 +71,8 @@
     "relatedPoiTitle": "endroits",
     "trackSwitchText": "étapes",
     "stopRouting": "itinéraire d'arrivée",
-    "routingTips": "Cliquez sur la carte pour dessiner votre itinéraire"
+    "routingTips": "Cliquez sur la carte pour dessiner votre itinéraire",
+    "showMoreUrl": "trouver"
   },
   "alert": {
     "warning": "attention",
