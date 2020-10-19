@@ -71,7 +71,8 @@
     "relatedPoiTitle": "places",
     "trackSwitchText": "stage",
     "stopRouting": "finish route",
-    "routingTips": "Click the map to draw the route"
+    "routingTips": "Click the map to draw the route",
+    "showMoreUrl": "Discover"
   },
   "alert": {
     "warning": "warning",
