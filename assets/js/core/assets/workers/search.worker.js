@@ -254,6 +254,7 @@ self._initializeEntry = function (
     showInResults:
       !feature.properties.noDetails && !feature.properties.noInteraction,
     preventFilter: feature.properties.preventFilter ? true : false,
+    startHidden: !!feature.properties.startHidden ? true : false
   };
 
   if (entry.type !== "poi") {
