@@ -35,7 +35,7 @@ Firstly you need to clone the repo
 
 `git clone git@github.com:webmappsrl/wm-embedmaps.git`
 
-This code only allows to develop the shortcode and some other php/Wordpress related features. To start developing the proper plugin code you should contact us at info@webmapp.it
+This code only allows to develop the shortcodes and some other php/Wordpress related features. To start developing the proper plugin code you should contact us at info@webmapp.it
 
 ## 2 Installation
 
@@ -43,7 +43,7 @@ To install the plugin you can simply you can simply clone the plugin as demonstr
 
 ## 3 Usage
 
-This plugin create some shortcodes that you can then use inside your Wordpress based website.
+This plugin creates some shortcodes that you can then use inside your Wordpress based website.
 
 ### 3.1 Main Shortcode
 
@@ -76,6 +76,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `details_feature_id`          | `string`  | `undefined` | use this field to specify a feature id to show in the map directly with the details opened                                                                                                                                                   |                                                              |
 | `hide_lateral_panel`          | `boolean` | `false`     | use this field to make the map never show the lateral panel for details, search and stuff                                                                                                                                                    |                                                              |
 | `related_poi_click_behaviour` | `string`  | `open`      | define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url)                                                                                   |                                                              |
+| `features_ids`                | `string`  | `undefined` | allow to specify a series of ids to load (for multiple ids just separate them with commas `,`). If the features have related poi it automatically load them when activated from configuration                                                | If `undefined` all the features are downloaded               |
 | `taxonomy_types`              | `string`  | `undefined` | define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded             |
 | `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded             |
 | `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded                 |
@@ -117,6 +118,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | ------------- | --------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | `related_poi` | `boolean` | `false`     | Set to `true` if the technical info should contains also the list of related poi                                                                                                                                                                                                                      |                                                                       |
 | `config`      | `string`  | `undefined` | A string with all the info to show separated by commas `,`. Available infos: `ele_from`, `ele_to`, `ele_max`, `ele_min`, `distance`, `duration_forward`, `duration_backward`, `ascent`, `descent`, `from`, `to`, `operator`, `scale`, `cai_scale`, `mtb_scale`, `ref`, `difficulty`, `stages`, `code` | If `undefined` all the info will be visible based on the feature type |
+| `feature_id`  | `string`  | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content                                                                                                                                                                              |                                                                       |
 
 #### 3.2.3 Style
 
@@ -147,6 +149,10 @@ The shortcode to instantiate the Elevation Chart Block is the
 It must be used with at least the `wm-embedmaps`. This instantiate a block that will contains the elevation chart related to the selected track in the map.
 
 #### 3.3.2 Parameters
+
+| Parameter     | Type      | Default     | Description                                                                                                              | FAQ |
+| ------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
+| `feature_id`  | `string`  | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
 
 #### 3.3.3 Style
 
@@ -185,6 +191,10 @@ The shortcode to instantiate the Related Pois Block is the
 It must be used with at least the `wm-embedmaps`. This instantiate a block that will contains all the related poi of a selected track. This by default is contained in the Technical Info block
 
 #### 3.4.2 Parameters
+
+| Parameter     | Type      | Default     | Description                                                                                                              | FAQ |
+| ------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
+| `feature_id`  | `string`  | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
 
 #### 3.4.3 Style
 
