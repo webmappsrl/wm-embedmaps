@@ -101,7 +101,7 @@ function wm_render_embedmaps_shortcode($atts)
         $htmlAttributes .= " fullscreenOffText=\"$fullscreen_off_text\"";
     }
     if ($features_ids != '') {
-        $htmlAttributes .= " loadingFeatures=\"$features_ids\"";
+        $htmlAttributes .= " loadingFeaturesIds=\"$features_ids\"";
     }
 
     $layers = array();
