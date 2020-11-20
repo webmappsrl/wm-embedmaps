@@ -29,7 +29,7 @@ function wm_render_embedmaps_shortcode($atts)
         "hide_taxonomy_filters" => "",
         "fullscreen_on_text" => "",
         "fullscreen_off_text" => "",
-        "features_id" => ""
+        "features_ids" => ""
     ), $atts));
 
     $htmlAttributes = '';
