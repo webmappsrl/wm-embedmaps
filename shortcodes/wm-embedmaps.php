@@ -29,7 +29,8 @@ function wm_render_embedmaps_shortcode($atts)
         "hide_taxonomy_filters" => "",
         "fullscreen_on_text" => "",
         "fullscreen_off_text" => "",
-        "features_ids" => ""
+        "features_ids" => "",
+        "show_related_pois" => ""
     ), $atts));
 
     $htmlAttributes = '';
@@ -102,6 +103,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($features_ids != '') {
         $htmlAttributes .= " loadingFeaturesIds=\"$features_ids\"";
+    }
+    if ($show_related_pois != '') {
+        $htmlAttributes .= " showRelatedPois=\"$show_related_pois\"";
     }
 
     $layers = array();

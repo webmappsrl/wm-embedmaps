@@ -81,6 +81,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `taxonomy_terms`              | `string`  | `undefined` | define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded             |
 | `post_types`                  | `string`  | `undefined` | define the post types to download. Must be a string composed by post types (`poi`, `track`, `route`) separated by commas `,`                                                                                                                 | If `undefined` all post types are downloaded                 |
 | `hide_taxonomy_filters`       | `boolean` | `false`     | Set to true to hide the taxonomy filters in map                                                                                                                                                                                              |                                                              |
+| `show_related_pois`           | `boolean` | `false`     | Set to true show the related pois in the map. This will also download the related pois even if the filters are not specifically including them.                                                                                              |                                                              |
 | `fullscreen_on_text`          | `string`  | `undefined` | Set the html to be seen when the fullscreen is on and can be toggled off                                                                                                                                                                     | Values starting with `wm-icon` will resolve as Webmapp Icons |
 | `fullscreen_off_text`         | `string`  | `undefined` | Set the html to be seen when the fullscreen is off and can be toggled on                                                                                                                                                                     | Values starting with `wm-icon` will resolve as Webmapp Icons |
 
@@ -97,8 +98,6 @@ This shortcode can be personalized to look like the user's needs. It is possible
 | `--wm-actions-fullscreen-horizontal-padding` | `5px`     | Define the horizontal padding of the fullscreen button                                                 |     |
 
 #### 3.1.4 FAQ
-
-The parameters `taxonomy_types`, `taxonomy_terms` and `post_types` could cause problems when used with the `details_feature_id` (both alone or all together). At the current build status please try to not use them together
 
 #### 3.1.5 Examples
 
