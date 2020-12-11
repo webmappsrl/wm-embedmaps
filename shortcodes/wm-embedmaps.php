@@ -30,7 +30,8 @@ function wm_render_embedmaps_shortcode($atts)
         "fullscreen_on_text" => "",
         "fullscreen_off_text" => "",
         "features_ids" => "",
-        "show_related_pois" => ""
+        "show_related_pois" => "",
+        "force_zoom_to_details_feature"
     ), $atts));
 
     $htmlAttributes = '';
@@ -106,6 +107,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($show_related_pois != '') {
         $htmlAttributes .= " showRelatedPois=\"$show_related_pois\"";
+    }
+    if ($force_zoom_to_details_feature != '') {
+        $htmlAttributes .= " forceZoomToDetailsFeature=\"$force_zoom_to_details_feature\"";
     }
 
     $layers = array();
