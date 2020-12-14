@@ -180,7 +180,8 @@
     "attribution": "attribution",
     "offline": "hors ligne",
     "credits": "crédits",
-    "pois": "points d'intérêt"
+    "pois": "points d'intérêt",
+    "difficultyLegend": "légende de difficulté"
   },
   "credits": {
     "webmappContent1": "L'application {{appName}} est développée et gérée par Webmapp. <br> Webmapp crée des services de cartographie Web, des applications mobiles et des cartes imprimées pour Nature & Adventure Tourism. <br> Pour plus d'informations, visitez notre site Web ",
@@ -281,6 +282,50 @@
     "2": "En cliquant <span class='bold'>sur l'icône</span> vous pouvez accéder à la description, à la galerie de photos et à d'autres info à propos de ce <span class='bold'>point d’intérêt</span>.",
     "3": "En cliquant <span class='bold'>sur le bouton de géolocalisation</span> vous pouvez voir votre position (le point bleu sur la carte).",
     "4": "En cliquant à nouveau <span class='bold'>sur le bouton de géolocalisation</span> vous activez le <span class='bold'>mode compas</span> et la carte tournera et s'orientera vers le Nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Échelle de difficulté de la randonnée",
+      "t": {
+        "title": "T - Touristique",
+        "description": "Itinéraires dans des rues étroites, des pistes muletières ou des chemins faciles, avec des itinéraires clairement évidents qui ne posent pas d'incertitudes ou de problèmes d'orientation. Ils ont généralement lieu en dessous de 2000 m et constituent généralement un accès aux alpages ou refuges. Ils nécessitent une certaine connaissance de l'environnement montagnard et une préparation physique à la marche."
+      },
+      "e": {
+        "title": "E - Randonnée",
+        "description": "Des itinéraires qui tournent presque toujours sur des chemins, ou sur des traces de passage dans divers terrains (pâturages, débris, sol caillouteux), généralement avec des panneaux. Ils nécessitent un certain sens de l'orientation, ainsi qu'une certaine expérience et connaissance du territoire montagneux, un entraînement à la marche, ainsi que des chaussures et des équipements appropriés. Normalement, la différence d'altitude est comprise entre 500 et 1000 m."
+      },
+      "ee": {
+        "title": "EE - Randonneurs experts",
+        "description": "Des itinéraires pas toujours balisés et qui nécessitent une bonne capacité à se déplacer sur différents terrains de montagne. Il peut s'agir de chemins ou même de faibles traces qui serpentent sur un terrain accidenté ou escarpé, avec des pentes raides et glissantes, des éboulis et des champs de neige courts qui peuvent être surmontés sans l'utilisation d'équipement d'alpinisme. Ils ont besoin d'une bonne expérience de la montagne, d'une assise ferme et d'une bonne préparation physique. Il est également nécessaire de disposer d'un équipement et d'un équipement adéquats, ainsi que d'un bon sens de l'orientation. Normalement, la différence de hauteur est supérieure à 1000 m."
+      },
+      "eea": {
+        "title": "EEA - Randonneurs experts avec équipement d'alpinisme",
+        "description": "Itinéraires nécessitant l'utilisation d'équipements de via ferrata (longes, harnais, dissipateur thermique, casque, etc.). Il peut s'agir de chemins équipés ou de véritables via ferratas. Il faut savoir utiliser le matériel technique en toute sécurité et avoir une certaine habitude d'exposition et d'escalade."
+      }
+    },
+    "mtb": {
+      "title": "Échelle de difficulté VTT",
+      "tc": {
+        "title": "TC - Touristique",
+        "description": "Route sur des chemins de terre avec une surface compacte et lisse, adaptée aux véhicules."
+      },
+      "mc": {
+        "title": "MC - Pour les cyclotouristes ayant une capacité technique moyenne",
+        "description": "Sentier sur des chemins de terre avec une surface légèrement cahoteuse ou légèrement irrégulière (pistes de moutons, pistes de charrettes ...) ou sur des chemins aux surfaces compactes et lisses."
+      },
+      "bc": {
+        "title": "BC - Pour les cyclistes ayant de bonnes compétences techniques",
+        "description": "Chemin sur des chemins de terre très cahoteux ou sur des pistes muletières et des chemins avec une surface plutôt cahoteuse mais assez lisse ou compacte mais irrégulière, avec quelques obstacles naturels (par exemple des marches rocheuses ou des racines)."
+      },
+      "oc": {
+        "title": "OC - Pour les cyclistes avec d'excellentes compétences techniques",
+        "description": "Comme ci-dessus mais sur des chemins avec un fond très cahoteux et / ou très irrégulier, avec une présence importante d'obstacles."
+      },
+      "ec": {
+        "title": "EC - Niveau maximum pour le cyclotouriste",
+        "description": "Sentier sur des chemins très irréguliers, caractérisés par des marches et des obstacles en succession continue, qui nécessitent des techniques de type essai."
+      }
+    }
   },
   "offline": {
     "title": "Carte déconnecté",

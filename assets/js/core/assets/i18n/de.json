@@ -180,7 +180,8 @@
     "attribution": "zuschreibung",
     "offline": "offline",
     "credits": "credits",
-    "pois": "punkte des interesses"
+    "pois": "punkte des interesses",
+    "difficultyLegend": "Schwierigkeitslegende"
   },
   "credits": {
     "webmappContent1": "Die App {{appName}} wird von Webmapp entwickelt und verwaltet. <br> Webmapp erstellt Webmapping-Dienste, mobile Apps und gedruckte Karten für den Natur- und Abenteuertourismus. <br> Weitere Informationen finden Sie auf unserer Website ",
@@ -281,6 +282,50 @@
     "2": "Durch Klicken <span class='bold'>auf das Symbol</span> erhalten Sie Zugriff auf die Beschreibung, die Fotogalerie und andere Informationen zu dieser <span class='bold'>Sehenswürdigkeit</span>.",
     "3": "Durch Klicken auf <span class='bold'>die Geolokalisierungstaste</span> können Sie Ihren Standort anzeigen (der blaue Punkt auf der Karte).",
     "4": "Durch erneutes Klicken auf <span class='bold'>die Geolokalisierungstaste</span> aktivieren Sie den <span class='bold'>Kompass-Modus</span> und die Karte wird nach Norden ausgerichtet."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Schwierigkeitsgrad des Wanderns",
+      "t": {
+        "title": "T - Tourist",
+        "description": "Routen auf kleinen Straßen, Saumpfaden oder einfachen Wegen mit klar erkennbaren Routen, die keine Unsicherheiten oder Orientierungsprobleme darstellen. Sie finden in der Regel unterhalb von 2000 m statt und stellen in der Regel den Zugang zu Bergwiesen oder Schutzhütten dar. Sie erfordern einige Kenntnisse der Bergumgebung und körperliche Vorbereitung auf das Gehen."
+      },
+      "e": {
+        "title": "E - Wandern",
+        "description": "Routen, die fast immer auf Wegen oder auf Durchgangsspuren in verschiedenen Geländen (Weiden, Trümmer, steiniger Boden) abbiegen, normalerweise mit Schildern. Sie erfordern ein gewisses Maß an Orientierung sowie eine gewisse Erfahrung und Kenntnis des Berggebiets, ein Lauftraining sowie angemessenes Schuhwerk und Ausrüstung. Normalerweise liegt der Höhenunterschied zwischen 500 und 1000 m."
+      },
+      "ee": {
+        "title": "EE - Erfahrene Wanderer",
+        "description": "Routen sind nicht immer markiert und erfordern eine gute Fähigkeit, sich auf verschiedenen Berggebieten zu bewegen. Dies können Wege oder sogar schwache Spuren sein, die sich in unebenem oder steilem Gelände schlängeln, mit steilen und rutschigen Hängen, Geröll und kurzen Schneefeldern, die ohne den Einsatz von Bergsteigerausrüstung überwunden werden können. Sie brauchen eine gute Bergerfahrung, einen festen Stand und eine gute körperliche Vorbereitung. Es ist auch notwendig, über angemessene Ausrüstung und Ausrüstung sowie einen guten Orientierungssinn zu verfügen. Normalerweise ist der Höhenunterschied größer als 1000 m."
+      },
+      "eea": {
+        "title": "EEA - Erfahrene Wanderer mit Bergsteigerausrüstung",
+        "description": "Routen, für die Klettersteigausrüstung erforderlich ist (Lanyards, Gurtzeug, Kühlkörper, Helm usw.). Sie können mit Wegen oder über Klettersteige ausgestattet werden. Es ist notwendig zu wissen, wie man die technische Ausrüstung sicher benutzt und eine gewisse Angewohnheit in Bezug auf Exposition und Bergsteigen hat."
+      }
+    },
+    "mtb": {
+      "title": "MTB-Schwierigkeitsgrad",
+      "tc": {
+        "title": "TC - Tourist",
+        "description": "Route auf unbefestigten Straßen mit kompakter und glatter Oberfläche, geeignet für Fahrzeuge"
+      },
+      "mc": {
+        "title": "MC - Für Fahrradausflügler mit mittleren technischen Fähigkeiten",
+        "description": "Weg auf unbefestigten Straßen mit leicht holpriger oder leicht unregelmäßiger Oberfläche (Schafspuren, Karrenbahnen ...) oder auf Wegen mit kompakten und glatten Oberflächen"
+      },
+      "bc": {
+        "title": "BC - Für Radfahrer mit guten technischen Fähigkeiten",
+        "description": "Pfad auf sehr holprigen Feldwegen oder auf Saumpfaden und Pfaden mit einer eher holprigen, aber ziemlich glatten Oberfläche oder kompakt, aber unregelmäßig, mit einigen natürlichen Hindernissen (z. B. Felsstufen oder Wurzeln)."
+      },
+      "oc": {
+        "title": "OC - Für Radfahrer mit hervorragenden technischen Fähigkeiten",
+        "description": "Wie oben, jedoch auf Wegen mit einem sehr holprigen und / oder sehr unregelmäßigen Boden, mit erheblichen Hindernissen."
+      },
+      "ec": {
+        "title": "EC - Maximales Niveau für den Fahrradausflügler",
+        "description": "Pfad auf sehr unregelmäßigen Pfaden, gekennzeichnet durch Stufen und Hindernisse in kontinuierlicher Abfolge, die Versuchstechniken erfordern."
+      }
+    }
   },
   "offline": {
     "title": "Offline-Karte",

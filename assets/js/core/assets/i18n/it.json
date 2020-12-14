@@ -180,7 +180,8 @@
     "attribution": "attribution",
     "offline": "offline",
     "credits": "credits",
-    "pois": "punti di interesse"
+    "pois": "punti di interesse",
+    "difficultyLegend": "legenda delle difficoltà"
   },
   "credits": {
     "webmappContent1": "La app {{appName}} è sviluppata e mantenuta da Webmapp.<br> Webmapp realizza servizi cartografici web, app mobile, e cartografia stampata per il Turismo Natura & Avventura.<br>Per maggiori informazioni visitate il nostro sito web ",
@@ -281,6 +282,50 @@
     "2": "Cliccando <span class='bold'>sull'icona</span> è possibile accedere alla descrizione, alle foto e alle altre informazioni del <span class='bold'>punto di interesse</span>.",
     "3": "Cliccando <span class='bold'>sul bottone di geolocalizzazione</span> è possibile visualizzare la propria posizione (punto blu in mappa).",
     "4": "Cliccando nuovamente <span class='bold'>sul bottone di geolocalizzazione</span> si attiva la <span class='bold'>modalità bussola</span> e la mappa ruota e si orienta secondo il Nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Scala difficoltà escursionismo",
+      "t": {
+        "title": "T - Turistico",
+        "description": "Itinerari su stradine, mulattiere o comodi sentieri, con percorsi ben evidenti e che non pongono incertezze o problemi di orientamento. Si svolgono in genere sotto i 2000 m e costituiscono di solito l’accesso ad alpeggi o rifugi. Richiedono una certa conoscenza dell’ambiente montano e una preparazione fisica alla camminata."
+      },
+      "e": {
+        "title": "E - Escursionistico",
+        "description": "Itinerari che si volgono quasi sempre su sentieri, oppure su tracce di passaggio in terreno vario (pascoli, detriti, pietraie), di solito con segnalazioni. Richiedono un certo senso di orientamento, come pure una certa esperienza e conoscenza del territorio montagnoso, allenamento alla camminata, oltre a calzature ed equipaggiamento adeguati. Normalmente il dislivello è compreso tra i 500 e i 1000m."
+      },
+      "ee": {
+        "title": "EE - Escursionisti Esperti",
+        "description": "Itinerari non sempre segnalati e che richiedono una buona capacità di muoversi sui vari terreni di montagna. Possono essere sentieri o anche labili tracce che si snodano su terreno impervio o scosceso, con pendii ripidi e scivolosi, ghiaioni e brevi nevai superabili senza l’uso di attrezzatura alpinistica. Necessitano di una buona esperienza di montagna, fermezza di piede e una buona preparazione fisica. Occorre inoltre avere un equipaggiamento ed attrezzatura adeguati, oltre ad un buon senso d’orientamento. Normalmente il dislivello è superiore ai 1000m."
+      },
+      "eea": {
+        "title": "EEA - Escursionisti Esperti con Attrezzatura alpinistica",
+        "description": "Itinerari che richiedono l’uso di attrezzatura da ferrata (cordini, imbracatura, dissipatore, casco, etc.). Possono essere sentieri attrezzati o vere e proprie vie ferrate. Si rende necessario saper utilizzare in sicurezza l’equipaggiamento tecnico e avere una certa abitudine all’esposizione e ai terreni alpinistici."
+      }
+    },
+    "mtb": {
+      "title": "Scala difficoltà MTB",
+      "tc": {
+        "title": "TC - Turistico",
+        "description": "Percorso su strade sterrate dal fondo compatto e scorrevole, di tipo carrozzabile."
+      },
+      "mc": {
+        "title": "MC - Per cicloescursionisti con media capacità tecnica",
+        "description": "Percorso su sterrate con fondo poco sconnesso o poco irregolare (tratturi, carrarecce…) o su sentieri con fondo compatto e scorrevole."
+      },
+      "bc": {
+        "title": "BC - Per cicloescursionisti di buone capacità tecniche",
+        "description": "Percorso su sterrate molto sconnesse o su mulattiere e sentieri dal fondo piuttosto sconnesso ma abbastanza scorrevole oppure compatto ma irregolare, con qualche ostacolo naturale (per es. gradini di roccia o radici)."
+      },
+      "oc": {
+        "title": "OC - Per cicloescursionisti di ottime capacità tecniche",
+        "description": "Come sopra ma su sentieri dal fondo molto sconnesso e/o molto irregolare, con presenza significativa di ostacoli."
+      },
+      "ec": {
+        "title": "EC - Massimo livello per il cicloescursionista",
+        "description": "Percorso su sentieri molto irregolari, caratterizzati da gradoni e ostacoli in continua successione, che richiedono tecniche di tipo trialistico."
+      }
+    }
   },
   "offline": {
     "title": "Mappa offline",

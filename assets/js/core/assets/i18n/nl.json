@@ -180,7 +180,8 @@
     "attribution": "attributie",
     "offline": "offline",
     "credits": "credits",
-    "pois": "aandachtspunten"
+    "pois": "aandachtspunten",
+    "difficultyLegend": "moeilijkheidsgraad"
   },
   "credits": {
     "webmappContent1": "De app {{appName}} is ontwikkeld en onderhouden door Webmapp.<br> Webmapp maakt web-, mobiele en gedrukte kaarten voor natuur- en avontuurtoerisme. <br> Bezoek onze website voor meer informatie ",
@@ -281,6 +282,50 @@
     "2": "Door te klikken <span class='bold'>op het pictogram</span> u hebt toegang tot de beschrijving, de fotogalerij en andere informatie daarover <span class='bold'>punt van belang</span>.",
     "3": "Door te klikken <span class='bold'>de geolocatieknop</span> u kunt uw positie zien (het blu-punt op de kaart).",
     "4": "Door nogmaals te klikken <span class='bold'>de geolocatieknop</span> u activeert de <span class='bold'>kompasmodus</span> en de kaart draait en oriënteert naar Nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Moeilijkheidsgraad schaal",
+      "t": {
+        "title": "T - Toerist",
+        "description": "Routes over kleine wegen, muilezelpaden of gemakkelijke paden, met duidelijk zichtbare routes die geen onzekerheden of oriëntatieproblemen opleveren. Ze vinden meestal plaats onder de 2000 m en vormen meestal toegang tot bergweiden of toevluchtsoorden. Ze vereisen enige kennis van de bergomgeving en fysieke voorbereiding om te wandelen."
+      },
+      "e": {
+        "title": "E - Wandelen",
+        "description": "Routes die bijna altijd over paden gaan, of op sporen van doorgang in verschillende terreinen (weilanden, puin, steenachtige grond), meestal met borden. Ze vereisen een zeker gevoel voor oriëntatie, evenals een bepaalde ervaring en kennis van het bergachtige gebied, looptraining en geschikt schoeisel en uitrusting. Normaal gesproken ligt het hoogteverschil tussen 500 en 1000 meter."
+      },
+      "ee": {
+        "title": "EE - Deskundige wandelaars",
+        "description": "Routes die niet altijd gemarkeerd zijn en die een goede vaardigheid vereisen om zich op verschillende bergterreinen te verplaatsen. Het kunnen paden zijn of zelfs vage sporen die op ruw of steil terrein slingeren, met steile en gladde hellingen, puin en korte sneeuwvelden die kunnen worden overwonnen zonder het gebruik van bergbeklimmers. Ze hebben een goede bergervaring, stevige voeten en een goede fysieke voorbereiding nodig. Het is ook noodzakelijk om over voldoende uitrusting en uitrusting te beschikken, evenals over een goed richtingsgevoel. Normaal gesproken is het hoogteverschil groter dan 1000 meter."
+      },
+      "eea": {
+        "title": "EEA - Deskundige wandelaars met bergbeklimmersuitrusting",
+        "description": "Routes waarvoor het gebruik van via ferrata-apparatuur vereist is (vanglijnen, harnas, koellichaam, helm, enz.). Het kunnen uitgeruste paden zijn of echte via ferrata's. Het is noodzakelijk om te weten hoe u de technische uitrusting veilig gebruikt en een bepaalde gewoonte heeft van blootstelling en klimterrein."
+      }
+    },
+    "mtb": {
+      "title": "MTB-moeilijkheidsgraad",
+      "tc": {
+        "title": "TC - Toerist",
+        "description": "Route over onverharde wegen met een compact en glad oppervlak, geschikt voor voertuigen."
+      },
+      "mc": {
+        "title": "MC - Voor fietsers met gemiddelde technische kennis",
+        "description": "Pad over onverharde wegen met weinig hobbelige of licht onregelmatige grond (schaapsporen, karrensporen ...) of op paden met compacte en gladde grond."
+      },
+      "bc": {
+        "title": "BC - Voor fietsers met goede technische vaardigheden",
+        "description": "Pad op zeer hobbelige onverharde wegen of op muilezelpaden en paden met een nogal hobbelig maar redelijk glad oppervlak of compact maar onregelmatig, met enkele natuurlijke obstakels (bijv. Stenen treden of wortels)."
+      },
+      "oc": {
+        "title": "OC - Voor fietsers met uitstekende technische vaardigheden",
+        "description": "Zoals hierboven maar op zeer hobbelige en / of zeer onregelmatige paden, met aanzienlijke aanwezigheid van obstakels."
+      },
+      "ec": {
+        "title": "EC - Maximaal niveau voor de fietstoerist",
+        "description": "Pad op zeer onregelmatige paden, gekenmerkt door trappen en obstakels die voortdurend opeenvolgend zijn en waarvoor beproevingsmethoden vereist zijn."
+      }
+    }
   },
   "offline": {
     "title": "Offline kaart",

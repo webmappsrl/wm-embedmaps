@@ -180,7 +180,8 @@
     "attribution": "attribution",
     "offline": "offline",
     "credits": "credits",
-    "pois": "points of interest"
+    "pois": "points of interest",
+    "difficultyLegend": "difficulty legend"
   },
   "credits": {
     "webmappContent1": "The app {{appName}} is developed and mantained by Webmapp.<br> Webmapp creates web, mobile and printed maps for Nature & Adventure Tourism.<br>For more information please visit our website ",
@@ -281,6 +282,50 @@
     "2": "By clicking <span class='bold'>on the icon</span> you can access the description, the photo gallery and other info about that <span class='bold'>point of interest</span>.",
     "3": "By clicking <span class='bold'>the geolocation button</span> you can see your position (the blu point in the map).",
     "4": "By clicking again <span class='bold'>the geolocation button</span> you activate the <span class='bold'>compass mode</span> and the map will rotate and orientate to Nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Hiking difficulty scale",
+      "t": {
+        "title": "T - Tourist",
+        "description": "Itineraries on small roads, mule tracks or easy paths, with clearly evident routes that do not pose uncertainties or problems of orientation. They generally take place below 2000 m and usually constitute access to mountain pastures or refuges. They require some knowledge of the mountain environment and physical preparation for walking."
+      },
+      "e": {
+        "title": "E - Hiking",
+        "description": "Routes that almost always turn on paths, or on traces of passage in various terrain (pastures, debris, stony ground), usually with signs. They require a certain sense of orientation, as well as a certain experience and knowledge of the mountainous territory, walking training, as well as appropriate footwear and equipment. Normally the difference in altitude is between 500 and 1000m."
+      },
+      "ee": {
+        "title": "EE - Expert hikers",
+        "description": "Routes not always marked and which require a good ability to move on various mountain terrains. They can be paths or even faint traces that wind over rough or steep terrain, with steep and slippery slopes, scree and short snowfields that can be overcome without the use of climbing equipment. They need a good mountain experience, firm footing and good physical preparation. It is also necessary to have adequate equipment and equipment, as well as a good sense of direction. Normally the difference in height is greater than 1000m."
+      },
+      "eea": {
+        "title": "EEA - Expert hikers with mountaineering equipment",
+        "description": "Routes that require the use of via ferrata equipment (lanyards, harness, heat sink, helmet, etc.). They can be equipped paths or real via ferratas. It is necessary to know how to use the technical equipment safely and have a certain habit of exposure and mountaineering terrain."
+      }
+    },
+    "mtb": {
+      "title": "MTB difficulty scale",
+      "tc": {
+        "title": "TC - Tourist",
+        "description": "Route on dirt roads with a compact and smooth surface, suitable for vehicles."
+      },
+      "mc": {
+        "title": "MC - For cycle excursionists with medium technical ability",
+        "description": "Path on dirt roads with a slightly bumpy or slightly irregular surface (sheep tracks, cart tracks ...) or on paths with compact and smooth surfaces."
+      },
+      "bc": {
+        "title": "BC - For cyclists with good technical skills",
+        "description": "Route on very bumpy dirt roads or on mule tracks and paths with a rather bumpy but fairly smooth surface or compact but irregular, with some natural obstacles (eg rock steps or roots)."
+      },
+      "oc": {
+        "title": "OC - For cyclists with excellent technical skills",
+        "description": "As above but on very bumpy and / or very irregular paths, with significant presence of obstacles."
+      },
+      "ec": {
+        "title": "EC - Maximum level for the cycle excursionist",
+        "description": "Path on very irregular paths, characterized by steps and obstacles in continuous succession, which require trial-type techniques."
+      }
+    }
   },
   "offline": {
     "title": "Offline map",
