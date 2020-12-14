@@ -180,7 +180,8 @@
     "attribution": "attribusjon",
     "offline": "offline",
     "credits": "kreditering",
-    "pois": "interessante steder"
+    "pois": "interessante steder",
+    "difficultyLegend": "vanskelighetssagn"
   },
   "credits": {
     "webmappContent1": "Appen {{appName}} er utviklet og blir vedlikeholdt av Webmapp.<br> Webmapp lager kart på nett, mobil og papir for Nature & Adventure Tourism.<br>Mer informasjon finner du på nettsiden vår ",
@@ -281,6 +282,50 @@
     "2": "Ved å trykke <span class='bold'>på ikonen</span> får du tilgang til beskrivelsen, bilder og annen informasjon om <span class='bold'>interessepunkt</span>.",
     "3": "Ved å trykke på <span class='bold'>lokaliserings knappen</span> kan du se hvor du befinner deg (den blå prikken på kartet).",
     "4": "Ved å trykke en gang til på <span class='bold'>lokaliserings knappen</span> aktiverer du <span class='bold'>kompass modusen</span> og kartet vil rotere og orientere seg mot nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Vandringsvanskelighetsskala",
+      "t": {
+        "title": "T - Turist",
+        "description": "Ruter på små veier, muldyrspor eller lette stier, med tydelige ruter som ikke utgjør usikkerhet eller orienteringsproblemer. De foregår vanligvis under 2000 m og utgjør vanligvis tilgang til fjellbeiter eller tilfluktssteder. De krever litt kunnskap om fjellmiljøet og fysisk forberedelse for å gå."
+      },
+      "e": {
+        "title": "E - Vandring",
+        "description": "Ruter som nesten alltid slår på stier, eller på spor av passasje i forskjellige terreng (beiter, rusk, steinete bakker), vanligvis med skilt. De krever en viss følelse av orientering, samt en viss erfaring og kunnskap om det fjellrike territoriet, turopplæring, samt passende fottøy og utstyr. Normalt er forskjellen i høyde mellom 500 og 1000m."
+      },
+      "ee": {
+        "title": "EE - Kyndige turgåere",
+        "description": "Ruter som ikke alltid er merket og som krever god evne til å bevege seg på forskjellige fjellterrenger. De kan være stier eller til og med svake spor som snor seg i ulendt eller bratt terreng, med bratte og glatte bakker, skumle og korte snøfelt som kan overvinnes uten bruk av fjellklatringsutstyr. De trenger en god fjellopplevelse, fasthet i foten og god fysisk forberedelse. Det er også nødvendig å ha tilstrekkelig utstyr og utstyr, samt god retningsfølelse. Normalt er høydeforskjellen større enn 1000 meter."
+      },
+      "eea": {
+        "title": "EEA - Kyndige turgåere med fjellklatringsutstyr",
+        "description": "Ruter som krever bruk av via ferratautstyr (snorer, sele, kjøleribbe, hjelm osv.). De kan være utstyrte stier eller reelle via ferratas. Det er nødvendig å vite hvordan du bruker det tekniske utstyret trygt og ha en viss vane med å eksponere og klatre terreng."
+      }
+    },
+    "mtb": {
+      "title": "MTB vanskelighetsskala",
+      "tc": {
+        "title": "TC - Turist",
+        "description": "Kjør på grusveier med en kompakt og glatt overflate, egnet for kjøretøy."
+      },
+      "mc": {
+        "title": "MC - For sykkelutflukter med middels teknisk evne",
+        "description": "Sti på grusveier med litt humpete eller litt uregelmessig underlag (sauespor, kjerrebane ...) eller på stier med kompakte og glatte underlag."
+      },
+      "bc": {
+        "title": "BC - For syklister med gode tekniske ferdigheter",
+        "description": "Sti på veldig humpete grusveier eller på muldyrspor og stier med en ganske humpete, men ganske glatt overflate eller kompakt, men uregelmessig, med noen naturlige hindringer (f.eks. Steintrapp eller røtter)."
+      },
+      "oc": {
+        "title": "OC - For syklister med utmerkede tekniske ferdigheter",
+        "description": "Som ovenfor, men på veldig humpete og / eller veldig uregelmessige stier, med betydelig tilstedeværelse av hindringer."
+      },
+      "ec": {
+        "title": "EC - Maksimumsnivå for sykkelutflukten",
+        "description": "Sti på veldig uregelmessige stier, preget av trinn og hindringer i kontinuerlig rekkefølge, som krever prøve-teknikker."
+      }
+    }
   },
   "offline": {
     "title": "Offline kart",

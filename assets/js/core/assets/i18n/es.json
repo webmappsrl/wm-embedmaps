@@ -180,7 +180,8 @@
     "attribution": "atribución",
     "offline": "sin conexión",
     "credits": "creditos",
-    "pois": "puntos de interes"
+    "pois": "puntos de interes",
+    "difficultyLegend": "leyenda de dificultad"
   },
   "credits": {
     "webmappContent1": "La aplicación {{appName}} es desarrollada y mantenida por Webmapp. <br> Webmapp crea servicios de mapas web, aplicaciones móviles y mapas impresos para turismo de naturaleza y aventura. <br> Para obtener más información, visite nuestro sitio web ",
@@ -281,6 +282,50 @@
     "2": "Al hacer clic en <span class='bold'>en el icono</span>, puede acceder a la descripción, la galería de fotos y otra información sobre ese <span class='bold'>punto de interés</span>.",
     "3": "Al hacer clic en <span class='bold'>el botón de geolocalización</span> puede ver su posición (el punto azul en el mapa).",
     "4": "Al hacer clic nuevamente en <span class='bold'>el botón de geolocalización</span>, se activa el <span class='bold'>modo de brújula</span> y el mapa girará y se orientará hacia Nord."
+  },
+  "difficultyLegend": {
+    "hiking": {
+      "title": "Escala de dificultad de senderismo",
+      "t": {
+        "title": "T - Turista",
+        "description": "Itinerarios por carreteras pequeñas, caminos de herradura o senderos fáciles, con recorridos claramente evidentes que no plantean incertidumbres ni problemas de orientación. Generalmente tienen lugar por debajo de los 2000 my suelen constituir el acceso a los pastos de montaña o refugios. Requieren cierto conocimiento del entorno montañoso y preparación física para caminar."
+      },
+      "e": {
+        "title": "E - Excursionismo",
+        "description": "Rutas que casi siempre giran sobre senderos, o sobre trazas de paso en diversos terrenos (pastos, escombros, pedregales), generalmente con señalización. Requieren cierto sentido de orientación, así como cierta experiencia y conocimiento del territorio montañoso, entrenamiento para caminar, así como calzado y equipo adecuado. Normalmente, la diferencia de altitud está entre 500 y 1000 m."
+      },
+      "ee": {
+        "title": "EE - Senderistas expertos",
+        "description": "Rutas no siempre señalizadas y que requieren una buena habilidad para moverse por diversos terrenos de montaña. Pueden ser caminos o incluso tenues trazas que serpentean por terrenos accidentados o escarpados, con pendientes pronunciadas y resbaladizas, pedregales y nevados cortos que se pueden superar sin el uso de equipos de montañismo. Necesitan una buena experiencia en la montaña, una base firme y una buena preparación física. También es necesario contar con equipo y equipo adecuados, así como un buen sentido de la orientación. Normalmente, la diferencia de altura es superior a 1000 m."
+      },
+      "eea": {
+        "title": "EEA - Excursionistas expertos con equipo de montañismo",
+        "description": "Rutas que requieran el uso de equipos de vía ferrata (cordones, arnés, disipador de calor, casco, etc.). Pueden ser caminos equipados o vías ferratas reales. Es necesario saber utilizar el equipo técnico de forma segura y tener un cierto hábito de exposición y terreno montañoso."
+      }
+    },
+    "mtb": {
+      "title": "Escala de dificultad MTB",
+      "tc": {
+        "title": "TC - Turista",
+        "description": "Recorrido por caminos de tierra con una superficie compacta y lisa, apta para vehículos."
+      },
+      "mc": {
+        "title": "MC - Para ciclistas excursionistas con habilidad técnica media",
+        "description": "Sendero por caminos de tierra con una superficie levemente accidentada o ligeramente irregular (huellas de ovejas, caminos de carros ...) o por caminos de superficies compactas y lisas."
+      },
+      "bc": {
+        "title": "BC - Para ciclistas con buenas habilidades técnicas",
+        "description": "Sendero por caminos de tierra muy accidentados o por caminos de herradura y caminos con una superficie bastante accidentada pero bastante lisa o compacta pero irregular, con algunos obstáculos naturales (p. Ej. Escalones de roca o raíces)."
+      },
+      "oc": {
+        "title": "OC - Para ciclistas con excelentes habilidades técnicas",
+        "description": "Como arriba pero en caminos con fondo muy accidentado y / o muy irregular, con presencia importante de obstáculos."
+      },
+      "ec": {
+        "title": "EC - Nivel máximo para el ciclista excursionista",
+        "description": "Sendero por caminos muy irregulares, caracterizado por escalones y obstáculos en continua sucesión, que requieren técnicas tipo trial."
+      }
+    }
   },
   "offline": {
     "title": "Mapa offline",
