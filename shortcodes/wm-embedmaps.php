@@ -31,7 +31,7 @@ function wm_render_embedmaps_shortcode($atts)
         "fullscreen_off_text" => "",
         "features_ids" => "",
         "show_related_pois" => "",
-        "force_zoom_to_details_feature"
+        "force_zoom_to_details_feature" => ""
     ), $atts));
 
     $htmlAttributes = '';
