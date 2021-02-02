@@ -62,7 +62,8 @@
       "osmUrl": "به OpenStreetMap مراجعه کنید",
       "imageGalleryUrl": "گالری عکس را ببینید",
       "creatorName": "مدیر",
-      "eventDate": "تاریخ واقعه"
+      "eventDate": "تاریخ واقعه",
+      "howToReach": "چگونه بدست آوریم"
     },
     "open": "باز",
     "close": "بسته",

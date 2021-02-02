@@ -62,7 +62,8 @@
       "osmUrl": "Zie op OpenStreetMap",
       "imageGalleryUrl": "Zie de fotogalerij",
       "creatorName": "Manager",
-      "eventDate": "Datum van het evenement"
+      "eventDate": "Datum van het evenement",
+      "howToReach": "Hoe krijg je"
     },
     "open": "Open",
     "close": "dichtbij",

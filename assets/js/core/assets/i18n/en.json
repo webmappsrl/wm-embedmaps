@@ -62,7 +62,8 @@
       "osmUrl": "See on OpenStreetMap",
       "imageGalleryUrl": "See the photo gallery",
       "creatorName": "Manager",
-      "eventDate": "Event date"
+      "eventDate": "Event date",
+      "howToReach": "How to get"
     },
     "open": "open",
     "close": "close",
