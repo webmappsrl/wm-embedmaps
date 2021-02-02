@@ -62,7 +62,8 @@
       "osmUrl": "Se på OpenStreetMap",
       "imageGalleryUrl": "Se bildegalleriet",
       "creatorName": "sjef",
-      "eventDate": "Dato for arrangementet"
+      "eventDate": "Dato for arrangementet",
+      "howToReach": "Hvordan få"
     },
     "open": "åpne",
     "close": "lukk",
