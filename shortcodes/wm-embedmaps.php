@@ -35,7 +35,8 @@ function wm_render_embedmaps_shortcode($atts)
         "force_zoom_to_feature_in_details" => "",
         "poi_click_action" => "",
         "track_click_action" => "",
-        "route_click_action" => ""
+        "route_click_action" => "",
+        "show_more_url_text" => ""
     ), $atts));
 
     $htmlAttributes = '';
@@ -126,6 +127,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($route_click_action != '') {
         $htmlAttributes .= " routeClickAction=\"$route_click_action\"";
+    }
+    if ($show_more_url_text != '') {
+        $htmlAttributes .= " showMoreUrlText=\"$show_more_url_text\"";
     }
 
     $layers = array();
