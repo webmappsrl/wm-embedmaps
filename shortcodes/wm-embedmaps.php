@@ -27,6 +27,7 @@ function wm_render_embedmaps_shortcode($atts)
         "taxonomy_terms" => "",
         "post_types" => "",
         "hide_taxonomy_filters" => "",
+        "hide_fullscreen_taxonomy_filters" => "",
         "fullscreen_on_text" => "",
         "fullscreen_off_text" => "",
         "features_ids" => "",
@@ -100,6 +101,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($hide_taxonomy_filters != '') {
         $htmlAttributes .= " hideTaxonomyFilters=\"$hide_taxonomy_filters\"";
+    }
+    if ($hide_fullscreen_taxonomy_filters != '') {
+        $htmlAttributes .= " hideFullscreenTaxonomyFilters=\"$hide_fullscreen_taxonomy_filters\"";
     }
     if ($fullscreen_on_text != '') {
         $htmlAttributes .= " fullscreenOnText=\"$fullscreen_on_text\"";
