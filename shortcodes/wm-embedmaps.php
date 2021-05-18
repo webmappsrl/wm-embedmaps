@@ -37,7 +37,7 @@ function wm_render_embedmaps_shortcode($atts)
         "poi_click_action" => "",
         "track_click_action" => "",
         "route_click_action" => "",
-        "show_more_url_text" => ""
+        "show_more_url_text" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -145,7 +145,7 @@ function wm_render_embedmaps_shortcode($atts)
     }
 
     $post_id = get_the_ID();
-    if ($post_id) {
+    if ($post_id && $features_ids === '' && $post_types === '' && $taxonomy_types === '' && $taxonomy_terms === '') {
         $post_type = get_post_type($post_id);
         if ($post_type == 'poi' || $post_type == 'track' || $post_type == 'route') {
 
