@@ -38,6 +38,7 @@ function wm_render_embedmaps_shortcode($atts)
         "track_click_action" => "",
         "route_click_action" => "",
         "show_more_url_text" => "",
+        "duration_unit" => "",
     ), $atts));
 
     $htmlAttributes = '';
@@ -134,6 +135,9 @@ function wm_render_embedmaps_shortcode($atts)
     }
     if ($show_more_url_text != '') {
         $htmlAttributes .= " showMoreUrlText=\"$show_more_url_text\"";
+    }
+    if ($duration_unit != '') {
+        $htmlAttributes .= " durationUnit=\"$duration_unit\"";
     }
 
     $layers = array();

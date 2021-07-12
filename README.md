@@ -77,7 +77,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `force_zoom_to_details_feature_id` | `boolean` | `false`     | Use this field to make the feature specified in the `details_feature_id` center in the map                                                                                                                                                   |                                                              |
 | `force_zoom_to_feature_in_details` | `boolean` | `false`     | Use this field to make all the features center in the map                                                                                                                                                                                    |                                                              |
 | `hide_lateral_panel`               | `boolean` | `false`     | Use this field to make the map never show the lateral panel for details, search and stuff                                                                                                                                                    |                                                              |
-| `related_poi_click_behaviour`      | `string`  | `open`      | Define the behaviour on the click event on a related poi. Can be "select" (select the poi in map), "open" (open the poi details), "web" (open the web url)                                                                                   |                                                              |
+| `related_poi_click_behaviour`      | `string`  | `open`      | Define the behaviour on the click event on a related poi. Can be `select` (select the poi in map), `open` (open the poi details), `web` (open the web url) or `none` (does not react to the click event)                                     |                                                              |
 | `features_ids`                     | `string`  | `undefined` | Allow to specify a series of ids to load (for multiple ids just separate them with commas `,`). If the features have related poi it automatically load them when activated from configuration                                                | If `undefined` all the features are downloaded               |
 | `taxonomy_types`                   | `string`  | `undefined` | Define the taxonomy types to download. Must be a string composed by taxonomy types (`webmapp_category`, `activity`, `theme`, `when`, `where`, `who`) separated by commas `,`                                                                 | If `undefined` all taxonomy types are downloaded             |
 | `taxonomy_terms`                   | `string`  | `undefined` | Define the taxonomy terms to download. Must be a string composed by the taxonomy ids separated by commas `,`                                                                                                                                 | If `undefined` all taxonomy terms are downloaded             |
@@ -91,6 +91,7 @@ This shortcode can be configured to match the user needs. The currently availabl
 | `poi_click_action`                 | `string`  | `undefined` | Set the action to perform when selecting a poi in the map. Possible values: `details`, `popup`. Default: `details`                                                                                                                           |                                                              |
 | `track_click_action`               | `string`  | `undefined` | Set the action to perform when selecting a track in the map. Possible values: `details`, `popup`. Default: `details`                                                                                                                         |                                                              |
 | `route_click_action`               | `string`  | `undefined` | Set the action to perform when selecting a route in the map. Possible values: `details`, `popup`. Default: `details`                                                                                                                         |                                                              |
+| `duration_unit`                    | `string`  | `undefined` | Set the unit of the duration fields when is a number. Possible values: `minutes`, `seconds`. Default: `minutes`                                                                                                                              |                                                              |
 
 #### 3.1.3 Style
 
@@ -156,9 +157,9 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 #### 3.3.2 Parameters
 
-| Parameter     | Type      | Default     | Description                                                                                                              | FAQ |
-| ------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
-| `feature_id`  | `string`  | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
+| Parameter    | Type     | Default     | Description                                                                                                              | FAQ |
+| ------------ | -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
+| `feature_id` | `string` | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
 
 #### 3.3.3 Style
 
@@ -198,9 +199,9 @@ It must be used with at least the `wm-embedmaps`. This instantiate a block that 
 
 #### 3.4.2 Parameters
 
-| Parameter     | Type      | Default     | Description                                                                                                              | FAQ |
-| ------------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
-| `feature_id`  | `string`  | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
+| Parameter    | Type     | Default     | Description                                                                                                              | FAQ |
+| ------------ | -------- | ----------- | ------------------------------------------------------------------------------------------------------------------------ | --- |
+| `feature_id` | `string` | `undefined` | Set the content of the shortcode using the given id. The component will always be visible with only this feature content |     |
 
 #### 3.4.3 Style
 
